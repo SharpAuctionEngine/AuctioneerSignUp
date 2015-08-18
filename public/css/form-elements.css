@@ -7,8 +7,8 @@ textarea.form-control {
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
-    background: #f8f8f8;
-    border: 3px solid #ddd;
+    /*background: #f8f8f8;*/
+    border: 3px solid #ccc;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -48,11 +48,11 @@ textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeh
 
 
 button.btn {
-	height: 50px;
+	height: 45px;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 7px;
     vertical-align: middle;
-    background: #19b9e7;
+    /*background: #19b9e7;*/
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -65,10 +65,10 @@ button.btn {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-button.btn:hover { opacity: 0.6; color: #fff; }
+/*button.btn:hover { opacity: 0.6; color: #fff; }*/
 
-button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/*button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }*/
 
-button.btn:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+/*button.btn:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }*/
 
-button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+/*button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }*/
