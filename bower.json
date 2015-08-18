@@ -1,0 +1,37 @@
+{
+  "name": "sae",
+  "version": "1.0.0",
+  "homepage": "https://github.com/SharpAuctionEngine/LSAE",
+  "authors": [
+    "InstanceOfMichael <michael@sharpauctionengine.com>"
+  ],
+  "description": "Sharp Auction Engine",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "jquery#2.1.*",
+    "jquery-ie8": "jquery#1.11.*",
+    "bootstrap": "3.3.*",
+    "kbw.countdown": "git://github.com/kbwood/countdown#1.6.*",
+    "moment": "2.8.*",
+    "bootstrap-datetimepicker": "git://github.com/Eonasdan/bootstrap-datetimepicker#4.7.*",
+    "font-awesome": "4.2.*",
+    "fancybox": "2.1.*",
+    "bootstrap-responsive-tabs": "git://github.com/openam/bootstrap-responsive-tabs#25306c730af34c591f8a6fa8920986920d6289da",
+    "bootbox": "4.4.*",
+    "x-editable": "x-editable#1.5.*",
+    "bootstrap-select2": "git://github.com/t0m/select2-bootstrap-css#1.4.*",
+    "mjolnic-bootstrap-colorpicker": "dec24bc13121c198dfa3f06de289b0d2833a7db8",
+    "sg-laravel-array-helpers": "git://github.com/SpaceGazebo/Laravel-Array-Helper-JS",
+    "tinymce":"4.*",
+    "bootstrap-toggle":"2",
+    "mootools-core":"1.5.*",
+    "jquery-serialize-object":"jquery-serialize-object#~2.4.5",
+    "intercom.js":"git://github.com/tinystride/intercom.js#d7652e76d6caebf45b0a8df76ed9fc5e088d0d96"
+  },
+  "resolutions": {
+    "jquery": "2.*",
+    "bootstrap": "3.3.*"
+  }
+}
+
