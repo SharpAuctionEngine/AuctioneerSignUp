@@ -1,6 +1,6 @@
 # AuctioneerSignUp
 
-if you are, and you need to share your current progress with FOH, do this:
+If you need to share your current progress with FOH, do this:
 
 ```
 ssh forge@clean-pond
