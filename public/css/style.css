@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #665A5A;
+    color: #1D1414;
     line-height: 30px;
     text-align: center;
 }
@@ -143,7 +143,7 @@ ul.navbar-nav {
 	overflow: hidden;
 	padding: 0 25px 15px 25px;
 	background: #fff;
-	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	-moz-border-radius: 29px 29px 0 0; -webkit-border-radius: 29px 29px 0 0; border-radius: 29px 29px 0 0;
 	text-align: left;
 }
 
