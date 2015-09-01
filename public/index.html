@@ -17,34 +17,37 @@
 		<link rel="stylesheet" href="css/bootstrap-formhelpers.css"> -->
 		<link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href="css/jquery.range.css" rel="stylesheet">
+
         <style type="text/css">
-.wrapper {
-    font-family:'arial', sans-serif;
-}
-input.icon {
-    padding:5px;
-}
-input.icon::-webkit-input-placeholder {
-    font-family:'FontAwesome';
-}
-input.icon::-moz-placeholder {
-    font-family:'FontAwesome';
-}
-input.icon::-ms-input-placeholder {
-    font-family:'FontAwesome';
-}
+		.wrapper {
+		    font-family:'arial', sans-serif;
+		}
+		input.icon {
+		    padding:5px;
+		}
+		input.icon::-webkit-input-placeholder {
+		    font-family:'FontAwesome';
+		}
+		input.icon::-moz-placeholder {
+		    font-family:'FontAwesome';
+		}
+		input.icon::-ms-input-placeholder {
+		    font-family:'FontAwesome';
+		}
 
-.dollar
-{
+		.dollar
+		{
 
-	color:#D25017;
-}
-.box
-{
+			color:#D25017;
+		}
+		.box
+		{
 
-	width:50%;
-}
-</style>
+			width:50%;
+		}
+		</style>
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,20 +58,21 @@ input.icon::-ms-input-placeholder {
 
         <!-- Favicon and touch icons -->
         <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
     
  
     </head>
-<section style="background-color:#5B8F99;overflow-x:hidden;">
+<section >    
+<!-- style="background-color:#5B8F99;overflow-x:hidden;" -->
     <body>
 			<!-- Top content -->
         <div class="top-content">
         	
             <div class="inner-bg">
                 <div class="container">
-            			<form role="form" action="" method="post" class="registration-form">
+            			<form role="form" action="" method="post" class="registration-form"id="paymentMethodForm">
                         	<fieldset>
                         		 <h1><strong>Choose Your Plan</strong></h1>
                         		 <p >Review your options below and select the plan the best suits your needs</p>
@@ -80,7 +84,7 @@ input.icon::-ms-input-placeholder {
                         		 					   <div class="text-center">
                                  							<h2> <strong> Basics </strong></h2>
                                 							 <p class="text-center dollar" style="font-size:170%">$99/mo</p>
-                                  							 <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
+                                  							 <button type="button" id="plan" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
                                 						</div>
                         		 					</div>
                         		 				</div>
@@ -93,6 +97,10 @@ input.icon::-ms-input-placeholder {
                         		 					  	 <div class="text-center">
                                   						 <h2> <strong>Pro</strong></h2>
                                   						 <p class="text-center dollar" style="font-size:170%">$140/mo</p>
+                                  						 	<!-- Single slider -->
+                                  						 	<div class=""  style="margin-bottom:25px; margin-left: 80px; margin-right: auto ;">
+																<input class="single-slider" type="hidden">
+															</div>
                                   						 <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
                                 						</div>
                         		 					 </div>
@@ -115,44 +123,57 @@ input.icon::-ms-input-placeholder {
                         		 		<div class="panel" style="border-radius:81px;border-color:black;">
            						 			<div class="panel-body">
 		                        				<div class="form-top">
-		                        				<h2 class="text-center"><strong>Captain Plan Sign Up</strong></h2>
-		                        				<p class="text-center dollar" style="font-size:170%">$140/mo</p>
-		                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.</small></p>
+		                        				<!-- <span id="plan"></span> -->
+		                        				<div id="basic" style="display:none;">
+		                        				<h2 class="text-center"><strong>Basics</strong></h2>
+		                        				<p class="text-center dollar" style="font-size:170%">$99/mo</p>
+		                        				<p><small>This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href="">Click here.</a></small></p>		                        				
+		                        				</div>
+		                        				<div id="pro" style="display:block;">
+			                        				<h2 class="text-center"><strong>Pro</strong></h2>
+			                        				<p class="text-center dollar" style="font-size:170%">$140/mo</p>
+			                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.</small></p>
+														<div class=""  style="margin-bottom:25px; margin-left: 80px; margin-right: auto ;">
+			                        				<input class="single-slider" type="hidden">
+			                        					</div>
+		                        				</div>
+
 		                        				</div>
 		                            	   		<div class="form-bottom">
 		                            				<div class="form-group">
 			                            				<p class="wrapper">
-					                    					<input type="text" name="form-username" placeholder="&#61447; Your Username" class="icon form-username form-control"  id="form-username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+					                    					<input type="text" name="form-username" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control"  id="form-username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
 					                    				</p>
 					                        		</div>
 				                        
 				                        			<div class="form-group">
 								                         <p class="wrapper">
-								                        	<input type="text" name="form-email" placeholder="&#xf003; Email" class="icon form-email form-control" id="form-email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+								                        	<input type="text" name="form-email" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="form-email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
 								                         </p>
 								                    </div>
 
 						                         	<div class="form-group">
 							                         	<p class="wrapper">
-							                    			<input type="text" name="form-auction-house" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="form-auction-house" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+							                    			<input type="text" name="form-auction-house" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="form-auction-house" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
 							                    		</p>
 							                        </div>
 
-							                         <div class="form-group box">
+							                         <div class="form-group ">
 							                         	<p class="wrapper">
-							                    			<input type="text" name="form-auction-url" placeholder="&#xf0ac; Your Auction House URL" class="icon form-auction-url form-control" id="form-auction" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.sae.bid</strong>">
-							                    		</p>sae.bid
+							                    			<input type="text" name="form-auction-url" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="form-auction" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.sae.bid</strong>">
+							                    		</p>
+							                    		<!-- sae.bid -->
 							                        </div>
 
 							                         <div class="form-group">
 							                        	 <p class="wrapper">
-							                    			<input type="password" name="form-password" placeholder="&#xf023; Password" class="icon form-password form-control" id="form-password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
+							                    			<input type="password" name="form-password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="form-password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
 							                    		 </p>
 							                        </div>
 
 							                        <div class="form-group">
 							                        	<p class="wrapper">
-							                        		<input type="password" name="form-repeat-password" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="form-repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm."></p>
+							                        		<input type="password" name="form-repeat-password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="form-repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm."></p>
 							                        </div>
 					                     			<div>
 								                        <section  class="text-muted text-center">
@@ -185,16 +206,16 @@ input.icon::-ms-input-placeholder {
 						                   		</div>
 					                        	<div class="form-bottom">
 					                            	<div class="form-group">
-														<input type="text" name="form-first-name" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
+														<input type="text" autocomplete="off" name="form-first-name" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
 								                    </div>
 						                        	<div class="form-group">
-							                        	<input type="text" name="form-last-name" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
+							                        	<input type="text" name="form-last-name" autocomplete="off" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
 							                        </div>
 						                            <div class="form-group">
-						                        	    <input type="text" name="form-phonenumber" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+						                        	    <input type="text" name="form-phonenumber" autocomplete="off" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
 						                            </div>
 							                        <div class="form-group">
-							                        	<input type="text" name="form-bornon" placeholder="Born On" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
+							                        	<input type="text" name="form-bornon" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
 							                        </div>
 							                        <div class="form-group">
 							                    	    <input type="text" name="form-address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
@@ -218,6 +239,7 @@ input.icon::-ms-input-placeholder {
 			                </fieldset>
 			                    
 			                 <fieldset>
+			                	 
 			                    <div class="row">
                         			<div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:50px;">
 			                   			<div class="panel" style="border-radius:81px;border-color:black;">
@@ -230,6 +252,10 @@ input.icon::-ms-input-placeholder {
     													</p>
   								    				</div>
 		                        				</div>
+		                        				
+		                        				<p>
+                					<span class="payment-errors"></span>
+              					 </p>
 		                            			<div class="form-bottom">
 		                           				 	<h3>Plan Info</h3>
 		                            					<div class="form-group">
@@ -249,20 +275,22 @@ input.icon::-ms-input-placeholder {
 								                       	</div>
 				                        			<h3>Payment Info</h3>
 				                    					<div class="form-group">
-								                    		<label class="" for="form-card-number">Card number:</label>
-								                        	<input type="text" name="form-card-number" placeholder="Card number" class="form-card-number form-control" id="form-card-number">
+								                    		<label class=""  for="form-card-number">Card number:</label>
+								                        	<input type="text" autocomplete="off" value="4242424242424242" placeholder="Card number" class="form-card-number form-control" data-stripe="number" id="form-card-number">
 								                        </div>
 								                        <div class="form-group">
 								                    		<label class="" for="form-expires">Expires:</label>
-								                        	<input type="text" name="form-expires" placeholder="MM/YYYY" class="form-expires form-control" id="form-expires">
+								                        	<input type="text" value="06/2016" class="form-expires form-control"  data-max-length="2" data-is-sae-card-exp="1" autocomplete="off" placeholder="MM/YYYY" id="form-expires">
+								                        	<input type="hidden" data-stripe="exp-month" />
+                         									<input type="hidden" data-stripe="exp-year" />
 								                        </div>
 								                        <div class="form-group">
 								                    		<label class="" for="form-name-on-card">Name on card:</label>
-								                        	<input type="text" name="form-name-on-card" placeholder="Name on card" class="form-name-on-card form-control" id="form-name-on-card">
+								                        	<input type="text" value="ka" autocomplete="off" placeholder="Name on Card" class="form-name-on-card form-control" id="form-name-on-card">
 								                        </div>
 								                        <div class="form-group">
 								                    		<label class="" for="form-cvc">CVC:</label>
-								                        	<input type="text" name="form-cvc" placeholder="CVC" class="form-cvc form-control" id="form-cvc">
+								                        	<input type="text" autocomplete="off" data-stripe="cvc" value ="123" placeholder="CVC" class="form-cvc form-control" id="form-cvc">
 								                        </div>
 														<div class="textfield col-xs-12">
 						                                  	 <div class="well alert alert-default" > Your card will be charged <span class="first-charge-mfs"></span> now,
@@ -272,14 +300,17 @@ input.icon::-ms-input-placeholder {
 				                                		</div>
 
 									                     <button type="button" class="btn btn-primary btn-previous">Previous</button>
-									                      <button type="button" class="btn btn-success btn-next">Get Started</button>
+									                      <button type="button" class="btn btn-success btn-stripe">Get Started</button>
 									                      <button type="button" class="btn btn-warning btn-next">skip</button>
+
 				                    			</div>
+				                    			
 				                    		</div>
+				                    		
 				                    	</div>
 			                   		</fieldset>
 			                     
-			                     	<fieldset>
+			                     	<!-- <fieldset>
 			                     		<div class="row">
                         					<div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:50px;">
 			                   					<div class="panel" style="border-radius:81px;border-color:black;">
@@ -302,8 +333,25 @@ input.icon::-ms-input-placeholder {
 				                    			</div>
 				                    		</div>
 				                    	</div>
-									</fieldset>
+									</fieldset> -->
 			                	</form>
+			                	<div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Congratulatons!</h4>
+      </div>
+      <div class="modal-body">
+        Congratulations!! you are good to go!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a href="#"><button type="button" class="btn btn-primary">Visit the page!</button></a>
+      </div>
+    </div>
+  </div>
+</div>
 		       				 </div>
             			</div>
         			</div>
@@ -323,7 +371,26 @@ $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
         <script src="js/scripts.js"></script>
         <script src="js/bootstrap-formhelpers-min.js"></script>
         <script src="js/bootstrap-formhelpers-states.js"></script>
-        <script type="text/javascript">$('.form-group input').popover({
+        <script src="js/jquery.range.js"></script>
+        <script type="text/javascript">
+		$(document).ready(function(){
+			$('.single-slider').jRange({
+			 from: 50,
+			 to: 500,
+			 scale: [50,125,250,375,500],
+				});
+			 });
+
+		 $("#plan").click(function(){
+			$('#pro').hide();
+		 	  $('#basic').show();
+
+       
+    });
+
+		</script>
+        <script type="text/javascript">
+        $('.form-group input').popover({
          trigger: "focus",
           delay: {
             show: 600,
@@ -331,8 +398,169 @@ $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
         },
         placement: 'top',
         html: true,
-    });</script>
+    			});
 
+    function denormalizeCardExp(event)
+{
+	console.log("true");
+  var $year  = $('[data-stripe="exp-year"]');
+  var $month = $('[data-stripe="exp-month"]');
+
+  $year.val('');
+  $month.val('');
+
+  var value = $(this).val().replace(/\D/g,'');
+
+  console.log($(this).val());
+
+  if (!{4:1,6:1}[value.length])
+  {
+      console.log('invalid!');
+
+      return;
+  }
+
+  $month.val(value.substr(0,2));
+
+  value = value.substr(2);
+
+  if (value.length==2)
+  {
+      value = '20'+value;
+  }
+
+  $year.val(value);
+  console.log({
+      month:$month.val(),
+      year:$year.val(),
+  });
+
+  console.log(value);
+}
+$('body').on('keyup','form [data-is-sae-card-exp=1]',denormalizeCardExp);
+
+        </script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="js/creditCardValidator.js"></script>
+<script >
+	Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
+// 	function pfWarnNoStripe()
+// {
+//     Alert.warning('It looks like you are running an outdated browser or blocking scripts. \
+//                    Please update your browser or add "stripe" to your browser\'s whitelist.');
+// }
+
+// if (typeof Stripe == 'undefined')
+// {
+//     pfWarnNoStripe();
+// }
+// else
+// {
+//     // https://stripe.com/docs/stripe.js
+//     Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
+// }
+jQuery(function ($) {
+  // $('#paymentMethodForm').click(function (event) { //ch
+  	$('.registration-form .btn-stripe').on('click',function (event) {
+  	console.log(this);
+    if($.trim($('input[data-stripe="number"]').val()))
+    {
+        var vResult = $('input[data-stripe="number"]').validateCreditCard();
+          console.log(vResult);
+         if(!vResult.valid)
+        {
+          // bootbox.alert('Please verify your card information.');
+		alert('Please verify your card information.');
+          return false;
+        }
+    }
+
+ var $form = $(this).parents('form').first();
+
+    var cc = 0;
+    $form.find('[data-stripe]').each(function (i,e) { if ($(e).val()!=='') cc++; });
+
+    $("#loadingModal").modal('show');
+
+     // if (cc==0 || $form.attr('data-is-ready')=='1') return true;
+
+    // Disable the submit button to prevent repeated clicks
+    $form.find('button,input[type=button]').prop('disabled', true);
+
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from submitting with the default action
+    return false;
+  });
+});
+function stripeResponseHandler(status, response) {
+
+  var $form = $('#paymentMethodForm');
+  
+  $("#loadingModal").modal('hide');
+
+  if (response.error) {
+  	
+    // Show the errors on the form
+    
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('button,input[type=button]').prop('disabled', false);
+  } else {
+  	console.log('time to submit!');
+  		
+    	
+    // response contains id and card, which contains additional card details
+    // var token = response.id;
+    
+    // Insert the token into the form so it gets submitted to the server
+    // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+    // and submit
+    // $form.get(0).submit();
+    $.ajax({
+        // url: "{{ URL::route('houses.payment-methods.store', [$house->id]) }}",
+        // method:'POST',
+        data:{
+            _token: $form.find('[name=_token]').val(),
+            gateway:'stripe',
+            stripe:response
+        },
+        beforeSend:function (json) {
+            $("#loadingModal").modal('show');
+        },
+        complete:function (xhr,textStatus) {
+            $("#loadingModal").modal('hide');
+            //xhr.responseText
+            //xhr.responseJson
+        },
+        success:function (json,textStatus,xhr) {
+        	var parent_fieldset = $(this).parents('fieldset');
+    	var next_step = true;
+    	if( next_step ) {
+
+    		parent_fieldset.fadeOut(400, function() {
+                 
+	    		$(this).next().fadeIn();
+	    	});
+    	}
+            // console.log(json);
+            // $form.attr('data-is-ready',1); //ch
+
+            // $('#paymentMethodForm').submit(); //ch
+            $("#congrats").modal('show');
+        },
+        error:function (xhr,textStatus,errorThrown) {
+            console.error({textStatus:textStatus,'xhr.response':xhr.responseJSON||xhr.responseText});
+            //xhr.responseText
+            //xhr.responseJSON
+
+            alert('There was an error! Please try again then contact support.');
+
+            typeof ReportError=='function'&&ReportError((xhr.responseText||"register failure"),(xhr.responseJSON||{}));
+        }
+    });
+    }
+};
+</script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
