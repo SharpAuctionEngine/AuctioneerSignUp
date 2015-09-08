@@ -1,5 +1,5 @@
 {
-  "name": "ExampleApp",
+  "name": "Auctioneersignup",
   "version": "0.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,6 +9,9 @@
     "Bower",
     "Bootstrap"
   ],
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
@@ -33,6 +36,15 @@
   },
   "dependencies": {
     "gulp-install": "~0.2.0",
-    "pg": "~4.4.1"
+    "pg": "~4.4.1",
+    "express": "^4.13.3",
+    "hogan.js": "^3.0.2",
+    "node-mandrill": "^1.0.1",
+    "mandrill-api": "~1.0.45",
+    "body-parser": "~1.13.3",
+    "dotenv": "~1.2.0",
+    "sequelize": "~3.7.1",
+    "pg-hstore": "~2.3.2",
+    "sequelize-cli": "~1.9.1"
   }
 }

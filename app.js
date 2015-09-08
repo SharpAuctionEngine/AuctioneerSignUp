@@ -1,6 +1,6 @@
 require('dotenv').load();
 
-process.env.APP_PORT = process.env.APP_PORT||3026;
+process.env.APP_PORT = process.env.APP_PORT||3039;
 
 var express = require('express');
 var app = express();
@@ -12,10 +12,8 @@ var pg = require('pg');
 var connectionString = process.env.DATABASE_URL || 'postgres://postgres:password@localhost:5432/auctioneersignup';
 var client = new pg.Client(connectionString);
 var Sequelize = require('sequelize');
-var db = new Sequelize('postgres://postgres:password@localhost:5432/auctioneersignup',{define: {
-  // timestamps: false
-}
-});
+var JsonField = require('sequelize-json');
+var db = new Sequelize('postgres://postgres:password@localhost:5432/auctioneersignup');
 client.connect();
 
 
@@ -25,84 +23,98 @@ app.use(bodyParser());
 var server = app.listen(process.env.APP_PORT, function() {
     console.log('Listing on port: '+process.env.APP_PORT)
 });
+var User = db.define('auctioneersignup', {
+	 
+    id: {
+              type:Sequelize.INTEGER,
+              primaryKey: true,
+              autoIncrement: true
+              },
 
-app.post('/signup',function(req,res){
+          createdAt: {
+                     type:Sequelize.DATE
+                     },
+          updatedAt: {
+                     type:Sequelize.DATE
+                     },
 
-    var userRequestRaw = req.body;
-    var UserDetails=['username','email','house_name'];
-
-    var results = [];
-    
-    console.log({userRequestRaw:userRequestRaw});
-
-var values = {};
-for(var i=0;i<=UserDetails.length;i++)
-{
- // userRequestRaw = {
-      
-  //       username:req.body.username,
-		// email:req.body.email,
-		// house_name:req.body.house_name,
-		// house_url:req.body.house_url,
-		
-    	values[UserDetails[i]] = req.body[UserDetails[i]];
-   		 
-
-        // phone:"le phone</td>",
-        // subject:'le subject',
-        // msg:'le msg',
-   // };
- }  
- console.log(values); 
-    req.body = userRequestRaw;
-    // res.send("success!",200);
-
-
-
-var User = db.define('registerations', {
-	 email: Sequelize.STRING,
-	 username: Sequelize.STRING,
-	 formData: Sequelize.JSON,
-    // field: 'username'
+          username: {
+                    type:Sequelize.STRING,
+                    defaultValue: false,
+                    allowNull: false
+                    },
+          email: {
+                 type:Sequelize.STRING,
+                 defaultValue: false,
+                 allowNull: false
+                 },
+          auction_house_name:{ 
+                             type:Sequelize.STRING,
+                             defaultValue: false,
+                             allowNull: false
+                             },
+          auction_house_name_url:{
+                                 type:Sequelize.STRING,
+                                 defaultValue: false,
+                                 allowNull: false
+                                 },
+          jsonblob :
+                    {
+                      type:Sequelize.JSON,
+                      defaultValue: false,
+                      allowNull: false
+                    }
 	
 });
+app.post('/signup',function(req,res){
+
+    var userRequestRaw = req.body;  
+ // console.log(values); 
+    req.body = userRequestRaw;
+
 
 db.sync().then(function() {
   return User.create({
-    username: userRequestRaw.username,
-    email   : userRequestRaw.email,
-    formData: userRequestRaw,
-    // birthday: new Date(1980, 6, 20)
+     username:userRequestRaw.username,
+     email:userRequestRaw.email,
+     auction_house_name:userRequestRaw.house_name,
+     auction_house_name_url:userRequestRaw.house_url,
+  	 jsonblob: userRequestRaw,
   });
-}).then(function(jane) {
+})
+.then(function(jane) {
   console.log(jane.get({
     plain: true
   }))
-});
+  // .then(function(User) {
+  //     expect(User.jsonField).to.be.a('object');
+      
+    });
+// });
 
-   return;
+  
 
     pg.connect(connectionString, function(err, client, done) {
 
  	// client.query("INSERT INTO register(username,email,auction_house,auction_houseurl) values($1,$2,$3,$4)",[userRequestRaw.username,userRequestRaw.email,userRequestRaw.house_name,userRequestRaw.house_url]);
 
-     client.query("INSERT INTO register(data) values($1)",values[UserDetails]);
+   //   client.query("INSERT INTO register(data) values($1)",values[UserDetails]);
 
-      var query = client.query("SELECT * FROM register ORDER BY username ASC;");
+   //    var query = client.query("SELECT * FROM register ORDER BY username ASC;");
 
-        // Stream results back one row at a time
-        query.on('row', function(row) {
-            results.push(row);
-        });
+   //      // Stream results back one row at a time
+   //      query.on('row', function(row) {
+   //          results.push(row);
+   //      });
 
-        // After all data is returned, close connection and return results
-        query.on('end', function() {
-            client.end();
-            return res.json(results);
-        });
- 	 // if(err) {
-   //        console.log(err);
-   //      }
+   //      // After all data is returned, close connection and return results
+   //      query.on('end', function() {
+   //          client.end();
+   //          return res.json(results);
+   //      });
+ 	 // // if(err) {
+   // //        console.log(err);
+   // //      }
                	
 
        });

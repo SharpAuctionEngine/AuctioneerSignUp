@@ -148,7 +148,7 @@
 				                        
 				                        			<div class="form-group">
 								                         <p class="wrapper">
-								                        	<input type="text" name="form-email" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="form-email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+								                        	<input type="text" name="form-email" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
 								                         </p>
 								                    </div>
 
@@ -585,13 +585,19 @@ function stripeResponseHandler(status, response) {
     // and submit
     // $form.get(0).submit();
     $.ajax({
-        // url: "{{ URL::route('houses.payment-methods.store', [$house->id]) }}",
-        // method:'POST',
-        data:{
-            _token: $form.find('[name=_token]').val(),
-            gateway:'stripe',
-            stripe:response
-        },
+        url: "/signup",
+        method:'POST',
+        data:$form.serialize(), 
+			// _token: $form.find('[name=_token]').val(),
+   //          gateway:'stripe',
+   //          stripe:response
+
+        // ,
+        // data:{
+        //     _token: $form.find('[name=_token]').val(),
+        //     gateway:'stripe',
+        //     stripe:response
+        // },
         beforeSend:function (json) {
             $("#loadingModal").modal('show');
         },
@@ -601,15 +607,8 @@ function stripeResponseHandler(status, response) {
             //xhr.responseJson
         },
         success:function (json,textStatus,xhr) {
-        	var parent_fieldset = $(this).parents('fieldset');
-    	var next_step = true;
-    	if( next_step ) {
-
-    		parent_fieldset.fadeOut(400, function() {
-                 
-	    		$(this).next().fadeIn();
-	    	});
-    	}
+        	
+    	
             // console.log(json);
             // $form.attr('data-is-ready',1); //ch
 
