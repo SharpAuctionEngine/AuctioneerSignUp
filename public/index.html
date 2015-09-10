@@ -57,6 +57,8 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
+
+        
         <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
 		<link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
 		<link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
@@ -72,6 +74,9 @@
         	
             <div class="inner-bg">
                 <div class="container">
+              	  <noscript>
+      				<div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
+  				  </noscript>
             			<form role="form" action="signup" method="post" class="registration-form"id="paymentMethodForm">
                         	<fieldset>
                         		 <h1><strong>Choose Your Plan</strong></h1>
@@ -207,16 +212,16 @@
 						                   		</div>
 					                        	<div class="form-bottom">
 					                            	<div class="form-group">
-														<input type="text" autocomplete="off" name="first-name" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
+														<input type="text" autocomplete="off" name="first_name" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
 								                    </div>
 						                        	<div class="form-group">
-							                        	<input type="text" name="last-name" autocomplete="off" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
+							                        	<input type="text" name="last_name" autocomplete="off" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
 							                        </div>
 						                            <div class="form-group">
-						                        	    <input type="text" name="phonenumber" autocomplete="off" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+						                        	    <input type="text" name="phone_number" autocomplete="off" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
 						                            </div>
 							                        <div class="form-group">
-							                        	<input type="text" name="bornon" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
+							                        	<input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
 							                        </div>
 							                        <div class="form-group">
 							                    	    <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
@@ -337,22 +342,22 @@
 									</fieldset> -->
 			                	</form>
 			                	<div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Congratulatons!</h4>
-      </div>
-      <div class="modal-body">
-        Congratulations!! you are good to go!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="#"><button type="button" class="btn btn-primary">Visit the page!</button></a>
-      </div>
-    </div>
-  </div>
-</div>
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title" id="myModalLabel">Congratulatons!</h4>
+								      </div>
+								      <div class="modal-body">
+								        Congratulations!! you are good to go!
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								        <a href="#"><button type="button" class="btn btn-primary">Visit the page!</button></a>
+								      </div>
+								    </div>
+								  </div>
+								</div>
 		       				 </div>
             			</div>
         			</div>
@@ -511,22 +516,22 @@ $('body').on('keyup','form [data-is-sae-card-exp=1]',denormalizeCardExp);
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script src="js/creditCardValidator.js"></script>
 <script >
-	Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
-// 	function pfWarnNoStripe()
-// {
-//     Alert.warning('It looks like you are running an outdated browser or blocking scripts. \
-//                    Please update your browser or add "stripe" to your browser\'s whitelist.');
-// }
+	// Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
+	function pfWarnNoStripe()
+{
+    Alert.warning('It looks like you are running an outdated browser or blocking scripts. \
+                   Please update your browser or add "stripe" to your browser\'s whitelist.');
+}
 
-// if (typeof Stripe == 'undefined')
-// {
-//     pfWarnNoStripe();
-// }
-// else
-// {
-//     // https://stripe.com/docs/stripe.js
-//     Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
-// }
+if (typeof Stripe == 'undefined')
+{
+    pfWarnNoStripe();
+}
+else
+{
+    // https://stripe.com/docs/stripe.js
+    Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
+}
 jQuery(function ($) {
   // $('#paymentMethodForm').click(function (event) { //ch
   	$('.registration-form .btn-stripe').on('click',function (event) {
