@@ -4,4 +4,4 @@ assets
 .env
 package.json~
 node-postgres-todo
-new_auctioneer_details_request.hjs~
+/views/new_auctioneer_details_request.hjs~
