@@ -14,9 +14,9 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
+    "username": "sae",
     "password": "password",
-    "database": "auctioneersignup",
+    "database": "auctioneersignupform",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
