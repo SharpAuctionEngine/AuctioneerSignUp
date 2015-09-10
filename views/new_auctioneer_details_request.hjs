@@ -1,0 +1,11 @@
+A new Auctioneer Details has been received!
+
+<table>
+    {{#userRequest}}
+        <tr>
+            <th>{{key}}</th>
+            <td>{{value}}</td>
+        </tr>
+    {{/userRequest}}
+</table>
+<p>{{message}}</p>
