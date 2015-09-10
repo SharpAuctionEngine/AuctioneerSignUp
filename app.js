@@ -14,7 +14,7 @@ var fs = require('fs');
 // var client = new pg.Client(connectionString);
 var Sequelize = require('sequelize');
 var JsonField = require('sequelize-json');
-var db = new Sequelize('postgres://postgres:password@localhost:5432/auctioneersignup');
+var db = new Sequelize(process.env.CONNECTION);
 // client.connect();
 var newAuctioneerDetailsEmailTemplate = Hogan.compile(fs.readFileSync('./views/new_auctioneer_details_request.hjs', 'utf-8'));
 
