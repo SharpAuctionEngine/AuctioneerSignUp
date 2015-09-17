@@ -11,7 +11,8 @@
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" /> -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="fonts/font-awesome.css">
         <!-- <link rel="stylesheet" href="fonts/CameoAntique.ttf">
@@ -81,6 +82,13 @@
 			padding-left: 3px;
 			padding-right: 3px;
 			
+		}
+		.slider
+		{
+			color:#CD623F;
+			font-size:170%;
+			font-weight:bold;
+			border:0;
 		}
 
 		@font-face {
@@ -158,7 +166,8 @@
                         		 					  	 <div class="text-center">
                                   						 <h2> <strong>Pro</strong></h2>
                                   						 <p class="text-center dollar">$<span class="borderbox">140</span>/mo</p>
-                                  						 <p style="font-size:15px; text-align:left;">Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:</p>
+                                  						 <p style="font-size:15px; text-align:left;">Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:<!-- <span><input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"> </span> -->
+                                  						 </p>
                                   						 	<!-- Single slider -->
                                   						 	<!-- <div id="selectorContainer" >
 															<select id="testSelectorD" name="testSelector4">
@@ -170,9 +179,11 @@
 														  <option value="5" >500</option>
 														</select>
 														</div> -->
-                                  						 	<div class=""  style="margin-bottom:25px;">
-																<input class="single-slider" type="hidden">
-															</div>
+                                  						 	 <p class="slider"><input type="text" id="amount" class="text-center" readonly style="color:#CD623F;font-weight:bold;font-size:20px;border:0"></p>
+                                  						 			
+																	<div id="slider" style="margin-bottom:10px;"></div>
+																<!-- <input class="single-slider" id="single-slider" type="hidden"> -->
+															
 															<p style="font-size:12px; text-align:left;">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan as well as:</p>
 															<div style="font-size:10px; text-align:left;">
                                 							 <ul> 
@@ -182,7 +193,7 @@
 															 </ul>
 															</div>
                                   						 <button type="button" class="btn btn-xs btn-next btncolor"><span class="text">Get Started Now!</span></button><br/>
-                                  						<p style="font-size:10px;"> Looking for an Enterprise solution? <a href="contact.sharpauctionengine.com">Contact us</a> to find out what we can do for you.</p>
+                                  						<p style="font-size:10px;"> Looking for an Enterprise solution? <a href="#">Contact us</a> to find out what we can do for you.</p>
                                 						</div>
                         		 					 </div>
                         		 				</div>
@@ -445,12 +456,15 @@
 $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
         </script> -->
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 
         <script src="js/jquery-1.11.1.min.js"></script>
+         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
        <!--  <script src="js/tooltip.js"></script>
         <script src="js/popover.js"></script> -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
         
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
@@ -462,27 +476,43 @@ $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
         <script src="js/register.js"></script>
 
         <script type="text/javascript">
+
+ 
+
 		$(document).ready(function(){
+			// $(function() {
+    $( "#slider" ).slider({
+      value:50,
+      min: 50,
+      max: 500,
+      step: 25,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  // });
 			// single-slider
-			$('.single-slider').jRange({
-			 from: 50,
-			 to: 500,
-			 scale: [50,125,250,375,500],
-				});
+			// $('.single-slider').jRange({
+			//  from: 50,
+			//  to: 500,
+			//  scale: [50,125,250,375,500],
+			// 	});
 			 });
 
 
-		$("body").on("change", "#single-slider", function () {
-			console.log(true);
-$val=$(this).val();
-    // oldHouseName = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase();
-    // console.log("focus:house_name:" + oldHouseName);
-console.log($val);
-  });
+
+// 		$("body").on("change", "#single-slider", function () {
+// 			console.log(true);
+// $val=$(this).val();
+//     // oldHouseName = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase();
+//     // console.log("focus:house_name:" + oldHouseName);
+// console.log($val);
+//   });
 
 
 
-$("select").horizontalSelector();
+// $("select").horizontalSelector();
 
 // $("#selectorContainer").resizable({
 //       minHeight: 300,
@@ -576,7 +606,7 @@ $("select").horizontalSelector();
 
     function denormalizeCardExp(event)
 {
-	console.log("true");
+	// console.log("true");
   var $year  = $('[data-stripe="exp-year"]');
   var $month = $('[data-stripe="exp-month"]');
 
