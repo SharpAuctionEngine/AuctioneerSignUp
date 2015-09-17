@@ -45,13 +45,44 @@
 		.dollar
 		{
 
-			color:#D25017;
+			color:#CD623F;
+			font-size:170%;
+			font-weight:bold;
 		}
 		.box
 		{
 
 			width:50%;
 		}
+		.btncolor
+		{
+			background-color:#CD623F;
+			border-color:#CD623F;
+		}
+		.text
+		{
+		color:white;
+		font-weight:bold;	
+		}
+		.red
+		{
+			color: red;
+		}
+		.green
+		{
+			color:#7ABFD0;
+		}
+		.borderbox
+		{
+			border: 2px solid #887E79;
+			border-radius: 3px;
+			border-width: 2px;
+			padding:1px;
+			padding-left: 3px;
+			padding-right: 3px;
+			
+		}
+
 		@font-face {
     font-family: 'CameoAntique';
     src:url('fonts/CameoAntique.ttf.woff') format('woff'),
@@ -104,8 +135,8 @@
                         		 					<div class="form-bottom">
                         		 					   <div class="text-center">
                                  							<h2> <strong> Basics </strong></h2>
-                                							 <p class="text-center dollar" style="font-size:170%">$99/mo</p>
-                                							 <p style="font-size:15px; text-align:left;">This plan is perfect for a small auction house with 25 or less active bidders* at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:</p>
+                                							 <p class="text-center dollar">$99/mo</p>
+                                							 <p style="font-size:15px; text-align:left;">This plan is perfect for a small auction house with 25 or less active bidders<span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:</p>
                                 							 <div style="font-size:10px; text-align:left;">
                                 							 <ul> 
                                 							    <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
@@ -113,8 +144,8 @@
 																<li>Easy lot creation with bulk importing and auto photo assignment</li>
 																<li> Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
 																<li> Our rapid development guarantees you consistently have the latest features at your finger tips</li></ul></div>
-                                  							 <button type="button" id="plan" class="btn btn-xs btn-warning btn-next">Get Started Now!<br/>One Month Free Trial</button><br/><br/>
-                                  							 <p style="font-size:10px;">*SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.</p>
+                                  							 <button type="button" id="plan" class="btn btn-xs btn-next btncolor"><span class="text">Get Started Now!<br/>One Month Free Trial</span></button><br/><br/>
+                                  							 <p style="font-size:10px;"><span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.</p>
                                 						</div>
                         		 					</div>
                         		 				</div>
@@ -126,7 +157,7 @@
                         		 					 <div class="form-bottom">
                         		 					  	 <div class="text-center">
                                   						 <h2> <strong>Pro</strong></h2>
-                                  						 <p class="text-center dollar" style="font-size:170%">$140/mo</p>
+                                  						 <p class="text-center dollar">$<span class="borderbox">140</span>/mo</p>
                                   						 <p style="font-size:15px; text-align:left;">Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:</p>
                                   						 	<!-- Single slider -->
                                   						 	<!-- <div id="selectorContainer" >
@@ -147,10 +178,11 @@
                                 							 <ul> 
                                 							    <li>Dedicated resources to cover your existing bidder base</li>
 																<li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
-																<li>Plus, Automated Growth Protection to cover your growing bidder list</li>
+																<li>Plus,<span class="green">Automated Growth Protection </span> to cover your growing bidder list</li>
 															 </ul>
 															</div>
-                                  						 <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
+                                  						 <button type="button" class="btn btn-xs btn-next btncolor"><span class="text">Get Started Now!</span></button><br/>
+                                  						<p style="font-size:10px;"> Looking for an Enterprise solution? <a href="contact.sharpauctionengine.com">Contact us</a> to find out what we can do for you.</p>
                                 						</div>
                         		 					 </div>
                         		 				</div>
