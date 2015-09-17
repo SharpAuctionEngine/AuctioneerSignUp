@@ -1,0 +1,19 @@
+Cameo Antique
+
+As seen on page 17 of the Solotype Catalog of 4,147 Display Typefaces
+
+Cameo Antique is a shadowed outline version of the typeface called NightShade, on the same page.
+
+The only known digitized fonts of NightShade are "Shadowed Serif" by James Fordyce (1994) and NigelSadeSH, from Soft Horizons (1993). Shadowed Serif has been anonymously renamed and can also be found with the name NightShade. NigelSade, like all of the SoftHorizons fonts, is encoded as a symbol font. This is the reason that many of the websites where it can be obtained can not show a sample. The encoding was fixed for Cameo Antique.
+
+The upper case A-Z here is the original Soft Horizons NigelSade. The Cameo Antique A-Z appears in the lower case area.
+
+This font, Cameo Antique, was created by adding to and modifying NigelSade. While most of Soft Horizons' fonts were copies or clones of other fonts, no predecessor of NigelSade has been found, and its glyphs (characters) are far superior to those in Shadowed Serif, which appear to be poorly done from a scan.
+
+Created December, 2011
+by "Character", a contributor to alt.binaries.fonts
+
+
+
+
+

@@ -11,12 +11,18 @@
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
         <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="fonts/font-awesome.css">
-		<!-- <link rel="stylesheet" href="css/bootstrap-formhelpers.min.css">
+        <!-- <link rel="stylesheet" href="fonts/CameoAntique.ttf">
+        <link rel="stylesheet" href="fonts/CameoAntique.otf"> -->
+		
+		 <!-- <link rel="stylesheet" href="css/bootstrap-formhelpers.min.css">
 		<link rel="stylesheet" href="css/bootstrap-formhelpers.css"> -->
 		<link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/horizontal_selector.css"> -->
+	    
         <link href="css/jquery.range.css" rel="stylesheet">
 
         <style type="text/css">
@@ -46,6 +52,15 @@
 
 			width:50%;
 		}
+		@font-face {
+    font-family: 'CameoAntique';
+    src:url('fonts/CameoAntique.ttf.woff') format('woff'),
+        url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'),
+        url('fonts/CameoAntique.ttf.eot'),
+        url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 		</style>
 
 
@@ -79,8 +94,9 @@
   				  </noscript>
             			<form role="form" action="signup" method="post" class="registration-form"id="paymentMethodForm">
                         	<fieldset>
-                        		 <h1><strong>Choose Your Plan</strong></h1>
-                        		 <p >Review your options below and select the plan the best suits your needs</p>
+                        		 <h1 style="font-family: 'CameoAntique';width:97%;color:white; font-size: 40px; text-align: center;margin-left: 15px;">CHOOSE YOUR PLAN</h1>
+                        		 <p style="color:#F2EFE3">Review your options below and select the plan the best suits your needs.<br/>When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!</p>
+                        		 
                         		 	<div class="row">
                         		 		<div class="col-sm-6">
                         		 			<div class="panel" style="border-radius:81px;border-color:black;">
@@ -89,7 +105,16 @@
                         		 					   <div class="text-center">
                                  							<h2> <strong> Basics </strong></h2>
                                 							 <p class="text-center dollar" style="font-size:170%">$99/mo</p>
-                                  							 <button type="button" id="plan" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
+                                							 <p style="font-size:15px; text-align:left;">This plan is perfect for a small auction house with 25 or less active bidders* at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:</p>
+                                							 <div style="font-size:10px; text-align:left;">
+                                							 <ul> 
+                                							    <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
+																<li>Automatic page refresh ensures your bidders never miss out</li>
+																<li>Easy lot creation with bulk importing and auto photo assignment</li>
+																<li> Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
+																<li> Our rapid development guarantees you consistently have the latest features at your finger tips</li></ul></div>
+                                  							 <button type="button" id="plan" class="btn btn-xs btn-warning btn-next">Get Started Now!<br/>One Month Free Trial</button><br/><br/>
+                                  							 <p style="font-size:10px;">*SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.</p>
                                 						</div>
                         		 					</div>
                         		 				</div>
@@ -102,9 +127,28 @@
                         		 					  	 <div class="text-center">
                                   						 <h2> <strong>Pro</strong></h2>
                                   						 <p class="text-center dollar" style="font-size:170%">$140/mo</p>
+                                  						 <p style="font-size:15px; text-align:left;">Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:</p>
                                   						 	<!-- Single slider -->
-                                  						 	<div class=""  style="margin-bottom:25px; margin-left: 80px; margin-right: auto ;">
+                                  						 	<!-- <div id="selectorContainer" >
+															<select id="testSelectorD" name="testSelector4">
+														  <option value="0" >50</option>
+														  <option value="1" >100</option>
+														  <option value="2" >200</option>
+														  <option value="3" >300</option>
+														  <option value="4" >400</option>
+														  <option value="5" >500</option>
+														</select>
+														</div> -->
+                                  						 	<div class=""  style="margin-bottom:25px;">
 																<input class="single-slider" type="hidden">
+															</div>
+															<p style="font-size:12px; text-align:left;">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan as well as:</p>
+															<div style="font-size:10px; text-align:left;">
+                                							 <ul> 
+                                							    <li>Dedicated resources to cover your existing bidder base</li>
+																<li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
+																<li>Plus, Automated Growth Protection to cover your growing bidder list</li>
+															 </ul>
 															</div>
                                   						 <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
                                 						</div>
@@ -138,8 +182,8 @@
 			                        				<h2 class="text-center"><strong>Pro</strong></h2>
 			                        				<p class="text-center dollar" style="font-size:170%">$140/mo</p>
 			                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.</small></p>
-														<div class=""  style="margin-bottom:25px; margin-left: 80px; margin-right: auto ;">
-			                        				<input class="single-slider" type="hidden">
+														<div class="">
+			                        				<input class="single-slider" id="single-slider" type="hidden">
 			                        					</div>
 		                        				</div>
 
@@ -165,7 +209,8 @@
 
 							                         <div class="form-group ">
 							                         	<p class="wrapper">
-							                    			<input type="text" name="auction_house_name_url" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.sae.bid</strong>">
+							                    			<input type="text" name="auction_house_name_url" placeholder="&#xf0ac; Your Auction House URL"  autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.sae.bid</strong>">
+							                    			<!-- <span class='text' id='ghost_text' value='sae.bid' readonly tabindex='-1' style='display:none;'>sae.bid</span> -->
 							                    		</p>
 							                    		<!-- <input type="text" id="ghost_text" class="text" value="sae.bid" readonly tabindex="-1" style="display:none;"> -->
 							                    		<!-- sae.bid -->
@@ -368,15 +413,19 @@
 $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
         </script> -->
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.min.js"></script>
        <!--  <script src="js/tooltip.js"></script>
         <script src="js/popover.js"></script> -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/bootstrap-formhelpers-min.js"></script>
         <script src="js/bootstrap-formhelpers-states.js"></script>
+        <!-- // <script src="js/horizontal_selector.js"></script> -->
         <script src="js/jquery.range.js"></script>
         <script src="js/register.js"></script>
 
@@ -389,6 +438,26 @@ $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
 			 scale: [50,125,250,375,500],
 				});
 			 });
+
+
+		$("body").on("change", "#single-slider", function () {
+			console.log(true);
+$val=$(this).val();
+    // oldHouseName = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase();
+    // console.log("focus:house_name:" + oldHouseName);
+console.log($val);
+  });
+
+
+
+$("select").horizontalSelector();
+
+// $("#selectorContainer").resizable({
+//       minHeight: 300,
+// 	  maxHeight: 300,
+// 	  minWidth: 302,
+// });
+
 			//  Plan decider
 		 	$("#plan").click(function(){
 			$('#pro').hide();
