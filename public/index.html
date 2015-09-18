@@ -11,20 +11,11 @@
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" /> -->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="fonts/font-awesome.css">
-        <!-- <link rel="stylesheet" href="fonts/CameoAntique.ttf">
-        <link rel="stylesheet" href="fonts/CameoAntique.otf"> -->
-		
-		 <!-- <link rel="stylesheet" href="css/bootstrap-formhelpers.min.css">
-		<link rel="stylesheet" href="css/bootstrap-formhelpers.css"> -->
-		<link rel="stylesheet" href="css/form-elements.css">
+     	<link rel="stylesheet" href="css/jquery-ui.css">
+  		<link rel="stylesheet" href="fonts/font-awesome.css">
+        <link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/horizontal_selector.css"> -->
-	    
-        <link href="css/jquery.range.css" rel="stylesheet">
+       	<!-- <link href="css/jquery.range.css" rel="stylesheet"> -->
 
         <style type="text/css">
 		.wrapper {
@@ -41,6 +32,16 @@
 		}
 		input.icon::-ms-input-placeholder {
 		    font-family:'FontAwesome';
+		}
+
+		.cameoantique
+		{
+		font-family: 'CameoAntique';
+		width:97%;
+		color:white; 
+		font-size: 40px; 
+		text-align: center;
+		margin-left: 15px;	
 		}
 
 		.dollar
@@ -63,7 +64,7 @@
 		.text
 		{
 		color:white;
-		font-weight:bold;	
+		font-weight:400;	
 		}
 		.red
 		{
@@ -89,8 +90,24 @@
 			font-size:20px;
 			font-weight:bold;
 		}
+		.white
+		{
+			color:#F2EFE3;
+		}
 		#slider .ui-slider-range { background: #CD623F; }
 		/*#slider .ui-slider-handle { border-color: #CD623F; }*/
+
+	.panelborder
+	{
+	border-radius:81px;
+	border-color:black;
+	}
+	.bulletpoints
+	{
+		font-size:12px; 
+		text-align:left;
+		margin-left:-15px;
+	}
 
 		@font-face {
     font-family: 'CameoAntique';
@@ -134,46 +151,49 @@
   				  </noscript>
             			<form role="form" action="signup" method="post" class="registration-form"id="paymentMethodForm">
                         	<fieldset>
-                        		 <h1 style="font-family: 'CameoAntique';width:97%;color:white; font-size: 40px; text-align: center;margin-left: 15px;">CHOOSE YOUR PLAN</h1>
-                        		 <p style="color:#F2EFE3">Review your options below and select the plan the best suits your needs.<br/>When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!</p>
+                        		 <h1 class="cameoantique">CHOOSE YOUR PLAN</h1>
+                        		 <p class="white">Review your options below and select the plan the best suits your needs.<br/>When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!</p>
                         		 
                         		 	<div class="row">
                         		 		<div class="col-sm-6">
-                        		 			<div class="panel" style="border-radius:81px;border-color:black;">
+                        		 			<div class="panel panelborder">
                         		 				<div class="panel-body">
-                        		 					<div class="form-bottom">
+                        		 					<div >
                         		 					   <div class="text-center">
-                                 							<h2> <strong> Basics </strong></h2>
+                                 							<h2> <strong> Basic Plan </strong></h2>
                                 							 <p class="text-center dollar">$99/mo</p>
                                 							 <p style="font-size:15px; text-align:left;">This plan is perfect for a small auction house with 25 or less active bidders<span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:</p>
-                                							 <div style="font-size:10px; text-align:left;">
+                                							 <div class="bulletpoints">
                                 							 <ul> 
+                                							 	<li>No contracts, no set-up fees, and unlimited auctions per month</li>
                                 							    <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
 																<li>Automatic page refresh ensures your bidders never miss out</li>
 																<li>Easy lot creation with bulk importing and auto photo assignment</li>
 																<li> Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
 																<li> Our rapid development guarantees you consistently have the latest features at your finger tips</li></ul></div>
                                   							 <button type="button" id="plan" class="btn btn-xs btn-next btncolor"><span class="text">Get Started Now!<br/>One Month Free Trial</span></button><br/><br/>
-                                  							 <p style="font-size:10px;"><span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.</p>
+                                  							 <p style="font-size:11px;"><span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.</p>
                                 						</div>
                         		 					</div>
                         		 				</div>
                         		 			</div>
 									</div>
                         		 	    <div class="col-sm-6">
-                        		 			<div class="panel" style="border-radius:81px;border-color:black;">
+                        		 			<div class="panel panelborder">
                         		 				<div class="panel-body">
-                        		 					 <div class="form-bottom">
+                        		 					 <div >
                         		 					  	 <div class="text-center">
-                                  						 <h2> <strong>Pro</strong></h2>
+                                  						 <h2> <strong>Pro Plan</strong></h2>
                                   						 <p class="dollar">$<span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
                                   						 <p style="font-size:15px; text-align:left;">Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:<span class="bidders"id="bidders">50</span>(bidders)</p>
+                                  						 <input type="hidden" id="bidders">
                                   						 <!-- <input type="text" id="bidders" readonly style="border:0; color:#f6931f; font-weight:bold;"> -->
-                                  						 	<div id="slider" style="margin-bottom:10px;"></div>
+                                  						 	<div id="slider" style="background-color:#BB866D;margin-bottom:25px;"></div>
+
 																<!-- <input class="single-slider" id="single-slider" type="hidden"> -->
 															
-															<p style="font-size:12px; text-align:left;">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan as well as:</p>
-															<div style="font-size:10px; text-align:left;">
+															<p style="font-size:15px; text-align:left;">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan as well as:</p>
+															<div class="bulletpoints">
                                 							 <ul> 
                                 							    <li>Dedicated resources to cover your existing bidder base</li>
 																<li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
@@ -181,13 +201,28 @@
 															 </ul>
 															</div>
                                   						 <button type="button" class="btn btn-xs btn-next btncolor"><span class="text">Get Started Now!</span></button><br/>
-                                  						<p style="font-size:10px;"> Looking for an Enterprise solution? <a href="#">Contact us</a> to find out what we can do for you.</p>
+                                  						<p style="font-size:12px;"> Looking for an Enterprise solution? <a href="#">Contact us</a> to find out what we can do for you.</p>
                                 						</div>
                         		 					 </div>
                         		 				</div>
                         		 			</div>
 										</div>
                         		 	</div>
+                        		 	<div class="text-center">
+                                 		<h3 class="white"> <strong> Billing & Payments </strong></h3>
+
+                                 	</div>	
+                                 	<p class="white" style="text-align:left;">Pay as you grow with our new pricing plans. With Automated Growth Protection and hourly billing for exceeding plan limitations, you can rest assured that your auctions are stable and secure while paying a fair and competitive price.<br/><br/>
+
+									Start by selecting a plan based on the number of concurrently active bidders you expect for your auctions, and we’ll take care of the rest. You will pay your monthly plan premium at the start of each month, and then you will be billed at the end of each month in hour increments for any overage activities only for the hours you used.<br/><br/>
+
+									With our built-in business intelligence statistics, you can easily monitor your active bidders. With this information, you can track bidder trends and activities, and you can adjust your plan as needed. You will be able to monitor any overages, so there will be no surprise charges at the end of the month.<br/><br/>
+
+									We’ve done our best to create straightforward billing and payment policies. Click below to learn more about how our hourly billing works and how to make payments, update your billing information, get referral credits, and remove services. Still have questions? Please feel free to contact us.</p>
+									<div class="text-center">
+                                 		 <button type="button" class="btn btn-next btncolor" style="padding:17px;"><span class="text">Learn More</span></button><br/>
+
+                                 	</div>
                         	</fieldset>
                         	
                         	<fieldset>
@@ -200,22 +235,23 @@
 										</p>
     								</div>	
     								<div class="col-sm-6" style="margin-top:45px;">
-                        		 		<div class="panel" style="border-radius:81px;border-color:black;">
+                        		 		<div class="panel panelborder" >
            						 			<div class="panel-body">
 		                        				<div class="form-top">
 		                        				<!-- <span id="plan"></span> -->
 		                        				<div id="basic" style="display:none;">
-		                        				<h2 class="text-center"><strong>Basics</strong></h2>
+		                        				<h2 class="text-center"><strong>Basic Plan</strong></h2>
 		                        				<p class="text-center dollar" style="font-size:170%">$99/mo</p>
+		                        				
 		                        				<p><small>This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href="">Click here.</a></small></p>		                        				
 		                        				</div>
 		                        				<div id="pro" style="display:block;">
-			                        				<h2 class="text-center"><strong>Pro</strong></h2>
-			                        				<p class="text-center dollar" style="font-size:170%">$140/mo</p>
-			                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.</small></p>
-														<div class="">
-			                        				<input class="single-slider" id="single-slider" type="hidden">
-			                        					</div>
+			                        				<h2 class="text-center"><strong>Pro Plan</strong></h2>
+			                        				<p class="text-center dollar">$<span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
+			                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.<span class="bidders"id="bidders">50</span>(bidders)</small></p>
+														
+			                        				<div id="slider" style="margin-bottom:25px;"></div>
+			                        					
 		                        				</div>
 
 		                        				</div>
@@ -276,7 +312,7 @@
 			                <fieldset>
 			                    <div class="row">
                         			<div class="col-sm-8 col-sm-offset-2 form-box" style="margin-top:50px;">
-			                   			<div class="panel" style="border-radius:81px;border-color:black;">
+			                   			<div class="panel panelborder">
            									<div class="panel-body">
 		                        				<div class="form-top">
 		                        	 				<div class="text-center">
@@ -324,7 +360,7 @@
 			                	 
 			                    <div class="row">
                         			<div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:50px;">
-			                   			<div class="panel" style="border-radius:81px;border-color:black;">
+			                   			<div class="panel panelborder">
            								 	<div class="panel-body">
 			                    				<div class="form-top">
 			                    					<div class="text-center">
@@ -440,33 +476,24 @@
 
 
         <!-- Javascript -->
-       <!--  <script type="text/javascript">
-$('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
-        </script> -->
-        
-        <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
- 
-        <script src="js/jquery-1.11.1.min.js"></script>
-         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-       <!--  <script src="js/tooltip.js"></script>
+      
+        <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script src="js/jquery-1.10.2.js"></script>
+ 		<script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+       	<!--  <script src="js/tooltip.js"></script>
         <script src="js/popover.js"></script> -->
         <script src="js/bootstrap.min.js"></script>
-        <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
-        
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/bootstrap-formhelpers-min.js"></script>
         <script src="js/bootstrap-formhelpers-states.js"></script>
-        <!-- // <script src="js/horizontal_selector.js"></script> -->
+        <!--  <script src="js/horizontal_selector.js"></script> -->
         <script src="js/jquery.range.js"></script>
         <script src="js/register.js"></script>
-
-        <script type="text/javascript">
-
- 
-
+		<script type="text/javascript">
 		$(document).ready(function(){
 			// Slider function
 			    $( "#slider" ).slider({
@@ -480,12 +507,12 @@ $('.bfh-select-fix').bfhstates({country:'US',state:'CA'});
 			        $( "#bidders" ).val( ui.value);
 			         var bidders=$( "#bidders" ).val();
 			         slideramount=Number(bidders) + Number(90);
-			        $("#slideramount").val(slideramount);
+			        // $("#slideramount").val(slideramount);
 			        $('.slideramount').text(slideramount);
 			        $('.bidders').text(bidders);
 						 }
 	 				});	
-				// $( "#amount" ).val( $( "#slider" ).slider( "value" ) );
+				// $( "#bidder" ).val( $( "#slider" ).slider( "value" ) );
     		 });
 
 
