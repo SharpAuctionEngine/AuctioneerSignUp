@@ -124,7 +124,7 @@
 	}
 	.bulletpoints
 	{
-		font-size:14px; 
+		font-size:15px; 
 		text-align:left;
 		margin-left:-15px;
 		line-height:200%
@@ -134,6 +134,29 @@
 		line-height:165%;
 		font-size:15px; 
 		text-align:left;
+	}
+	.footer
+	{
+
+		margin-bottom:0px;
+		padding-top:35px;
+		background-color:#F2EFE3;
+		margin-top:20px;
+	}
+	.nav-header
+	{
+		font-family: Tahoma,Arial,sans-serif;
+		font-size: 15px;
+		font-weight:bold;
+		padding-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	.nav-link
+	{
+   font-size: 14px;
+   line-height: 14px;
+   padding: 0.5em 0;
+
 	}
 
 		@font-face {
@@ -167,19 +190,51 @@
     </head>
     <!-- Header section -->
  <section style="background-color:#F2EFE3;">
-    <nav class="navbar navbar-default navbar-fixed-top">
-    <div class=" ">
-    <ul class="nav nav-pills">
-    	
-			    <li class="pull-right col-lg-pull-2" style="" ><a href="" style="text-decoration:none;
-          color:#564841;">Create an account</a></li>
+ 	<nav class="navbar navbar-default navbar-fixed-top">
+ 		<div class="navbar-header col-sm-3  col-lg-4">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".nb-loginmenu-collapse" style="padding:9px 5px; margin-right:5px;">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+     		<div class="col-sm-offset-1 col-lg-offset-7">
+                <a href="" class="navbar-brand uses-image"style="padding:5px 10px 8px;" >
+                    <img src="images/sae_logo_new_2.png" class="pull-left" height="40" style="height:40px;" alt="logo" />
+                </a>
+       		</div>
+        </div>
+        <nav class="SAEnav collapse navbar-collapse nb-loginmenu-collapse" style="overflow-y:scroll;">
+            <div class="col-xs-12 col-sm-7 pull-right">
+    			<ul class="nav navbar-nav pull-right">
+        			<li class="col-lg-pull-12">
+            			<a href="" rel="nofollow"  style="text-decoration:none;color:#564841;">Sign In</a>
+        			</li>
+			        <li class="col-lg-pull-12">
+			            <a href="" style="text-decoration:none;color:#564841;">Create an account</a>
+			        </li>
+    			</ul>
+			</div>
+        </nav>
+    </nav>
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="col-sm-offset-1 col-lg-offset-2">
+	<a href="" class="navbar-brand"style="padding:5px 10px 8px;" ><img src="images/sae_logo_new_2.png" class="pull-left" height="40" style="height:40px;" alt="logo" /></a></div>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar- nav">
+    		    <li class="pull-right col-lg-pull-2"><a href="" style="text-decoration:none;color:#564841;">Create an account</a></li>
 			    <li class="pull-right col-lg-pull-2"><a href="" style="color:#564841;">Sign In</a></li>
-			    
-			    <div class="col-sm-offset-1 col-lg-offset-2">
-			    <li ><a href="" class="navbar-brand"style="padding:5px 10px 8px;margin: 0px 0px 5px 5px;" ><img src="images/sae_logo_new_2.png" class="pull-left" height="40" style="height:40px;" alt="logo" /></a></li></div>
 			</ul>
 			</div>
-			</nav>
+			</div>
+			</nav> -->
 </section>
    
 <!-- style="background-color:#5B8F99;overflow-x:hidden;" -->
@@ -245,7 +300,7 @@
 																<li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
 															 </ul>
 															</div>
-                                  						 <button type="button" class="btn btn-xs btn-next btncolor" style="margin-top:26px;"><span class="text">Get Started Now!</span></button><br/><br/>
+                                  						 <button type="button" class="btn btn-xs btn-next btncolor" style="margin-top:11px;"><span class="text">Get Started Now!</span></button><br/><br/>
                                   						<p style="font-size:14px;"> Looking for an Enterprise solution? <a href="/contact-us" target="_blank">Contact us</a> to find out what we can do for you.</p>
                                 						</div>
                         		 					 </div>
@@ -253,7 +308,7 @@
                         		 			</div>
 										</div>
                         		 	</div>
-                        		 	<div style="background-color:#F2EFE3;display:inline-block;margin-bottom:10px;">
+                        		 	<div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
 	                        		 	<div class="text-center">
 	                                 		<h3 class="black"> <strong> Billing & Payments </strong></h3>
 
@@ -289,12 +344,12 @@
 		                        				<h2 class="text-center"><strong>Basic Plan</strong></h2>
 		                        				<p class="text-center dollar" style="font-size:170%">$99/mo</p>
 		                        				
-		                        				<p><small>This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href="">Click here.</a></small></p>		                        				
+		                        				<p><small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href="">Click here.</a></small></p>		                        				
 		                        				</div>
 		                        				<div id="pro" style="display:block;">
 			                        				<h2 class="text-center"><strong>Pro Plan</strong></h2>
 			                        				<p class="text-center dollar">$<span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
-			                        				<p><small>Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.<span class="bidders"id="bidders">50</span> (bidders)</small></p>
+			                        				<p><small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href="">Click here</a>.Use the slider below to choose your average number of bidders per catalog and determine your monthly cost.<span class="bidders"id="bidders">50</span> (bidders)</small></p>
 														
 			                        				<div id="slider2" style="background-color:#D3D3D3;"></div>
 			                        					
@@ -829,57 +884,57 @@ function stripeResponseHandler(status, response) {
     </body>
     <!-- Footer section -->
     <footer>
-     <nav class="navbar navbar-default" style="margin-bottom:0px;padding-top:10px;background-color:#F2EFE3">
-    <div class="container">
-    <div class="col-sm-9">
-    <div class="row">
-        <div class="col-sm-4">
-            <ul class="nav">
-                <li class="nav-header">About</li>
-                <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a></li>
-                <li><a href="/site-terms-and-conditions">Terms & Conditions</a></li>
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-4">
-            <ul class="nav">
-                <li class="nav-header">Product</li>
-                <li><a href="http://news.sharpauctionengine.com/">News</a></li>
-                <li><a href="/auctioneer-sign-up">Auctioneer Sign Up</a></li>
-                <li><a href="/demo-request">Request Demo</a></li>
+     <nav class="navbar navbar-default footer">
+    	<div class="container">
+    		<div class="col-sm-9 nav-link">
+    			<div class="row">
+        			<div class="col-sm-4">
+            			<ul class="nav">
+			                <li class="nav-header ">About</li>
+			                <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a></li>
+			                <li><a href="/site-terms-and-conditions">Terms & Conditions</a></li>
+			                <li><a href="/privacy-policy">Privacy Policy</a></li>
+			            </ul>
+        			</div>
+			        <div class="col-sm-4">
+			            <ul class="nav">
+			                <li class="nav-header">Product</li>
+			                <li><a href="http://news.sharpauctionengine.com/">News</a></li>
+			                <li><a href="/auctioneer-sign-up">Auctioneer Sign Up</a></li>
+			                <li><a href="/demo-request">Request Demo</a></li>
 
-            </ul>
-        </div>
-        <div class="col-sm-4">
-            <ul class="nav">
-                <li class="nav-header">Support</li>
-                <li><a href="http://support.sharpauctionengine.com">Support Portal</a></li>
-                <li><a href="http://news.sharpauctionengine.com/?cat=5"> Release Notes</a></li>
-                <li><a href="mailto:{{ HTML::email(Config::get('mail.support-email-address')) }}">Email Us</a></li>
-                </ul>
-        </div>
-    </div>
-</div>
-<div class="col-sm-3">
-    <p class="text-center">
-        <a href="https://twitter.com/AuctionEngine" class="btn btn-info" target="_blank">
-            <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-info" target="_blank">
-            <i class="fa fa-facebook"></i>
-        </a>
-        <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-info" target="_blank">
-            <i class="fa fa-linkedin"></i>
-        </a>
-    </p>
-    <p class="text-muted text-center"> <a href="http://support.sharpauctionengine.com">Support</a> •
-    <a href="/site-terms-and-conditions">Terms</a> •
-    <a href="http://sharpauctionengine.com/index.php/contact-us">Contact</a> <br/>
-    <!-- https://github.com/SharpAuctionEngine/LSAE/issues/1717 -->
-     &copy; 2015 Sharp Auction Engine, Inc. All rights reserved.</p>
-    <p class="text-muted text-center">Powered by <a href="http://www.spacegazebo.com" target="_blank">Space Gazebo</a>.</p>
-</div>
-</div>
-</nav>
-</footer>
+			            </ul>
+			        </div>
+			        <div class="col-sm-4">
+			            <ul class="nav">
+			                <li class="nav-header">Support</li>
+			                <li><a href="http://support.sharpauctionengine.com">Support Portal</a></li>
+			                <li><a href="http://news.sharpauctionengine.com/?cat=5"> Release Notes</a></li>
+			                <li><a href="mailto:{{ HTML::email(Config::get('mail.support-email-address')) }}">Email Us</a></li>
+			                </ul>
+			        </div>
+    			</div>
+			</div>
+			<div class="col-sm-3">
+			    <p class="text-center">
+			        <a href="https://twitter.com/AuctionEngine" class="btn btn-info" target="_blank">
+			            <i class="fa fa-twitter"></i>
+			        </a>
+			        <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-info" target="_blank">
+			            <i class="fa fa-facebook"></i>
+			        </a>
+			        <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-info" target="_blank">
+			            <i class="fa fa-linkedin"></i>
+			        </a>
+			    </p>
+			    <!-- <p class="text-muted text-center"> <a href="http://support.sharpauctionengine.com">Support</a> •
+			    <a href="/site-terms-and-conditions">Terms</a> •
+			    <a href="http://sharpauctionengine.com/index.php/contact-us">Contact</a> <br/> -->
+			    <!-- https://github.com/SharpAuctionEngine/LSAE/issues/1717 -->
+     			<p class="text-muted text-center">&copy; 2015 Sharp Auction Engine, Inc. All rights reserved.</p>
+			    <!-- <p class="text-muted text-center">Powered by <a href="http://www.spacegazebo.com" target="_blank">Space Gazebo</a>.</p> -->
+			</div>
+		</div>
+	</nav>
+  </footer>
 </html>
