@@ -47,6 +47,12 @@ module.exports = {
                       type:DataTypes.JSON,
                       defaultValue: false,
                       allowNull: false
+                    },
+          stripejson :
+                    {
+                      type:DataTypes.JSON,
+                      defaultValue: false,
+                      allowNull: false
                     }
         });
     

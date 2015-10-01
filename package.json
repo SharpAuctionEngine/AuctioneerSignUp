@@ -45,6 +45,8 @@
     "dotenv": "~1.2.0",
     "sequelize": "~3.7.1",
     "pg-hstore": "~2.3.2",
-    "sequelize-cli": "~1.9.1"
+    "sequelize-cli": "~1.9.1",
+    "es6-promise": "~3.0.2",
+    "request-promise": "~0.4.3"
   }
 }

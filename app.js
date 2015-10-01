@@ -14,12 +14,18 @@ var fs = require('fs');
 // var client = new pg.Client(connectionString);
 var Sequelize = require('sequelize');
 var JsonField = require('sequelize-json');
+var rp=require('request-promise');
 var db = new Sequelize(process.env.CONNECTION);
 // client.connect();
 var newAuctioneerDetailsEmailTemplate = Hogan.compile(fs.readFileSync('./views/new_auctioneer_details_request.hjs', 'utf-8'));
+var Promise = require("es6-promise").Promise;
+var stripeAPI = require("stripe")("sk_test_qNt8nbmpti7cUDTSpSwrQoQJ");
+var subscribeToStripe = require('./lib/subscribeToStripe');
+var parseStringPlan = require('./lib/parseStringPlan');
+var sendToAdminPanel = require('./lib/sendToAdminPanel');
 
-
-
+var stripePlansPromise = stripeAPI.plans.list(
+  { limit: 21 });
 app.use(bodyParser());
 var server = app.listen(process.env.APP_PORT, function() {
     console.log('Listing on port: '+process.env.APP_PORT)
@@ -65,40 +71,106 @@ var User = db.define('auctioneersignup', {
                       defaultValue: false,
                       allowNull: false
                     },
-	     results :
+	       results :
+                    {
+                      type:Sequelize.JSON,
+                      defaultValue: false,
+                      allowNull: false
+                    },
+          stripejson :
                     {
                       type:Sequelize.JSON,
                       defaultValue: false,
                       allowNull: false
                     }
 });
+function insertToPostgre(customerPromise,username,email,house_name,house_url,userRequestRaw) {
+  
+  return new Promise(function(resolve, reject) {
+       customerPromise.then(function(customer) {
+            // asynchronously called
+            var dbPromise= db.sync().then(function() {
+                var UserCreate= User.create({
+                  username: username,
+                  email: email,
+                  auction_house_name: house_name,
+                  auction_house_name_url: house_url,
+                  jsonblob: userRequestRaw,
+                  stripejson: customer,
+                });
+              //   UserCreate.then(function(jane) {
+              //   console.log(jane.get({
+              //     plain: true
+              //   }));
+              // });
+              })
+          });
+         
+
+      });
+}
 app.post('/signup',function(req,res)
 	{
+     var userRequestRaw = req.body;
+     var stripePlan =parseStringPlan(stripePlansPromise,userRequestRaw.plan,userRequestRaw.bidders); //'plan_'
+ 
+      stripePlan
+     .then(function(result){  console.log({parseStringPlanResolve : result}); })
+     .catch(function(result){ console.err({parseStringPlanReject  : result}); })
+ // create cus_ card_ sub_
+     var customerPromise = subscribeToStripe(stripePlan,userRequestRaw.stripeToken,userRequestRaw.email,stripeAPI);
+customerPromise
+     .then(function(result){  console.log({subscribeToStripeResolve : result}); })
+     .catch(function(result){ console.err({subscribeToStripeReject  : result}); })
 
-    var userRequestRaw = req.body;  
- // console.log(values); 
-    req.body = userRequestRaw;
+     var dbPromise = insertToPostgre(customerPromise,userRequestRaw.username,userRequestRaw.email,userRequestRaw.house_name,userRequestRaw.house_url,userRequestRaw);
+     dbPromise
+     .then(function(result){  console.log({insertToPostgreResolve : result}); })
+     .catch(function(result){ console.err({insertToPostgreReject  : result}); })
+     
+     var adminPanelPromise = sendToAdminPanel(dbPromise);
+
+     adminPanelPromise
+     .then(function(result){  console.log({sendToAdminPanelResolve : result}); })
+     .catch(function(result){ console.err({sendToAdminPanelReject  : result}); })
+
+ 
+    
+      // var stripePromise = subscribeToStripe(stripePlan,data)
+
+      // possible validation error
+      // var insertStripeToDbPromise = insertStripeToPostgre(dbPromise,stripePromise)
+      // var dbPromise = insertToPostgre(data)
+
+      // var adminPanelPromise = sendToAdminPanel(insertStripeToDbPromise)
+
+      // var mandrillPromise = sendMandrill(insertStripeToDbPromise)
+
+      // insertStripeToDbPromise.success(function(){ res.send(); }).fail(fn)
+
+    
 
 
-	db.sync().then(function() 
-		{
-  		return User.create(
-  			{
-		    username:userRequestRaw.username,
-		    email:userRequestRaw.email,
-		    auction_house_name:userRequestRaw.house_name,
-		    auction_house_name_url:userRequestRaw.house_url,
-		  	jsonblob: userRequestRaw,
-  			});
-		})
-		.then(function(jane) 
-		    {
-  		    console.log(jane.get(
-  		    	{
-  				plain: true
-  				}))
+// console.log({userRequestRaw:userRequestRaw});
+	// db.sync().then(function() 
+	// 	{
+ //  		return User.create(
+ //  			{
+	// 	    username:userRequestRaw.username,
+	// 	    email:userRequestRaw.email,
+	// 	    auction_house_name:userRequestRaw.house_name,
+	// 	    auction_house_name_url:userRequestRaw.house_url,
+	// 	  	jsonblob: userRequestRaw,
+ //  			});
+	// 	})
+	// 	.then(function(jane) 
+	// 	    {
+ //  		    console.log(jane.get(
+ //  		    	{
+ //  				plain: true
+ //  				}))
   			
-			});
+	// 		});
    	var userRequest = [];
 
     var message = null;
@@ -124,7 +196,7 @@ app.post('/signup',function(req,res)
                 	key:key,
                 	value:userRequestRaw[key],
             		});
-       		    }
+       		 }
     	}
 
 
@@ -151,19 +223,20 @@ app.post('/signup',function(req,res)
                 email:process.env.SAE_CC_EMAIL,
                 name: "SAE",
                 type: "bcc"
-            }
-            ],
+            }],
         headers: {
             'Reply-To': req.body.email
                  },
          bcc_address:process.env.SAE_EMAIL
         }
+
 // console.log(message);
     //var return_path_domain = null;
     /**
      * 
      * async = true // this is so that we can give the user a response faster
      */
+
 
     mandrill.messages.send({message:message, async: true}, function(results,b)
     	{
@@ -187,7 +260,7 @@ app.post('/signup',function(req,res)
         		{
             		res.send('Results Not Equal To One',500);
         		}
-        	console.log({results:results});
+        	// console.log({results:results});
         /**
          * @link https://mandrillapp.com/api/docs/messages.php.html
          * 
@@ -212,6 +285,7 @@ app.post('/signup',function(req,res)
 
   		});
 
+});
   //   pg.connect(connectionString, function(err, client, done) {
 
  	// // client.query("INSERT INTO register(username,email,auction_house,auction_houseurl) values($1,$2,$3,$4)",[userRequestRaw.username,userRequestRaw.email,userRequestRaw.house_name,userRequestRaw.house_url]);
@@ -236,4 +310,5 @@ app.post('/signup',function(req,res)
                	
 
        // });
-    });
+    
+    // })
