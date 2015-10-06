@@ -603,6 +603,7 @@
 		$(document).ready(function(){
 			var selectors = "#slider1,#slider2";
 			
+			
 			// Slider function
 			    $( selectors ).slider({
 			      value:50,
@@ -633,7 +634,7 @@
 					} 
 				    })
 				    	$('input[name=bidders]').val($( "#bidders" ).val());
-				    	// console.log(slideramount);
+				    	console.log(slideramount);
 				    	$('input[name=PlanAmount]').val(slideramount);
 				}
 				});	
@@ -650,9 +651,12 @@
 		 	$('#basic').show();
 		 			$('input[name=plan]').val('basic');
 		 			$('input[name=PlanAmount]').val(99);
+
 		 	});
 		 	$("#Pro_plan").click(function(){
 		 		$('input[name=plan]').val('pro');
+		 		$('input[name=bidders]').val(50);
+		 		$('input[name=PlanAmount]').val(140);
 		 	});
 		 	// Validation
 
