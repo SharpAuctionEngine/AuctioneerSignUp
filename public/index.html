@@ -850,7 +850,7 @@ function stripeResponseHandler(status, response) {
     // and submit
     // $form.get(0).submit();
     $.ajax({
-        url: "/signup",
+        url: "/auctioneer-signup/submit",
         method:'POST',
         data:$form.serialize(), 
 			// _token: $form.find('[name=_token]').val(),

@@ -109,8 +109,10 @@ var User = db.define('auctioneersignup', {
 
   });
 }*/
-app.post('/signup', function (req, res) {
+app.post('/auctioneer-signup/submit', function (req, res) {
+
   var userRequestRaw = req.body;
+   console.log({userRequestRaw:userRequestRaw});
   var stripePlan = parseStringPlan(stripePlansPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
 
   stripePlan
@@ -138,7 +140,7 @@ app.post('/signup', function (req, res) {
       });
     });
 
-  var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw.username, userRequestRaw.email, userRequestRaw.house_name, userRequestRaw.house_url, userRequestRaw);
+  var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw.username, userRequestRaw.email, userRequestRaw.auction_house_name, userRequestRaw.auction_house_name_url, userRequestRaw);
   dbPromise
     .then(function (result) {
       console.log({
@@ -151,7 +153,7 @@ app.post('/signup', function (req, res) {
       });
     });
 
-  var adminPanelPromise = sendToAdminPanel(dbPromise);
+  var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
 
   adminPanelPromise
     .then(function (result) {
@@ -161,7 +163,8 @@ app.post('/signup', function (req, res) {
     })
     .catch(function (result) {
       console.err({
-        sendToAdminPanelReject: result
+        sendToAdminPanelReject: result,
+        messages:result.error.message
       });
     });
 
