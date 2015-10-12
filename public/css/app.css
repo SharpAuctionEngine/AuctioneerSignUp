@@ -1,0 +1,125 @@
+.wrapper {
+    font-family: 'arial', sans-serif;
+}
+input.icon {
+    padding: 5px;
+}
+input.icon::-webkit-input-placeholder {
+    font-family: 'FontAwesome';
+}
+input.icon::-moz-placeholder {
+    font-family: 'FontAwesome';
+}
+input.icon::-ms-input-placeholder {
+    font-family: 'FontAwesome';
+}
+.cameoantique {
+    font-family: 'CameoAntique';
+    width: 97%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 15px;
+}
+.dollar {
+    color: #CD623F;
+    font-size: 170%;
+    font-weight: bold;
+}
+.box {
+    width: 50%;
+}
+.btncolor {
+    background-color: #CD623F;
+    border-color: #CD623F;
+}
+.btn_learnmore {
+    background-color: #5B8F99;
+    border-color: #5B8F99;
+    width: 150px;
+}
+.text {
+    color: white;
+    font-weight: 400;
+}
+.red {
+    color: red;
+}
+.green {
+    color: #7ABFD0;
+}
+.borderbox {
+    border: 2px solid #887E79;
+    border-radius: 3px;
+    border-width: 2px;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.bidders {
+    color: #CD623F;
+    font-size: 20px;
+    font-weight: bold;
+}
+.white {
+    color: #F2EFE3;
+}
+.black {
+    color: #564841;
+}
+.payment_text {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+}
+#slider1 .ui-slider-range {
+    background: #FFA500;
+}
+#slider1 .ui-slider-handle {
+    border-color: #FFA500;
+}
+#slider2 .ui-slider-range {
+    background: #FFA500;
+}
+#slider2 .ui-slider-handle {
+    border-color: #FFA500;
+}
+.panelborder {
+    border-radius: 81px;
+    border-color: black;
+}
+.bulletpoints {
+    font-size: 15px;
+    text-align: left;
+    margin-left: -15px;
+    line-height: 200%
+}
+.plantext {
+    line-height: 165%;
+    font-size: 15px;
+    text-align: left;
+}
+.footer {
+    margin-bottom: 0px;
+    padding-top: 35px;
+    background-color: #F2EFE3;
+    margin-top: 20px;
+}
+.nav-header {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+}
+.nav-link {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0.5em 0;
+}
+@font-face {
+    font-family: 'CameoAntique';
+    src: url('fonts/CameoAntique.ttf.woff') format('woff'), url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'), url('fonts/CameoAntique.ttf.eot'), url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
