@@ -82,12 +82,17 @@ supervisorctl update
 supervisorctl start auctioneersignup
 supervisorctl stop auctioneersignup
 ```
-
-###### Test locally
-
-$ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && echo ''``
-
 ###### Copy the ``.envExample`` file to ``.env``
 
  * fill in the details
  * use a Mandrill API key that has only messages.send permission
+ * make sure that ``config/config.json`` has the correct DB details for your environment
+
+###### Run Database migration
+
+$ ``sequelize db:migrate --env=production``
+
+
+###### Test locally
+
+$ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && echo ''``
