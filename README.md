@@ -36,7 +36,7 @@ server {
         try_files $uri $uri/ /index.html?$query_string;
     }
 
-    location /signup {
+    location /auctioneer-signup/submit {
             proxy_pass http://localhost:3002;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
