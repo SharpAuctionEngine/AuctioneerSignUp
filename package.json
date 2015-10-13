@@ -35,18 +35,19 @@
     "gulp-through": "~0.3.0"
   },
   "dependencies": {
-    "gulp-install": "~0.2.0",
-    "pg": "~4.4.1",
-    "express": "^4.13.3",
-    "hogan.js": "^3.0.2",
-    "node-mandrill": "^1.0.1",
-    "mandrill-api": "~1.0.45",
     "body-parser": "~1.13.3",
     "dotenv": "~1.2.0",
-    "sequelize": "~3.7.1",
-    "pg-hstore": "~2.3.2",
-    "sequelize-cli": "~1.9.1",
     "es6-promise": "~3.0.2",
-    "request-promise": "~0.4.3"
+    "express": "^4.13.3",
+    "gulp-install": "~0.2.0",
+    "hogan.js": "^3.0.2",
+    "mandrill-api": "~1.0.45",
+    "node-mandrill": "^1.0.1",
+    "pg": "~4.4.1",
+    "pg-hstore": "~2.3.2",
+    "request-promise": "~0.4.3",
+    "sequelize": "~3.7.1",
+    "sequelize-cli": "~1.9.1",
+    "stripe": "^4.0.0"
   }
 }

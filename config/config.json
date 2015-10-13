@@ -14,8 +14,8 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "admin",
-    "password": "password",
+    "username": "forge",
+    "password": "ZjrOtwELtlMQwecltiSj",
     "database": "auctioneersignupform",
     "host": "127.0.0.1",
     "dialect": "postgres"
