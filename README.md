@@ -98,31 +98,47 @@ $ ``sequelize db:migrate --env=production``
 $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && echo ''``
 
 
-####Setup local env to run node.js
-####Install all nodes 
+######Setup local env to run node.js
+######Install all nodes 
 
-#For express use
-npm install express --save
+``npm install``
 
-#For mandrill_api use
-npm install mandrill-api --save
+######For express use
+``npm install express --save``
 
-#For mandrill_api use
-npm install --save sequelize
+######For mandrill_api use
+``npm install mandrill-api --save``
 
-#For mandrill_api use
-sequelize-json
+######For mandrill_api use
+``npm install --save sequelize``
 
-es6-promise
-request-promise
-stripe
+######For sequelize-json use
+``npm install sequelize-json --save``
+
+######For es6-promise use
+``npm install es6-promises``
+
+
+######For request-promise use
+``npm install request-promise``
+
+######For stripe use
+``npm install stripe --save``
+
+#####you might want to do this
+``sudo npm install sequelize-cli -g``
+``sudo npm install -g pg pg-hstore``
+
+
 ##### Install postgre sql
-##### sometime user postgre wont login
-##### Change the peer to md5 from /etc/postgresql/9.x/main/pg_hba.con
-##### Login to psql as postgre and change the password if you want to
-####  create a DB name auctioneersignupform
+    * ometime user postgre wont login
+    * Change the peer to md5 from /etc/postgresql/9.x/main/pg_hba.con
+    * Login to psql as postgre and change the password if you want to
+    * create a DB name auctioneersignupform
 
 ###### Copy the ``.envExample`` file to ``.env``
 
-
+ * fill in the details
+ * use a Mandrill API key that has only messages.send permission
+ * make sure that ``config/config.json`` has the correct DB details for your environment
 
