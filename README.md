@@ -96,3 +96,33 @@ $ ``sequelize db:migrate --env=production``
 ###### Test locally
 
 $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && echo ''``
+
+
+####Setup local env to run node.js
+####Install all nodes 
+
+#For express use
+npm install express --save
+
+#For mandrill_api use
+npm install mandrill-api --save
+
+#For mandrill_api use
+npm install --save sequelize
+
+#For mandrill_api use
+sequelize-json
+
+es6-promise
+request-promise
+stripe
+##### Install postgre sql
+##### sometime user postgre wont login
+##### Change the peer to md5 from /etc/postgresql/9.x/main/pg_hba.con
+##### Login to psql as postgre and change the password if you want to
+####  create a DB name auctioneersignupform
+
+###### Copy the ``.envExample`` file to ``.env``
+
+
+
