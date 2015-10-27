@@ -36,7 +36,7 @@ server {
         try_files $uri $uri/ /index.html?$query_string;
     }
 
-    location /signup {
+    location /auctioneer-signup/submit {
             proxy_pass http://localhost:3002;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
@@ -82,12 +82,65 @@ supervisorctl update
 supervisorctl start auctioneersignup
 supervisorctl stop auctioneersignup
 ```
+###### Copy the ``.envExample`` file to ``.env``
+
+ * fill in the details
+ * use a Mandrill API key that has only messages.send permission
+ * make sure that ``config/config.json`` has the correct DB details for your environment
+
+###### Run Database migration
+
+$ ``sequelize db:migrate --env=production``
+
 
 ###### Test locally
 
 $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && echo ''``
 
+
+######Setup local env to run node.js
+######Install all nodes 
+
+``npm install``
+
+######For express use
+``npm install express --save``
+
+######For mandrill_api use
+``npm install mandrill-api --save``
+
+######For mandrill_api use
+``npm install --save sequelize``
+
+######For sequelize-json use
+``npm install sequelize-json --save``
+
+######For es6-promise use
+``npm install es6-promises``
+
+
+######For request-promise use
+``npm install request-promise``
+
+######For stripe use
+``npm install stripe --save``
+
+######you might want to do this
+``sudo npm install sequelize-cli -g``
+``sudo npm install -g pg pg-hstore``
+
+
+######Install postgre sql
+
+ * sometime user postgre wont login
+ * Change the peer to md5 from /etc/postgresql/9.x/main/pg_hba.con
+ * Login to psql as postgre and change the password if you want to
+ * create a DB name auctioneersignupform
+   
+
 ###### Copy the ``.envExample`` file to ``.env``
 
  * fill in the details
  * use a Mandrill API key that has only messages.send permission
+ * make sure that ``config/config.json`` has the correct DB details for your environment
+
