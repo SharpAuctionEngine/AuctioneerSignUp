@@ -45,6 +45,7 @@ $("#Basic_plan").click(function() {
 
 });
 $("#Pro_plan").click(function() {
+    $('#proplan_enabler').show();
     $('input[name=plan]').val('pro');
     $('input[name=bidders]').val(50);
     $('input[name=PlanAmount]').val(140);
