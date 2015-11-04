@@ -142,7 +142,7 @@ function denormalizeCardExp(event) {
             6: 1
         }[value.length]) {
         console.log('invalid!');
-
+         // bootbox.alert("Your card's expiration year is invalid");
         return;
     }
 
@@ -184,7 +184,7 @@ jQuery(function($) {
             console.log(vResult);
             if (!vResult.valid) {
                 // bootbox.alert('Please verify your card information.');
-                alert('Please verify your card information.');
+                bootbox.alert('Please verify your card information.');
                 return false;
             }
         }
@@ -219,8 +219,8 @@ function stripeResponseHandler(status, response) {
     if (response.error) {
 
         // Show the errors on the form
-
-        $form.find('.payment-errors').text(response.error.message);
+        bootbox.alert(response.error.message);
+        // $form.find('.payment-errors').text(response.error.message);
         $form.find('button,input[type=button]').prop('disabled', false);
     } else {
         console.log('time to submit!');
@@ -273,7 +273,7 @@ function stripeResponseHandler(status, response) {
                 //xhr.responseText
                 //xhr.responseJSON
 
-                alert('There was an error! Please try again then contact support.');
+               bootbox.alert('There was an error! Please try again then contact support.');
 
                 typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }
