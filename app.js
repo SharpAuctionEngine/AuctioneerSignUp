@@ -197,7 +197,7 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       async: true
     }, function (results) {
 
-      if (results.length === 2) {
+      if (results.length > 0) {
         var result = results[0];
 
 
@@ -208,7 +208,7 @@ app.post('/auctioneer-signup/submit', function (req, res) {
 
         }
       } else {
-        res.send('Results Not Equal To One', 500);
+        res.send('Results Not Greater Than One', 500);
       }
       // console.log({results:results});
       /**
