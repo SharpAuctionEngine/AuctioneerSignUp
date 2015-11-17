@@ -25,6 +25,9 @@ var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 
+const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
+console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
+
 var stripePlansPromise = stripeAPI.plans.list({
   limit: 21
 });
@@ -84,31 +87,6 @@ var User = db.define('auctioneersignup', {
   }
 });
 
-/*function insertToPostgre(customerPromise, username, email, house_name, house_url, userRequestRaw) {
-
-  return new Promise(function (resolve, reject) {
-    customerPromise.then(function (customer) {
-      // asynchronously called
-      var dbPromise = db.sync().then(function () {
-        var UserCreate = User.create({
-          username: username,
-          email: email,
-          auction_house_name: house_name,
-          auction_house_name_url: house_url,
-          jsonblob: userRequestRaw,
-          stripejson: customer,
-        });
-        //   UserCreate.then(function(jane) {
-        //   console.log(jane.get({
-        //     plain: true
-        //   }));
-        // });
-      })
-    });
-
-
-  });
-}*/
 app.post('/auctioneer-signup/submit', function (req, res) {
 
   var userRequestRaw = req.body;
@@ -168,43 +146,6 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       });
     });
 
-
-
-  // var stripePromise = subscribeToStripe(stripePlan,data)
-
-  // possible validation error
-  // var insertStripeToDbPromise = insertStripeToPostgre(dbPromise,stripePromise)
-  // var dbPromise = insertToPostgre(data)
-
-  // var adminPanelPromise = sendToAdminPanel(insertStripeToDbPromise)
-
-  // var mandrillPromise = sendMandrill(insertStripeToDbPromise)
-
-  // insertStripeToDbPromise.success(function(){ res.send(); }).fail(fn)
-
-
-
-
-  // console.log({userRequestRaw:userRequestRaw});
-  // db.sync().then(function() 
-  // 	{
-  //  		return User.create(
-  //  			{
-  // 	    username:userRequestRaw.username,
-  // 	    email:userRequestRaw.email,
-  // 	    auction_house_name:userRequestRaw.house_name,
-  // 	    auction_house_name_url:userRequestRaw.house_url,
-  // 	  	jsonblob: userRequestRaw,
-  //  			});
-  // 	})
-  // 	.then(function(jane) 
-  // 	    {
-  //  		    console.log(jane.get(
-  //  		    	{
-  //  				plain: true
-  //  				}))
-
-  // 		});
   var userRequest = [];
 
   var message = null;
@@ -237,29 +178,16 @@ app.post('/auctioneer-signup/submit', function (req, res) {
     subject: (process.env.TO_FOH_SUBJECT_PREFIX || '') + req.body.subject,
     from_email: req.body.email,
     from_name: req.body.name,
-
-    to: [{
-        email: process.env.SAE_HELP_EMAIL,
-        name: "SAE",
-        type: "to"
-      },
-
-      {
-        email: process.env.SAE_CC_EMAIL,
-        name: "SAE",
-        type: "bcc"
-      }
-    ],
+    to: SEND_EMAIL_TO,
     headers: {
       'Reply-To': req.body.email
-    },
-    bcc_address: process.env.SAE_EMAIL
+    }
   };
 
   // console.log(message);
   //var return_path_domain = null;
   /**
-   * 
+   *
    * async = true // this is so that we can give the user a response faster
    */
 
@@ -285,7 +213,7 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       // console.log({results:results});
       /**
        * @link https://mandrillapp.com/api/docs/messages.php.html
-       * 
+       *
        * note that the results assume that more than one email could
        * have been sent out
       [{
