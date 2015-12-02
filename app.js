@@ -25,8 +25,8 @@ var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 
-const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
-console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
+// const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
+// console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
 var stripePlansPromise = stripeAPI.plans.list({
   limit: 21
