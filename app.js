@@ -111,8 +111,9 @@ var User = db.define('auctioneersignup', {
 }*/
 app.post('/auctioneer-signup/submit', function (req, res) {
 
+
   var userRequestRaw = req.body;
-   console.log({userRequestRaw:userRequestRaw});
+   // console.log({userRequestRaw:userRequestRaw});
   var stripePlan = parseStringPlan(stripePlansPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
 
   stripePlan
@@ -152,59 +153,27 @@ app.post('/auctioneer-signup/submit', function (req, res) {
         insertToPostgreReject: result
       });
     });
-
-  var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
+   var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
 
   adminPanelPromise
     .then(function (result) {
+     
       console.log({
         sendToAdminPanelResolve: result
       });
+      
     })
     .catch(function (result) {
-      console.err({
+       
+ console.err({
         sendToAdminPanelReject: result,
-        messages:result.error.message
+        messages: result.error.message
       });
+  
     });
 
 
 
-  // var stripePromise = subscribeToStripe(stripePlan,data)
-
-  // possible validation error
-  // var insertStripeToDbPromise = insertStripeToPostgre(dbPromise,stripePromise)
-  // var dbPromise = insertToPostgre(data)
-
-  // var adminPanelPromise = sendToAdminPanel(insertStripeToDbPromise)
-
-  // var mandrillPromise = sendMandrill(insertStripeToDbPromise)
-
-  // insertStripeToDbPromise.success(function(){ res.send(); }).fail(fn)
-
-
-
-
-  // console.log({userRequestRaw:userRequestRaw});
-  // db.sync().then(function() 
-  // 	{
-  //  		return User.create(
-  //  			{
-  // 	    username:userRequestRaw.username,
-  // 	    email:userRequestRaw.email,
-  // 	    auction_house_name:userRequestRaw.house_name,
-  // 	    auction_house_name_url:userRequestRaw.house_url,
-  // 	  	jsonblob: userRequestRaw,
-  //  			});
-  // 	})
-  // 	.then(function(jane) 
-  // 	    {
-  //  		    console.log(jane.get(
-  //  		    	{
-  //  				plain: true
-  //  				}))
-
-  // 		});
   var userRequest = [];
 
   var message = null;
