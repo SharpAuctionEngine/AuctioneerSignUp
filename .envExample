@@ -1,6 +1,5 @@
 MANDRILL_KEY = '
-SAE_EMAIL = ''
-SAE_CC_EMAIL = ''
+SEND_EMAIL_TO='[{"email":"help@sharpauctionengine.com","type":"to"},{"email":"carolyn@sharpauctionengine.com","type":"cc"}]'
 SAE_HELP_EMAIL = ''
 TO_FOH_SUBJECT_PREFIX = ''
 CONNECTION=''

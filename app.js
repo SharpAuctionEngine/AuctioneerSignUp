@@ -25,6 +25,9 @@ var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 
+const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
+console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
+
 var stripePlansPromise = stripeAPI.plans.list({
   limit: 21
 });
@@ -153,7 +156,8 @@ app.post('/auctioneer-signup/submit', function (req, res) {
         insertToPostgreReject: result
       });
     });
-   var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
+
+  var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
 
   adminPanelPromise
     .then(function (result) {
@@ -164,10 +168,9 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       
     })
     .catch(function (result) {
-       
- console.err({
+      console.err({
         sendToAdminPanelReject: result,
-        messages: result.error.message
+        messages:result.error.message
       });
   
     });
