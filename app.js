@@ -18,6 +18,7 @@ var rp = require('request-promise');
 var db = new Sequelize(process.env.CONNECTION);
 // client.connect();
 var newAuctioneerDetailsEmailTemplate = Hogan.compile(fs.readFileSync('./views/new_auctioneer_details_request.hjs', 'utf-8'));
+var ProPlanTemplate = Hogan.compile(fs.readFileSync('./views/proplan_template.hjs', 'utf-8'));
 var Promise = require("es6-promise").Promise;
 var stripeAPI = require("stripe")("sk_test_qNt8nbmpti7cUDTSpSwrQoQJ");
 var subscribeToStripe = require('./lib/subscribeToStripe');
@@ -25,12 +26,23 @@ var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 
+
 // const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
 // console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
 var stripePlansPromise = stripeAPI.plans.list({
   limit: 21
 });
+
+  
+stripePlansPromise.then(function (result) {
+
+           ProPlanTemplate.render({
+          options:result.data
+
+        });            
+})
+
 app.use(bodyParser());
 var server = app.listen(process.env.APP_PORT, function () {
   console.log('Listing on port: ' + process.env.APP_PORT);
