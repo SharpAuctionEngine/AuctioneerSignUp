@@ -10,7 +10,7 @@
     "Bootstrap"
   ],
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": "Your Name",
   "license": "MIT",
