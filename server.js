@@ -53,7 +53,7 @@ app.post('/auctioneer-signup/submit', function(req, res) {
   var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, stripePlan);
   dumpPromise('adminPanelPromise',adminPanelPromise);
 
-  var sendStaffEmailPromise = sendNewRequestEmailToStaff(userRequestRaw);
-  dumpPromise('sendStaffEmailPromise',sendStaffEmailPromise);
+  // finishes the request's response
+  sendNewRequestEmailToStaff(userRequestRaw,res);
 
 });
