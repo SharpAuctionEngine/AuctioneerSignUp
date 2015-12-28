@@ -28,7 +28,7 @@ var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(man
 // const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
 // console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
-var renderIndexHtmlOnStartUp = require('./renderIndexHtmlOnStartUp')();
+var renderIndexHtmlOnStartUp = require('./lib/renderIndexHtmlOnStartUp')();
 
 renderIndexHtmlOnStartUp(getStripePlans());
 
