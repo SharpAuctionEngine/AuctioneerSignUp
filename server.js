@@ -23,13 +23,13 @@ var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 var getStripePlans = require('./lib/getStripePlans')(stripeAPI);
-var dumpPromise = require('./debug/dumpPromise');
-var sendNewRequestEmailToStaff = require('lib/sendNewRequestEmailToStaff')(madrill,Hogan);
+var dumpPromise = require('./lib/debug/dumpPromise');
+var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(mandrill,Hogan);
 
 // const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
 // console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
-var renderIndexHtmlOnStartUp = require('renderIndexHtmlOnStartUp')(Hogan);
+var renderIndexHtmlOnStartUp = require('./lib/renderIndexHtmlOnStartUp')(Hogan);
 
 renderIndexHtmlOnStartUp(getStripePlans());
 
