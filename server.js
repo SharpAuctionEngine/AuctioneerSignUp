@@ -5,7 +5,6 @@ process.env.APP_PORT = process.env.APP_PORT || 3002;
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var Hogan = require('hogan.js');
 var mandrill_api = require('mandrill-api/mandrill');
 var mandrill = new mandrill_api.Mandrill(process.env.MANDRILL_KEY);
 // var pg = require('pg');
@@ -24,12 +23,12 @@ var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 var getStripePlans = require('./lib/getStripePlans')(stripeAPI);
 var dumpPromise = require('./lib/debug/dumpPromise');
-var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(mandrill,Hogan);
+var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(mandrill);
 
 // const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
 // console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
-var renderIndexHtmlOnStartUp = require('./lib/renderIndexHtmlOnStartUp')(Hogan);
+var renderIndexHtmlOnStartUp = require('./renderIndexHtmlOnStartUp')();
 
 renderIndexHtmlOnStartUp(getStripePlans());
 
