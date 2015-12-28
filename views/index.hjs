@@ -362,9 +362,9 @@
                                             <h3>Plan Info</h3>
                                                 <label class="" for="form-bill-period">Billing Period:</label>
                                                 <select class="form-control" style="height:50px; border-radius:16px;">
-                                                {{#options}}
-                                                <option value="{{name}}">{{name}}</option>
-                                                 {{/options}}
+                                                  {{#planOptions}}
+                                                    <option value="{{id}}">{{description}}</option>
+                                                  {{/planOptions}}
                                                 </select>
                                             </div>
                                             <h3>Payment Info</h3>
