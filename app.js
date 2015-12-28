@@ -34,17 +34,17 @@ var stripePlansPromise = stripeAPI.plans.list({
   limit: 21
 });
 
-  
-stripePlansPromise.then(function (result) {
 
-           ProPlanTemplate.render({
-          options:result.data
+stripePlansPromise.then(function(result) {
 
-        });            
-})
+  ProPlanTemplate.render({
+    options: result.data
+
+  });
+});
 
 app.use(bodyParser());
-var server = app.listen(process.env.APP_PORT, function () {
+var server = app.listen(process.env.APP_PORT, function() {
   console.log('Listing on port: ' + process.env.APP_PORT);
 });
 var User = db.define('auctioneersignup', {
@@ -124,33 +124,33 @@ var User = db.define('auctioneersignup', {
 
   });
 }*/
-app.post('/auctioneer-signup/submit', function (req, res) {
+app.post('/auctioneer-signup/submit', function(req, res) {
 
 
   var userRequestRaw = req.body;
-   // console.log({userRequestRaw:userRequestRaw});
+  // console.log({userRequestRaw:userRequestRaw});
   var stripePlan = parseStringPlan(stripePlansPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
 
   stripePlan
-    .then(function (result) {
+    .then(function(result) {
       console.log({
         parseStringPlanResolve: result
       });
     })
-    .catch(function (result) {
+    .catch(function(result) {
       console.err({
         parseStringPlanReject: result
       });
     });
-    // create cus_ card_ sub_
+  // create cus_ card_ sub_
   var customerPromise = subscribeToStripe(stripePlan, userRequestRaw.stripeToken, userRequestRaw.email, stripeAPI);
   customerPromise
-    .then(function (result) {
+    .then(function(result) {
       console.log({
         subscribeToStripeResolve: result
       });
     })
-    .catch(function (result) {
+    .catch(function(result) {
       console.err({
         subscribeToStripeReject: result
       });
@@ -158,33 +158,33 @@ app.post('/auctioneer-signup/submit', function (req, res) {
 
   var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw.username, userRequestRaw.email, userRequestRaw.auction_house_name, userRequestRaw.auction_house_name_url, userRequestRaw);
   dbPromise
-    .then(function (result) {
+    .then(function(result) {
       console.log({
         insertToPostgreResolve: result
       });
     })
-    .catch(function (result) {
+    .catch(function(result) {
       console.err({
         insertToPostgreReject: result
       });
     });
 
-  var adminPanelPromise = sendToAdminPanel(dbPromise,userRequestRaw.password, stripePlan);
+  var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, stripePlan);
 
   adminPanelPromise
-    .then(function (result) {
-     
+    .then(function(result) {
+
       console.log({
         sendToAdminPanelResolve: result
       });
-      
+
     })
-    .catch(function (result) {
+    .catch(function(result) {
       console.err({
         sendToAdminPanelReject: result,
-        messages:result.error.message
+        messages: result.error.message
       });
-  
+
     });
 
 
@@ -240,18 +240,10 @@ app.post('/auctioneer-signup/submit', function (req, res) {
     bcc_address: process.env.SAE_EMAIL
   };
 
-  // console.log(message);
-  //var return_path_domain = null;
-  /**
-   * 
-   * async = true // this is so that we can give the user a response faster
-   */
-
-
   mandrill.messages.send({
       message: message,
       async: true
-    }, function (results) {
+    }, function(results) {
 
       if (results.length === 2) {
         var result = results[0];
@@ -269,7 +261,7 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       // console.log({results:results});
       /**
        * @link https://mandrillapp.com/api/docs/messages.php.html
-       * 
+       *
        * note that the results assume that more than one email could
        * have been sent out
       [{
@@ -280,7 +272,7 @@ app.post('/auctioneer-signup/submit', function (req, res) {
       }]
       */
     },
-    function (e) {
+    function(e) {
       // Mandrill returns the error as an object with name and message keys
 
       console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
@@ -291,29 +283,3 @@ app.post('/auctioneer-signup/submit', function (req, res) {
     });
 
 });
-//   pg.connect(connectionString, function(err, client, done) {
-
-// // client.query("INSERT INTO register(username,email,auction_house,auction_houseurl) values($1,$2,$3,$4)",[userRequestRaw.username,userRequestRaw.email,userRequestRaw.house_name,userRequestRaw.house_url]);
-
-//  //   client.query("INSERT INTO register(data) values($1)",values[UserDetails]);
-
-//  //    var query = client.query("SELECT * FROM register ORDER BY username ASC;");
-
-//  //      // Stream results back one row at a time
-//  //      query.on('row', function(row) {
-//  //          results.push(row);
-//  //      });
-
-//  //      // After all data is returned, close connection and return results
-//  //      query.on('end', function() {
-//  //          client.end();
-//  //          return res.json(results);
-//  //      });
-//  // // if(err) {
-//  // //        console.log(err);
-//  // //      }
-
-
-// });
-
-// })
