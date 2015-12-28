@@ -16,24 +16,22 @@ var Sequelize = require('sequelize');
 var rp = require('request-promise');
 var db = new Sequelize(process.env.CONNECTION);
 // client.connect();
-var newAuctioneerDetailsEmailTemplate = Hogan.compile(fs.readFileSync('./views/new_auctioneer_details_request.hjs', 'utf-8'));
-var ProPlanTemplate = Hogan.compile(fs.readFileSync('./views/proplan_template.hjs', 'utf-8'));
 var Promise = require("es6-promise").Promise;
 var stripeAPI = require("stripe")("sk_test_qNt8nbmpti7cUDTSpSwrQoQJ");
 var subscribeToStripe = require('./lib/subscribeToStripe');
 var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
-var getStripePlans = require('./lib/getStripePlans');
+var getStripePlans = require('./lib/getStripePlans')(stripeAPI);
 var dumpPromise = require('./debug/dumpPromise');
-var sendNewRequestEmailToStaff = require('lib/sendNewRequestEmailToStaff');
+var sendNewRequestEmailToStaff = require('lib/sendNewRequestEmailToStaff')(madrill,Hogan);
 
 // const SEND_EMAIL_TO = require('./lib/getSendEmailTo')(process.env.SEND_EMAIL_TO);
 // console.log({SEND_EMAIL_TO:SEND_EMAIL_TO});
 
-var renderIndexHtmlOnStartUp = require('renderIndexHtmlOnStartUp');
+var renderIndexHtmlOnStartUp = require('renderIndexHtmlOnStartUp')(Hogan);
 
-renderIndexHtmlOnStartUp(stripeAPI);
+renderIndexHtmlOnStartUp(getStripePlans());
 
 app.use(bodyParser());
 var server = app.listen(process.env.APP_PORT, function() {
@@ -46,12 +44,14 @@ app.post('/auctioneer-signup/submit', function(req, res) {
 
   var userRequestRaw = req.body||{};
 
+  var stripePlansPromise = getStripePlans();
+
   // console.log({userRequestRaw:userRequestRaw});
   var stripePlan = parseStringPlan(stripePlansPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
   dumpPromise('stripePlan',stripePlan);
 
   // create cus_ card_ sub_
-  var customerPromise = subscribeToStripe(stripePlan, userRequestRaw.stripeToken, userRequestRaw.email, stripeAPI);
+  var customerPromise = subscribeToStripe(stripePlan, userRequestRaw, stripeAPI);
   dumpPromise('customerPromise',customerPromise);
 
   var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw);
@@ -60,7 +60,7 @@ app.post('/auctioneer-signup/submit', function(req, res) {
   var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, stripePlan);
   dumpPromise('adminPanelPromise',adminPanelPromise);
 
-  var sendStaffEmailPromise = sendNewRequestEmailToStaff();
+  var sendStaffEmailPromise = sendNewRequestEmailToStaff(userRequestRaw);
   dumpPromise('sendStaffEmailPromise',sendStaffEmailPromise);
 
 });
