@@ -1,6 +1,8 @@
 require('dotenv').load();
 
 process.env.APP_PORT = process.env.APP_PORT || 3002;
+process.env.STRIPE_SECRET_KEY      = process.env.STRIPE_SECRET_KEY||'sk_test_qNt8nbmpti7cUDTSpSwrQoQJ';
+process.env.STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY||'pk_test_Gs3mml7J0sPmODW6ZS8o8R3h';
 
 var express = require('express');
 var app = express();
@@ -8,17 +10,18 @@ var bodyParser = require('body-parser');
 var mandrill_api = require('mandrill-api/mandrill');
 var mandrill = new mandrill_api.Mandrill(process.env.MANDRILL_KEY);
 var fs = require('fs');
-var Sequelize = require('sequelize');
 var rp = require('request-promise');
-var db = new Sequelize(process.env.CONNECTION);
 var Promise = require("es6-promise").Promise;
-var stripeAPI = require("stripe")("sk_test_qNt8nbmpti7cUDTSpSwrQoQJ");
+var dumpPromise = require('./lib/debug/dumpPromise');
+var Sequelize = require('sequelize');
+var db = new Sequelize(process.env.CONNECTION);
+var stripeAPI = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
 var subscribeToStripe = require('./lib/subscribeToStripe');
 var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');
 var insertToPostgre = require('./lib/insertTopostgre');
 var getStripePlans = require('./lib/getStripePlans')(stripeAPI);
-var dumpPromise = require('./lib/debug/dumpPromise');
 var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(mandrill);
 
 var renderIndexHtmlOnStartUp = require('./lib/renderIndexHtmlOnStartUp')();

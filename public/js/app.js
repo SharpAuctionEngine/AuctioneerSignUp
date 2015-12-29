@@ -169,11 +169,13 @@ function pfWarnNoStripe() {
    Please update your browser or add "stripe" to your browser\'s whitelist.');
 }
 
+var stripePublishableKey = 'pk_test_Gs3mml7J0sPmODW6ZS8o8R3h';
+
 if (typeof Stripe == 'undefined') {
     pfWarnNoStripe();
 } else {
     // https://stripe.com/docs/stripe.js
-    Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
+    Stripe.setPublishableKey(stripePublishableKey);
 }
 jQuery(function($) {
     // $('#paymentMethodForm').click(function (event) { //ch
