@@ -14,7 +14,7 @@ var updateStripePlan = function(plan)
         $('#basic').hide();
         $('#proplan_enabler').show();
     }
-    $('input[name=PlanAmount]').val(plan.amount);
+    $('input[name=PlanAmount]').val(plan.amountDecimal);
 
     console.log({
         updateStripePlan:plan,
@@ -43,7 +43,7 @@ var getStripePlan = function(id)
             {
                 return false;
             }
-            if (o.amount && plan.amount != o.amount)
+            if (o.amount && plan.amountDecimal != o.amount)
             {
                 return false;
             }
@@ -90,13 +90,11 @@ $(document).ready(function() {
         slide: function(event, ui) {
             $("#bidders").val(ui.value);
             var bidders = $("#bidders").val();
-            slideramount = Number(bidders) + Number(90);
             var plan = getStripePlan({
                 bidders:bidders,
                 basic:0,
             });
-            // $("#slideramount").val(slideramount);
-            $('.slideramount').text(slideramount);
+            $('.slideramount').text(plan.amountDecimal);
             $('.bidders').text('\t' + bidders);
             //  console.log(bidders);
             // console.log(this);
@@ -110,8 +108,8 @@ $(document).ready(function() {
                 }
             });
             $('input[name=bidders]').val($("#bidders").val());
-            console.log({slideramount:slideramount});
-            $('input[name=PlanAmount]').val(slideramount);
+            console.log({slideramount:plan.amountDecimal});
+            $('input[name=PlanAmount]').val(plan.amountDecimal);
             updateStripePlanSelect(plan);
         }
     });
@@ -133,7 +131,7 @@ $("#Basic_plan").click(function() {
 $("#Pro_plan").click(function() {
     var plan = getStripePlan({
         basic:0,
-        amount:$('input[name=PlanAmount]').val()||140,
+        bidders:$('input[name=bidders]').val()||50,
     });
     updateStripePlanSelect(plan);
 });
