@@ -378,7 +378,7 @@
                                             <div class="form-group" id="proplan_enabler" style="display:none;">
                                             <h3>Plan Info</h3>
                                                 <label class="" for="form-bill-period">Billing Period:</label>
-                                                <select class="form-control" style="height:50px; border-radius:16px;">
+                                                <select name="stripe_plan" class="form-control" style="height:50px; border-radius:16px;">
                                                   {{#planOptions}}
                                                     <option value="{{id}}">{{description}}</option>
                                                   {{/planOptions}}

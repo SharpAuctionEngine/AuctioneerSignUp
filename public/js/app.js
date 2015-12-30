@@ -1,3 +1,16 @@
+var updateStripePlanSelect = function()
+{
+    if ($('input[name=plan]').val()==='pro')
+    {
+        $('select[name=stripe_plan]').val('Pro-'+Number($('input[name=bidders]').val()));
+    }
+    else
+    {
+        $('select[name=stripe_plan]').val('Basic');
+    }
+
+};
+
 $(document).ready(function() {
     var selectors = "#slider1,#slider2";
 
@@ -23,18 +36,19 @@ $(document).ready(function() {
             // $slider.attr('id');
             // $('#slider1').data().uiSlider.options.value
             $(selectors).each(function() {
-                if ($('#slider1').val(ui.value) != $('#slider2').val(ui.value)) {
+                if ($('#slider1').val(ui.value) != $('#slider2').val(ui.value))
+                {
                     $('#slider2').slider("option", "value", bidders);
                 }
             });
             $('input[name=bidders]').val($("#bidders").val());
             console.log(slideramount);
             $('input[name=PlanAmount]').val(slideramount);
+            updateStripePlanSelect();
         }
     });
 
 });
-
 
 //  Plan decider
 $("#Basic_plan").click(function() {
@@ -42,6 +56,7 @@ $("#Basic_plan").click(function() {
     $('#basic').show();
     $('input[name=plan]').val('basic');
     $('input[name=PlanAmount]').val(99);
+    updateStripePlanSelect();
 
 });
 $("#Pro_plan").click(function() {
@@ -49,6 +64,7 @@ $("#Pro_plan").click(function() {
     $('input[name=plan]').val('pro');
     $('input[name=bidders]').val(50);
     $('input[name=PlanAmount]').val(140);
+    updateStripePlanSelect();
 });
 // Validation
 
@@ -87,7 +103,7 @@ $("body").on("blur", "#house_url", function() {
     }
 });
 
-function changeHouseUrlText(UrlText) {
+var changeHouseUrlText = function (UrlText) {
     if ($.trim(UrlText)) {
         $('#house_url').css({
             // width: '58%',
@@ -106,10 +122,11 @@ function changeHouseUrlText(UrlText) {
         $('#ghost_text').css('display', 'none');
         $('.hint_house_url').text('example');
     }
-}
+};
 
 $('#house_url').on('shown.bs.popover', function() {
-    if ($.trim($(this).val())) {
+    if ($.trim($(this).val()))
+    {
         $('.hint_house_url').text($(this).val());
     }
 });
@@ -125,7 +142,7 @@ $('.form-group input').popover({
     html: true,
 });
 
-function denormalizeCardExp(event) {
+var denormalizeCardExp = function (event) {
     // console.log("true");
     var $year = $('[data-stripe="exp-year"]');
     var $month = $('[data-stripe="exp-month"]');
@@ -161,15 +178,13 @@ function denormalizeCardExp(event) {
     });
 
     console.log(value);
-}
+};
 $('body').on('keyup', 'form [data-is-sae-card-exp=1]', denormalizeCardExp);
 // Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
 function pfWarnNoStripe() {
     Alert.warning('It looks like you are running an outdated browser or blocking scripts. \
    Please update your browser or add "stripe" to your browser\'s whitelist.');
 }
-
-var stripePublishableKey = 'pk_test_Gs3mml7J0sPmODW6ZS8o8R3h';
 
 if (typeof Stripe == 'undefined') {
     pfWarnNoStripe();
