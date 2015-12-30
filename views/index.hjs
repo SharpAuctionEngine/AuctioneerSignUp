@@ -331,9 +331,9 @@
                                             <div class="form-group">
                                                 <input type="text" name="phone_number" autocomplete="off" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
                                             </div>
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
-                                            </div>
+                                            </div> -->
                                             <div class="form-group">
                                                 <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
                                             </div>
