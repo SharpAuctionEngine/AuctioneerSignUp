@@ -1,6 +1,6 @@
 var updateStripePlan = function(plan)
 {
-    if ('basic' === plan.id.toLowerCase().slice(5))
+    if ('basic' === plan.id.toLowerCase().slice(0,5))
     {
         $('input[name=plan]').val('basic');
         $('#pro').hide();
@@ -47,11 +47,11 @@ var getStripePlan = function(id)
             {
                 return false;
             }
-            if (o.basic===1 && 'basic' !== plan.id.toLowerCase().slice(5))
+            if (o.basic===1 && 'basic' !== plan.id.toLowerCase().slice(0,5))
             {
                 return false;
             }
-            else if (o.basic===0 && 'basic' === plan.id.toLowerCase().slice(5))
+            else if (o.basic===0 && 'basic' === plan.id.toLowerCase().slice(0,5))
             {
                 return false;
             }
