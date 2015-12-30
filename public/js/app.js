@@ -2,17 +2,62 @@ var updateStripePlanSelect = function()
 {
     if ($('input[name=plan]').val()==='pro')
     {
-        $('select[name=stripe_plan]').val('Pro-'+Number($('input[name=bidders]').val()));
+        $('select[name=stripe_plan]').val('Pro-'+Number($('input[name=bidders]').val()||50));
     }
     else
     {
         $('select[name=stripe_plan]').val('Basic');
     }
+
     console.log({
         updateStripePlanSelect:$('select[name=stripe_plan]').val(),
         stripe_plan:$('select[name=stripe_plan]').val(),
+        getStripePlan:getStripePlan($('select[name=stripe_plan]').val()),
     });
+};
 
+/* global var planOptions = [] */
+var getStripePlan = function(id)
+{
+    if (typeof id === 'object')
+    {
+        var o = id;
+        var planCandidates = planOptions.filter(function(plan)
+        {
+            if (o.bidders && plan.bidders != o.bidders)
+            {
+                return false;
+            }
+            if (o.amount && plan.amount != o.amount)
+            {
+                return false;
+            }
+            if (o.basic===1 && 'basic' !== plan.id.toLowerCase())
+            {
+                return false;
+            }
+            else if (o.basic===0 && 'basic' === plan.id.toLowerCase())
+            {
+                return false;
+            }
+            return true;
+        });
+        if (planCandidates.length === 1)
+        {
+            return planCandidates[0];
+        }
+    }
+    else
+    {
+        id = id || $('select[name=stripe_plan]').val();
+        for (var i=0;i<planOptions.length;i++)
+        {
+            if (id.toLowerCase() === planOptions[i].id.toLowerCase())
+            {
+                return planOptions[i];
+            }
+        }
+    }
 };
 
 $(document).ready(function() {
@@ -47,12 +92,26 @@ $(document).ready(function() {
             });
             $('input[name=bidders]').val($("#bidders").val());
             console.log(slideramount);
-            $('input[name=plan]').val('pro');
             $('input[name=PlanAmount]').val(slideramount);
             updateStripePlanSelect();
         }
     });
 
+});
+
+$('body').on('input','select[name=stripe_plan]',function()
+{
+    var stripePlan = $('select[name=stripe_plan]').val();
+
+    if (stripePlan.toLowerCase().startsWith('pro-'))
+    {
+        var parts = stripePlan.toLowerCase().split('-');
+        $('input[name=plan]').val(parts[0]);
+    }
+    $('#pro').hide();
+    $('#basic').show();
+    $('input[name=plan]').val('basic');
+    $('input[name=PlanAmount]').val(99);
 });
 
 //  Plan decider
@@ -67,8 +126,8 @@ $("#Basic_plan").click(function() {
 $("#Pro_plan").click(function() {
     $('#proplan_enabler').show();
     $('input[name=plan]').val('pro');
-    $('input[name=bidders]').val($('input[name=bidders]').val()||50);
-    $('input[name=PlanAmount]').val($('input[name=PlanAmount]').val()||140);
+    $('input[name=bidders]').val(50);
+    $('input[name=PlanAmount]').val(140);
     updateStripePlanSelect();
 });
 // Validation

@@ -9,17 +9,26 @@ var stripePlansPromise = getStripePlans();
 
 var planToObjectForSelectOption = function(plan)
 {
-    var amount = ((new Decimal(plan.amount)).div(100).toString());
+    var amountDecimal = ((new Decimal(plan.amount)).div(100).toString());
     var description = plan.name;
+    var bidders = 25;
     if (plan.name.toLowerCase().trim() === 'basic')
     {
         description += '-25';
     }
-    description += ' Bidders: $'+amount;
+    else
+    {
+        var parts = plan.name.toLowerCase().split('-');
+        bidders = parts[1];
+    }
+    description += ' Bidders: $'+amountDecimal;
 
     return {
         id:plan.id,
         description:description,
+        amountInteger:plan.amount,
+        amountDecimal:amountDecimal,
+        bidders:bidders,
     };
       // {{name}} Bidders: ${{amount}}
 };
