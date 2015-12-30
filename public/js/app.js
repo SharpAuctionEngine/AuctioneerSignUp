@@ -1,19 +1,34 @@
-var updateStripePlanSelect = function()
+var updateStripePlan = function(plan)
 {
-    if ($('input[name=plan]').val()==='pro')
+    if ('basic' === plan.id.toLowerCase().slice(5))
     {
-        $('select[name=stripe_plan]').val('Pro-'+Number($('input[name=bidders]').val()||50));
+        $('input[name=plan]').val('basic');
+        $('#pro').hide();
+        $('#basic').show();
+        $('#proplan_enabler').hide();
     }
     else
     {
-        $('select[name=stripe_plan]').val('Basic');
+        $('input[name=plan]').val('pro');
+        $('#pro').show();
+        $('#basic').hide();
+        $('#proplan_enabler').show();
     }
+    $('input[name=PlanAmount]').val(plan.amount);
 
     console.log({
-        updateStripePlanSelect:$('select[name=stripe_plan]').val(),
-        stripe_plan:$('select[name=stripe_plan]').val(),
-        getStripePlan:getStripePlan($('select[name=stripe_plan]').val()),
+        updateStripePlan:plan,
     });
+
+};
+var updateStripePlanSelect = function(plan)
+{
+    $('select[name=stripe_plan]').val(plan.id);
+
+    console.log({
+        updateStripePlanSelect:plan,
+    });
+    updateStripePlan(plan);
 };
 
 /* global var planOptions = [] */
@@ -32,11 +47,11 @@ var getStripePlan = function(id)
             {
                 return false;
             }
-            if (o.basic===1 && 'basic' !== plan.id.toLowerCase())
+            if (o.basic===1 && 'basic' !== plan.id.toLowerCase().slice(5))
             {
                 return false;
             }
-            else if (o.basic===0 && 'basic' === plan.id.toLowerCase())
+            else if (o.basic===0 && 'basic' === plan.id.toLowerCase().slice(5))
             {
                 return false;
             }
@@ -76,6 +91,10 @@ $(document).ready(function() {
             $("#bidders").val(ui.value);
             var bidders = $("#bidders").val();
             slideramount = Number(bidders) + Number(90);
+            var plan = getStripePlan({
+                bidders:bidders,
+                basic:0,
+            });
             // $("#slideramount").val(slideramount);
             $('.slideramount').text(slideramount);
             $('.bidders').text('\t' + bidders);
@@ -91,9 +110,9 @@ $(document).ready(function() {
                 }
             });
             $('input[name=bidders]').val($("#bidders").val());
-            console.log(slideramount);
+            console.log({slideramount:slideramount});
             $('input[name=PlanAmount]').val(slideramount);
-            updateStripePlanSelect();
+            updateStripePlanSelect(plan);
         }
     });
 
@@ -101,34 +120,22 @@ $(document).ready(function() {
 
 $('body').on('input','select[name=stripe_plan]',function()
 {
-    var stripePlan = $('select[name=stripe_plan]').val();
+    var plan = getStripePlan()||getStripePlan({basic:1});
 
-    if (stripePlan.toLowerCase().startsWith('pro-'))
-    {
-        var parts = stripePlan.toLowerCase().split('-');
-        $('input[name=plan]').val(parts[0]);
-    }
-    $('#pro').hide();
-    $('#basic').show();
-    $('input[name=plan]').val('basic');
-    $('input[name=PlanAmount]').val(99);
+    updateStripePlan(plan);
 });
 
 //  Plan decider
 $("#Basic_plan").click(function() {
-    $('#pro').hide();
-    $('#basic').show();
-    $('input[name=plan]').val('basic');
-    $('input[name=PlanAmount]').val(99);
-    updateStripePlanSelect();
-
+    var plan = getStripePlan({basic:1});
+    updateStripePlanSelect(plan);
 });
 $("#Pro_plan").click(function() {
-    $('#proplan_enabler').show();
-    $('input[name=plan]').val('pro');
-    $('input[name=bidders]').val(50);
-    $('input[name=PlanAmount]').val(140);
-    updateStripePlanSelect();
+    var plan = getStripePlan({
+        basic:0,
+        amount:$('input[name=PlanAmount]').val()||140,
+    });
+    updateStripePlanSelect(plan);
 });
 // Validation
 
@@ -246,8 +253,8 @@ var denormalizeCardExp = function (event) {
 $('body').on('keyup', 'form [data-is-sae-card-exp=1]', denormalizeCardExp);
 // Stripe.setPublishableKey('pk_test_Gs3mml7J0sPmODW6ZS8o8R3h');
 function pfWarnNoStripe() {
-    Alert.warning('It looks like you are running an outdated browser or blocking scripts. \
-   Please update your browser or add "stripe" to your browser\'s whitelist.');
+    Alert.warning('It looks like you are running an outdated browser or blocking scripts. ' +
+      'Please update your browser or add "stripe" to your browser\'s whitelist.');
 }
 
 if (typeof Stripe == 'undefined') {
@@ -354,9 +361,9 @@ function stripeResponseHandler(status, response) {
                 //xhr.responseText
                 //xhr.responseJSON
 
-               bootbox.alert('There was an error! Please try again then contact support.');
+                bootbox.alert('There was an error! Please try again then contact support.');
 
-                typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
+                //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }
         });
     }
