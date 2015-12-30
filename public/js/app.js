@@ -8,6 +8,10 @@ var updateStripePlanSelect = function()
     {
         $('select[name=stripe_plan]').val('Basic');
     }
+    console.log({
+        updateStripePlanSelect:$('select[name=stripe_plan]').val(),
+        stripe_plan:$('select[name=stripe_plan]').val(),
+    });
 
 };
 
@@ -43,6 +47,7 @@ $(document).ready(function() {
             });
             $('input[name=bidders]').val($("#bidders").val());
             console.log(slideramount);
+            $('input[name=plan]').val('pro');
             $('input[name=PlanAmount]').val(slideramount);
             updateStripePlanSelect();
         }
@@ -62,8 +67,8 @@ $("#Basic_plan").click(function() {
 $("#Pro_plan").click(function() {
     $('#proplan_enabler').show();
     $('input[name=plan]').val('pro');
-    $('input[name=bidders]').val(50);
-    $('input[name=PlanAmount]').val(140);
+    $('input[name=bidders]').val($('input[name=bidders]').val()||50);
+    $('input[name=PlanAmount]').val($('input[name=PlanAmount]').val()||140);
     updateStripePlanSelect();
 });
 // Validation
