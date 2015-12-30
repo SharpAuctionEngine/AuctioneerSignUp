@@ -282,15 +282,24 @@
                                                 </p>
                                             </div>
                                             <div>
-                                                <section class="text-muted text-center">
-                                                    <p> <small><small>By signing up, you agree to our <a href="#">T & C</a> and <a href="#">privacy policy</a>.</small></small>
-                                                    </p>
+                                              <section class="text-muted text-center">
+                                                <p>
+                                                  <small>
+                                                    <small>
+                                                      By signing up, you agree to our
+                                                      <a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">T & C</a>
+                                                      and
+                                                      <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">privacy policy</a>.
+                                                    </small>
+                                                  </small>
+                                                </p>
 
-                                                    <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
+                                                <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
 
-                                                    <p> <small>Need a customized Solution? <a href="#" data-toggle="modal" data-target="#contact us" class="link">Contact us</a> to find out what we can do for you. </small>
-                                                    </p>
-                                                </section>
+                                                <p>
+                                                  <small>Need a customized Solution? <a href="#" data-toggle="modal" data-target="#contact us" class="link">Contact us</a> to find out what we can do for you. </small>
+                                                </p>
+                                              </section>
                                             </div>
                                         </div>
                                     </div>
@@ -499,7 +508,13 @@ var planOptions = {{{planOptionsJson}}};
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
 
+{{{termsConditionsModalHtml}}}
+{{{privacyPolicyModalHtml}}}
+
 </body>
+
+
+
 <!-- Footer section -->
 <footer>
     <nav class="navbar navbar-default footer">

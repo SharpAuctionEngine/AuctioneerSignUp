@@ -52,4 +52,7 @@ stripePlansPromise.then(function(results)
 
 });
 
+var renderIndexHtmlOnStartUp = require('../lib/renderIndexHtmlOnStartUp')();
+renderIndexHtmlOnStartUp(getStripePlans());
+
 // dumpPromise('stripePlansPromise ',stripePlansPromise);

@@ -40,20 +40,20 @@ app.post('/auctioneer-signup/submit', function(req, res) {
 
   var userRequestRaw = req.body||{};
 
-  var stripePlansPromise = getStripePlans();
+  var stripePlansListPromise = getStripePlans();
 
   // console.log({userRequestRaw:userRequestRaw});
-  var stripePlan = parseStringPlan(stripePlansPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
-  dumpPromise('stripePlan',stripePlan);
+  var selectedPlanPromise = parseStringPlan(stripePlansListPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
+  dumpPromise('selectedPlanPromise',selectedPlanPromise);
 
   // create cus_ card_ sub_
-  var customerPromise = subscribeToStripe(stripePlan, userRequestRaw, stripeAPI);
+  var customerPromise = subscribeToStripe(selectedPlanPromise, userRequestRaw, stripeAPI);
   dumpPromise('customerPromise',customerPromise);
 
   var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw);
   dumpPromise('dbPromise',dbPromise);
 
-  var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, stripePlan);
+  var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, selectedPlanPromise);
   dumpPromise('adminPanelPromise',adminPanelPromise);
 
   // finishes the request's response
