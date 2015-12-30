@@ -5,14 +5,14 @@ var updateStripePlan = function(plan)
         $('input[name=plan]').val('basic');
         $('#pro').hide();
         $('#basic').show();
-        $('#proplan_enabler').hide();
+        // $('#proplan_enabler').hide();
     }
     else
     {
         $('input[name=plan]').val('pro');
         $('#pro').show();
         $('#basic').hide();
-        $('#proplan_enabler').show();
+        // $('#proplan_enabler').show();
     }
     $('input[name=PlanAmount]').val(plan.amountDecimal);
 
