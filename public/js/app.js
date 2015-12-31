@@ -187,7 +187,7 @@ var changeHouseUrlText = function (UrlText) {
         $('#house_url').val(UrlText);
         $('.hint_house_url').text(UrlText);
     } else {
-        $('#house_url').css('width', '90%');
+        // $('#house_url').css('width', '90%');
         $('#ghost_text').css('display', 'none');
         $('.hint_house_url').text('example');
     }

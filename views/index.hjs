@@ -272,14 +272,32 @@
                                                 </p>
                                             </div>
 
-                                            <div class="form-group ">
+                                            <div class="form-group">
                                                 <p class="wrapper">
-                                                    <input type="text" name="auction_house_name_url" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong>">
-                                                    <!-- <span class='text' id='ghost_text' value='{{instanceParentDomain}}' readonly tabindex='-1' style='display:none;'>{{instanceParentDomain}}</span> -->
+                                                    <input
+                                                        type="text"
+                                                        name="auction_house_name_url"
+                                                        placeholder="&#xf0ac; Your Auction House URL"
+                                                        autocomplete="off"
+                                                        class="icon form-auction-url form-control"
+                                                        id="house_url"
+                                                        data-toggle="popover"
+                                                        title="House URL"
+                                                        data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong>"
+                                                        style="" />
+                                                    <div class="pull-right" style="height:0px;">
+                                                      <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
+                                                    </div>
                                                 </p>
-                                                <!-- <input type="text" id="ghost_text" class="text" value="{{instanceParentDomain}}" readonly tabindex="-1" style="display:none;"> -->
-                                                <!-- {{instanceParentDomain}} -->
                                             </div>
+
+                                            <!-- <div class="form-group">
+                                                <p class="wrapper">
+                                                    <div class="icon form-auction-url form-control psuedo-fc">
+                                                        <span contenteditable="true" id="edit_auction_house_name_url">Input</span><span class="trailing">.{{instanceParentDomain}}</span>
+                                                    </div>
+                                                </p>
+                                            </div> -->
 
                                             <div class="form-group">
                                                 <p class="wrapper">
