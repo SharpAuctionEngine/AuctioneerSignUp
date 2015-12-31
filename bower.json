@@ -27,11 +27,11 @@
     "bootstrap-toggle":"2",
     "mootools-core":"1.5.*",
     "jquery-serialize-object":"jquery-serialize-object#~2.4.5",
-    "intercom.js":"git://github.com/tinystride/intercom.js#d7652e76d6caebf45b0a8df76ed9fc5e088d0d96"
+    "intercom.js":"git://github.com/tinystride/intercom.js#d7652e76d6caebf45b0a8df76ed9fc5e088d0d96",
+    "jquery-throttle-debounce": "cowboy/jquery-throttle-debounce"
   },
   "resolutions": {
     "jquery": "2.*",
     "bootstrap": "3.3.*"
   }
 }
-

@@ -94,13 +94,10 @@ $(document).ready(function() {
                 bidders:bidders,
                 basic:0,
             });
+
             $('.slideramount').text(plan.amountDecimal);
             $('.bidders').text('\t' + bidders);
-            //  console.log(bidders);
-            // console.log(this);
-            // $slider = $(this);
-            // $slider.attr('id');
-            // $('#slider1').data().uiSlider.options.value
+
             $(selectors).each(function() {
                 if ($('#slider1').val(ui.value) != $('#slider2').val(ui.value))
                 {
@@ -108,7 +105,7 @@ $(document).ready(function() {
                 }
             });
             $('input[name=bidders]').val($("#bidders").val());
-            console.log({slideramount:plan.amountDecimal});
+            // console.log({slideramount:plan.amountDecimal,plan:plan});
             $('input[name=PlanAmount]').val(plan.amountDecimal);
             updateStripePlanSelect(plan);
         }
@@ -140,43 +137,62 @@ $("#Pro_plan").click(function() {
 var oldHouseName = "";
 $("body").on("focus", "#house_name", function() {
 
-    oldHouseName = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase();
+    oldHouseName = slug($(this).val());
     // console.log("focus:house_name:" + oldHouseName);
 
 });
 
+// @todo https://www.npmjs.com/package/slug
+var slug = function(str)
+{
+    return (str||'')
+        .replace(/[^a-z0-9\s]/gi, '')
+        .replace(/[_\s]/g, '')
+        .toLowerCase()
+        ;
+};
+
 $("body").on("keyup", "#house_name", function() {
 
     if (oldHouseName == $('#house_url').val()) {
-        oldHouseName = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase();
+        oldHouseName = slug($(this).val());
         // console.log("keyup:house_name:" + oldHouseName);
         changeHouseUrlText(oldHouseName);
     }
 });
-/*
- $("body").on("blur", "#house_name", function () {
-    if (oldHouseName  == $('#house_url').val()) {g
-     changeHouseUrlText($(this));
-   }
 
- });*/
-
-$("body").on("keyup", "#house_url", function() {
-    changeHouseUrlText($(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase());
-    // console.log("keyUp:house_url:"+$(this).val() );
+$("body").on("keyup blur", "#house_url", function() {
+    changeHouseUrlText($(this).val());
 });
-$("body").on("blur", "#house_url", function() {
-    if (!$.trim($(this).val())) {
-        changeHouseUrlText($("#house_name").val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase());
-        // console.log("blur:house_url:"+$("#house_name").val() );
-    }
+
+
+var isDomainTakenAjax = $.debounce(350,function($input,$fg,domain)
+{
+    $.ajax({
+        url:"/auctioneer-signup/v1/typeahead/is/domain/available",
+        data:{domain:domain},
+        complete:function(xhr,textStatus){
+            var json = xhr.responseJSON||{};
+            //xhr.responseText
+            //xhr.responseJSON
+            console.log([json,$input,$fg,domain]);
+        },
+    });
+});
+
+$("body").on("input", "[name=auction_house_name_url]", function() {
+    var $input = $(this);
+
+    isDomainTakenAjax($input,$input.parents('.form-group').first(),$input.val());
+
 });
 
 var changeHouseUrlText = function (UrlText) {
-    if ($.trim(UrlText)) {
+    UrlTextSlugged = slug($.trim(UrlText));
+
+    if (UrlTextSlugged) {
         $('#house_url').css({
             // width: '58%',
-
         });
         $('#ghost_text').css({
             display: '',
@@ -184,8 +200,8 @@ var changeHouseUrlText = function (UrlText) {
             'font-weight': 'bolder',
         });
 
-        $('#house_url').val(UrlText);
-        $('.hint_house_url').text(UrlText);
+        $('#house_url').val(UrlTextSlugged);
+        $('.hint_house_url').text(UrlTextSlugged);
     } else {
         // $('#house_url').css('width', '90%');
         $('#ghost_text').css('display', 'none');

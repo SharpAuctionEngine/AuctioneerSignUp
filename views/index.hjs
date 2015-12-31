@@ -519,6 +519,7 @@ var planOptions = {{{planOptionsJson}}};
             <script src="js/jquery-ui.js"></script>
             <!--  <script src="js/tooltip.js"></script>
             <script src="js/popover.js"></script> -->
+            <script src="js/jquery.ba-throttle-debounce.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
              <script src="js/bootbox.min.js"></script>
             <script src="js/jquery.backstretch.min.js"></script>
