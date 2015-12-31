@@ -127,8 +127,19 @@
                                                         <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
                                                         <li>Automatic page refresh ensures your bidders never miss out</li>
                                                         <li>Easy lot creation with bulk importing and auto photo assignment</li>
-                                                        <li> Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
-                                                        <li> Our rapid development guarantees you consistently have the latest features at your finger tips</li>
+                                                        <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
+                                                        <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
+                                                        <li>
+                                                            SAE offers the use of
+                                                            <a href="https://git.spacegazebo.com/SharpAuctionEngine/SAE-Manual/blob/master/docs/domain.rst">
+                                                                vanity domains
+                                                            </a>.
+                                                            If you own a domain,
+                                                            you can use that domain for your new auction's website.
+                                                            It comes with a
+                                                            <strong><em>FREE SSL</em></strong>
+                                                            for added security.
+                                                        </li>
                                                     </ul>
                                                 </div>
                                                 <strong>One Month Free Trial</strong>
