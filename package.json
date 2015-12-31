@@ -43,6 +43,7 @@
     "fs-promise": "^0.3.1",
     "gulp-install": "~0.2.0",
     "hogan.js": "^3.0.2",
+    "ioredis": "^1.13.2",
     "mandrill-api": "~1.0.45",
     "node-mandrill": "^1.0.1",
     "pg": "~4.4.1",

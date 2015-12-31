@@ -21,22 +21,22 @@ http://clean-pond.sharpauctionengine.com/
 ```
 server {
     listen 80 ;
-    
+
     server_name www.auctioneersignup.com  ;
-   
+
 
     root /home/forge/www.auctioneersignup.com/public;
-    
+
     index index.html;
 
     charset utf-8;
 
-    
+
     location / {
         try_files $uri $uri/ /index.html?$query_string;
     }
 
-    location /auctioneer-signup/submit {
+    location /auctioneer-signup/v1 {
             proxy_pass http://localhost:3002;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
@@ -99,7 +99,7 @@ $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && ec
 
 
 ######Setup local env to run node.js
-######Install all nodes 
+######Install all nodes
 
 ``npm install``
 
@@ -136,11 +136,10 @@ $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && ec
  * Change the peer to md5 from /etc/postgresql/9.x/main/pg_hba.con
  * Login to psql as postgre and change the password if you want to
  * create a DB name auctioneersignupform
-   
+
 
 ###### Copy the ``.envExample`` file to ``.env``
 
  * fill in the details
  * use a Mandrill API key that has only messages.send permission
  * make sure that ``config/config.json`` has the correct DB details for your environment
-
