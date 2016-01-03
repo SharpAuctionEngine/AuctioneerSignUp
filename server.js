@@ -44,8 +44,9 @@ var server = app.listen(process.env.APP_PORT, function() {
 });
 
 var User = require('./lib/signUpRequestModel')(db);
+var validateSignupRequest = require('./lib/validateSignupRequest')(db);
 
-app.post('/auctioneer-signup/v1/submit', function(req, res) {
+app.post('/auctioneer-signup/v1/submit', validateSignupRequest, function(req, res) {
 
   var userRequestRaw = req.body||{};
 
