@@ -509,9 +509,9 @@
               <li class="nav-header ">About</li>
               <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a>
               </li>
-              <li><a href="/site-terms-and-conditions">Terms & Conditions</a>
+              <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a>
               </li>
-              <li><a href="/privacy-policy">Privacy Policy</a>
+              <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>
               </li>
             </ul>
           </div>
