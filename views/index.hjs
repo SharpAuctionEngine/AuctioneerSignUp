@@ -109,7 +109,7 @@
                             <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
                             <li>
                               SAE offers the use of
-                              <a href="https://git.spacegazebo.com/SharpAuctionEngine/SAE-Manual/blob/master/docs/domain.rst">
+                              <a href="http://sae-manual.readthedocs.org/en/latest/domain/" target="_blank">
                                   vanity domains
                               </a>.
                               If you own a domain, you can use that domain for your new auction's website. It comes with a
@@ -555,7 +555,6 @@
         <!-- <p class="text-muted text-center"> <a href="http://support.sharpauctionengine.com">Support</a> •
 			    <a href="/site-terms-and-conditions">Terms</a> •
 			    <a href="http://sharpauctionengine.com/index.php/contact-us">Contact</a> <br/> -->
-        <!-- https://github.com/SharpAuctionEngine/LSAE/issues/1717 -->
         <p class="text-muted text-center">&copy; 2015 Sharp Auction Engine, Inc. All rights reserved.</p>
         <!-- <p class="text-muted text-center">Powered by <a href="http://www.spacegazebo.com" target="_blank">Space Gazebo</a>.</p> -->
       </div>
