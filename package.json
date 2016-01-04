@@ -52,6 +52,7 @@
     "sequelize": "~3.7.1",
     "sequelize-cli": "~1.9.1",
     "sequelize-json": "^2.1.2",
+    "slug": "^0.9.1",
     "stripe": "^4.0.0"
   }
 }
