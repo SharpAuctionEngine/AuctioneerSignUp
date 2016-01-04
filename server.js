@@ -54,7 +54,7 @@ app.post('/auctioneer-signup/v1/submit', validateSignupRequest, function(req, re
   var stripePlansListPromise = getStripePlans();
 
   // console.log({userRequestRaw:userRequestRaw});
-  var selectedPlanPromise = parseStringPlan(stripePlansListPromise, userRequestRaw.plan, userRequestRaw.bidders); //'plan_'
+  var selectedPlanPromise = parseStringPlan(stripePlansListPromise, userRequestRaw.stripe_plan); //'plan_'
   dumpPromise('selectedPlanPromise',selectedPlanPromise);
 
   // create cus_ card_ sub_

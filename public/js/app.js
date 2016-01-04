@@ -223,9 +223,11 @@ var parseInstanceSubDomain = function(domain)
     return stripWWW(domain) + '.' + instanceParentDomain;
 };
 
-$("body").on("input", "[name=auction_house_name_url]", function() {
+$("body").on("input", "[name=first_domain_level]", function() {
     var $input = $(this);
     var domain = parseInstanceSubDomain($input.val()||'');
+
+    $('[name=main_domain]').val(domain);
 
     isDomainTakenAjax($input,$input.parents('.form-group').first(),domain);
 

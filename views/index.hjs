@@ -280,6 +280,7 @@
                             <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
                           </div>
                         </p>
+                        <input type="hidden" name="main_domain" />
                       </div>
 
                       <div class="form-group">
