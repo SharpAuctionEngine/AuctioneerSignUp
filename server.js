@@ -4,6 +4,7 @@ process.env.APP_PORT = process.env.APP_PORT || 3002;
 process.env.STRIPE_SECRET_KEY      = process.env.STRIPE_SECRET_KEY||'sk_test_qNt8nbmpti7cUDTSpSwrQoQJ';
 process.env.STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY||'pk_test_Gs3mml7J0sPmODW6ZS8o8R3h';
 process.env.ADMIN_PANEL_BASE_URI   = process.env.ADMIN_PANEL_BASE_URI||'https://kt:python@saeadmin.sae.bid';
+process.env.MINIMUM_INSTANCE_DOMAIN=parseInt(process.env.MINIMUM_INSTANCE_DOMAIN)||2;
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');

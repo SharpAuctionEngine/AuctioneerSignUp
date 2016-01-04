@@ -165,25 +165,69 @@ $("body").on("keyup blur", "#house_url", function() {
     changeHouseUrlText($(this).val());
 });
 
+var firstDomainLevel = function(domain)
+{
+    var indexOfDot = domain.indexOf('.');
+    if (indexOfDot > 0)
+    {
+        return domain.slice(0,indexOfDot);
+    }
+    return '';
+};
+
+var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
+{
+    $fg[is_available?'addClass':'removeClass']('has-success');
+    $fg[is_available?'removeClass':'addClass']('has-error');
+    $('.when-instance-domain-is-available')[is_available?'show':'hide']();
+    $('.when-instance-domain-is-not-available')[is_available?'hide':'show']();
+};
 
 var isDomainTakenAjax = $.debounce(350,function($input,$fg,domain)
 {
-    $.ajax({
-        url:"/auctioneer-signup/v1/typeahead/is/domain/available",
-        data:{domain:domain},
-        complete:function(xhr,textStatus){
-            var json = xhr.responseJSON||{};
-            //xhr.responseText
-            //xhr.responseJSON
-            console.log([json,$input,$fg,domain]);
-        },
-    });
+    if (minimumDomainLength >= firstDomainLevel(domain).length)
+    {
+        console.log('isDomainAvailable('+domain+'): "too short"');
+        var is_available = false;
+        updateHouseAvailableDOM($input,$fg,domain,is_available);
+    }
+    else
+    {
+        $.ajax({
+            url:"/auctioneer-signup/v1/typeahead/is/domain/available",
+            data:{domain:domain},
+            complete:function(xhr,textStatus)
+            {
+                var json = xhr.responseJSON||{};
+                //xhr.responseText
+                //xhr.responseJSON
+                // console.log([json,$input,$fg,domain]);
+                var is_available = json.is_available||false;
+
+                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
+                updateHouseAvailableDOM($input,$fg,json.domain,is_available);
+            },
+        });
+    }
 });
+var stripWWW = function(domain)
+{
+    if (domain.slice(0,4)==='www.')
+    {
+        return stripWWW(domain.slice(4));
+    }
+    return domain;
+};
+var parseInstanceSubDomain = function(domain)
+{
+    return stripWWW(domain) + '.' + instanceParentDomain;
+};
 
 $("body").on("input", "[name=auction_house_name_url]", function() {
     var $input = $(this);
+    var domain = parseInstanceSubDomain($input.val()||'');
 
-    isDomainTakenAjax($input,$input.parents('.form-group').first(),$input.val());
+    isDomainTakenAjax($input,$input.parents('.form-group').first(),domain);
 
 });
 
