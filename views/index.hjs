@@ -274,7 +274,7 @@
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="auction_house_name_url" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span>"
+                          <input type="text" name="first_domain_level" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span>"
                           style="" />
                           <div class="pull-right" style="height:0px;">
                             <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
