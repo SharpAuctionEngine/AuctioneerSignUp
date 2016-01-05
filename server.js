@@ -1,4 +1,5 @@
 require('dotenv').load();
+var rollbar = require('./lib/debug/rollbar');
 
 process.env.APP_PORT = process.env.APP_PORT || 3002;
 process.env.STRIPE_SECRET_KEY      = process.env.STRIPE_SECRET_KEY||'sk_test_qNt8nbmpti7cUDTSpSwrQoQJ';
@@ -37,6 +38,7 @@ var redis = new Redis({
   //password: process.env.REDIS_PASSWORD||null,
   keyPrefix:   (process.env.REDIS_PREFIX||'asu-cp')+':',
 });
+// rollbar.errorHandler("ACCESS_TOKEN", {environment: 'playground'})
 
 app.use(bodyParser());
 
@@ -75,3 +77,7 @@ app.post('/auctioneer-signup/v1/submit', validateSignupRequest, function(req, re
 app.get('/auctioneer-signup/v1/typeahead/is/domain/available',
     require('./lib/Typeahead/DomainAvailableController')(redis,db)
 );
+
+// @link http://expressjs.com/en/guide/error-handling.html
+// You define error-handling middleware last, after other app.use() and routes calls
+app.use(rollbar.errorHandler({environment: app.settings.env}));
