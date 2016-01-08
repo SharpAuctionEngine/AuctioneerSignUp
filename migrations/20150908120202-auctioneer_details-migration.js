@@ -31,6 +31,11 @@ module.exports = {
         defaultValue: false,
         // allowNull: false
       },
+      first_level_domain: {
+        type: DataTypes.STRING,
+        defaultValue: false,
+        // allowNull: false
+      },
       email: {
         type: DataTypes.STRING,
         defaultValue: false,
