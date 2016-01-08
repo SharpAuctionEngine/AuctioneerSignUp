@@ -135,7 +135,7 @@ $("#Pro_plan").click(function() {
 // Validation
 
 var oldHouseName = "";
-$("body").on("focus", "#house_name", function() {
+$("body").on("focus", "[name=auction_house_name]", function() {
 
     oldHouseName = slug($(this).val());
     // console.log("focus:house_name:" + oldHouseName);
@@ -152,16 +152,17 @@ var slug = function(str)
         ;
 };
 
-$("body").on("keyup", "#house_name", function() {
+$("body").on("keyup", "[name=auction_house_name]", function() {
 
-    if (oldHouseName == $('#house_url').val()) {
+    if (oldHouseName == $('[name=first_domain_level]').val())
+    {
         oldHouseName = slug($(this).val());
         // console.log("keyup:house_name:" + oldHouseName);
         changeHouseUrlText(oldHouseName);
     }
 });
 
-$("body").on("keyup blur", "#house_url", function() {
+$("body").on("keyup blur", "[name=first_domain_level]", function() {
     changeHouseUrlText($(this).val());
 });
 
@@ -235,9 +236,10 @@ $("body").on("input", "[name=first_domain_level]", function() {
 
 var changeHouseUrlText = function (UrlText) {
     UrlTextSlugged = slug($.trim(UrlText));
-
-    if (UrlTextSlugged) {
-        $('#house_url').css({
+    var $firstLevelDomain = $('[name=first_domain_level]');
+    if (UrlTextSlugged)
+    {
+        $firstLevelDomain.css({
             // width: '58%',
         });
         $('#ghost_text').css({
@@ -246,16 +248,17 @@ var changeHouseUrlText = function (UrlText) {
             'font-weight': 'bolder',
         });
 
-        $('#house_url').val(UrlTextSlugged);
+        $firstLevelDomain.val(UrlTextSlugged);
         $('.hint_house_url').text(UrlTextSlugged);
     } else {
-        // $('#house_url').css('width', '90%');
+        // $firstLevelDomain.css('width', '90%');
         $('#ghost_text').css('display', 'none');
         $('.hint_house_url').text('example');
     }
+    $firstLevelDomain.trigger('input');
 };
 
-$('#house_url').on('shown.bs.popover', function() {
+$('[name=first_domain_level]').on('shown.bs.popover', function() {
     if ($.trim($(this).val()))
     {
         $('.hint_house_url').text($(this).val());
