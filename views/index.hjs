@@ -386,7 +386,7 @@
                       <span class="payment-errors"></span>
                     </p>
                     <div class="form-bottom">
-                      <div class="form-group" id="proplan_enabler">
+                      <!-- <div class="form-group" id="proplan_enabler">
                         <h3>Plan Info</h3>
                         <label class="" for="form-bill-period">Billing Period:</label>
                         <select name="stripe_plan" class="form-control" style="height:50px; border-radius:16px;">
@@ -394,7 +394,8 @@
                           <option value="{{id}}">{{description}}</option>
                           {{/planOptions}}
                         </select>
-                      </div>
+                      </div> -->
+                      <input type="hidden" name="stripe_plan" />
                       <h3>Payment Info</h3>
                       <div class="form-group">
                         <label class="" for="form-card-number">Card number:</label>
