@@ -23,7 +23,7 @@ var updateStripePlan = function(plan)
 };
 var updateStripePlanSelect = function(plan)
 {
-    $('select[name=stripe_plan]').val(plan.id);
+    $('[name=stripe_plan]').val(plan.id);
 
     console.log({
         updateStripePlanSelect:plan,
@@ -64,7 +64,7 @@ var getStripePlan = function(id)
     }
     else
     {
-        id = id || $('select[name=stripe_plan]').val();
+        id = id || $('[name=stripe_plan]').val();
         for (var i=0;i<planOptions.length;i++)
         {
             if (id.toLowerCase() === planOptions[i].id.toLowerCase())
