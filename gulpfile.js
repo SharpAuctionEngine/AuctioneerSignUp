@@ -266,7 +266,7 @@ gulp.task('editme-css', function() {
       paths.dev.vendor+'/x-editable/dist/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css',
     ])
     ;
-    
+
   return es.merge(bsWysiwygStream,xEditableStream,select2Stream,typeAheadJsStream)
     .pipe(concat('editme.css'))
     .pipe(gulp.dest(paths.production.css))
@@ -293,59 +293,61 @@ gulp.task('phpunit', function() {
 });
 */
 
-gulp.task('icons', function() { 
-    return gulp.src(paths.dev.vendor + '/font-awesome/fonts/**.*') 
-        .pipe(gulp.dest('./public/assets/fonts')); 
+gulp.task('icons', function() {
+    return gulp.src(paths.dev.vendor + '/font-awesome/fonts/**.*')
+        .pipe(gulp.dest('./public/assets/fonts'));
 });
-gulp.task('bs-colorpicker', function() { 
+gulp.task('bs-colorpicker', function() {
     return gulp.src([
       paths.dev.vendor + '/mjolnix-bootstrap-colorpicker/dist/**/**.*',
-    ]) 
-    .pipe(gulp.dest('./public/libs/bs-colorpicker')); 
+    ])
+    .pipe(gulp.dest('./public/libs/bs-colorpicker'));
 });
-gulp.task('tinymce', function() { 
+gulp.task('tinymce', function() {
     return gulp.src([
       paths.dev.vendor + '/tinymce/**/**.*',
-    ]) 
-    .pipe(gulp.dest('./public/libs/tinymce')); 
+    ])
+    .pipe(gulp.dest('./public/libs/tinymce'));
 });
-gulp.task('bs-switch', function() { 
+gulp.task('bs-switch', function() {
     return gulp.src([
       paths.dev.vendor + '/bootstrap-switch/dist/**/**.*',
-    ]) 
-    .pipe(gulp.dest('./public/libs/bootstrap-switch')); 
+    ])
+    .pipe(gulp.dest('./public/libs/bootstrap-switch'));
 });
-gulp.task('fancybox-img', function() { 
+gulp.task('fancybox-img', function() {
   return gulp.src([
     paths.dev.vendor + '/fancybox/source/**.gif',
     paths.dev.vendor + '/fancybox/source/**.png',
     paths.dev.vendor + '/fancybox/source/**.jpg'
-    ]) 
-    .pipe(gulp.dest('./public/assets/img/fancybox')); 
+    ])
+    .pipe(gulp.dest('./public/assets/img/fancybox'));
   });
-gulp.task('gritter-img', function() { 
+gulp.task('gritter-img', function() {
   return gulp.src([
     paths.dev.vendor + '/jquery.gritter/images/**.gif',
     paths.dev.vendor + '/jquery.gritter/images/**.png',
     paths.dev.vendor + '/jquery.gritter/images/**.jpg'
-    ]) 
-    .pipe(gulp.dest('./public/assets/img/gritter')); 
+    ])
+    .pipe(gulp.dest('./public/assets/img/gritter'));
 });
-gulp.task('select2-img', function() { 
-  return gulp.src([
+gulp.task('select2-img', function() {
+    return gulp.src([
     paths.dev.vendor + '/select2/**.gif',
     paths.dev.vendor + '/select2/**.png',
     paths.dev.vendor + '/select2/**.jpg'
-    ]) 
-    .pipe(gulp.dest('./public/assets/img/select2')); 
+    ])
+    .pipe(gulp.dest('./public/assets/img/select2'))
+    ;
 });
-gulp.task('x-editable-img', function() { 
+gulp.task('x-editable-img', function(){
   return gulp.src([
     paths.dev.vendor + '/x-editable/dist/bootstrap3-editable/img/**.gif',
     paths.dev.vendor + '/x-editable/dist/bootstrap3-editable/img/**.png',
     paths.dev.vendor + '/x-editable/dist/bootstrap3-editable/img/**.jpg'
-    ]) 
-    .pipe(gulp.dest('./public/assets/img/x-editable')); 
+  ])
+  .pipe(gulp.dest('./public/assets/img/x-editable'))
+  ;
 });
 
 gulp.task('watch', function() {
