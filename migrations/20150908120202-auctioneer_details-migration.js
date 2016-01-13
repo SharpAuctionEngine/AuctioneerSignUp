@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = {
   up: function(queryInterface, DataTypes) {
+    'use strict';
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
@@ -30,6 +29,7 @@ module.exports = {
         type: DataTypes.STRING,
         defaultValue: false,
         // allowNull: false
+        unique: true
       },
       first_level_domain: {
         type: DataTypes.STRING,
@@ -40,6 +40,7 @@ module.exports = {
         type: DataTypes.STRING,
         defaultValue: false,
         // allowNull: false
+        unique: true
       },
       auction_house_name: {
         type: DataTypes.STRING,
@@ -66,6 +67,7 @@ module.exports = {
   },
 
   down: function(queryInterface, DataTypes) {
+    'use strict';
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
