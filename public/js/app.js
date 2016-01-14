@@ -439,6 +439,7 @@ function stripeResponseHandler(status, response) {
 
                     });
                     alerts.sprinkle('form:first');
+                    
                     $form.find('button,input[type=button]').prop('disabled', false);
                    
                     return ; 
