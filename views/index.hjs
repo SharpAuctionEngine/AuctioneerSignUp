@@ -385,7 +385,7 @@
 
                     <p>
                       <span class="payment-errors"></span>
-                      <!-- <div class="errors"s></div> -->
+                      
                     </p>
                     <div class="form-bottom">
                       <!-- <div class="form-group" id="proplan_enabler">
@@ -444,7 +444,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Congratulatons!</h4>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
               </div>
               <div class="modal-body">
                 Congratulations!! you are good to go!

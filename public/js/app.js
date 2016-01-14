@@ -113,6 +113,14 @@ $(document).ready(function() {
 
 });
 
+// $('body').on('focus','.form-control',function()
+//     {
+        
+//         $('.form-control').removeClass();
+
+//     });
+
+
 $('body').on('input','select[name=stripe_plan]',function()
 {
     var plan = getStripePlan()||getStripePlan({basic:1});
@@ -434,14 +442,15 @@ function stripeResponseHandler(status, response) {
                     
                     jQuery.each(xhr.responseJSON.errors, function(key, value) {
                      
-                     responseText12 += value.message+'\n';
+                     responseText12 += value.message;
+
                      alerts.add(value.field,value.message);
 
                     });
                     alerts.sprinkle('form:first');
-                    
+
                     $form.find('button,input[type=button]').prop('disabled', false);
-                   
+                    bootbox.alert('There are validation errors.Please click on previous button to review errors');
                     return ; 
 
                 }
