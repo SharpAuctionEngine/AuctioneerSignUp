@@ -417,13 +417,33 @@ function stripeResponseHandler(status, response) {
                 $("#congrats").modal('show');
             },
             error: function(xhr, textStatus, errorThrown) {
+                var responseText12 ='';
+                var alerts =new MessageBag();
+                
                 console.error({
                     textStatus: textStatus,
-                    'xhr.response': xhr.responseJSON || xhr.responseText
+                    'xhr.response': xhr.responseJSON || xhr.responseText,
+                    errorThrown:errorThrown,
                 });
                 //xhr.responseText
                 //xhr.responseJSON
+                
+                if(xhr.status==400)
+                {
 
+                    
+                    jQuery.each(xhr.responseJSON.errors, function(key, value) {
+                     
+                     responseText12 += value.message+'\n';
+                     alerts.add(value.field,value.message);
+
+                    });
+                    alerts.sprinkle('form:first');
+                    $form.find('button,input[type=button]').prop('disabled', false);
+                   
+                    return ; 
+
+                }
                 bootbox.alert('There was an error! Please try again then contact support.');
 
                 //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
