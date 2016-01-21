@@ -118,8 +118,8 @@ $(document).ready(function() {
         
 //         $('.form-control').removeClass();
 
-//     });
-
+//        });
+ 
 
 $('body').on('input','select[name=stripe_plan]',function()
 {
