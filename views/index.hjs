@@ -209,7 +209,7 @@
               </div>
             </div>
           </fieldset>
-
+           
           <fieldset>
             <div class="row">
               <div class="col-sm-6 text-center" style="margin-top:230px;">
@@ -257,19 +257,19 @@
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="username" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                          <input type="text" name="username" value="test" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="email" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+                          <input type="text" name="email" value="@sae.bid" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="auction_house_name" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+                          <input type="text" name="auction_house_name" value="housename" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
                         </p>
                       </div>
 
@@ -336,13 +336,13 @@
                     </div>
                     <div class="form-bottom">
                       <div class="form-group">
-                        <input type="text" autocomplete="off" name="first_name" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
+                        <input type="text" autocomplete="off" name="first_name" value="test" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
                       </div>
                       <div class="form-group">
-                        <input type="text" name="last_name" autocomplete="off" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
+                        <input type="text" name="last_name" autocomplete="off" value="user" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
                       </div>
                       <div class="form-group">
-                        <input type="text" name="phone_number" autocomplete="off" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+                        <input type="text" name="phone_number" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
                       </div>
                       <!-- <div class="form-group">
                                                 <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
@@ -367,6 +367,8 @@
               </div>
             </div>
           </fieldset>
+
+        
 
           <fieldset>
 
@@ -435,9 +437,37 @@
 
                 </div>
           </fieldset>
+        <fieldset id="final_page" class=".finalPage">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color" style="font-size:24px">
+                          <strong>Thanking you for signing up!</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <h3 class="black">
+                         <strong> Your auction house is under construction.</strong>
+                     </h3>
+                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
 
+                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
+
+                       <p style="font-size:12px;">If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
         </form>
-        <div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <!--  <div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -460,7 +490,7 @@
         </div>
         </div>
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Javascript -->
@@ -540,7 +570,7 @@
               </li>
               <li><a href="http://news.sharpauctionengine.com/?cat=5"> Release Notes</a>
               </li>
-              <li><a href="mailto:{{ HTML::email(Config::get('mail.support-email-address')) }}">Email Us</a>
+              <li><a href="mailto:help@sharpauctionengine.com" target="_top">Email Us</a>
               </li>
             </ul>
           </div>

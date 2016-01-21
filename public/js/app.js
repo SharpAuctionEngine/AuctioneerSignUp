@@ -118,7 +118,7 @@ $(document).ready(function() {
         
 //         $('.form-control').removeClass();
 
-//        });
+//     });
  
 
 $('body').on('input','select[name=stripe_plan]',function()
@@ -422,7 +422,11 @@ function stripeResponseHandler(status, response) {
                 // $form.attr('data-is-ready',1); //ch
 
                 // $('#paymentMethodForm').submit(); //ch
-                $("#congrats").modal('show');
+                // $("#congrats").modal('show');
+                // $('#final_page').css('display:block');
+                // $("#final_page").append($form.find(".finalPage, .form-top, .form-bottom"));
+                 $form.find(".finalPage").css("display:block");
+                
             },
             error: function(xhr, textStatus, errorThrown) {
                 var responseText12 ='';
