@@ -210,6 +210,8 @@
             </div>
           </fieldset>
            
+          
+
           <fieldset>
             <div class="row">
               <div class="col-sm-6 text-center" style="margin-top:230px;">
@@ -368,9 +370,7 @@
             </div>
           </fieldset>
 
-        
-
-          <fieldset>
+             <fieldset class="finalfieldset">
 
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
@@ -428,7 +428,7 @@
                       </div>
 
                       <button type="button" class="btn btn-primary btn-previous">Previous</button>
-                      <button type="button" class="btn btn-success btn-stripe">Get Started</button>
+                      <button type="button" class="btn btn-success btn-stripe ">Get Started</button>
                       <!-- <button type="button" class="btn btn-warning btn-next">skip</button> -->
 
                     </div>
@@ -437,8 +437,8 @@
 
                 </div>
           </fieldset>
-        <fieldset id="final_page" class=".finalPage">
-            <div class="row">
+        <fieldset >
+            <div class="row" id="final_page" class="finalPage">
               <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
                 <div class="panel panelborder">
                   <div class="panel-body">

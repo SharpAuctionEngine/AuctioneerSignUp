@@ -125,13 +125,17 @@ $('body').on('input','select[name=stripe_plan]',function()
 {
     var plan = getStripePlan()||getStripePlan({basic:1});
 
-    updateStripePlan(plan);
+     updateStripePlan(plan);
 });
+
+
+
 
 //  Plan decider
 $("#Basic_plan").click(function() {
     var plan = getStripePlan({basic:1});
     updateStripePlanSelect(plan);
+    
 });
 $("#Pro_plan").click(function() {
     var plan = getStripePlan({
@@ -139,6 +143,8 @@ $("#Pro_plan").click(function() {
         bidders:$('input[name=bidders]').val()||50,
     });
     updateStripePlanSelect(plan);
+    
+
 });
 // Validation
 
@@ -369,6 +375,8 @@ jQuery(function($) {
     });
 });
 
+
+
 function stripeResponseHandler(status, response) {
 
     var $form = $('#paymentMethodForm');
@@ -417,15 +425,22 @@ function stripeResponseHandler(status, response) {
             },
             success: function(json, textStatus, xhr) {
 
+                     var parent_fieldset = $('.registration-form .finalfieldset');
+                 var next_step = true;
+        
+        
+                  if( next_step ) {
 
-                // console.log(json);
+                     parent_fieldset.fadeOut(400, function() {
+                           
+                 $(this).next().fadeIn();
+              });
+                 // console.log(json);
                 // $form.attr('data-is-ready',1); //ch
 
                 // $('#paymentMethodForm').submit(); //ch
                 // $("#congrats").modal('show');
-                // $('#final_page').css('display:block');
-                // $("#final_page").append($form.find(".finalPage, .form-top, .form-bottom"));
-                 $form.find(".finalPage").css("display:block");
+                
                 
             },
             error: function(xhr, textStatus, errorThrown) {
@@ -442,6 +457,8 @@ function stripeResponseHandler(status, response) {
                 
                 if(xhr.status==400)
                 {
+                    if(xhr.responseJSON.errors)
+                    {
 
                     
                     jQuery.each(xhr.responseJSON.errors, function(key, value) {
@@ -455,11 +472,10 @@ function stripeResponseHandler(status, response) {
 
                     $form.find('button,input[type=button]').prop('disabled', false);
                     bootbox.alert('There are validation errors.Please click on previous button to review errors');
-                    return ; 
-
-                }
+                    return ;
+                    }
                 bootbox.alert('There was an error! Please try again then contact support.');
-
+                }
                 //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }
         });
