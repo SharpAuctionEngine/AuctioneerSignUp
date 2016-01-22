@@ -435,6 +435,8 @@ function stripeResponseHandler(status, response) {
                            
                  $(this).next().fadeIn();
               });
+                }
+                 },
                  // console.log(json);
                 // $form.attr('data-is-ready',1); //ch
 
@@ -442,7 +444,7 @@ function stripeResponseHandler(status, response) {
                 // $("#congrats").modal('show');
                 
                 
-            },
+            
             error: function(xhr, textStatus, errorThrown) {
                 var responseText12 ='';
                 var alerts =new MessageBag();
@@ -457,9 +459,6 @@ function stripeResponseHandler(status, response) {
                 
                 if(xhr.status==400)
                 {
-                    if(xhr.responseJSON.errors)
-                    {
-
                     
                     jQuery.each(xhr.responseJSON.errors, function(key, value) {
                      
@@ -475,7 +474,7 @@ function stripeResponseHandler(status, response) {
                     return ;
                     }
                 bootbox.alert('There was an error! Please try again then contact support.');
-                }
+                
                 //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }
         });
