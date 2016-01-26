@@ -92,7 +92,7 @@ MessageBag.prototype.getMessages=function(k,v){
  */
 MessageBag.prototype.sprinkle = function(sel,f,insert){
   sel = sel||$('body');
-  f = f||'<div class="messagebag mb-sprinkled-item"><span class="label label-danger">:message</span></div>';
+  f = f||'<div class="messagebag mb-sprinkled-item"><span class="label label-danger" id="messagebag">:message</span></div>';
   insert = insert || function(key,message,bag,sel,format,insert)
   {
       var $fg = $(sel).find('[name="'+key+'"]').parents('.form-group');
