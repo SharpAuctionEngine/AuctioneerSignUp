@@ -117,7 +117,7 @@ $(document).ready(function() {
     $(".removeMessagebag").click(function() {
     
         $(' #messagebag ').remove();
-        
+
     });
  
 
@@ -343,7 +343,7 @@ if (typeof Stripe == 'undefined') {
 jQuery(function($) {
     // $('#paymentMethodForm').click(function (event) { //ch
     $('.registration-form .btn-stripe').on('click', function(event) {
-        console.log(this);
+        // console.log(this);
         if ($.trim($('input[data-stripe="number"]').val())) {
             var vResult = $('input[data-stripe="number"]').validateCreditCard();
             console.log(vResult);
@@ -426,18 +426,18 @@ function stripeResponseHandler(status, response) {
                 //xhr.responseJson
             },
             success: function(json, textStatus, xhr) {
-
+                    console.log('success ajax');
                      var parent_fieldset = $('.registration-form .finalfieldset');
-                   var next_step = true;
+                     var next_step = true;
         
         
-                  if( next_step ) {
+                      if( next_step ) {
 
-                     parent_fieldset.fadeOut(400, function() {
-                           
-                 $(this).next().fadeIn();
-              });
-                }
+                         parent_fieldset.fadeOut(400, function() {
+                               
+                     $(this).next().fadeIn();
+                  });
+                    }
                  },
                  // console.log(json);
                 // $form.attr('data-is-ready',1); //ch
@@ -448,7 +448,7 @@ function stripeResponseHandler(status, response) {
                 
             
             error: function(xhr, textStatus, errorThrown) {
-                var responseText12 ='';
+                var validationText ='';
                 var alerts =new MessageBag();
                 console.error({
                     textStatus: textStatus,
@@ -459,21 +459,35 @@ function stripeResponseHandler(status, response) {
                 //xhr.responseJSON
                 
                 if(xhr.status==400)
-                {
-                    
+                {   
+                    $form.find('button,input[type=button]').prop('disabled', false);
+
+                    if(xhr.responseText === 'Duplicate_Email')
+                    {
+
+                        bootbox.alert('Your email address already in use! Please try again then contact support.');
+                        return;
+                    }
+
+                    if(xhr.responseJSON.errors)
+                    {
                     jQuery.each(xhr.responseJSON.errors, function(key, value) {
                      
-                     responseText12 += value.message;
+                     validationText += value.message;
 
                      alerts.add(value.field,value.message);
 
                     });
                     alerts.sprinkle('form:first');
 
-                    $form.find('button,input[type=button]').prop('disabled', false);
+                    
+
                     bootbox.alert('There are validation errors.Please click on previous button to review errors');
+
                     return ;
                     }
+
+                }
                 bootbox.alert('There was an error! Please try again then contact support.');
                 
                 //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));

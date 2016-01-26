@@ -69,8 +69,9 @@ app.post('/auctioneer-signup/v1/submit', validateSignupRequest, function(req, re
   var adminPanelPromise = sendToAdminPanel(dbPromise, userRequestRaw.password, selectedPlanPromise);
   dumpPromise('adminPanelPromise',adminPanelPromise);
 
+
   // finishes the request's response
-  sendNewRequestEmailToStaff(userRequestRaw,res);
+  sendNewRequestEmailToStaff(userRequestRaw,res,adminPanelPromise);
 
 });
 
