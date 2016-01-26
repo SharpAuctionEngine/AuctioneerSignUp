@@ -113,12 +113,12 @@ $(document).ready(function() {
 
 });
 
-// $('body').on('focus','.form-control',function()
-//     {
-        
-//         $('.form-control').removeClass();
 
-//     });
+    $(".removeMessagebag").click(function() {
+    
+        $(' #messagebag ').remove();
+        
+    });
  
 
 $('body').on('input','select[name=stripe_plan]',function()
@@ -417,16 +417,18 @@ function stripeResponseHandler(status, response) {
             // },
             beforeSend: function(json) {
                 $("#loadingModal").modal('show');
+                
             },
             complete: function(xhr, textStatus) {
                 $("#loadingModal").modal('hide');
+                
                 //xhr.responseText
                 //xhr.responseJson
             },
             success: function(json, textStatus, xhr) {
 
                      var parent_fieldset = $('.registration-form .finalfieldset');
-                 var next_step = true;
+                   var next_step = true;
         
         
                   if( next_step ) {
@@ -448,7 +450,6 @@ function stripeResponseHandler(status, response) {
             error: function(xhr, textStatus, errorThrown) {
                 var responseText12 ='';
                 var alerts =new MessageBag();
-                
                 console.error({
                     textStatus: textStatus,
                     'xhr.response': xhr.responseJSON || xhr.responseText,
