@@ -192,10 +192,14 @@ var firstDomainLevel = function(domain)
 
 var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
 {
-    $fg[is_available?'addClass':'removeClass']('has-success');
+    $fg[is_available ?'addClass':'removeClass']('has-success');
     $fg[is_available?'removeClass':'addClass']('has-error');
-    $('.when-instance-domain-is-available')[is_available?'show':'hide']();
-    $('.when-instance-domain-is-not-available')[is_available?'hide':'show']();
+    $fg[is_available==='Ap_not_available'?'addClass':'removeClass']('has-warning');
+
+    $('.when-instance-domain-is-available')[is_available && is_available !='Ap_not_available'?'show':'hide']();
+    $('.when-instance-domain-is-not-available')[is_available ?'hide':'show']();
+    $('.when-Ap-is-not-available')[is_available==='Ap_not_available'?'show':'hide']();
+
 };
 
 var isDomainTakenAjax = $.debounce(350,function($input,$fg,domain)
@@ -213,15 +217,17 @@ var isDomainTakenAjax = $.debounce(350,function($input,$fg,domain)
             data:{domain:domain},
             complete:function(xhr,textStatus)
             {
-                var json = xhr.responseJSON||{};
-                //xhr.responseText
-                //xhr.responseJSON
-                // console.log([json,$input,$fg,domain]);
-                var is_available = json.is_available||false;
 
-                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
-                updateHouseAvailableDOM($input,$fg,json.domain,is_available);
-            },
+                var json = xhr.responseJSON||{};
+                 //xhr.responseText
+                //xhr.responseJson
+                
+                var is_available = xhr.status===200? json.is_available || false:'Ap_not_available';
+              
+               console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
+               updateHouseAvailableDOM($input,$fg,json.domain,is_available);
+            }
+            
         });
     }
 });
