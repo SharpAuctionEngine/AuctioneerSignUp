@@ -432,7 +432,6 @@ function stripeResponseHandler(status, response) {
                 //xhr.responseJson
             },
             success: function(json, textStatus, xhr) {
-                    console.log('success ajax');
                      var parent_fieldset = $('.registration-form .finalfieldset');
                      var next_step = true;
         
