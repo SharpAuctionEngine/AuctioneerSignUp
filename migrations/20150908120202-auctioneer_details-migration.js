@@ -28,7 +28,7 @@ module.exports = {
       main_domain: {
         type: DataTypes.STRING,
         defaultValue: false,
-        // allowNull: false
+        allowNull: false
         unique: true,
       },
       first_level_domain: {
@@ -39,7 +39,7 @@ module.exports = {
       email: {
         type: DataTypes.STRING,
         defaultValue: false,
-        // allowNull: false
+        allowNull: false
         unique: true,
       },
       auction_house_name: {
