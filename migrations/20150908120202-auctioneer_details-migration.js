@@ -6,7 +6,7 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
 
       Example:*/
-    return queryInterface.createTable('auctioneersignup', {
+    return queryInterface.createTable('auctioneersignups', {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -73,7 +73,7 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
 
       Example:*/
-    return queryInterface.dropTable('auctioneersignup');
+    return queryInterface.dropTable('auctioneersignups');
 
   }
 };
