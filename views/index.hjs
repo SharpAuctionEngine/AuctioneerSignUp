@@ -259,19 +259,19 @@
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="username" value="test" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                          <input type="text" name="username" value="" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="email" value="@sae.bid" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+                          <input type="text" name="email" value="" autocomplete="off" placeholder="&#xf003; Email" class="icon email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="auction_house_name" value="housename" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+                          <input type="text" name="auction_house_name" value="" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
                         </p>
                       </div>
 
@@ -458,7 +458,7 @@
 
                       While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
 
-                       <p style="font-size:12px;">If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+                       <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
                       
                     </div>
                   </div>

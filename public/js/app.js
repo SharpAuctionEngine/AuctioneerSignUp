@@ -113,6 +113,7 @@ $(document).ready(function() {
 
 });
 
+    // Removes repeated validation message 
 
     $(".removeMessagebag").click(function() {
     
@@ -180,6 +181,7 @@ $("body").on("keyup blur", "[name=first_domain_level]", function() {
     changeHouseUrlText($(this).val());
 });
 
+
 var firstDomainLevel = function(domain)
 {
     var indexOfDot = domain.indexOf('.');
@@ -202,29 +204,54 @@ var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
 
 };
 
-var isDomainTakenAjax = $.debounce(350,function($input,$fg,domain)
+var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
 {
-    if (minimumDomainLength >= firstDomainLevel(domain).length)
+    
+    if (minimumDomainLength >= firstDomainLevel(domain).length )
     {
         console.log('isDomainAvailable('+domain+'): "too short"');
         var is_available = false;
-        updateHouseAvailableDOM($input,$fg,domain,is_available);
+        is_email?'':updateHouseAvailableDOM($input,$fg,domain,is_available);
     }
     else
     {
         $.ajax({
             url:"/auctioneer-signup/v1/typeahead/is/domain/available",
-            data:{domain:domain},
+            data:{domain:domain, email:email},
             complete:function(xhr,textStatus)
             {
 
                 var json = xhr.responseJSON||{};
+                 var alerts =new MessageBag();
                  //xhr.responseText
                 //xhr.responseJson
-                
-                var is_available = xhr.status===200? json.is_available || false:'Ap_not_available';
-              
+
+                //Main Domain response from node
+                var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
+
+                // Email response from node 
+                if(xhr.status===200)
+                {
+                    var fg= $('input[name=email]').parents('.form-group').first();
+                    $(' #messagebag ').remove();
+                    if(json.is_available.email)
+                    {
+                          fg.removeClass('has-error');
+                          fg.addClass('has-success');
+                        
+                    }
+                    else
+                    {
+                        
+                        fg.removeClass('has-success');
+                        alerts.add('email','Email is already in use');
+                        alerts.sprinkle('form:first');
+                    }
+                    
+                }
+
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
+               console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
                updateHouseAvailableDOM($input,$fg,json.domain,is_available);
             }
             
@@ -244,13 +271,13 @@ var parseInstanceSubDomain = function(domain)
     return stripWWW(domain) + '.' + instanceParentDomain;
 };
 
-$("body").on("input", "[name=first_domain_level]", function() {
+$("body").on("input", "[name=first_domain_level],[name=email]", function() {
     var $input = $(this);
-    var domain = parseInstanceSubDomain($input.val()||'');
-
+    var domain = parseInstanceSubDomain($('[name=first_domain_level]').val()||'');
+    var email = $('[name=email]').val();
+    var is_email= email?1:0;
     $('[name=main_domain]').val(domain);
-
-    isDomainTakenAjax($input,$input.parents('.form-group').first(),domain);
+    isDomainTakenAjax(is_email,$input,$input.parents('.form-group').first(),domain,email);
 
 });
 
