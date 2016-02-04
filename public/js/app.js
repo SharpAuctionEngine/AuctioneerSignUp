@@ -204,9 +204,20 @@ var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
 
 };
 
-var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
+var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,email_available)
 {
-    
+        
+    // var box =bootbox.dialog({message:'Custom alert',className: "email_modal",show:true});
+        // is_triggered=0;
+        
+        // box.modal({show:false});
+  // is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
+  // email_available?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
+});
+
+var is_triggered=0;
+var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
+{     
     if (minimumDomainLength >= firstDomainLevel(domain).length )
     {
         console.log('isDomainAvailable('+domain+'): "too short"');
@@ -220,7 +231,6 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
             data:{domain:domain, email:email},
             complete:function(xhr,textStatus)
             {
-
                 var json = xhr.responseJSON||{};
                  var alerts =new MessageBag();
                  //xhr.responseText
@@ -229,10 +239,12 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                 //Main Domain response from node
                 var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
 
+                
+                
                 // Email response from node 
                 if(xhr.status===200)
-                {
-                    var fg= $('input[name=email]').parents('.form-group').first();
+                {   
+                    var fg= $('input[name=email][value="'+email+'"]').parents('.form-group').first();
                     $(' #messagebag ').remove();
                     if(json.is_available.email)
                     {
@@ -253,6 +265,9 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
                updateHouseAvailableDOM($input,$fg,json.domain,is_available);
+               
+               is_triggered===1?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
+               is_triggered=1;
             }
             
         });
