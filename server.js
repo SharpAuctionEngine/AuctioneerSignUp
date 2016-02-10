@@ -60,9 +60,10 @@ app.post('/auctioneer-signup/v1/submit', validateSignupRequest, function(req, re
   dumpPromise('selectedPlanPromise',selectedPlanPromise);
 
   // create cus_ card_ sub_
-  var customerPromise = subscribeToStripe(selectedPlanPromise, userRequestRaw, stripeAPI);
+  var customerPromise = subscribeToStripe(selectedPlanPromise, userRequestRaw, stripeAPI,redis);
   dumpPromise('customerPromise',customerPromise);
-
+  
+  
   var dbPromise = insertToPostgre(customerPromise, User, userRequestRaw);
   dumpPromise('dbPromise',dbPromise);
 

@@ -244,7 +244,7 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                 // Email response from node 
                 if(xhr.status===200)
                 {   
-                    var fg= $('input[name=email][value="'+email+'"]').parents('.form-group').first();
+                    var fg= $('input[name=email]').parents('.form-group').first();
                     $(' #messagebag ').remove();
                     if(json.is_available.email)
                     {
