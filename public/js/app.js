@@ -204,13 +204,12 @@ var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
 
 };
 
-
-var domain_alert='';
-var email_alert='';
 var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,email_available)
 {
- domain_alert =bootbox.dialog({message:'Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273',className: "domain_modal",show:false,buttons:{success:{ label:'OK',className:'btn-primary'}}});
- email_alert =bootbox.dialog({message:'The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.',className: "email_modal",show:false,buttons:{success:{ label:'OK',className:'btn-primary'}}});
+
+    email_available?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
+    is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
+ 
       
 });
 
@@ -241,9 +240,6 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                 var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
                 updateHouseAvailableDOM($input,$fg,json.domain,is_available);
                 
-                // alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
-                // var domain_alert_count= is_available?'':domain_alert.modal({show:true});
-                
                 // Email response from node 
                 if(xhr.status===200 && json.email)
                 {   
@@ -258,19 +254,18 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                     }
                     else
                     {
-                        // alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
+                        alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
                         fg.removeClass('has-success');
                         alerts.add('email','Email is already in use');
                         alerts.sprinkle('form:first');
-                        // email_alert.modal({show:true});
-                        // email_alert.modal({show:false});
+                      
 
 
                         
                     }
                     
                 }
-
+                is_available?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
             }
@@ -518,6 +513,8 @@ function stripeResponseHandler(status, response) {
                     {
 
                         bootbox.alert('Your email address already in use! Please try again then contact support.');
+                        $('#email').removeClass('input-success');
+                        $('#email').addClass('has-error');
                         return;
                     }
 
