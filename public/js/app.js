@@ -527,7 +527,7 @@ function stripeResponseHandler(status, response) {
                      alerts.add(value.field,value.message);
 
                     });
-                    alerts.sprinkle('form:first');
+                     alerts.sprinkle('form:first');
 
                     
 
@@ -537,7 +537,7 @@ function stripeResponseHandler(status, response) {
                     }
 
                 }
-                bootbox.alert('There was an error! Please try again then contact support.');
+                bootbox.alert('There was an ISE error! Please try again then contact support.');
                 
                 //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }

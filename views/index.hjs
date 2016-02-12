@@ -60,13 +60,13 @@
                 </div>
                 <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
                     <ul class="nav navbar-nav navbar-right" style="">
-                        <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li><!-- Link to Home Page -->
+                        <!-- <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li> --><!-- Link to Home Page -->
                         <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li><!-- Link to About Page -->
                         <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li><!-- Link to Features Page -->
                         <li><a href="https://demo.bid/" target="_blank">DEMO</a><!-- Link to Demo Website-->
-                        <li><a href="http://sharpauctionengine.com/">PRICING</a></li><!-- Link to Pricing Page -->
+                        <li class="active"><a href="#">PRICING</a></li><!-- Link to Pricing Page -->
                         <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
-                        <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li><!-- Link to Pricing Page -->
+                       <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
