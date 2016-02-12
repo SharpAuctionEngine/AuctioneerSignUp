@@ -69,7 +69,7 @@ input.icon::-ms-input-placeholder {
 .templatemo-top-menu
 {
     background-color: #d3d3d3;
-    z-index:5000;
+    z-index:1000;
     width:100%;
     position: fixed;
 
