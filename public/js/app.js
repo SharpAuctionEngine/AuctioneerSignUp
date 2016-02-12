@@ -208,11 +208,11 @@ var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,emai
 {
 
     email_available?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
-    is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
+    // is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
  
+     is_available?'':bootbox.alert('The sub-domain you are requesting is already in use. Please select a new domain or email support at <a href="mailto:help@sharpauctionengine.com" target="_top"> help@sharpauctionengine.com </a> for additional assistance.');
       
 });
-
 
 var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
 {     
@@ -231,17 +231,18 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
             {
                 var json = xhr.responseJSON||{};
                 var alerts =new MessageBag();
-
+                
                  //xhr.responseText
                 //xhr.responseJson
                
                 //Main Domain response from node
                 
+               
                 var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
                 updateHouseAvailableDOM($input,$fg,json.domain,is_available);
                 
                 // Email response from node 
-                if(xhr.status===200 && json.email)
+                if(xhr.status===200 )
                 {   
                    
                     var fg= $('input[name=email]').parents('.form-group').first();
