@@ -60,11 +60,11 @@
                 </div>
                 <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
                     <ul class="nav navbar-nav navbar-right" style="">
-                        <li class="active"><a href="/">HOME</a></li><!-- Link to Home Page -->
-                        <li><a href="">ABOUT</a></li><!-- Link to About Page -->
-                        <li><a href="/features.html">FEATURES</a></li><!-- Link to Features Page -->
+                        <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li><!-- Link to Home Page -->
+                        <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li><!-- Link to About Page -->
+                        <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li><!-- Link to Features Page -->
                         <li><a href="https://demo.bid/" target="_blank">DEMO</a><!-- Link to Demo Website-->
-                        <li><a href="">PRICING</a></li><!-- Link to Pricing Page -->
+                        <li><a href="http://sharpauctionengine.com/">PRICING</a></li><!-- Link to Pricing Page -->
                         <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
                         <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li><!-- Link to Pricing Page -->
                     </ul>
@@ -476,32 +476,8 @@
             </div>
           </fieldset>
         </form>
-       <!--  <div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
-              </div>
-              <div class="modal-body">
-                Congratulations!! you are good to go!
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <a href="#">
-                  <button type="button" class="btn btn-primary">Visit the page!</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-      </div> -->
-
-
+     </div>
+  </div>
       <!-- Javascript -->
       <script>
         var stripePublishableKey = '{{stripePublishableKey}}';
@@ -541,70 +517,200 @@
 
 </body>
 
-
+<div class="templatemo-footer" >
+    <div class="footer_container">
+        
+            <!-- Hot Links -->
+        <div class="row"> 
+            <div class="col-sm-9">
+                <div class="row custom_width text-center">
+                    <div class="col-sm-2">
+                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
+                        <p><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
+                        <br><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
+                        </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
+                        <p><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
+                        <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
+                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
+                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
+                        </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
+                        <p><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
+                        <br><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
+                        <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
+                        </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Support</strong></a></h5><!-- Link to Support Page -->
+                        <p><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Support Policy</a> <!-- Link to Support Page (Support Policy Anchor) -->
+                        <br><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Resources</a> <!-- Link to Support Page (Resources Anchor) -->
+                        <br><a href="http://contact.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Contact</a> <!-- Link to Support Page (Contact Anchor) -->
+                        <br><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Training</a> <!-- Link to Support Page (Training Anchor) -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Logo -->
+            <div class="col-sm-3 text-center">
+                <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
+            </div>
+        </div>
+            
+            <!-- Email Sign Up -->
+        <div class="row"> 
+            <div class="col-sm-9">
+                <div class="row text-center">
+                    <form action="#"><!-- Should sign folks up for your email list - MailChimp? -->
+                        <div class="input-group center-block">
+                            <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
+                            <button class="btn btn-med btn-green" style="height:37px; width:13%" type="success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Social Links -->   
+        <div class="col-sm-3" style="margin-top:5px;">
+            <p class="text-center">
+              <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-grey" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-grey" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
+                <i class="fa fa-rss"></i>
+              </a>
+            </p> 
+       </div>
+    </div>
+ </div>
+    
+    <div class="footer_bottom_content text-center">
+        <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
+    </div>
+                
+</div>
+                         
 
 <!-- Footer section -->
-<footer>
-  <nav class="navbar navbar-default footer">
+<!-- <section >
+  <nav class="footer">
     <div class="container">
       <div class="col-sm-9 nav-link">
-        <div class="row">
-          <div class="col-sm-4">
+        <div class="row custom_width text-center">
+        <div class="col-sm-2">
+            <ul class="nav">
+              <li class="nav-header">Home</li>
+            </ul>
+          </div>
+          <div class="col-sm-2">
             <ul class="nav">
               <li class="nav-header ">About</li>
               <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a>
               </li>
-              <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a>
+              <li><a href="#">Company Timeline</a>
               </li>
-              <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>
+              <li><a href="#">Meet the Execs</a>
               </li>
             </ul>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-2">
             <ul class="nav">
-              <li class="nav-header">Product</li>
-              <li><a href="http://news.sharpauctionengine.com/">News</a>
+              <li class="nav-header ">Features</li>
+              <li><a href="#">Features</a>
               </li>
-              <li><a href="/auctioneer-sign-up">Auctioneer Sign Up</a>
+              <li><a href="#">Product Features</a>
               </li>
-              <li><a href="/demo-request">Request Demo</a>
+              <li><a href="#">Demo</a>
+              </li>
+              <li><a href="#">What's Next</a>
+              </li>
+              <li><a href="#">Product Timeline</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-2">
+            <ul class="nav">
+              <li class="nav-header">Pricing</li>
+              <li><a href="#">Pricing</a>
+              </li>
+              <li><a href="#">Choose Your Plan</a>
+              </li>
+              <li><a href="#">Billing & Payments</a>
+              </li>
+              <li><a href="#">Demo</a>
               </li>
 
             </ul>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-2">
             <ul class="nav">
               <li class="nav-header">Support</li>
-              <li><a href="http://support.sharpauctionengine.com">Support Portal</a>
+              <li><a href="#">Support</a>
               </li>
-              <li><a href="http://news.sharpauctionengine.com/?cat=5"> Release Notes</a>
+              <li><a href="#">Support Policy</a>
               </li>
-              <li><a href="mailto:help@sharpauctionengine.com" target="_top">Email Us</a>
+              <li><a href="#">Resources</a>
+              </li>
+              <li><a href="#">Contact</a>
+              </li>
+              <li><a href="#">Training</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 text-center">
+                <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
+      </div>
+        
+      <div class="col-sm-3" style="margin-top:5px;">
         <p class="text-center">
-          <a href="https://twitter.com/AuctionEngine" class="btn btn-info" target="_blank">
+          <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
             <i class="fa fa-twitter"></i>
           </a>
-          <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-info" target="_blank">
+          <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-grey" target="_blank">
             <i class="fa fa-facebook"></i>
           </a>
-          <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-info" target="_blank">
+          <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-grey" target="_blank">
             <i class="fa fa-linkedin"></i>
           </a>
-        </p>
-        <!-- <p class="text-muted text-center"> <a href="http://support.sharpauctionengine.com">Support</a> •
-			    <a href="/site-terms-and-conditions">Terms</a> •
-			    <a href="http://sharpauctionengine.com/index.php/contact-us">Contact</a> <br/> -->
-        <p class="text-muted text-center">&copy; 2016 Sharp Auction Engine, Inc. All rights reserved.</p>
-        <!-- <p class="text-muted text-center">Powered by <a href="http://www.spacegazebo.com" target="_blank">Space Gazebo</a>.</p> -->
+          <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
+            <i class="fa fa-rss"></i>
+          </a>
+        </p> 
+      
       </div>
+       <div class="row">  
+            <div class="col-sm-9">
+                <div class="row text-center">
+                    <form action="#"> --><!-- Should sign folks up for your email list - MailChimp? -->
+                        <!-- <div class="input-group center-block">
+                            <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
+                            <button class="btn btn-med btn-green" type="success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+     <div class="footer_bottom_content text-center">
+        <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
+    </div>
     </div>
   </nav>
-</footer>
+</section> -->
 
 </html>

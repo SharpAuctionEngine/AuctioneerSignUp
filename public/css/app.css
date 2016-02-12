@@ -15,7 +15,7 @@ input.icon::-ms-input-placeholder {
 }
 .body_style
 {
-    
+
     font-family: open-sans;
     font-size: 12px;
     font-weight: 300;
@@ -180,21 +180,78 @@ input.icon::-ms-input-placeholder {
 .footer {
     margin-bottom: 0px;
     padding-top: 35px;
-    background-color: #F2EFE3;
+    background-color: #d3d3d3;
     margin-top: 20px;
+    color: #FFFFFF;
+    width:100%;
+
 }
-.nav-header {
+.templatemo-footer {
+    border-top: 2px solid #cccccc;
+    margin-top: 50px;
+    background-color: #787878;
+    color: #FFFFFF;
+}
+.footer_container{
+    color: #FFFFFF;
+}
+.footer_bottom_content {
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+/*.nav-header {
     font-family: Tahoma, Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding-bottom: 0.5em;
     text-transform: uppercase;
+    color:black;
 }
 .nav-link {
     font-size: 14px;
     line-height: 14px;
     padding: 0.5em 0;
+}*/
+ @media (min-width: 768px){
+.custom_width .col-sm-2 { width: 19.285714285714%; }
 }
+
+.btn-grey
+{
+    background-color: #333333;
+    color: #FFFFFF;
+}
+a:hover.btn.btn-grey
+{
+    background-color: #FF6600;
+    color: #FFFFFF;
+}
+a:hover.link_hover
+{
+    background-color: #FF6600;
+    color: #FFFFFF;
+}
+.footer_white
+{
+    color:#FFFFFF;
+}
+.input-group {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input.btn.btn-med {
+    width: 40%;
+    height: 35px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
 @font-face {
     font-family: 'CameoAntique';
     src: url('fonts/CameoAntique.ttf.woff') format('woff'), url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'), url('fonts/CameoAntique.ttf.eot'), url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype');

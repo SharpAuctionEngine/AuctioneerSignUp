@@ -502,7 +502,7 @@ function stripeResponseHandler(status, response) {
                     'xhr.response': xhr.responseJSON || xhr.responseText,
                     errorThrown:errorThrown,
                 });
-                //xhr.responseText
+                  //xhr.responseText
                 //xhr.responseJSON
                 
                 if(xhr.status==400)
