@@ -321,7 +321,7 @@
                           <button type="button" class="btn btn-xs btn-warning btn-next" id="Check_duplicates">Get Started Now!</button>
 
                           <p>
-                            <small>Need a customized Solution? <a href="#" data-toggle="modal" data-target="#contact us" class="link">Contact us</a> to find out what we can do for you. </small>
+                            <small>Need a customized Solution? <a href="http://contact.sharpauctionengine.com/" target="_blank">Contact us</a> to find out what we can do for you. </small>
                           </p>
                         </section>
                       </div>
