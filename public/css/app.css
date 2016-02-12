@@ -13,6 +13,16 @@ input.icon::-moz-placeholder {
 input.icon::-ms-input-placeholder {
     font-family: 'FontAwesome';
 }
+.body_style
+{
+    
+    font-family: open-sans;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
 .cameoantique {
     font-family: 'CameoAntique';
     width: 97%;
@@ -47,6 +57,74 @@ input.icon::-ms-input-placeholder {
 }
 .green {
     color: #7ABFD0;
+}
+.btn-green{
+    background-color: #2ecc71;
+    border-bottom: 2px solid #27ae60;
+}
+.btn-green:hover, .btn-green:focus, .btn-green:active, .btn-green.active, .open .dropdown-toggle.btn-green {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+.templatemo-top-menu
+{
+    background-color: #d3d3d3;
+    z-index:5000;
+    width:100%;
+    position: fixed;
+
+}
+.templatemo-top-bar {
+    min-height: 40px;
+    background-color:#eeeeee;
+}
+.templatemo-top-menu .navbar-brand {
+    padding: 0;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+/**{
+    border-radius:0 !important;
+}*/
+.nav > li > a {
+    padding: 10px 20px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: #787878;
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: #787878;
+    color: #fff;
+}
+.nav > li > a {
+    color: #929292;
+}
+.navbar-default {
+    background-color: #D3D3D3;
+    border: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: #787878;
+    color: #fff;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  } 
 }
 .borderbox {
     border: 2px solid #887E79;

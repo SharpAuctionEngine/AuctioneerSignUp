@@ -11,6 +11,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="fonts/font-awesome.css">
   <link rel="stylesheet" href="css/form-elements.css">
@@ -37,34 +39,41 @@
 
 </head>
 <!-- Header section -->
-<section style="background-color:#F2EFE3;">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-header col-sm-3  col-lg-4">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".nb-loginmenu-collapse" style="padding:9px 5px; margin-right:5px;">
-        <span class="sr-only">Toggle</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="col-sm-offset-1 col-lg-offset-7">
-        <a href="" class="navbar-brand uses-image" style="padding:5px 10px 8px;">
-          <img src="images/sae_logo_new_2.png" class="pull-left" height="40" style="height:40px;" alt="logo" />
-        </a>
-      </div>
-    </div>
-    <nav class="SAEnav collapse navbar-collapse nb-loginmenu-collapse" style="overflow-y:scroll;">
-      <div class="col-xs-12 col-sm-7 pull-right">
-        <ul class="nav navbar-nav pull-right">
-          <li class="col-lg-pull-12">
-            <a href="" rel="nofollow" style="text-decoration:none;color:#564841;">Sign In</a>
-          </li>
-          <li class="col-lg-pull-12">
-            <a href="" style="text-decoration:none;color:#564841;">Create an account</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </nav>
+<section  style="background-color:#F2EFE3;">
+ <div class="templatemo-top-menu">
+    <div class="container">
+                
+    <!-- Static navbar -->
+    <!-- NOTE: Alignment and padding/margins/something is screwy. The button should be behaving like the other buttons: white text with a darkening effect on hover. Needs scrolling with the page. -->
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
+                    <img src="images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
+                    <ul class="nav navbar-nav navbar-right" style="">
+                        <li class="active"><a href="/">HOME</a></li><!-- Link to Home Page -->
+                        <li><a href="">ABOUT</a></li><!-- Link to About Page -->
+                        <li><a href="/features.html">FEATURES</a></li><!-- Link to Features Page -->
+                        <li><a href="https://demo.bid/" target="_blank">DEMO</a><!-- Link to Demo Website-->
+                        <li><a href="">PRICING</a></li><!-- Link to Pricing Page -->
+                        <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
+                        <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li><!-- Link to Pricing Page -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </div><!--/.navbar -->
+    </div><!-- /container -->
+</div>
+
 
 </section>
 
@@ -520,7 +529,7 @@
       <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
       <script src="js/creditCardValidator.js"></script>
       <script src="js/MessageBag.js"></script>
-
+      
       <script type="text/javascript" src="js/app.js"></script>
 
       <!--[if lt IE 10]>
