@@ -130,7 +130,11 @@ $('body').on('input','select[name=stripe_plan]',function()
 });
 
 
-
+$("#loadingModal").modal({
+        keyboard: false,
+        backdrop: 'static',
+        show: false
+    });
 
 //  Plan decider
 $("#Basic_plan").click(function() {
@@ -214,6 +218,7 @@ var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,emai
       
 });
 
+
 var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
 {     
     if (minimumDomainLength >= firstDomainLevel(domain).length )
@@ -221,12 +226,15 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
         console.log('isDomainAvailable('+domain+'): "too short"');
         var is_available = false;
         is_email?'':updateHouseAvailableDOM($input,$fg,domain,is_available);
+        
+
     }
     else
     {
         $.ajax({
             url:"/auctioneer-signup/v1/typeahead/is/domain/available",
             data:{domain:domain, email:email},
+            
             complete:function(xhr,textStatus)
             {
                 var json = xhr.responseJSON||{};
@@ -266,9 +274,12 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                     }
                     
                 }
-                is_available?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
+               is_available?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
+               
+               
+               
             }
             
         });
@@ -294,7 +305,6 @@ $("body").on("input", "[name=first_domain_level],[name=email]", function() {
     var is_email= email?1:0;
     $('[name=main_domain]').val(domain);
     isDomainTakenAjax(is_email,$input,$input.parents('.form-group').first(),domain,email);
-
 });
 
 var changeHouseUrlText = function (UrlText) {

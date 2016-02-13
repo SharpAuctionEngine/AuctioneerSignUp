@@ -258,3 +258,10 @@ input.btn.btn-med {
     font-weight: normal;
     font-style: normal;
 }
+#loadingModal p.text {
+    color: #eee;
+    font-weight: bold;
+    margin-top: 25%;
+  font-size: 4em;
+  display: block;
+}

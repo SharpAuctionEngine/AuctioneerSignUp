@@ -476,6 +476,9 @@
             </div>
           </fieldset>
         </form>
+        <div class="modal" id="loadingModal">
+          <p class="text-center text"><i class="fa fa-spinner fa-spin"></i>&nbsp;Loading...</p>
+        </div>
      </div>
   </div>
       <!-- Javascript -->
