@@ -181,7 +181,6 @@
                             <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
                           </ul>
                         </div>
-                        <!-- <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled"> -->
                          
                          <!-- Navigation Disbaled for 2.0 release -->
                         <button type="button" class="btn btn-xs btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled"> 
