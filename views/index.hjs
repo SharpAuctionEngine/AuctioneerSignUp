@@ -221,7 +221,7 @@
            
           
 
-          <fieldset>
+          <fieldset id="first_id">
             <div class="row">
               <div class="col-sm-6 text-center" style="margin-top:230px;">
                 <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
@@ -274,13 +274,13 @@
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="email" value="" autocomplete="off" placeholder="&#xf003; Email" class="icon email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+                          <input type="text" name="email"  autocomplete="off" placeholder="&#xf003; Email" class="icon email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="text" name="auction_house_name" value="" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+                          <input type="text" name="auction_house_name"  autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
                         </p>
                       </div>
 
@@ -297,13 +297,13 @@
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="password" name="password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="form-password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
+                          <input type="password" name="password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
                         </p>
                       </div>
 
                       <div class="form-group">
                         <p class="wrapper">
-                          <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="form-repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
+                          <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
                         </p>
                       </div>
                       <div>
@@ -318,7 +318,7 @@
                             </small>
                           </p>
 
-                          <button type="button" class="btn btn-xs btn-warning btn-next" id="Check_duplicates">Get Started Now!</button>
+                          <button type="button" class="btn btn-xs btn-warning btn-next " id="checkValidation">Get Started Now!</button>
 
                           <p>
                             <small>Need a customized Solution? <a href="http://contact.sharpauctionengine.com/" target="_blank">Contact us</a> to find out what we can do for you. </small>
@@ -371,7 +371,7 @@
                         <input type="text" name="zip" placeholder="Zip" class="form-zip form-control" id="form-zip" data-toggle="popover" title="Zip" data-content="Zip code of auction house.">
                       </div>
                       <button type="button" class="btn btn-primary btn-previous">Previous</button>
-                      <button type="button" class="btn btn-success btn-next">Submit Now</button>
+                      <button type="button" id="checkValidation" class="btn btn-success btn-next">Submit Now</button>
                     </div>
                   </div>
                 </div>

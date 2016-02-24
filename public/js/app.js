@@ -151,6 +151,7 @@ $("#Pro_plan").click(function() {
     
 
 });
+
 // Validation
 
 var oldHouseName = "";
@@ -339,15 +340,15 @@ $('[name=first_domain_level]').on('shown.bs.popover', function() {
 });
 
 
-$('.form-group input').popover({
-    trigger: "focus",
-    delay: {
-        show: 600,
-        hide: 400
-    },
-    placement: 'top',
-    html: true,
-});
+// $('.form-group input').popover({
+//     trigger: "focus",
+//     delay: {
+//         show: 600,
+//         hide: 400
+//     },
+//     placement: 'top',
+//     html: true,
+// });
 
 var denormalizeCardExp = function (event) {
     // console.log("true");
@@ -434,8 +435,6 @@ jQuery(function($) {
     });
 });
 
-
-
 function stripeResponseHandler(status, response) {
 
     var $form = $('#paymentMethodForm');
@@ -457,23 +456,123 @@ function stripeResponseHandler(status, response) {
 
         // Insert the token into the form so it gets submitted to the server
         $('input[name=stripeToken]').val(token);
+        console.log($form.serialize());
+        ajaxCallToAp($form.serialize());
         // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
         // and submit
         // $form.get(0).submit();
-        $.ajax({
+        // $.ajax({
+        //     url: "/auctioneer-signup/v1/submit",
+        //     method: 'POST',
+        //     data: $form.serialize(),
+        //     // _token: $form.find('[name=_token]').val(),
+        //     //          gateway:'stripe',
+        //     //          stripe:response
+
+        //     // ,
+        //     // data:{
+        //     //     _token: $form.find('[name=_token]').val(),
+        //     //     gateway:'stripe',
+        //     //     stripe:response
+        //     // },
+        //     beforeSend: function(json) {
+        //         $("#loadingModal").modal('show');
+                
+        //     },
+        //     complete: function(xhr, textStatus) {
+        //         $("#loadingModal").modal('hide');
+                
+        //         //xhr.responseText
+        //         //xhr.responseJson
+        //     },
+        //     success: function(json, textStatus, xhr) {
+        //              var parent_fieldset = $('.registration-form .finalfieldset');
+        //              var next_step = true;
+        
+        
+        //               if( next_step ) {
+
+        //                  parent_fieldset.fadeOut(400, function() {
+                               
+        //              $(this).next().fadeIn();
+        //           });
+        //             }
+        //          },
+        //          // console.log(json);
+        //         // $form.attr('data-is-ready',1); //ch
+
+        //         // $('#paymentMethodForm').submit(); //ch
+        //         // $("#congrats").modal('show');
+                
+                
+            
+        //     error: function(xhr, textStatus, errorThrown) {
+        //         var validationText ='';
+        //         var alerts =new MessageBag();
+        //         console.error({
+        //             textStatus: textStatus,
+        //             'xhr.response': xhr.responseJSON || xhr.responseText,
+        //             errorThrown:errorThrown,
+        //         });
+        //         //xhr.responseText
+        //         //xhr.responseJSON
+                
+        //         if(xhr.status==400)
+        //         {   
+        //             $form.find('button,input[type=button]').prop('disabled', false);
+
+        //             if(xhr.responseText === 'Duplicate_Email')
+        //             {
+
+        //                 bootbox.alert('Your email address already in use! Please try again then contact support.');
+        //                 $('#email').removeClass('input-success');
+        //                 $('#email').addClass('has-error');
+        //                 return;
+        //             }
+
+        //             if(xhr.responseJSON.errors)
+        //             {
+        //             jQuery.each(xhr.responseJSON.errors, function(key, value) {
+                     
+        //              validationText += value.message;
+
+        //              alerts.add(value.field,value.message);
+
+        //             });
+        //              alerts.sprinkle('form:first');
+
+                    
+
+        //             bootbox.alert('There are validation errors.Please click on previous button to review errors');
+
+        //             return ;
+        //             }
+
+        //         }
+        //         bootbox.alert('There was an ISE error! Please try again then contact support.');
+                
+        //         //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
+        //     }
+        // });
+    }
+}
+
+$("#checkValidation").click(function() {
+    
+var $input =$("#first_id input");
+            console.log($input.serialize());
+            ajaxCallToAp($input);
+    
+});
+
+var ajaxCallToAp = $.debounce(450,function($data)
+{   
+    var $form = $('#paymentMethodForm');
+    
+  $.ajax({
             url: "/auctioneer-signup/v1/submit",
             method: 'POST',
-            data: $form.serialize(),
-            // _token: $form.find('[name=_token]').val(),
-            //          gateway:'stripe',
-            //          stripe:response
-
-            // ,
-            // data:{
-            //     _token: $form.find('[name=_token]').val(),
-            //     gateway:'stripe',
-            //     stripe:response
-            // },
+            data: $data,
             beforeSend: function(json) {
                 $("#loadingModal").modal('show');
                 
@@ -497,13 +596,7 @@ function stripeResponseHandler(status, response) {
                   });
                     }
                  },
-                 // console.log(json);
-                // $form.attr('data-is-ready',1); //ch
-
-                // $('#paymentMethodForm').submit(); //ch
-                // $("#congrats").modal('show');
-                
-                
+                          
             
             error: function(xhr, textStatus, errorThrown) {
                 var validationText ='';
@@ -550,8 +643,6 @@ function stripeResponseHandler(status, response) {
                 }
                 bootbox.alert('There was an ISE error! Please try again then contact support.');
                 
-                //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
             }
         });
-    }
-}
+});
