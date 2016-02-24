@@ -21,7 +21,7 @@ var updateStripePlan = function(plan)
     });
 
 };
-        $('#Pro_plan').prop('disabled', true); // disabled pro plan for 2.0 release
+        // $('#Pro_plan').prop('disabled', true); // disabled pro plan for 2.0 release
 
 var updateStripePlanSelect = function(plan)
 {

@@ -174,14 +174,18 @@
                           as well as:</p>  <p class="comingSoon">
                                            Coming <br/><br/>Soon
                                            </p>
-                        <div class="bulletpoints" style="margin-top:-58px;">
+                        <div class="bulletpoints" style="margin-top:-50px;">
                           <ul>
                             <li>Dedicated resources to cover your existing bidder base</li>
                             <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
                             <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
                           </ul>
                         </div>
-                        <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;">
+                        <!-- <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled"> -->
+                         
+                         <!-- Navigation Disbaled for 2.0 release -->
+                        <button type="button" class="btn btn-xs btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled"> 
+
                           <span class="text">Get Started Now!</span>
                         </button>
                         <br/>
