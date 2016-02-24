@@ -340,15 +340,15 @@ $('[name=first_domain_level]').on('shown.bs.popover', function() {
 });
 
 
-// $('.form-group input').popover({
-//     trigger: "focus",
-//     delay: {
-//         show: 600,
-//         hide: 400
-//     },
-//     placement: 'top',
-//     html: true,
-// });
+$('.form-group input').popover({
+    trigger: "focus",
+    delay: {
+        show: 600,
+        hide: 400
+    },
+    placement: 'top',
+    html: true,
+});
 
 var denormalizeCardExp = function (event) {
     // console.log("true");
@@ -457,7 +457,8 @@ function stripeResponseHandler(status, response) {
         // Insert the token into the form so it gets submitted to the server
         $('input[name=stripeToken]').val(token);
         console.log($form.serialize());
-        ajaxCallToAp($form.serialize());
+        var validate_field='lastpage';
+        ajaxCallToAp($form.serialize(),validate_field);
         // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
         // and submit
         // $form.get(0).submit();
@@ -556,23 +557,35 @@ function stripeResponseHandler(status, response) {
         // });
     }
 }
-
-$("#checkValidation").click(function() {
+$("#firstFieldsetValidation").click(function() {
     
-var $input =$("#first_id input");
-            console.log($input.serialize());
-            ajaxCallToAp($input);
+var $firstFieldsetInput =$("#firstFieldset");
+            $(' #messagebag ').remove();
+            $('.form-group').removeClass('has-error');
+            var validate_field='profile';
+            console.log($firstFieldsetInput.serialize());
+
+            ajaxCallToAp($firstFieldsetInput.serialize(),validate_field);
     
 });
-
-var ajaxCallToAp = $.debounce(450,function($data)
+$("#secondFieldsetValidation").click(function() {
+    
+var $secondFieldsetInput =$("#secondFieldset");
+            var validate_field='Additional_Info';
+            $(' #messagebag ').remove();
+            $('.form-group').removeClass('has-error');
+            console.log($secondFieldsetInput.serialize());
+            ajaxCallToAp($secondFieldsetInput.serialize(),validate_field);
+    
+});
+var ajaxCallToAp = $.debounce(450,function($data,validate_field)
 {   
     var $form = $('#paymentMethodForm');
     
   $.ajax({
             url: "/auctioneer-signup/v1/submit",
             method: 'POST',
-            data: $data,
+            data: $data+"&validate_field="+validate_field,
             beforeSend: function(json) {
                 $("#loadingModal").modal('show');
                 
@@ -584,7 +597,21 @@ var ajaxCallToAp = $.debounce(450,function($data)
                 //xhr.responseJson
             },
             success: function(json, textStatus, xhr) {
-                     var parent_fieldset = $('.registration-form .finalfieldset');
+                    var button_next='';
+                    if(validate_field==='profile')
+                        { 
+                            button_next='firstFieldset';
+                        }
+                    if(validate_field==='Additional_Info')
+                        { 
+                            button_next='secondFieldset';
+                        }
+                    if(validate_field==='lastpage')
+                        { 
+                            button_next='finalfieldset';
+                        }
+    
+                     var parent_fieldset = $('.registration-form .'+button_next);
                      var next_step = true;
         
         
@@ -606,6 +633,7 @@ var ajaxCallToAp = $.debounce(450,function($data)
                     'xhr.response': xhr.responseJSON || xhr.responseText,
                     errorThrown:errorThrown,
                 });
+                var json= xhr.responseJSON || xhr.responseText ||{};
                 //xhr.responseText
                 //xhr.responseJSON
                 
@@ -624,10 +652,8 @@ var ajaxCallToAp = $.debounce(450,function($data)
 
                     if(xhr.responseJSON.errors)
                     {
-                    jQuery.each(xhr.responseJSON.errors, function(key, value) {
-                     
-                     validationText += value.message;
 
+                    jQuery.each(xhr.responseJSON.errors, function(key, value) {
                      alerts.add(value.field,value.message);
 
                     });

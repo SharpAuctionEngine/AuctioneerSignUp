@@ -221,7 +221,7 @@
            
           
 
-          <fieldset id="first_id">
+          <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">
               <div class="col-sm-6 text-center" style="margin-top:230px;">
                 <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
@@ -318,7 +318,7 @@
                             </small>
                           </p>
 
-                          <button type="button" class="btn btn-xs btn-warning btn-next " id="checkValidation">Get Started Now!</button>
+                          <button type="button" class="btn btn-xs btn-warning" id="firstFieldsetValidation">Get Started Now!</button>
 
                           <p>
                             <small>Need a customized Solution? <a href="http://contact.sharpauctionengine.com/" target="_blank">Contact us</a> to find out what we can do for you. </small>
@@ -332,7 +332,7 @@
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="secondFieldset" class="secondFieldset">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
                 <div class="panel panelborder">
@@ -371,7 +371,7 @@
                         <input type="text" name="zip" placeholder="Zip" class="form-zip form-control" id="form-zip" data-toggle="popover" title="Zip" data-content="Zip code of auction house.">
                       </div>
                       <button type="button" class="btn btn-primary btn-previous">Previous</button>
-                      <button type="button" id="checkValidation" class="btn btn-success btn-next">Submit Now</button>
+                      <button type="button" id="secondFieldsetValidation" class="btn btn-success">Submit Now</button>
                     </div>
                   </div>
                 </div>
