@@ -21,6 +21,7 @@ var updateStripePlan = function(plan)
     });
 
 };
+        $('#Pro_plan').prop('disabled', true); // disabled pro plan for 2.0 release
 
 var updateStripePlanSelect = function(plan)
 {
@@ -87,6 +88,8 @@ $(document).ready(function() {
         max: 500,
         range: "min",
         step: 25,
+        disabled: true, // Disabled for 2.0 release
+
         // animate:true,
         slide: function(event, ui) {
             $("#bidders").val(ui.value);
