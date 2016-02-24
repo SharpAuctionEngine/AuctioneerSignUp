@@ -265,3 +265,11 @@ input.btn.btn-med {
   font-size: 4em;
   display: block;
 }
+.comingSoon
+{ 
+    color:#CD623F;
+    z-index:4;
+    font-size:65px;
+    margin-top:-39px;
+    font-weight: 500
+}

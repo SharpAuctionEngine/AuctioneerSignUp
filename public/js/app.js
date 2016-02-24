@@ -21,6 +21,7 @@ var updateStripePlan = function(plan)
     });
 
 };
+
 var updateStripePlanSelect = function(plan)
 {
     $('[name=stripe_plan]').val(plan.id);
