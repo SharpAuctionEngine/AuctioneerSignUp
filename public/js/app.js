@@ -665,7 +665,7 @@ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
 
                     
 
-                    bootbox.alert('There are validation errors.Please click on previous button to review errors');
+                    bootbox.alert('There are validation errors. Please click on previous button to review errors');
 
                     return ;
                     }
