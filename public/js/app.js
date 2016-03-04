@@ -213,13 +213,13 @@ var updateHouseAvailableDOM = function($input,$fg,domain,is_available)
 
 };
 
-var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,email_available)
+var alertTriggersOnDuplicates = $.debounce(350,function()
 {
 
-    email_available?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
+    !email_trigger?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
     // is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
  
-     is_available?'':bootbox.alert('The sub-domain you are requesting is already in use. Please select a new domain or email support at <a href="mailto:help@sharpauctionengine.com" target="_top"> help@sharpauctionengine.com </a> for additional assistance.');
+     !domain_trigger?'':bootbox.alert('The sub-domain you are requesting is already in use. Please select a new domain or email support at <a href="mailto:help@sharpauctionengine.com" target="_top"> help@sharpauctionengine.com </a> for additional assistance.');
       
 });
 
@@ -264,11 +264,13 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                     {
                           fg.removeClass('has-error');
                           fg.addClass('has-success');
+                          email_trigger=0;
                         
                     }
                     else
                     {
-                        alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
+                        email_trigger=1;
+                        // alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
                         fg.removeClass('has-success');
                         alerts.add('email','Email is already in use');
                         alerts.sprinkle('form:first');
@@ -279,7 +281,7 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                     }
                     
                 }
-               is_available?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
+               domain_trigger=is_available?0:1
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
                
@@ -561,15 +563,17 @@ function stripeResponseHandler(status, response) {
         // });
     }
 }
+var email_trigger=0;
+var domain_trigger=0;
 $("#firstFieldsetValidation").click(function() {
     
 var $firstFieldsetInput =$("#firstFieldset");
-            $(' #messagebag ').remove();
-            $('.form-group').removeClass('has-error');
+           email_trigger?'': $(' #messagebag ').remove();
+            email_trigger?'':$('.form-group').removeClass('has-error');
             var validate_field='profile';
             console.log($firstFieldsetInput.serialize());
-
-            ajaxCallToAp($firstFieldsetInput.serialize(),validate_field);
+            (email_trigger===1 || domain_trigger===1)? alertTriggersOnDuplicates():ajaxCallToAp($firstFieldsetInput.serialize(),validate_field);
+           
     
 });
 $("#secondFieldsetValidation").click(function() {
