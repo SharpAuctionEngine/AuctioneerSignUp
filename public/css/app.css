@@ -23,6 +23,16 @@ input.icon::-ms-input-placeholder {
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
 }
+
+@font-face {
+    font-family: 'CameoAntique';
+    src:url('/fonts/CameoAntique.ttf.woff') format('woff'),
+        url('/fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'),
+        url('/fonts/CameoAntique.ttf.eot'),
+        url('/fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 .cameoantique {
     font-family: 'CameoAntique';
     width: 97%;
@@ -252,12 +262,7 @@ input.btn.btn-med {
 }
 
 
-@font-face {
-    font-family: 'CameoAntique';
-    src: url('fonts/CameoAntique.ttf.woff') format('woff'), url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'), url('fonts/CameoAntique.ttf.eot'), url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 #loadingModal p.text {
     color: #eee;
     font-weight: bold;
