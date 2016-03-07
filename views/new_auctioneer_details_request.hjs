@@ -9,3 +9,5 @@ A new Auctioneer Details has been received!
     {{/userRequest}}
 </table>
 <p>{{message}}</p>
+
+Click here to go <a href="https://saeadmin.sae.bid/">Adminpanel</a>
