@@ -27,6 +27,8 @@ var getStripePlans = require('./lib/getStripePlans')(stripeAPI);
 var sendNewRequestEmailToStaff = require('./lib/sendNewRequestEmailToStaff')(mandrill);
 var Redis = require('ioredis');
 
+var log4js= require('log4js');
+log4js.configure('./config/logConfig.json', { reloadSecs: 300 });
 var renderIndexHtmlOnStartUp = require('./lib/renderIndexHtmlOnStartUp')();
 
 renderIndexHtmlOnStartUp(getStripePlans());
@@ -39,6 +41,8 @@ var redis = new Redis({
   keyPrefix:   (process.env.REDIS_PREFIX||'asu-cp')+':',
 });
 // rollbar.errorHandler("ACCESS_TOKEN", {environment: 'playground'})
+var log=log4js.getLogger("app");
+app.use(log4js.connectLogger(log, { level: 'auto' }));
 
 app.use(bodyParser());
 
