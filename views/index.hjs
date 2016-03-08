@@ -538,26 +538,26 @@
             <div class="col-sm-9">
                 <div class="row custom_width text-center">
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
+                        <h5><a href="http://website.dev.bid/index.html" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
-                        <p><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
+                        <h5><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
+                        <p><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
+                        <br><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
-                        <p><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
+                        <h5><a href="http://website.dev.bid/features.html" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
+                        <p><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
                         <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
+                        <br><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
+                        <br><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
-                        <p><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
+                        <h5><a href="/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
+                        <p><a href="/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
+                        <br><a href="/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
                         <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
                         </p>
                     </div>
