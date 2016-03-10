@@ -223,7 +223,49 @@ var alertTriggersOnDuplicates = $.debounce(350,function()
       
 });
 
+var checkStatus=0;
+$("#checkStatus").click(function() {
+   checkStatus=1;
+   $( ".alert" ).append( "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Headsup!</strong> Please do not refresh the page.It automatically checks the status every 15 secs.If your requested house is created it automatically redirects to your house.</div>" );
 
+
+   // var is_okay=bootbox.alert('Please do not refresh the page.It automatically checks the status every 15 secs.If your requested house is created it automatically redirects to your house');
+   // console.log(is_okay);
+   
+ setInterval(function(){ 
+    var domain = parseInstanceSubDomain($('[name=first_domain_level]').val()||'');
+    var email = $('[name=email]').val();
+    isDomainTakenAjax('','','',domain,email); 
+}, 15000);  
+    
+});
+
+var checkHouseStatus=function(status,domain)
+{
+if(status==='up_running')
+{
+    $('#checkStatus').removeClass('btn-primary');
+    $('#checkStatus').addClass('btn-success');
+
+    window.location='http://'+domain;
+
+}
+if(status==='up_failed')
+{
+  $('#checkStatus').removeClass('btn-primary');  
+  $('#checkStatus').addClass('btn-danger');
+
+}
+if(status==='up_working')
+{
+   $('#checkStatus').removeClass('btn-primary');  
+   $('#checkStatus').addClass('btn-warning');  
+}
+if(status==='down_working')
+{
+
+}
+};
 var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
 {     
     if (minimumDomainLength >= firstDomainLevel(domain).length )
@@ -249,7 +291,8 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                 //xhr.responseJson
                
                 //Main Domain response from node
-                
+                if(!checkStatus)
+                {
                
                 var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
                 updateHouseAvailableDOM($input,$fg,json.domain,is_available);
@@ -281,7 +324,11 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                     }
                     
                 }
+                // 
+               
                domain_trigger=is_available?0:1
+           }
+                checkStatus?checkHouseStatus(json.auc_bal_params.status,json.domain):'';
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
                
@@ -617,6 +664,7 @@ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
                     if(validate_field==='lastpage')
                         { 
                             button_next='finalfieldset';
+                            $form.find('button,input[type=button]').prop('disabled', false);
                         }
     
                      var parent_fieldset = $('.registration-form .'+button_next);
