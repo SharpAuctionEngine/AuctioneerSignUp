@@ -224,14 +224,12 @@ var alertTriggersOnDuplicates = $.debounce(350,function()
 });
 
 var checkStatus=0;
+
 $("#checkStatus").click(function() {
    checkStatus=1;
-   $( ".alert" ).append( "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Headsup!</strong> Please do not refresh the page.It automatically checks the status every 15 secs.If your requested house is created it automatically redirects to your house.</div>" );
-
-
-   // var is_okay=bootbox.alert('Please do not refresh the page.It automatically checks the status every 15 secs.If your requested house is created it automatically redirects to your house');
-   // console.log(is_okay);
-   
+   $("#checkStatus").hide();
+   $( ".alert" ).append( "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Heads up!</strong> This page will automatically check the status of your new auction house every 15 seconds. We estimate this to take approximately 30 minutes. When your house has finished being created, this page will automatically redirect to your new site.</div>" );
+   $(".statusButton").append("<button class='btn btn-xs btn-primary' id='statusCheck'>Check Status</button>");
  setInterval(function(){ 
     var domain = parseInstanceSubDomain($('[name=first_domain_level]').val()||'');
     var email = $('[name=email]').val();
@@ -240,26 +238,27 @@ $("#checkStatus").click(function() {
     
 });
 
+
 var checkHouseStatus=function(status,domain)
 {
 if(status==='up_running')
 {
-    $('#checkStatus').removeClass('btn-primary');
-    $('#checkStatus').addClass('btn-success');
+    $('#statusCheck').removeClass();
+    $('#statusCheck').addClass('btn-success');
 
     window.location='http://'+domain;
 
 }
 if(status==='up_failed')
 {
-  $('#checkStatus').removeClass('btn-primary');  
-  $('#checkStatus').addClass('btn-danger');
+  $('#statusCheck').removeClass();  
+  $('#statusCheck').addClass('btn-danger');
 
 }
 if(status==='up_working')
 {
-   $('#checkStatus').removeClass('btn-primary');  
-   $('#checkStatus').addClass('btn-warning');  
+   $('#statusCheck').removeClass();  
+   $('#statusCheck').addClass('btn-warning');  
 }
 if(status==='down_working')
 {

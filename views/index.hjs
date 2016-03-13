@@ -68,7 +68,7 @@
                         <li class="active"><a href="#">PRICING</a></li><!-- Link to Pricing Page -->
                         <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li>
                         <!-- Link to Support Page -->
-                        <li><a href="http://website.dev.bid/contactUs.html" target="_blank">CONTACTUS</a></li>
+                        <li><a href="http://website.dev.bid/contact-us.html" target="_blank">CONTACTUS</a></li>
 
                        <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
                     </ul>
@@ -229,7 +229,39 @@
             </div>
           </fieldset>
            
-          
+           <fieldset >
+            <div class="row" id="final_page" class="finalPage">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color" style="font-size:24px">
+                          <strong>Thanking you for signing up!</strong>
+                        </p>
+                        <span class="alert"></span>
+                        <span class="statusButton"></span>
+
+                        <button type="button" class="btn btn-xs btn-primary" id="checkStatus">Check Status</button>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <h3 class="black">
+                         <strong> Your auction house is under construction.</strong>
+                     </h3>
+                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
+
+                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
+
+                       <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
           <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">
@@ -468,6 +500,8 @@
                           <strong>Thanking you for signing up!</strong>
                         </p>
                         <span class="alert"></span>
+                        <span class="statusButton"></span>
+
                         <button type="button" class="btn btn-xs btn-primary" id="checkStatus">Check Status</button>
                       </div>
                     </div>
