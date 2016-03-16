@@ -508,7 +508,7 @@ function stripeResponseHandler(status, response) {
 
         // Insert the token into the form so it gets submitted to the server
         $('input[name=stripeToken]').val(token);
-        console.log($form.serialize());
+         console.log($form.serialize());
         var validate_field='lastpage';
         ajaxCallToAp($form.serialize(),validate_field);
         // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
