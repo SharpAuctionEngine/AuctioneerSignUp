@@ -49,6 +49,7 @@
     "mandrill-api": "^1.0.45",
     "node-mandrill": "^1.0.1",
     "node-sass": "^3.4.2",
+    "nodemon": "^1.9.1",
     "pg": "~4.4.1",
     "pg-hstore": "~2.3.2",
     "request-promise": "~0.4.3",
