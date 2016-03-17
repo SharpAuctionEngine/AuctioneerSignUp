@@ -229,7 +229,7 @@
             </div>
           </fieldset>
            
-           <fieldset >
+         <!--   <fieldset >
             <div class="row" id="final_page" class="finalPage">
               <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
                 <div class="panel panelborder">
@@ -261,7 +261,7 @@
                 </div>
               </div>
             </div>
-          </fieldset>
+          </fieldset> -->
 
           <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">

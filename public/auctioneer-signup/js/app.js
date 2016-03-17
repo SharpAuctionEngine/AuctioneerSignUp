@@ -632,7 +632,7 @@ var $secondFieldsetInput =$("#secondFieldset");
             ajaxCallToAp($secondFieldsetInput.serialize(),validate_field);
     
 });
-var ajaxCallToAp = $.debounce(450,function($data,validate_field)
+ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
 {   
     var $form = $('#paymentMethodForm');
     
