@@ -5,6 +5,6 @@ assets
 package.json~
 node-postgres-todo
 /views/new_auctioneer_details_request.hjs~
-/public/auctioneer-signup/index.html
+public/auctioneer-signup/index.html
 npm-debug.log
 log
