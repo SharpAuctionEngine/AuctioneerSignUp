@@ -6,4 +6,4 @@ package.json~
 node-postgres-todo
 /views/new_auctioneer_details_request.hjs~
 npm-debug.log
-public/index.html
+public/auctioneer-signup/index.html
