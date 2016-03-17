@@ -60,12 +60,16 @@
                 </div>
                 <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
                     <ul class="nav navbar-nav navbar-right" style="">
-                        <!-- <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li> --><!-- Link to Home Page -->
+                        <li><a href="http://website.dev.bid/index.html" target="_blank">HOME</a></li>
+                        <!-- Link to Home Page -->
                         <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li><!-- Link to About Page -->
                         <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li><!-- Link to Features Page -->
                         <li><a href="https://demo.bid/" target="_blank">DEMO</a><!-- Link to Demo Website-->
                         <li class="active"><a href="#">PRICING</a></li><!-- Link to Pricing Page -->
-                        <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
+                        <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li>
+                        <!-- Link to Support Page -->
+                        <li><a href="http://website.dev.bid/contact-us.html" target="_blank">CONTACTUS</a></li>
+
                        <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -145,8 +149,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="panel panelborder">
+              <div class="col-sm-6 "id="proDisable" style="pointer-events:none"> <!-- disabled for 2.0 release -->
+              
+                <div class="panel panelborder" style="background-color:lightgrey">
                   <div class="panel-body">
                     <div>
                       <div class="text-center">
@@ -170,15 +175,20 @@
                         <!-- <input class="single-slider" id="single-slider" type="hidden"> -->
 
                         <p class="plantext">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan
-                          as well as:</p>
-                        <div class="bulletpoints">
+                          as well as:</p>  <p class="comingSoon">
+                                           Coming <br/><br/>Soon
+                                           </p>
+                        <div class="bulletpoints" style="margin-top:-50px;">
                           <ul>
                             <li>Dedicated resources to cover your existing bidder base</li>
                             <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
                             <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
                           </ul>
                         </div>
-                        <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;">
+                         
+                         <!-- Navigation Disbaled for 2.0 release -->
+                        <button type="button" class="btn btn-xs btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled"> 
+
                           <span class="text">Get Started Now!</span>
                         </button>
                         <br/>
@@ -219,7 +229,39 @@
             </div>
           </fieldset>
            
-          
+           <fieldset >
+            <div class="row" id="final_page" class="finalPage">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color" style="font-size:24px">
+                          <strong>Thanking you for signing up!</strong>
+                        </p>
+                        <span class="alert"></span>
+                        <span class="statusButton"></span>
+
+                        <button type="button" class="btn btn-xs btn-primary" id="checkStatus">Check Status</button>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <h3 class="black">
+                         <strong> Your auction house is under construction.</strong>
+                     </h3>
+                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
+
+                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
+
+                       <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
           <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">
@@ -474,6 +516,10 @@
                         <p class="white-color" style="font-size:24px">
                           <strong>Thanking you for signing up!</strong>
                         </p>
+                        <span class="alert"></span>
+                        <span class="statusButton"></span>
+
+                        <button type="button" class="btn btn-xs btn-primary" id="checkStatus">Check Status</button>
                       </div>
                     </div>
                     <div class="form-bottom">
@@ -504,6 +550,7 @@
         var instanceParentDomain = 'sae.bid';
         var minimumDomainLength = parseInt('2');
         var planOptions = [{"id":"Basic","description":"Basic-25 Bidders: $99","amountInteger":9900,"amountDecimal":"99","bidders":25},{"id":"Pro-50","description":"Pro-50 Bidders: $140","amountInteger":14000,"amountDecimal":"140","bidders":"50"},{"id":"Pro-75","description":"Pro-75 Bidders: $165","amountInteger":16500,"amountDecimal":"165","bidders":"75"},{"id":"Pro-100","description":"Pro-100 Bidders: $190","amountInteger":19000,"amountDecimal":"190","bidders":"100"},{"id":"Pro-125","description":"Pro-125 Bidders: $215","amountInteger":21500,"amountDecimal":"215","bidders":"125"},{"id":"Pro-150","description":"Pro-150 Bidders: $240","amountInteger":24000,"amountDecimal":"240","bidders":"150"},{"id":"Pro-175","description":"Pro-175 Bidders: $265","amountInteger":26500,"amountDecimal":"265","bidders":"175"},{"id":"Pro-200","description":"Pro-200 Bidders: $290","amountInteger":29000,"amountDecimal":"290","bidders":"200"},{"id":"Pro-225","description":"Pro-225 Bidders: $315","amountInteger":31500,"amountDecimal":"315","bidders":"225"},{"id":"Pro-250","description":"Pro-250 Bidders: $340","amountInteger":34000,"amountDecimal":"340","bidders":"250"},{"id":"Pro-275","description":"Pro-275 Bidders: $365","amountInteger":36500,"amountDecimal":"365","bidders":"275"},{"id":"Pro-300","description":"Pro-300 Bidders: $390","amountInteger":39000,"amountDecimal":"390","bidders":"300"},{"id":"Pro-325","description":"Pro-325 Bidders: $415","amountInteger":41500,"amountDecimal":"415","bidders":"325"},{"id":"Pro-350","description":"Pro-350 Bidders: $440","amountInteger":44000,"amountDecimal":"440","bidders":"350"},{"id":"Pro-375","description":"Pro-375 Bidders: $465","amountInteger":46500,"amountDecimal":"465","bidders":"375"},{"id":"Pro-400","description":"Pro-400 Bidders: $490","amountInteger":49000,"amountDecimal":"490","bidders":"400"},{"id":"Pro-425","description":"Pro-425 Bidders: $515","amountInteger":51500,"amountDecimal":"515","bidders":"425"},{"id":"Pro-450","description":"Pro-450 Bidders: $540","amountInteger":54000,"amountDecimal":"540","bidders":"450"},{"id":"Pro-475","description":"Pro-475 Bidders: $565","amountInteger":56500,"amountDecimal":"565","bidders":"475"},{"id":"Pro-500","description":"Pro-500 Bidders: $590","amountInteger":59000,"amountDecimal":"590","bidders":"500"}];
+        
       </script>
       <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
       <!--<script src="js/jquery-1.10.2.js"></script>-->
@@ -1024,26 +1071,26 @@
             <div class="col-sm-9">
                 <div class="row custom_width text-center">
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
+                        <h5><a href="http://website.dev.bid/index.html" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
-                        <p><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
+                        <h5><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
+                        <p><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
+                        <br><a href="http://website.dev.bid/about.html" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
-                        <p><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
+                        <h5><a href="http://website.dev.bid/features.html" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
+                        <p><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
                         <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
+                        <br><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
+                        <br><a href="http://website.dev.bid/features.html" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
-                        <p><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
+                        <h5><a href="/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
+                        <p><a href="/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
+                        <br><a href="/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
                         <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
                         </p>
                     </div>
