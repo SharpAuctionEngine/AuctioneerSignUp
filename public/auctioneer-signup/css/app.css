@@ -278,3 +278,21 @@ input.btn.btn-med {
     margin-top:-55px;
     font-weight: 500
 }
+@media (max-width:768px){
+  
+.mobile
+{
+      width:70px!important;
+      margin-left:-44px!important;
+      margin-right: 0px!important;
+}
+
+}
+ .mailChimp
+ {
+    height:37px!important;
+    margin-right: 185px;
+    margin-top: -1px!important;
+    width:15%;
+
+ }

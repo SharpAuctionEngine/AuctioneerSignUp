@@ -619,10 +619,14 @@
         <div class="row"> 
             <div class="col-sm-9">
                 <div class="row text-center">
-                    <form action="#"><!-- Should sign folks up for your email list - MailChimp? -->
+                    <form action="//sharpauctionengine.us13.list-manage.com/subscribe/post" method="post"    target="_blank" novalidate><!-- Should sign folks up for your email list - MailChimp? -->
+                    <input type="hidden" name="u" value="d782b8ddfadf37314e5e5c005">
+
+                    <input type="hidden" name="id" value="3a3f58257b">
                         <div class="input-group center-block">
-                            <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
-                            <button class="btn btn-med btn-green" style="height:37px; width:13%" type="success">Submit</button>
+                            <input class="form-control" name="EMAIL" id="mce-EMAIL" type="email" placeholder="enter your email address for updates" style="width:40%;margin-left: 25%">
+                            
+                            <button class="btn btn-med btn-green mobile mailChimp" style="" type="success">Submit</button>
                         </div>
                     </form>
                 </div>

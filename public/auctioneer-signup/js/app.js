@@ -624,7 +624,7 @@ var $firstFieldsetInput =$("#firstFieldset");
 });
 $("#secondFieldsetValidation").click(function() {
     
-var $secondFieldsetInput =$("#secondFieldset");
+   var $secondFieldsetInput =$("#secondFieldset");
             var validate_field='Additional_Info';
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
