@@ -88,4 +88,4 @@ app.get('/auctioneer-signup/v1/typeahead/is/domain/available',
 
 // @link http://expressjs.com/en/guide/error-handling.html
 // You define error-handling middleware last, after other app.use() and routes calls
-app.use(rollbar.errorHandler(process.env.ROLLBAR_ACCESS_TOKEN||"e2d340481e044946ac1391204cfb09c2",{environment:process.env.ROLLBAR_ENV}));
+app.use(rollbar.errorHandler({environment:app.settings.env}));
