@@ -44,6 +44,8 @@ document,'script','//connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1518592401781359');
 fbq('track', "PageView");
+fbq('track', 'ViewContent');
+fbq('track', 'Lead');
 fbq('track', 'AddPaymentInfo');
 fbq('track', 'Purchase', {value: '0.00', currency: 'USD'});
 fbq('track', 'CompleteRegistration');
