@@ -35,7 +35,24 @@
   <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
   <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
   <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
+   <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
 
+fbq('init', '1518592401781359');
+fbq('track', "PageView");
+fbq('track', 'AddPaymentInfo');
+fbq('track', 'Purchase', {value: '0.00', currency: 'USD'});
+fbq('track', 'CompleteRegistration');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 
 </head>
 <!-- Header section -->
@@ -403,6 +420,12 @@
                       <div class="form-group">
                         <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
                       </div>
+                      <!-- <div class="form-group">
+                        <input type="text" name="premise" placeholder="Auction House Address" class="form-control" id="form-premise" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
+                      </div> -->
+                      <div class="form-group">
+                        <select name="country" class="form-control form-country" style="height:50px; border-radius:16px;"></select>
+                      </div>
                       <div class="form-group">
                         <input type="text" name="city" placeholder="City" class="form-city form-control" id="form-city" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
                       </div>
@@ -551,6 +574,7 @@
       <script src="js/bootstrap-formhelpers-states.js"></script>
       <!--  <script src="js/horizontal_selector.js"></script> -->
       <script src="js/jquery.range.js"></script>
+      <script src="js/jquery_addressfield.js"></script>
       <script src="js/register.js"></script>
       <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
       <script src="js/creditCardValidator.js"></script>

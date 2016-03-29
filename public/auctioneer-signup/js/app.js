@@ -116,6 +116,23 @@ $(document).ready(function() {
     });
 
 });
+// $('[name=country').select({
+//     placeholder: 'Select an Country',
+//     allowClear:false,
+//     selectOnClose: true,
+//     // data:addressJson.options.map(function(data){ return {id:data.iso, text:data.label}; })
+// }).val('');
+// jquery.addressfield configuation
+ $('#secondFieldset').addressfield({
+  json: 'json/addressField.json',
+  fields: {
+    country: '.form-country',
+    administrativearea: '.bfh-states',
+    postalcode: '.form-zip',
+    localityname:'.form-city',
+    thoroughfare:'.form-address',
+  },
+});
 
     // Removes repeated validation message 
 

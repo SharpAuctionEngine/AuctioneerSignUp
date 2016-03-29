@@ -46,6 +46,7 @@
     "hogan.js": "^3.0.2",
     "indicative": "^2.0.5",
     "ioredis": "^1.13.2",
+    "jquery.addressfield": "^1.1.0",
     "mandrill-api": "^1.0.45",
     "node-mandrill": "^1.0.1",
     "node-sass": "^3.4.2",
