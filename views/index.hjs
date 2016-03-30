@@ -126,7 +126,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <h2>
                           <strong> Basic Plan </strong>
                         </h2>
-                        <p class="text-center dollar">$99/mo</p>
+                        <p class="text-center dollar">$180/mo</p>
                         <p class="plantext">
                           This plan is perfect for a small auction house with 25 or less active bidders
                           <span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:
@@ -178,7 +178,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                           <strong>Pro Plan</strong>
                         </h2>
                         <p class="dollar">$
-                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
+                          <span class="slideramount borderbox" id="slideramount">250</span>/mo</p>
                         <p class="plantext">
                           Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:
                           <span class="bidders"
@@ -302,7 +302,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <h2 class="text-center">
                           <strong>Basic Plan</strong>
                         </h2>
-                        <p class="text-center dollar" style="font-size:170%">$99/mo</p>
+                        <p class="text-center dollar" style="font-size:170%">$180/mo</p>
                         <input class="plans" id="single-slider" type="hidden">
                         <p>
                           <small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
@@ -313,7 +313,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                           <strong>Pro Plan</strong>
                         </h2>
                         <p class="text-center dollar">$
-                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
+                          <span class="slideramount borderbox" id="slideramount">250</span>/mo</p>
                         <p>
                           <small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href=""> Click here</a>. Use the slider below to choose your average number of bidders per catalog and determine your monthly
                             cost.
