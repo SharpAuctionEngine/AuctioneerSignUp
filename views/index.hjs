@@ -154,21 +154,20 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                 <p class="text-center dollar">$180/mo</p>
                                                 <p class="plantext">
                                                     This plan is perfect for a small auction house with 25 or less active bidders
-                                                    <span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:
+                                                    <span class="red">*</span> at one time. With the Basic Plan, you pay $180 per month for access to all the features you and your bidders love from Sharp Auction Engine:
                                                 </p>
                                                 <div class="bulletpoints">
                                                     <ul>
-                                                        <li>No contracts, no set-up fees, and unlimited auctions per month</li>
-                                                        <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
-                                                        <li>Automatic page refresh ensures your bidders never miss out</li>
-                                                        <li>Easy lot creation with bulk importing and auto photo assignment</li>
-                                                        <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
-                                                        <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
+                                                        <li>No contracts, no set-up fees, and unlimited auctions per month.</li>
+                                                        <li>Conduct auctions anywhere, anytime with our cloud based platform.</li>
+                                                        <li>Automatic page refresh ensures your bidders never miss out.</li>
+                                                        <li>Easy lot creation with bulk importing and auto photo assignment.</li>
+                                                        <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe.</li>
+                                                        <li>Our rapid development guarantees you consistently have the latest features at your finger tips.</li>
                                                         <li>
                                                             SAE offers the use of
                                                             <a href="http://sae-manual.readthedocs.org/en/latest/domain/" target="_blank">
-                                  vanity domains
-                              </a>. If you own a domain, you can use that domain for your new auction's website. It comes with a
+                                  vanity domains</a>. If you own a domain, you can use that domain for your new auction's website. It comes with a
                                                             <strong>
                                 <em>FREE SSL</em>
                               </strong> for added security.
@@ -222,9 +221,9 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                 </p>
                                                 <div class="bulletpoints" style="margin-top:-50px;">
                                                     <ul>
-                                                        <li>Dedicated resources to cover your existing bidder base</li>
-                                                        <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
-                                                        <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
+                                                        <li>Dedicated resources to cover your existing bidder base.</li>
+                                                        <li>Powerful business intelligence statistics allow you to find bidder and listing trend.</li>
+                                                        <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list.</li>
                                                     </ul>
                                                 </div>
 
@@ -291,7 +290,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                 <p class="text-center dollar" style="font-size:170%">$180/mo</p>
                                                 <input class="plans" id="single-slider" type="hidden">
                                                 <p>
-                                                    <small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
+                                                    <small style="font-size:84%">This plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
                                                 </p>
                                             </div>
                                             <div id="pro" style="display:block;">
