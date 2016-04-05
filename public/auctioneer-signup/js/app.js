@@ -1,4 +1,4 @@
-var updateStripePlan = function(plan) {
+var updateStripePlan = function (plan) {
     if ('basic' === plan.id.toLowerCase().slice(0, 5)) {
         $('input[name=plan]').val('basic');
         $('#pro').hide();
@@ -13,26 +13,26 @@ var updateStripePlan = function(plan) {
     $('input[name=PlanAmount]').val(plan.amountDecimal);
 
     console.log({
-        updateStripePlan: plan
+        updateStripePlan: plan,
     });
 
 };
 // $('#Pro_plan').prop('disabled', true); // disabled pro plan for 2.0 release
 
-var updateStripePlanSelect = function(plan) {
+var updateStripePlanSelect = function (plan) {
     $('[name=stripe_plan]').val(plan.id);
 
     console.log({
-        updateStripePlanSelect: plan
+        updateStripePlanSelect: plan,
     });
     updateStripePlan(plan);
 };
 
 /* global var planOptions = [] */
-var getStripePlan = function(id) {
+var getStripePlan = function (id) {
     if (typeof id === 'object') {
         var o = id;
-        var planCandidates = planOptions.filter(function(plan) {
+        var planCandidates = planOptions.filter(function (plan) {
             if (o.bidders && plan.bidders != o.bidders) {
                 return false;
             }
@@ -59,7 +59,7 @@ var getStripePlan = function(id) {
     }
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
     var selectors = "#slider1,#slider2";
 
 
@@ -73,7 +73,7 @@ $(document).ready(function() {
         disabled: true, // Disabled for 2.0 release
 
         // animate:true,
-        slide: function(event, ui) {
+        slide: function (event, ui) {
             $("#bidders").val(ui.value);
             var bidders = $("#bidders").val();
             var plan = getStripePlan({
@@ -84,7 +84,7 @@ $(document).ready(function() {
             $('.slideramount').text(plan.amountDecimal);
             $('.bidders').text('\t' + bidders);
 
-            $(selectors).each(function() {
+            $(selectors).each(function () {
                 if ($('#slider1').val(ui.value) != $('#slider2').val(ui.value)) {
                     $('#slider2').slider("option", "value", bidders);
                 }
@@ -98,15 +98,16 @@ $(document).ready(function() {
 
 });
 
-// Removes repeated validation message
-$(".removeMessagebag").click(function() {
+// Removes repeated validation message 
+
+$(".removeMessagebag").click(function () {
 
     $(' #messagebag ').remove();
 
 });
 
 
-$('body').on('input', 'select[name=stripe_plan]', function() {
+$('body').on('input', 'select[name=stripe_plan]', function () {
     var plan = getStripePlan() || getStripePlan({
         basic: 1
     });
@@ -122,14 +123,14 @@ $("#loadingModal").modal({
 });
 
 //  Plan decider
-$("#Basic_plan").click(function() {
+$("#Basic_plan").click(function () {
     var plan = getStripePlan({
         basic: 1
     });
     updateStripePlanSelect(plan);
 
 });
-$("#Pro_plan").click(function() {
+$("#Pro_plan").click(function () {
     var plan = getStripePlan({
         basic: 0,
         bidders: $('input[name=bidders]').val() || 50,
@@ -142,7 +143,7 @@ $("#Pro_plan").click(function() {
 // Validation
 
 var oldHouseName = "";
-$("body").on("focus", "[name=auction_house_name]", function() {
+$("body").on("focus", "[name=auction_house_name]", function () {
 
     oldHouseName = slug($(this).val());
     // console.log("focus:house_name:" + oldHouseName);
@@ -150,14 +151,14 @@ $("body").on("focus", "[name=auction_house_name]", function() {
 });
 
 // @todo https://www.npmjs.com/package/slug
-var slug = function(str) {
+var slug = function (str) {
     return (str || '')
         .replace(/[^a-z0-9\s]/gi, '')
         .replace(/[_\s]/g, '')
         .toLowerCase();
 };
 
-$("body").on("keyup", "[name=auction_house_name]", function() {
+$("body").on("keyup", "[name=auction_house_name]", function () {
 
     if (oldHouseName == $('[name=first_domain_level]').val()) {
         oldHouseName = slug($(this).val());
@@ -166,12 +167,12 @@ $("body").on("keyup", "[name=auction_house_name]", function() {
     }
 });
 
-$("body").on("keyup blur", "[name=first_domain_level]", function() {
+$("body").on("keyup blur", "[name=first_domain_level]", function () {
     changeHouseUrlText($(this).val());
 });
 
 
-var firstDomainLevel = function(domain) {
+var firstDomainLevel = function (domain) {
     var indexOfDot = domain.indexOf('.');
     if (indexOfDot > 0) {
         return domain.slice(0, indexOfDot);
@@ -179,7 +180,7 @@ var firstDomainLevel = function(domain) {
     return '';
 };
 
-var updateHouseAvailableDOM = function($input, $fg, domain, is_available) {
+var updateHouseAvailableDOM = function ($input, $fg, domain, is_available) {
     $fg[is_available ? 'addClass' : 'removeClass']('has-success');
     $fg[is_available ? 'removeClass' : 'addClass']('has-error');
     $fg[is_available === 'Ap_not_available' ? 'addClass' : 'removeClass']('has-warning');
@@ -190,7 +191,7 @@ var updateHouseAvailableDOM = function($input, $fg, domain, is_available) {
 
 };
 
-var alertTriggersOnDuplicates = $.debounce(350, function() {
+var alertTriggersOnDuplicates = $.debounce(350, function () {
 
     !email_trigger ? '' : bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
     // is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
@@ -201,12 +202,12 @@ var alertTriggersOnDuplicates = $.debounce(350, function() {
 
 var checkStatus = 0;
 
-$("#checkStatus").click(function() {
+$("#checkStatus").click(function () {
     checkStatus = 1;
     $("#checkStatus").hide();
     $(".alert").append("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Heads up!</strong> This page will automatically check the status of your new auction house every 15 seconds. We estimate this to take approximately 30 minutes. When your house has finished being created, this page will automatically redirect to your new site.</div>");
     $(".statusButton").append("<button class='btn btn-xs btn-primary' id='statusCheck'>Check Status</button>");
-    setInterval(function() {
+    setInterval(function () {
         var domain = parseInstanceSubDomain($('[name=first_domain_level]').val() || '');
         var email = $('[name=email]').val();
         isDomainTakenAjax('', '', '', domain, email);
@@ -215,7 +216,7 @@ $("#checkStatus").click(function() {
 });
 
 
-var checkHouseStatus = function(status, domain) {
+var checkHouseStatus = function (status, domain) {
     if (status === 'up_running') {
         $('#statusCheck').removeClass();
         $('#statusCheck').addClass('btn-success');
@@ -236,7 +237,7 @@ var checkHouseStatus = function(status, domain) {
 
     }
 };
-var isDomainTakenAjax = $.debounce(350, function(is_email, $input, $fg, domain, email) {
+var isDomainTakenAjax = $.debounce(350, function (is_email, $input, $fg, domain, email) {
     if (minimumDomainLength >= firstDomainLevel(domain).length) {
         console.log('isDomainAvailable(' + domain + '): "too short"');
         var is_available = false;
@@ -251,7 +252,7 @@ var isDomainTakenAjax = $.debounce(350, function(is_email, $input, $fg, domain, 
                 email: email
             },
 
-            complete: function(xhr, textStatus) {
+            complete: function (xhr, textStatus) {
                 var json = xhr.responseJSON || {};
                 var alerts = new MessageBag();
 
@@ -287,6 +288,8 @@ var isDomainTakenAjax = $.debounce(350, function(is_email, $input, $fg, domain, 
                         }
 
                     }
+                    // 
+
                     domain_trigger = is_available ? 0 : 1
                 }
                 checkStatus ? checkHouseStatus(json.auc_bal_params.status, json.domain) : '';
@@ -300,17 +303,17 @@ var isDomainTakenAjax = $.debounce(350, function(is_email, $input, $fg, domain, 
         });
     }
 });
-var stripWWW = function(domain) {
+var stripWWW = function (domain) {
     if (domain.slice(0, 4) === 'www.') {
         return stripWWW(domain.slice(4));
     }
     return domain;
 };
-var parseInstanceSubDomain = function(domain) {
+var parseInstanceSubDomain = function (domain) {
     return stripWWW(domain) + '.' + instanceParentDomain;
 };
 
-$("body").on("input", "[name=first_domain_level],[name=email]", function() {
+$("body").on("input", "[name=first_domain_level],[name=email]", function () {
     var $input = $(this);
     var domain = parseInstanceSubDomain($('[name=first_domain_level]').val() || '');
     var email = $('[name=email]').val();
@@ -319,7 +322,7 @@ $("body").on("input", "[name=first_domain_level],[name=email]", function() {
     isDomainTakenAjax(is_email, $input, $input.parents('.form-group').first(), domain, email);
 });
 
-var changeHouseUrlText = function(UrlText) {
+var changeHouseUrlText = function (UrlText) {
     UrlTextSlugged = slug($.trim(UrlText));
     var $firstLevelDomain = $('[name=first_domain_level]');
     if (UrlTextSlugged) {
@@ -342,7 +345,7 @@ var changeHouseUrlText = function(UrlText) {
     $firstLevelDomain.trigger('input');
 };
 
-$('[name=first_domain_level]').on('shown.bs.popover', function() {
+$('[name=first_domain_level]').on('shown.bs.popover', function () {
     if ($.trim($(this).val())) {
         $('.hint_house_url').text($(this).val());
     }
@@ -359,7 +362,7 @@ $('.form-group input').popover({
     html: true,
 });
 
-var denormalizeCardExp = function(event) {
+var denormalizeCardExp = function (event) {
     // console.log("true");
     var $year = $('[data-stripe="exp-year"]');
     var $month = $('[data-stripe="exp-month"]');
@@ -376,7 +379,7 @@ var denormalizeCardExp = function(event) {
             6: 1
         }[value.length]) {
         console.log('invalid!');
-        bootbox.alert("Your card's expiration year is invalid");
+        // bootbox.alert("Your card's expiration year is invalid");
         return;
     }
 
@@ -409,15 +412,16 @@ if (typeof Stripe == 'undefined') {
     // https://stripe.com/docs/stripe.js
     Stripe.setPublishableKey(stripePublishableKey);
 }
-jQuery(function($) {
+jQuery(function ($) {
     // $('#paymentMethodForm').click(function (event) { //ch
-    $('.registration-form .btn-stripe').on('click', function(event) {
+    $('.registration-form .btn-stripe').on('click', function (event) {
         // console.log(this);
         if ($.trim($('input[data-stripe="number"]').val())) {
             var vResult = $('input[data-stripe="number"]').validateCreditCard();
             console.log(vResult);
             if (!vResult.valid) {
                 // bootbox.alert('Please verify your card information.');
+                bootbox.alert('Please verify your card information.');
                 return false;
             }
         }
@@ -425,7 +429,7 @@ jQuery(function($) {
         var $form = $(this).parents('form').first();
 
         var cc = 0;
-        $form.find('[data-stripe]').each(function(i, e) {
+        $form.find('[data-stripe]').each(function (i, e) {
             if ($(e).val() !== '') cc++;
         });
 
@@ -467,11 +471,107 @@ function stripeResponseHandler(status, response) {
         console.log($form.serialize());
         var validate_field = 'lastpage';
         ajaxCallToAp($form.serialize(), validate_field);
+        // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // and submit
+        // $form.get(0).submit();
+        // $.ajax({
+        //     url: "/auctioneer-signup/v1/submit",
+        //     method: 'POST',
+        //     data: $form.serialize(),
+        //     // _token: $form.find('[name=_token]').val(),
+        //     //          gateway:'stripe',
+        //     //          stripe:response
+
+        //     // ,
+        //     // data:{
+        //     //     _token: $form.find('[name=_token]').val(),
+        //     //     gateway:'stripe',
+        //     //     stripe:response
+        //     // },
+        //     beforeSend: function(json) {
+        //         $("#loadingModal").modal('show');
+
+        //     },
+        //     complete: function(xhr, textStatus) {
+        //         $("#loadingModal").modal('hide');
+
+        //         //xhr.responseText
+        //         //xhr.responseJson
+        //     },
+        //     success: function(json, textStatus, xhr) {
+        //              var parent_fieldset = $('.registration-form .finalfieldset');
+        //              var next_step = true;
+
+
+        //               if( next_step ) {
+
+        //                  parent_fieldset.fadeOut(400, function() {
+
+        //              $(this).next().fadeIn();
+        //           });
+        //             }
+        //          },
+        //          // console.log(json);
+        //         // $form.attr('data-is-ready',1); //ch
+
+        //         // $('#paymentMethodForm').submit(); //ch
+        //         // $("#congrats").modal('show');
+
+
+
+        //     error: function(xhr, textStatus, errorThrown) {
+        //         var validationText ='';
+        //         var alerts =new MessageBag();
+        //         console.error({
+        //             textStatus: textStatus,
+        //             'xhr.response': xhr.responseJSON || xhr.responseText,
+        //             errorThrown:errorThrown,
+        //         });
+        //         //xhr.responseText
+        //         //xhr.responseJSON
+
+        //         if(xhr.status==400)
+        //         {   
+        //             $form.find('button,input[type=button]').prop('disabled', false);
+
+        //             if(xhr.responseText === 'Duplicate_Email')
+        //             {
+
+        //                 bootbox.alert('Your email address already in use! Please try again then contact support.');
+        //                 $('#email').removeClass('input-success');
+        //                 $('#email').addClass('has-error');
+        //                 return;
+        //             }
+
+        //             if(xhr.responseJSON.errors)
+        //             {
+        //             jQuery.each(xhr.responseJSON.errors, function(key, value) {
+
+        //              validationText += value.message;
+
+        //              alerts.add(value.field,value.message);
+
+        //             });
+        //              alerts.sprinkle('form:first');
+
+
+
+        //             bootbox.alert('There are validation errors.Please click on previous button to review errors');
+
+        //             return ;
+        //             }
+
+        //         }
+        //         bootbox.alert('There was an ISE error! Please try again then contact support.');
+
+        //         //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
+        //     }
+        // });
     }
 }
 var email_trigger = 0;
 var domain_trigger = 0;
-$("#firstFieldsetValidation").click(function() {
+$("#firstFieldsetValidation").click(function () {
 
     var $firstFieldsetInput = $("#firstFieldset");
     email_trigger ? '' : $(' #messagebag ').remove();
@@ -482,7 +582,7 @@ $("#firstFieldsetValidation").click(function() {
 
 
 });
-$("#secondFieldsetValidation").click(function() {
+$("#secondFieldsetValidation").click(function () {
 
     var $secondFieldsetInput = $("#secondFieldset");
     var validate_field = 'Additional_Info';
@@ -492,24 +592,24 @@ $("#secondFieldsetValidation").click(function() {
     ajaxCallToAp($secondFieldsetInput.serialize(), validate_field);
 
 });
-var ajaxCallToAp = $.debounce(450, function($data, validate_field) {
+var ajaxCallToAp = $.debounce(450, function ($data, validate_field) {
     var $form = $('#paymentMethodForm');
 
     $.ajax({
         url: "/auctioneer-signup/v1/submit",
         method: 'POST',
         data: $data + "&validate_field=" + validate_field,
-        beforeSend: function(json) {
+        beforeSend: function (json) {
             $("#loadingModal").modal('show');
 
         },
-        complete: function(xhr, textStatus) {
+        complete: function (xhr, textStatus) {
             $("#loadingModal").modal('hide');
 
             //xhr.responseText
             //xhr.responseJson
         },
-        success: function(json, textStatus, xhr) {
+        success: function (json, textStatus, xhr) {
             var button_next = '';
             if (validate_field === 'profile') {
                 button_next = 'firstFieldset';
@@ -528,7 +628,7 @@ var ajaxCallToAp = $.debounce(450, function($data, validate_field) {
 
             if (next_step) {
 
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(400, function () {
 
                     $(this).next().fadeIn();
                 });
@@ -536,7 +636,7 @@ var ajaxCallToAp = $.debounce(450, function($data, validate_field) {
         },
 
 
-        error: function(xhr, textStatus, errorThrown) {
+        error: function (xhr, textStatus, errorThrown) {
             var validationText = '';
             var alerts = new MessageBag();
             console.error({
@@ -561,7 +661,7 @@ var ajaxCallToAp = $.debounce(450, function($data, validate_field) {
 
                 if (xhr.responseJSON.errors) {
 
-                    jQuery.each(xhr.responseJSON.errors, function(key, value) {
+                    jQuery.each(xhr.responseJSON.errors, function (key, value) {
                         alerts.add(value.field, value.message);
 
                     });
