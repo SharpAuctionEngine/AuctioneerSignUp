@@ -418,7 +418,6 @@ jQuery(function($) {
             console.log(vResult);
             if (!vResult.valid) {
                 // bootbox.alert('Please verify your card information.');
-                bootbox.alert('Please verify your card information.');
                 return false;
             }
         }
