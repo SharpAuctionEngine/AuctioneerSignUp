@@ -10,14 +10,14 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="auctioneer-signup/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="fonts/font-awesome.css">
-  <link rel="stylesheet" href="css/form-elements.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="auctioneer-signup/css/jquery-ui.css">
+  <link rel="stylesheet" href="auctioneer-signup/fonts/font-awesome.css">
+  <link rel="stylesheet" href="auctioneer-signup/css/form-elements.css">
+  <link rel="stylesheet" href="auctioneer-signup/css/style.css">
+  <link rel="stylesheet" href="auctioneer-signup/css/app.css">
   <!-- <link href="css/jquery.range.css" rel="stylesheet"> -->
 
 
@@ -31,10 +31,10 @@
   <!-- Favicon and touch icons -->
 
 
-  <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
+  <link rel="apple-touch-icon" href="auctioneer-signup/ico/touch-icon-iphone-precomposed.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="auctioneer-signup/ico/touch-icon-ipad-precomposed.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="auctioneer-signup/ico/touch-icon-iphone-retina-precomposed.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="auctioneer-signup/ico/touch-icon-ipad-retina-precomposed.png">
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -74,7 +74,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <span class="icon-bar"></span>
                     </button>
                     <a href="/">
-                    <img src="images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                    <img src="auctioneer-signup/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
                     </a>
                 </div>
                 <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
@@ -248,44 +248,11 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
             </div>
           </fieldset>
            
-         <!--   <fieldset >
-            <div class="row" id="final_page" class="finalPage">
-              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div class="form-top">
-                      <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
-                        <p class="white-color" style="font-size:24px">
-                          <strong>Thanking you for signing up!</strong>
-                        </p>
-                        <span class="alert"></span>
-                        <span class="statusButton"></span>
-
-                        <button type="button" class="btn btn-xs btn-primary" id="checkStatus">Check Status</button>
-                      </div>
-                    </div>
-                    <div class="form-bottom">
-                      <h3 class="black">
-                         <strong> Your auction house is under construction.</strong>
-                     </h3>
-                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
-
-                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
-
-                       <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset> -->
 
           <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">
               <div class="col-sm-6 text-center" style="margin-top:230px;">
-                <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
+                <img src="auctioneer-signup/images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
                 <h2 class="white-color">Sign Up now for
                   <br/>your Online Auction House</h2>
                 <p class="white-color">
@@ -400,7 +367,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                   <div class="panel-body">
                     <div class="form-top">
                       <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
+                        <img src="auctioneer-signup/images/saelogotransparent140w120h.png">
                         <p class="white-color">
                           <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
                         </p>
@@ -448,7 +415,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                   <div class="panel-body">
                     <div class="form-top">
                       <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
+                        <img src="auctioneer-signup/images/saelogotransparent140w120h.png">
                         <p class="white-color" style="font-weight: bold;">
                           Please confirm your plan and provide us additional information for payments.
                         </p>
@@ -514,7 +481,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                   <div class="panel-body">
                     <div class="form-top">
                       <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
+                        <img src="auctioneer-signup/images/saelogotransparent140w120h.png">
                         <p class="white-color" style="font-size:24px">
                           <strong>Thanking you for signing up!</strong>
                         </p>
@@ -630,7 +597,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
         
             <!-- Logo -->
             <div class="col-sm-3 text-center">
-                <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
+                <img src="auctioneer-signup/images/logo-150px.png" class="image-responsive" alt="SAE logo">
             </div>
         </div>
             
