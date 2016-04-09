@@ -643,7 +643,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
 
                         <input type="hidden" name="id" value="3a3f58257b">
                         <div class="input-group center-block">
-                            <input class="form-control" name="EMAIL" id="mce-EMAIL" type="email" placeholder="enter your email address for updates" style="width:40%;margin-left: 25%">
+                            <input class="form-control mailChimpPlaceholder" name="EMAIL" id="mce-EMAIL" type="email" placeholder="enter your email address for updates">
 
                             <button class="btn btn-med btn-green mobile mailChimp" style="" type="success">Submit</button>
                         </div>

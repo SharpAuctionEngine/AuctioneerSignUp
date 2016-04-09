@@ -296,3 +296,10 @@ input.btn.btn-med {
     width:15%;
 
  }
+ .mailChimpPlaceholder
+ {
+    width:40%!important;
+    margin-left: 25%;
+    font-weight: lighter;
+    font-style: italic;
+ }
