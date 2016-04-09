@@ -420,8 +420,11 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                 <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
                                             </div> -->
                       <div class="form-group">
-                        <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
+                        <input type="text" name="premise" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
                       </div>
+                      <div class="form-group">
+                        <select name="country" class="form-control form-country" style="height:50px; border-radius:16px;"></select>
+                        </div>
                       <div class="form-group">
                         <input type="text" name="city" placeholder="City" class="form-city form-control" id="form-city" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
                       </div>
@@ -574,7 +577,9 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
       <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
       <script src="js/creditCardValidator.js"></script>
       <script src="js/MessageBag.js"></script>
-
+      <script src="js/require.js"></script>
+      <!-- <script src="js/jquery.validate.js"></script> -->
+      <script src="js/jquery.addressfield.js"></script>
       <script type="text/javascript" src="js/app.js"></script>
 
       <!--[if lt IE 10]>

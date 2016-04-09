@@ -1,3 +1,4 @@
+
 var updateStripePlan = function(plan)
 {
     if ('basic' === plan.id.toLowerCase().slice(0,5))
@@ -76,7 +77,38 @@ var getStripePlan = function(id)
         }
     }
 };
+// var addressJson=require('json/addressField.json');
 
+require.config({
+    paths: {
+        'addressJson': 'json/addressField.json'
+    }
+});
+require(['addressJson'], function (addressJson) {
+    console.log({addressJson:addressJson});
+    //foo is now loaded.
+//     $('[name="form-country"]').select({
+//     placeholder: 'Select an Country',
+//     allowClear:false,
+//     selectOnClose: true,
+//     data:addressJson.options.map(function(data){ return {id:data.iso, text:data.label}; })
+// }).val('US');
+
+});
+// var json = require('./data.json');
+
+
+ $('#secondFieldset').addressfield({
+  json: 'json/addressField.json',
+  fields: {
+    country: '.form-country',
+    administrativearea: '.bfh-states',
+    postalcode: '.form-zip',
+    localityname:'.form-city',
+    thoroughfare:'.form-address',
+  },
+});
+ 
 $(document).ready(function() {
     var selectors = "#slider1,#slider2";
 
