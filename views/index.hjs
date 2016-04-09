@@ -101,7 +101,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                             <!-- Link to About Page -->
                             <li><a href="http://www.dev.bid/features" target="_blank">FEATURES</a></li>
                             <!-- Link to Features Page -->
-                            <li><a href="https://demo.bid/" target="_blank">DEMO</a>
+                            <li><a href="https://demo.bid/" target="_blank">DEMO</a></li>
                                 <!-- Link to Demo Website-->
                                 <li class="active"><a href="#">PRICING</a></li>
                                 <!-- Link to Pricing Page -->
