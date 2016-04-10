@@ -1,0 +1,41 @@
+
+
+<apex:page >
+    <script type=""text/javascript"">
+    var __sfdcSessionId = '{!GETSESSIONID()}';
+    </script>
+    <script src="https://na17.salesforce.com/soap/ajax/22.0/connection.js" type="text/javascript"></script>
+    <script type=""text/javascript"">    
+    function setupPage() {
+      var state = {
+          output : document.getElementById("output"),
+          startTime : new Date().getTime()};
+      var callback = {
+          onSuccess: layoutResults,
+          onFailure: queryFailed,
+          source: state};
+      sforce.connection.query(
+          "Select Id From Account limit 1",
+           callback);
+  }
+
+  function queryFailed(error, source) {
+    source.output.innerHTML = "An error has occurred: " + error;
+  }
+ 
+  function layoutResults(queryResult, source) {
+    if (queryResult.size > 0) {
+      var output = "";
+      var records = queryResult.getArray('records');
+      for (var i = 0; i < records.length; i++) {
+        var account = records[i];
+        output += account.Id + "<br/>";
+      }
+    source.output.innerHTML = output;
+    }
+  }
+  </script>
+    <button type="button" onclick="setupPage()">Click Me!</button>
+    <div id="output"> </div>
+  
+</apex:page>

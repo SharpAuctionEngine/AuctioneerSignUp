@@ -108,6 +108,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                 <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li>
                                 <!-- Link to Support Page -->
                                 <li><a href="http://www.dev.bid/contact-us.html" target="_blank">CONTACTUS</a></li>
+                                 <!-- <li><a href="/auctioneer-signup/vf.html" target="_blank">SALESFORCE</a></li> -->
 
                                 <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> -->
                                 <!-- Link to Pricing Page -->
@@ -363,6 +364,14 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                     <option>Search Engine</option>
                                                     <option>AuctionLook</option>
                                                 </select>
+
+                                            <div class="form-group" id="customer_name_div" style="display:none;">
+                                                <p class="wrapper">
+                                                    <input type="text" name="customer_name" class="icon form-control customer_name" required="required" placeholder="&#61447; Name of the Customer">
+                                                </p>
+                                            </div>
+                                            
+
                                                 </p>
                                             </div>
                                             <input type=hidden name="oid" value="00Do0000000ZekX">
@@ -551,8 +560,11 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                     var instanceParentDomain = '{{instanceParentDomain}}';
                     var minimumDomainLength = parseInt('{{minimumDomainLength}}');
                     var planOptions = {{{planOptionsJson}}};
-                    
+                    var salesForceInstance ='{{salesForceInstance}}';
                 </script>
+                <script type="text/javascript" src="js/connection.js"></script>
+                <!-- https://na17.salesforce.com/soap/ajax/36.0/connection.js -->
+
                 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
                 <!--<script src="js/jquery-1.10.2.js"></script>-->
                 <script src="auctioneer-signup/js/jquery-1.11.1.min.js"></script>

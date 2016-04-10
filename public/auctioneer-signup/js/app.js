@@ -569,16 +569,24 @@ function stripeResponseHandler(status, response) {
         // });
     }
 }
+$('body').on('change','#lead_source',function(){
+
+if($('#lead_source').val()==='A current SAE customer')
+{
+    $('#customer_name_div').css('display','block');
+    
+    
+}
+else
+{
+    $('#customer_name_div').css('display','none');
+
+}
+});
 
 var ajaxCallToSalesforce = $.debounce(450, function ($data)
 {
-var emailToSalesforce=$('#email').val();
-var Leadsource =$('#lead_source').val();
-var oid=$('[name=oid]').val();
-var debug=$('[name=debug]').val();
-var name =$('[name=username]').val();
 
-// var debugemail=$('[name=debugEmail]').val();
 
 $.ajax({
         url: "https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
@@ -596,12 +604,20 @@ $.ajax({
 });
 var email_trigger = 0;
 var domain_trigger = 0;
+// var customer_name;
 $("#firstFieldsetValidation").click(function () {
 
     var $firstFieldsetInput = $("#firstFieldset");
     email_trigger ? '' : $(' #messagebag ').remove();
     email_trigger ? '' : $('.form-group').removeClass('has-error');
     var validate_field = 'profile';
+    // customer_name=$('.customer_name').val();
+    // console.log('customer_name:'+customer_name);
+    // if(customer_name.length<=1)
+    // {
+    //     $('.customer_name').val(0);
+    //    console.log('customer_name:: '+$('.customer_name').val()); 
+    // }
     console.log($firstFieldsetInput.serialize());
     (email_trigger === 1 || domain_trigger === 1) ? alertTriggersOnDuplicates(): ajaxCallToAp($firstFieldsetInput.serialize(), validate_field);
     
@@ -645,6 +661,7 @@ var ajaxCallToAp = $.debounce(450, function ($data, validate_field) {
             if (validate_field === 'lastpage') {
                 button_next = 'finalfieldset';
                 $form.find('button,input[type=button]').prop('disabled', false);
+
                 ajaxCallToSalesforce($data);
    
             }
