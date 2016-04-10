@@ -18,7 +18,6 @@ var dumpPromise = require('./lib/debug/dumpPromise');
 var Sequelize = require('sequelize');
 var db = new Sequelize(process.env.CONNECTION);
 var stripeAPI = require("stripe")(process.env.STRIPE_SECRET_KEY);
-
 var subscribeToStripe = require('./lib/subscribeToStripe');
 var parseStringPlan = require('./lib/parseStringPlan');
 var sendToAdminPanel = require('./lib/sendToAdminPanel');

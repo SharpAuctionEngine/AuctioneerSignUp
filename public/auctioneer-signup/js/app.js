@@ -569,6 +569,31 @@ function stripeResponseHandler(status, response) {
         // });
     }
 }
+
+var ajaxCallToSalesforce = $.debounce(450, function ($data)
+{
+var emailToSalesforce=$('#email').val();
+var Leadsource =$('#lead_source').val();
+var oid=$('[name=oid]').val();
+var debug=$('[name=debug]').val();
+var name =$('[name=username]').val();
+
+// var debugemail=$('[name=debugEmail]').val();
+
+$.ajax({
+        url: "https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
+        method: 'POST',
+        data:$data,
+        // data: "&first_name="+name+"&email="+emailToSalesforce + "&lead_source=" + Leadsource +"&oid=" + oid+ "&debug=" + debug,
+         error: function (xhr, textStatus, errorThrown) {
+            console.log("Sorry! Error Sending to salesforce");
+         },
+         success:function(){
+            console.log("Success sending to salesforce");
+
+         },
+    });
+});
 var email_trigger = 0;
 var domain_trigger = 0;
 $("#firstFieldsetValidation").click(function () {
@@ -579,7 +604,7 @@ $("#firstFieldsetValidation").click(function () {
     var validate_field = 'profile';
     console.log($firstFieldsetInput.serialize());
     (email_trigger === 1 || domain_trigger === 1) ? alertTriggersOnDuplicates(): ajaxCallToAp($firstFieldsetInput.serialize(), validate_field);
-
+    
 
 });
 $("#secondFieldsetValidation").click(function () {
@@ -592,9 +617,9 @@ $("#secondFieldsetValidation").click(function () {
     ajaxCallToAp($secondFieldsetInput.serialize(), validate_field);
 
 });
+
 var ajaxCallToAp = $.debounce(450, function ($data, validate_field) {
     var $form = $('#paymentMethodForm');
-
     $.ajax({
         url: "/auctioneer-signup/v1/submit",
         method: 'POST',
@@ -620,6 +645,8 @@ var ajaxCallToAp = $.debounce(450, function ($data, validate_field) {
             if (validate_field === 'lastpage') {
                 button_next = 'finalfieldset';
                 $form.find('button,input[type=button]').prop('disabled', false);
+                ajaxCallToSalesforce($data);
+   
             }
 
             var parent_fieldset = $('.registration-form .' + button_next);
@@ -669,7 +696,7 @@ var ajaxCallToAp = $.debounce(450, function ($data, validate_field) {
 
 
 
-                    bootbox.alert('There are validation errors. Please click on previous button to review errors');
+                    bootbox.alert('There seems to be some validation errors on this page, please review and fix the errors to continue.');
 
                     return;
                 }

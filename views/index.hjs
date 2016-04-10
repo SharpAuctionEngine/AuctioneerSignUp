@@ -135,7 +135,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
           <div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
         </noscript>
                 <form role="form" action="signup" method="post" class="registration-form" id="paymentMethodForm">
-                    <fieldset>
+                    <fieldset id="LandingPage" class="LandingPage">
                         <h1 class="cameoantique" style="margin-top:85px;">CHOOSE YOUR PLAN</h1>
                         <p class="white">
                             Review your options below and select the plan the best suits your needs.
@@ -241,6 +241,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                 </div>
                             </div>
                         </div>
+                       <!--  
                         <div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
                             <div class="text-center">
                                 <h3 class="black">
@@ -263,7 +264,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                 </a>
                                 <br/>
                             </div>
-                        </div>
+                        </div> -->
                     </fieldset>
 
 
@@ -351,6 +352,22 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                     <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
                                                 </p>
                                             </div>
+                                            <div class="form-group">
+                                                <p class="wrapper">
+                                                
+                                                <select name="lead_source" id="lead_source" class="form-control" style="height:50px; border-radius:16px;">
+                                                    <option value="0" style="font-weight: lighter!important;">How did you find out about us?</option>
+                                                    <option>Social Media</option>
+                                                    <option>I met your staff at a conference!</option>
+                                                    <option>A current SAE customer</option>
+                                                    <option>Search Engine</option>
+                                                    <option>AuctionLook</option>
+                                                </select>
+                                                </p>
+                                            </div>
+                                            <input type=hidden name="oid" value="00Do0000000ZekX">
+                                            <!-- <input type="hidden" name="debug" value=1>         -->
+                                            <!-- <input type="hidden" name="debugEmail"> -->
                                             <div>
                                                 <section class="text-muted text-center">
                                                     <p>
@@ -398,7 +415,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                                 <input type="text" name="last_name" autocomplete="off" value="user" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" name="phone_number" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+                                                <input type="text" name="phone" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
                                             </div>
                                             <!-- <div class="form-group">
                                                 <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
@@ -645,7 +662,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <div class="input-group center-block">
                             <input class="form-control mailChimpPlaceholder" name="EMAIL" id="mce-EMAIL" type="email" placeholder="enter your email address for updates">
 
-                            <button class="btn btn-med btn-green mobile mailChimp" style="" type="success">Submit</button>
+                            <button class="btn btn-med btn-green mobile mailChimp" type="success">Submit</button>
                         </div>
                     </form>
                 </div>
