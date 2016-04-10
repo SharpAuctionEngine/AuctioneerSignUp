@@ -90,7 +90,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <span class="icon-bar"></span>
                     </button>
                         <a href="/">
-                            <img src="auctioneer-signup/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                            <img src="/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
                         </a>
                     </div>
                     <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar">
@@ -655,7 +655,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
 
             <!-- Logo -->
             <div class="col-sm-3 text-center">
-                <img src="auctioneer-signup/images/logo-150px.png" class="image-responsive" alt="SAE logo">
+                <img src="/images/logo-150px.png" class="image-responsive" alt="SAE logo">
             </div>
         </div>
 
