@@ -26,10 +26,10 @@ input.icon::-ms-input-placeholder {
 
 @font-face {
     font-family: 'CameoAntique';
-    src:url('fonts/CameoAntique.ttf.woff') format('woff'),
-        url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'),
-        url('fonts/CameoAntique.ttf.eot'),
-        url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype'); 
+    src:url('/auctioneer-signup/fonts/CameoAntique.ttf.woff') format('woff'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.eot'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
