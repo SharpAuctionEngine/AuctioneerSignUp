@@ -54,11 +54,6 @@ var server = app.listen(process.env.APP_PORT, function() {
 });
 
 var User = require('./lib/signUpRequestModel')(db);
-app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next()
-  });
 
 var validateSignupRequest = require('./lib/validateSignupRequest')(db);
 
