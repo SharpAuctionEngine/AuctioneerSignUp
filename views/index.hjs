@@ -271,7 +271,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                     <fieldset id="firstFieldset" class="firstFieldset">
                         <div class="row">
                             <div class="col-sm-6 text-center" style="margin-top:230px;">
-                                <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
+                                <img src="auctioneer-signup/images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
                                 <h2 class="white-color">Sign Up now for
                   <br/>your Online Auction House</h2>
                                 <p class="white-color">
@@ -583,7 +583,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                 <script src="js/creditCardValidator.js"></script>
                 <script src="js/MessageBag.js"></script>
 
-                <script type="text/javascript" src="auctioneer-signup/js/app.js"></script>
+                <script type="text/javascript" src="js/app.js"></script>
 
                 <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
