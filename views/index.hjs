@@ -11,14 +11,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="auctioneer-signup/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/auctioneer-signup/css/bootstrap.css"> -->
 
-    <link rel="stylesheet" href="auctioneer-signup/css/jquery-ui.css">
-    <link rel="stylesheet" href="auctioneer-signup/fonts/font-awesome.css">
-    <link rel="stylesheet" href="auctioneer-signup/css/form-elements.css">
-    <link rel="stylesheet" href="auctioneer-signup/css/style.css">
-    <link rel="stylesheet" href="auctioneer-signup/css/app.css">
-    <!-- <link href="auctioneer-signup/css/jquery.range.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/auctioneer-signup/css/jquery-ui.css">
+    <link rel="stylesheet" href="/auctioneer-signup/fonts/font-awesome.css">
+    <link rel="stylesheet" href="/auctioneer-signup/css/form-elements.css">
+    <link rel="stylesheet" href="/auctioneer-signup/css/style.css">
+    <link rel="stylesheet" href="/auctioneer-signup/css/app.css">
+    <!-- <link href="/auctioneer-signup/css/jquery.range.css" rel="stylesheet"> -->
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,10 +31,10 @@
     <!-- Favicon and touch icons -->
 
 
-    <link rel="apple-touch-icon" href="auctioneer-signup/ico/touch-icon-iphone-precomposed.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="auctioneer-signup/ico/touch-icon-ipad-precomposed.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="auctioneer-signup/ico/touch-icon-iphone-retina-precomposed.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="auctioneer-signup/ico/touch-icon-ipad-retina-precomposed.png">
+    <link rel="apple-touch-icon" href="/auctioneer-signup/ico/touch-icon-iphone-precomposed.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/auctioneer-signup/ico/touch-icon-ipad-precomposed.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/auctioneer-signup/ico/touch-icon-iphone-retina-precomposed.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/auctioneer-signup/ico/touch-icon-ipad-retina-precomposed.png">
     <script>
         ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
@@ -90,7 +90,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                         <span class="icon-bar"></span>
                     </button>
                         <a href="/">
-                            <img src="auctioneer-signup//images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                            <img src="/auctioneer-signup/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
                         </a>
                     </div>
                     <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar">
@@ -271,7 +271,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                     <fieldset id="firstFieldset" class="firstFieldset">
                         <div class="row">
                             <div class="col-sm-6 text-center" style="margin-top:230px;">
-                                <img src="auctioneer-signup//images/logo-150px.png" alt="Sharp Auction Engine" title="" />
+                                <img src="/auctioneer-signup/images/logo-150px.png" alt="Sharp Auction Engine" title="" />
                                 <h2 class="white-color">Sign Up now for
                   <br/>your Online Auction House</h2>
                                 <p class="white-color">
@@ -409,7 +409,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="auctioneer-signup//images/logo-150px.png">
+                                                <img src="/auctioneer-signup/images/logo-150px.png">
                                                 <p class="white-color">
                                                     <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
                                                 </p>
@@ -457,7 +457,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="auctioneer-signup//images/logo-150px.png">
+                                                <img src="/auctioneer-signup/images/logo-150px.png">
                                                 <p class="white-color" style="font-weight: bold;">
                                                     Please confirm your plan and provide us additional information for payments.
                                                 </p>
@@ -523,7 +523,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="auctioneer-signup//images/logo-150px.png">
+                                                <img src="/auctioneer-signup/images/logo-150px.png">
                                                 <p class="white-color" style="font-size:24px">
                                                     <strong>Thanking you for signing up!</strong>
                                                 </p>
@@ -563,30 +563,30 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
                 </script>
 
                 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-                <!--<script src="auctioneer-signup/js/jquery-1.10.2.js"></script>-->
-                <script src="auctioneer-signup/js/jquery-1.11.1.min.js"></script>
-                <script src="auctioneer-signup/js/jquery-ui.js"></script>
-                <!--  <script src="auctioneer-signup/js/tooltip.js"></script>
-            <script src="auctioneer-signup/js/popover.js"></script> -->
-                <script src="auctioneer-signup/js/jquery.ba-throttle-debounce.min.js"></script>
-                <script src="auctioneer-signup/js/bootstrap.min.js"></script>
-                <script src="auctioneer-signup/js/bootbox.min.js"></script>
-                <script src="auctioneer-signup/js/jquery.backstretch.min.js"></script>
-                <script src="auctioneer-signup/js/retina-1.1.0.min.js"></script>
-                <script src="auctioneer-signup/js/scripts.js"></script>
-                <script src="auctioneer-signup/js/bootstrap-formhelpers-min.js"></script>
-                <script src="auctioneer-signup/js/bootstrap-formhelpers-states.js"></script>
-                <!--  <script src="auctioneer-signup/js/horizontal_selector.js"></script> -->
-                <script src="auctioneer-signup/js/jquery.range.js"></script>
-                <script src="auctioneer-signup/js/register.js"></script>
+                <!--<script src="/auctioneer-signup/js/jquery-1.10.2.js"></script>-->
+                <script src="/auctioneer-signup/js/jquery-1.11.1.min.js"></script>
+                <script src="/auctioneer-signup/js/jquery-ui.js"></script>
+                <!--  <script src="/auctioneer-signup/js/tooltip.js"></script>
+            <script src="/auctioneer-signup/js/popover.js"></script> -->
+                <script src="/auctioneer-signup/js/jquery.ba-throttle-debounce.min.js"></script>
+                <script src="/auctioneer-signup/js/bootstrap.min.js"></script>
+                <script src="/auctioneer-signup/js/bootbox.min.js"></script>
+                <script src="/auctioneer-signup/js/jquery.backstretch.min.js"></script>
+                <script src="/auctioneer-signup/js/retina-1.1.0.min.js"></script>
+                <script src="/auctioneer-signup/js/scripts.js"></script>
+                <script src="/auctioneer-signup/js/bootstrap-formhelpers-min.js"></script>
+                <script src="/auctioneer-signup/js/bootstrap-formhelpers-states.js"></script>
+                <!--  <script src="/auctioneer-signup/js/horizontal_selector.js"></script> -->
+                <script src="/auctioneer-signup/js/jquery.range.js"></script>
+                <script src="/auctioneer-signup/js/register.js"></script>
                 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-                <script src="auctioneer-signup/js/creditCardValidator.js"></script>
-                <script src="auctioneer-signup/js/MessageBag.js"></script>
+                <script src="/auctioneer-signup/js/creditCardValidator.js"></script>
+                <script src="/auctioneer-signup/js/MessageBag.js"></script>
 
-                <script type="text/javascript" src="auctioneer-signup/js/app.js"></script>
+                <script type="text/javascript" src="/auctioneer-signup/js/app.js"></script>
 
                 <!--[if lt IE 10]>
-            <script src="auctioneer-signup/assets/js/placeholder.js"></script>
+            <script src="/auctioneer-signup/assets/js/placeholder.js"></script>
         <![endif]-->
 
                 {{{termsConditionsModalHtml}}} {{{privacyPolicyModalHtml}}}
@@ -655,7 +655,7 @@ src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
 
             <!-- Logo -->
             <div class="col-sm-3 text-center">
-                <img src="auctioneer-signup//images/logo-150px.png" class="image-responsive" alt="SAE logo">
+                <img src="/auctioneer-signup/images/logo-150px.png" class="image-responsive" alt="SAE logo">
             </div>
         </div>
 
