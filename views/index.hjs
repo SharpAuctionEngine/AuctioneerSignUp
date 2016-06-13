@@ -433,7 +433,7 @@ e.parentNode.insertBefore(n, e);
                                                 <input type="text" name="last_name" autocomplete="off" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" name="phone" autocomplete="off" placeholder="Phone(No sepcial characters,eg xxxxxxxxxx.)" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+                                                <input type="text" name="phone" autocomplete="off" placeholder="Phone (Accepted format: xxxxxxxxxx. Please do not use special characters.)" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
                                             </div>
                                             <!-- <div class="form-group">
                                                 <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
