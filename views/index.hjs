@@ -42,7 +42,7 @@
 <section  style="background-color:#F2EFE3;">
  <div class="templatemo-top-menu">
     <div class="container">
-                
+
     <!-- Static navbar -->
     <!-- NOTE: Alignment and padding/margins/something is screwy. The button should be behaving like the other buttons: white text with a darkening effect on hover. Needs scrolling with the page. -->
     <div class="navbar navbar-default" role="navigation">
@@ -63,7 +63,7 @@
                         <!-- <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li> --><!-- Link to Home Page -->
                         <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li><!-- Link to About Page -->
                         <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li><!-- Link to Features Page -->
-                        <li><a href="https://demo.bid/" target="_blank">DEMO</a><!-- Link to Demo Website-->
+                        <li><a href="http://sharpauctionengine.com/demo" target="_blank">DEMO</a><!-- Link to Demo Website-->
                         <li class="active"><a href="#">PRICING</a></li><!-- Link to Pricing Page -->
                         <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
                        <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
@@ -218,8 +218,8 @@
               </div>
             </div>
           </fieldset>
-           
-          
+
+
 
           <fieldset id="firstFieldset" class="firstFieldset">
             <div class="row">
@@ -396,7 +396,7 @@
 
                     <p>
                       <span class="payment-errors"></span>
-                      
+
                     </p>
                     <div class="form-bottom">
                       <!-- <div class="form-group" id="proplan_enabler">
@@ -468,7 +468,7 @@
                       While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
 
                        <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -522,9 +522,9 @@
 
 <div class="templatemo-footer" >
     <div class="footer_container">
-        
+
             <!-- Hot Links -->
-        <div class="row"> 
+        <div class="row">
             <div class="col-sm-9">
                 <div class="row custom_width text-center">
                     <div class="col-sm-2">
@@ -539,7 +539,7 @@
                     <div class="col-sm-2">
                         <h5><a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
                         <p><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
-                        <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
+                        <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
                         <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
                         <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
                         </p>
@@ -548,7 +548,7 @@
                         <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
                         <p><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
                         <br><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
-                        <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
+                        <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
@@ -561,15 +561,15 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Logo -->
             <div class="col-sm-3 text-center">
                 <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
             </div>
         </div>
-            
+
             <!-- Email Sign Up -->
-        <div class="row"> 
+        <div class="row">
             <div class="col-sm-9">
                 <div class="row text-center">
                     <form action="#"><!-- Should sign folks up for your email list - MailChimp? -->
@@ -580,8 +580,8 @@
                     </form>
                 </div>
             </div>
-            
-            <!-- Social Links -->   
+
+            <!-- Social Links -->
         <div class="col-sm-3" style="margin-top:5px;">
             <p class="text-center">
               <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
@@ -596,17 +596,17 @@
               <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
                 <i class="fa fa-rss"></i>
               </a>
-            </p> 
+            </p>
        </div>
     </div>
  </div>
-    
+
     <div class="footer_bottom_content text-center">
         <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
     </div>
-                
+
 </div>
-                         
+
 
 <!-- Footer section -->
 <!-- <section >
@@ -679,7 +679,7 @@
       <div class="col-sm-3 text-center">
                 <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
       </div>
-        
+
       <div class="col-sm-3" style="margin-top:5px;">
         <p class="text-center">
           <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
@@ -694,10 +694,10 @@
           <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
             <i class="fa fa-rss"></i>
           </a>
-        </p> 
-      
+        </p>
+
       </div>
-       <div class="row">  
+       <div class="row">
             <div class="col-sm-9">
                 <div class="row text-center">
                     <form action="#"> --><!-- Should sign folks up for your email list - MailChimp? -->
