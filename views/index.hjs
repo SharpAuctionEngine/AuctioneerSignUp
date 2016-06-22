@@ -106,13 +106,13 @@ e.parentNode.insertBefore(n, e);
                     </div>
                     <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar">
                         <ul class="nav navbar-nav navbar-right" style="">
-                            <li><a href="http://www.sharpauctionengine.com/index.html" target="_blank">HOME</a></li>
+                            <li><a href="http://www.sharpauctionengine.com/index" target="_blank">HOME</a></li>
                             <!-- Link to Home Page -->
                             <li><a href="http://www.sharpauctionengine.com/about" target="_blank">ABOUT</a></li>
                             <!-- Link to About Page -->
                             <li><a href="http://www.sharpauctionengine.com/features" target="_blank">FEATURES</a></li>
                             <!-- Link to Features Page -->
-                            <li><a href="https://demo.bid/" target="_blank">DEMO</a></li>
+                            <li><a href="http://sharpauctionengine.com/demo" target="_blank">DEMO</a></li>
                                 <!-- Link to Demo Website-->
                                 <li class="active"><a href="#">PRICING</a></li>
                                 <!-- Link to Pricing Page -->
@@ -233,7 +233,7 @@ e.parentNode.insertBefore(n, e);
                                                     <span class="bidders" id="bidders"> 50</span> (bidders)
                                                 </p>
 						<div id="slider1" style="background-color:#D3D3D3;margin-bottom:25px;" class="slider-mrg"></div>
-						
+
 						<p class="dollar">$
                                                     <span class="slideramount borderbox" id="slideramount">250</span>/mo</p>
 
@@ -251,7 +251,7 @@ e.parentNode.insertBefore(n, e);
                                 </div>
                             </div>
                         </div>
-                       <!--  
+                       <!--
                         <div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
                             <div class="text-center">
                                 <h3 class="black">
@@ -364,7 +364,7 @@ e.parentNode.insertBefore(n, e);
                                             </div>
                                             <div class="form-group">
                                                 <p class="wrapper">
-                                                
+
                                                 <select name="lead_source" id="lead_source" class="form-control" style="height:50px; border-radius:16px;">
                                                     <option value="0" style="font-weight: lighter!important;">How did you find out about us?</option>
                                                     <option>Social Media</option>
@@ -379,7 +379,7 @@ e.parentNode.insertBefore(n, e);
                                                     <input type="text" name="customer_name" class="icon form-control customer_name" required="required" placeholder="&#61447; Name of the Customer">
                                                 </p>
                                             </div>
-                                            
+
 
                                                 </p>
                                             </div>
@@ -611,28 +611,28 @@ e.parentNode.insertBefore(n, e);
             <div class="col-sm-9">
                 <div class="row custom_width text-center">
                     <div class="col-sm-2">
-                        <h5><a href="http://www.sharpauctionengine.com/index.html" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5>
+                        <h5><a href="http://www.sharpauctionengine.com/index" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5>
                         <!-- Link to Home Page -->
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://www.sharpauctionengine.com/about.html" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5>
+                        <h5><a href="http://www.sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5>
                         <!-- Link to About Page -->
-                        <p><a href="http://www.sharpauctionengine.com/about.html" class="link_hover footer_white" target="_blank">Company Timeline </a>
+                        <p><a href="http://www.sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a>
                             <!-- Link to About Page (Company Timeline Anchor) -->
-                            <br><a href="http://www.sharpauctionengine.com/about.html" class="link_hover footer_white" target="_blank">Meet the Execs</a>
+                            <br><a href="http://www.sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a>
                             <!-- Link to About Page (Meet the Execs Anchor) -->
                         </p>
                     </div>
                     <div class="col-sm-2">
-                        <h5><a href="http://www.sharpauctionengine.com/features.html" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5>
+                        <h5><a href="http://www.sharpauctionengine.com/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5>
                         <!-- Link to Features Page -->
-                        <p><a href="http://www.sharpauctionengine.com/features.html" class="link_hover footer_white" target="_blank">Product Features</a>
+                        <p><a href="http://www.sharpauctionengine.com/features" class="link_hover footer_white" target="_blank">Product Features</a>
                             <!-- Link to Features Page (Product Features Anchor) -->
-                            <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a>
+                            <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a>
                             <!-- Link to Features Page (Demo Anchor) -->
-                            <br><a href="http://www.sharpauctionengine.com/features.html" class="link_hover footer_white" target="_blank">What's Next?</a>
+                            <br><a href="http://www.sharpauctionengine.com/features" class="link_hover footer_white" target="_blank">What's Next?</a>
                             <!-- Link to Features Page (What's Next Anchor) -->
-                            <br><a href="http://www.sharpauctionengine.com/features.html" class="link_hover footer_white" target="_blank">Product Timeline</a>
+                            <br><a href="http://www.sharpauctionengine.com/features" class="link_hover footer_white" target="_blank">Product Timeline</a>
                             <!-- Link to Features Page (Product Timeline Anchor) -->
                         </p>
                     </div>
@@ -643,7 +643,7 @@ e.parentNode.insertBefore(n, e);
                             <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
                             <br><a href="/" class="link_hover footer_white" target="_blank">Billing & Payments</a>
                             <!-- Link to Pricing Page (Billing & Payments Anchor) -->
-                            <br><a href="https://demo.bid/" class="link_hover footer_white" target="_blank">Demo</a>
+                            <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a>
                             <!-- Link to Pricing Page (Demo Anchor) -->
                         </p>
                     </div>
