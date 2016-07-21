@@ -1,719 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign Up | Sharp Auction Engine, Inc.</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="fonts/font-awesome.css">
-  <link rel="stylesheet" href="css/form-elements.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/app.css">
-  <!-- <link href="css/jquery.range.css" rel="stylesheet"> -->
-
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sign Up | Sharp Auction Engine, Inc.</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="fonts/font-awesome.css">
+        <link rel="stylesheet" href="css/form-elements.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/app.css">
+        <!-- <link href="css/jquery.range.css" rel="stylesheet"> -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-  <!-- Favicon and touch icons -->
-
-
-  <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
-
-
-</head>
-<!-- Header section -->
-<section  style="background-color:#F2EFE3;">
- <div class="templatemo-top-menu">
-    <div class="container">
-
-    <!-- Static navbar -->
-    <!-- NOTE: Alignment and padding/margins/something is screwy. The button should be behaving like the other buttons: white text with a darkening effect on hover. Needs scrolling with the page. -->
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="/">
-                    <img src="images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
-                    </a>
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
+    </head>
+    <!-- Header section -->
+    <section  style="background-color:#F2EFE3;">
+        <div class="templatemo-top-menu">
+            <div class="container">
+                <!-- Static navbar -->
+                <!-- NOTE: Alignment and padding/margins/something is screwy. The button should be behaving like the other buttons: white text with a darkening effect on hover. Needs scrolling with the page. -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <a href="/">
+                            <img src="images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
+                            <ul class="nav navbar-nav navbar-right" style="">
+                                <!-- <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li> --><!-- Link to Home Page -->
+                                <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li>
+                                <!-- Link to About Page -->
+                                <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li>
+                                <!-- Link to Features Page -->
+                                <li>
+                                    <a href="http://sharpauctionengine.com/demo" target="_blank">DEMO</a><!-- Link to Demo Website-->
+                                <li class="active"><a href="#">PRICING</a></li>
+                                <!-- Link to Pricing Page -->
+                                <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li>
+                                <!-- Link to Support Page -->
+                                <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                    <!--/.container-fluid -->
                 </div>
-                <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar" >
-                    <ul class="nav navbar-nav navbar-right" style="">
-                        <!-- <li class="active"><a href="http://sharpauctionengine.com/">HOME</a></li> --><!-- Link to Home Page -->
-                        <li><a href="http://sharpauctionengine.com/about" target="_blank">ABOUT</a></li><!-- Link to About Page -->
-                        <li><a href="http://website.dev.bid/features" target="_blank">FEATURES</a></li><!-- Link to Features Page -->
-                        <li><a href="http://sharpauctionengine.com/demo" target="_blank">DEMO</a><!-- Link to Demo Website-->
-                        <li class="active"><a href="#">PRICING</a></li><!-- Link to Pricing Page -->
-                        <li><a href="http://support.sharpauctionengine.com/" target="_blank">SUPPORT</a></li><!-- Link to Support Page -->
-                       <!--  <li><a class="btn btn-md btn-green" href="#" role="button" style="margin: 10px;"><strong>Get Started!</strong></a></li> --><!-- Link to Pricing Page -->
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-        </div><!--/.navbar -->
-    </div><!-- /container -->
-</div>
-
-
-</section>
-
-<body>
-  <!-- Top content -->
-  <div class="top-content">
-
-    <div class="inner-bg">
-      <div class="container">
+                <!--/.navbar -->
+            </div>
+            <!-- /container -->
+        </div>
+    </section>
+    <body>
+        <!-- Top content -->
+        <div class="top-content">
+        <div class="inner-bg">
+        <div class="container">
         <noscript>
-          <div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
+            <div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
         </noscript>
         <form role="form" action="signup" method="post" class="registration-form" id="paymentMethodForm">
-          <fieldset>
-            <h1 class="cameoantique" style="margin-top:85px;">CHOOSE YOUR PLAN</h1>
-            <p class="white">
-              Review your options below and select the plan the best suits your needs.
-              <br/> When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!
-            </p>
-
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div>
-                      <div class="text-center">
-                        <h2>
-                          <strong> Basic Plan </strong>
-                        </h2>
-                        <p class="text-center dollar">$99/mo</p>
-                        <p class="plantext">
-                          This plan is perfect for a small auction house with 25 or less active bidders
-                          <span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:
-                        </p>
-                        <div class="bulletpoints">
-                          <ul>
-                            <li>No contracts, no set-up fees, and unlimited auctions per month</li>
-                            <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
-                            <li>Automatic page refresh ensures your bidders never miss out</li>
-                            <li>Easy lot creation with bulk importing and auto photo assignment</li>
-                            <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
-                            <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
-                            <li>
-                              SAE offers the use of
-                              <a href="http://sae-manual.readthedocs.org/en/latest/domain/" target="_blank">
-                                  vanity domains
-                              </a>.
-                              If you own a domain, you can use that domain for your new auction's website. It comes with a
-                              <strong>
-                                <em>FREE SSL</em>
-                              </strong>
-                              for added security.
-                            </li>
-                          </ul>
-                        </div>
-                        <strong>One Month Free Trial</strong>
-                        <br/>
-                        <input type="hidden" name="plan" />
-                        <button type="button" id="Basic_plan" class="btn btn-xs btn-next btncolor">
-                          <span class="text">Get Started Now!</span>
-                        </button>
-                        <br/>
-                        <br/>
-                        <p style="font-size:11px;">
-                          <span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div>
-                      <div class="text-center">
-                        <h2>
-                          <strong>Pro Plan</strong>
-                        </h2>
-                        <p class="dollar">$
-                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
-                        <p class="plantext">
-                          Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:
-                          <span class="bidders"
-                          id="bidders"> 50</span> (bidders)
-                        </p>
-                        <input type="hidden" name="bidders">
-                        <input type="hidden" name="PlanAmount">
-                        <!-- <input type="hidden" id="bidders"  readonly style="border:0; color:#f6931f; font-weight:bold;"> -->
-
-                        <!-- TODO Touch is not working -->
-                        <div id="slider1" style="background-color:#D3D3D3;margin-bottom:25px;"></div>
-
-                        <!-- <input class="single-slider" id="single-slider" type="hidden"> -->
-
-                        <p class="plantext">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan
-                          as well as:</p>
-                        <div class="bulletpoints">
-                          <ul>
-                            <li>Dedicated resources to cover your existing bidder base</li>
-                            <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
-                            <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
-                          </ul>
-                        </div>
-                        <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;">
-                          <span class="text">Get Started Now!</span>
-                        </button>
-                        <br/>
-                        <br/>
-                        <p style="font-size:14px;"> Looking for an Enterprise solution? <a href="/contact-us" target="_blank">Contact us</a> to find out what we can do for you.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
-              <div class="text-center">
-                <h3 class="black">
-                  <strong> Billing & Payments </strong>
-                </h3>
-
-              </div>
-              <p class="black payment_text">Pay as you grow with our new pricing plans. With <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection</a> and <a href="http://sae-manual.readthedocs.org/en/latest/hourlybilling/"
-                target="_blank">hourly billing </a>for exceeding plan limitations, you can rest assured that your auctions are stable and secure while paying a fair and competitive price.
-                <br/>
-                <br/> Start by selecting a plan based on the <a href="http://sae-manual.readthedocs.org/en/latest/yourcustomers/" target="_blank">number of concurrently active bidders </a> you expect for your auctions, and we’ll take care of the rest. You
-                will pay your monthly plan premium at the start of each month, and then you will be billed at the end of each month in hour increments for any overage activities only for the hours you used.
-                <br/>
-                <br/> With our built-in <a href="http://sae-manual.readthedocs.org/en/latest/businessintelligencestatistics/" target="_blank">business intelligence statistics</a>, you can easily monitor your active bidders. With this information, you can track
-                bidder trends and activities, and you can adjust your plan as needed. You will be able to monitor any overages, so there will be no surprise charges at the end of the month.
-                <br/>
-                <br/> We’ve done our best to create straightforward billing and payment policies. Click below to learn more about how our hourly billing works and how to make payments, update your billing information, get referral credits, and remove services.
-                Still have questions? Please feel free to <a href="/contact-us" target="_blank">contact us</a>.</p>
-              <div class="text-center">
-                <a href="http://sae-manual.readthedocs.org/en/latest/saeplans/" target="_blank">
-                  <button type="button" class="btn btn-lg btn_learnmore" style="border-radius: 10px;margin-bottom:10px;">
-                    <span class="text">Learn More</span>
-                  </button>
-                </a>
-                <br/>
-              </div>
-            </div>
-          </fieldset>
-
-
-
-          <fieldset id="firstFieldset" class="firstFieldset">
-            <div class="row">
-              <div class="col-sm-6 text-center" style="margin-top:230px;">
-                <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
-                <h2 class="white-color">Sign Up now for
-                  <br/>your Online Auction House</h2>
-                <p class="white-color">
-                  "I love SAE because it's so sharp and it's easy to use!
-                  <br/>~ Firehouse Antiques &amp; Auctions
+            <fieldset>
+                <h1 class="cameoantique" style="margin-top:85px;">CHOOSE YOUR PLAN</h1>
+                <p class="white">
+                    Review your options below and select the plan the best suits your needs.
+                    <br/> When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!
                 </p>
-              </div>
-              <div class="col-sm-6" style="margin-top:85px;">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div class="form-top">
-                      <!-- <span id="plan"></span> -->
-                      <div id="basic" style="display:none;">
-                        <h2 class="text-center">
-                          <strong>Basic Plan</strong>
-                        </h2>
-                        <p class="text-center dollar" style="font-size:170%">$99/mo</p>
-                        <input class="plans" id="single-slider" type="hidden">
-                        <p>
-                          <small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
-                        </p>
-                      </div>
-                      <div id="pro" style="display:block;">
-                        <h2 class="text-center">
-                          <strong>Pro Plan</strong>
-                        </h2>
-                        <p class="text-center dollar">$
-                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
-                        <p>
-                          <small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href=""> Click here</a>. Use the slider below to choose your average number of bidders per catalog and determine your monthly
-                            cost.
-                            <span class="bidders" id="bidders">50</span> (bidders)</small>
-                        </p>
-
-                        <div id="slider2" style="background-color:#D3D3D3;"></div>
-                        <!-- <input class="plans" value="99"  type="hidden"> -->
-                      </div>
-
-                    </div>
-                    <div class="form-bottom">
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="text" name="username" value="" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
-                        </p>
-                      </div>
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="text" name="email"  autocomplete="off" placeholder="&#xf003; Email" class="icon email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
-                        </p>
-                      </div>
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="text" name="auction_house_name"  autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
-                        </p>
-                      </div>
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="text" name="first_domain_level" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span><span class='when-Ap-is-not-available text-warning' style='display:none;'> was not able to be validated. Please contact <a href='mailto:help@sharpauctionengine.com' target='_top'>help@sharpauctionengine.com</a> if this problem persists</span>"
-                          style="" />
-                          <div class="pull-right" style="height:0px;">
-                            <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
-                          </div>
-                        </p>
-                        <input type="hidden" name="main_domain" />
-                      </div>
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="password" name="password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
-                        </p>
-                      </div>
-
-                      <div class="form-group">
-                        <p class="wrapper">
-                          <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
-                        </p>
-                      </div>
-                      <div>
-                        <section class="text-muted text-center">
-                          <p>
-                            <small>
-                              <small>
-                                By signing up, you agree to our
-                                <a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">T & C</a> and
-                                <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">privacy policy</a>.
-                              </small>
-                            </small>
-                          </p>
-
-                          <button type="button" class="btn btn-xs btn-warning" id="firstFieldsetValidation">Get Started Now!</button>
-
-                          <p>
-                            <small>Need a customized Solution? <a href="http://contact.sharpauctionengine.com/" target="_blank">Contact us</a> to find out what we can do for you. </small>
-                          </p>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset id="secondFieldset" class="secondFieldset">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div class="form-top">
-                      <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
-                        <p class="white-color">
-                          <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="form-bottom">
-                      <div class="form-group">
-                        <input type="text" autocomplete="off" name="first_name" value="test" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="last_name" autocomplete="off" value="user" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="phone_number" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
-                      </div>
-                      <!-- <div class="form-group">
-                                                <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
-                                            </div> -->
-                      <div class="form-group">
-                        <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="city" placeholder="City" class="form-city form-control" id="form-city" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
-                      </div>
-                      <div class="form-group">
-                        <select name="states" class="form-control bfh-states" data-country="US" data-state="SS" style="height:50px; border-radius:16px;"></select>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="zip" placeholder="Zip" class="form-zip form-control" id="form-zip" data-toggle="popover" title="Zip" data-content="Zip code of auction house.">
-                      </div>
-                      <button type="button" class="btn btn-primary btn-previous">Previous</button>
-                      <button type="button" id="secondFieldsetValidation" class="btn btn-success">Submit Now</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-             <fieldset class="finalfieldset">
-
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div class="form-top">
-                      <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
-                        <p class="white-color" style="font-weight: bold;">
-                          Please confirm your plan and provide us additional information for payments.
-                        </p>
-                      </div>
-                    </div>
-
-                    <p>
-                      <span class="payment-errors"></span>
-
-                    </p>
-                    <div class="form-bottom">
-                      <!-- <div class="form-group" id="proplan_enabler">
-                        <h3>Plan Info</h3>
-                        <label class="" for="form-bill-period">Billing Period:</label>
-                        <select name="stripe_plan" class="form-control" style="height:50px; border-radius:16px;">
-                          {{#planOptions}}
-                          <option value="{{id}}">{{description}}</option>
-                          {{/planOptions}}
-                        </select>
-                      </div> -->
-                      <input type="hidden" name="stripe_plan" />
-                      <h3>Payment Info</h3>
-                      <div class="form-group">
-                        <label class="" for="form-card-number">Card number:</label>
-                        <input type="text" autocomplete="off" value="4242424242424242" placeholder="Card number" class="form-card-number form-control" data-stripe="number" id="form-card-number">
-                      </div>
-                      <div class="form-group">
-                        <label class="" for="form-expires">Expires:</label>
-                        <input type="text" value="" class="form-expires form-control" data-max-length="2" data-is-sae-card-exp="1" autocomplete="off" placeholder="MM/YYYY" id="form-expires">
-                        <input type="hidden" data-stripe="exp-month" />
-                        <input type="hidden" data-stripe="exp-year" />
-                      </div>
-                      <div class="form-group">
-                        <label class="" for="form-name-on-card">Name on card:</label>
-                        <input type="text" value="ka" autocomplete="off" placeholder="Name on Card" class="form-name-on-card form-control" id="form-name-on-card">
-                      </div>
-                      <div class="form-group">
-                        <label class="" for="form-cvc">CVC:</label>
-                        <input type="text" autocomplete="off" data-stripe="cvc" value="123" placeholder="CVC" class="form-cvc form-control" id="form-cvc">
-                      </div>
-                      <input type="hidden" name="stripeToken" />
-                      <div class="textfield col-xs-12">
-                        <div class="well alert alert-default"> Your card will be charged
-                          <span class="first-charge-mfs"></span> now, and your subscription will bill every
-                          <span class="first-charge-interval">month</span> thereafter. You can cancel or change plans at anytime.
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel panelborder">
+                            <div class="panel-body">
+                                <div>
+                                    <div class="text-center">
+                                        <h2>
+                                            <strong> Basic Plan </strong>
+                                        </h2>
+                                        <p class="text-center dollar">$99/mo</p>
+                                        <p class="plantext">
+                                            This plan is perfect for a small auction house with 25 or less active bidders
+                                            <span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:
+                                        </p>
+                                        <div class="bulletpoints">
+                                            <ul>
+                                                <li>No contracts, no set-up fees, and unlimited auctions per month</li>
+                                                <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
+                                                <li>Automatic page refresh ensures your bidders never miss out</li>
+                                                <li>Easy lot creation with bulk importing and auto photo assignment</li>
+                                                <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
+                                                <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
+                                                <li>
+                                                    SAE offers the use of
+                                                    <a href="http://sae-manual.readthedocs.org/en/latest/domain/" target="_blank">
+                                                    vanity domains
+                                                    </a>.
+                                                    If you own a domain, you can use that domain for your new auction's website. It comes with a
+                                                    <strong>
+                                                    <em>FREE SSL</em>
+                                                    </strong>
+                                                    for added security.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <strong>One Month Free Trial</strong>
+                                        <br/>
+                                        <input type="hidden" name="plan" />
+                                        <button type="button" id="Basic_plan" class="btn btn-xs btn-next btncolor">
+                                        <span class="text">Get Started Now!</span>
+                                        </button>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-size:11px;">
+                                            <span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-
-                      <button type="button" class="btn btn-primary btn-previous">Previous</button>
-                      <button type="button" class="btn btn-success btn-stripe removeMessagebag">Get Started</button>
-                      <!-- <button type="button" class="btn btn-warning btn-next">skip</button> -->
-
                     </div>
-
-                  </div>
-
+                    <div class="col-sm-6">
+                        <div class="panel panelborder">
+                            <div class="panel-body">
+                                <div>
+                                    <div class="text-center">
+                                        <h2>
+                                            <strong>Pro Plan</strong>
+                                        </h2>
+                                        <p class="dollar">$
+                                            <span class="slideramount borderbox" id="slideramount">140</span>/mo
+                                        </p>
+                                        <p class="plantext">
+                                            Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:
+                                            <span class="bidders"
+                                                id="bidders"> 50</span> (bidders)
+                                        </p>
+                                        <input type="hidden" name="bidders">
+                                        <input type="hidden" name="PlanAmount">
+                                        <!-- <input type="hidden" id="bidders"  readonly style="border:0; color:#f6931f; font-weight:bold;"> -->
+                                        <!-- TODO Touch is not working -->
+                                        <div id="slider1" style="background-color:#D3D3D3;margin-bottom:25px;"></div>
+                                        <!-- <input class="single-slider" id="single-slider" type="hidden"> -->
+                                        <p class="plantext">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan
+                                            as well as:
+                                        </p>
+                                        <div class="bulletpoints">
+                                            <ul>
+                                                <li>Dedicated resources to cover your existing bidder base</li>
+                                                <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
+                                                <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;">
+                                        <span class="text">Get Started Now!</span>
+                                        </button>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-size:14px;"> Looking for an Enterprise solution? <a href="/contact-us" target="_blank">Contact us</a> to find out what we can do for you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          </fieldset>
-        <fieldset >
-            <div class="row" id="final_page" class="finalPage">
-              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
-                <div class="panel panelborder">
-                  <div class="panel-body">
-                    <div class="form-top">
-                      <div class="text-center">
-                        <img src="images/saelogotransparent140w120h.png">
-                        <p class="white-color" style="font-size:24px">
-                          <strong>Thanking you for signing up!</strong>
+                <div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
+                    <div class="text-center">
+                        <h3 class="black">
+                            <strong> Billing & Payments </strong>
+                        </h3>
+                    </div>
+                    <p class="black payment_text">Pay as you grow with our new pricing plans. With <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection</a> and <a href="http://sae-manual.readthedocs.org/en/latest/hourlybilling/"
+                        target="_blank">hourly billing </a>for exceeding plan limitations, you can rest assured that your auctions are stable and secure while paying a fair and competitive price.
+                        <br/>
+                        <br/> Start by selecting a plan based on the <a href="http://sae-manual.readthedocs.org/en/latest/yourcustomers/" target="_blank">number of concurrently active bidders </a> you expect for your auctions, and we’ll take care of the rest. You
+                        will pay your monthly plan premium at the start of each month, and then you will be billed at the end of each month in hour increments for any overage activities only for the hours you used.
+                        <br/>
+                        <br/> With our built-in <a href="http://sae-manual.readthedocs.org/en/latest/businessintelligencestatistics/" target="_blank">business intelligence statistics</a>, you can easily monitor your active bidders. With this information, you can track
+                        bidder trends and activities, and you can adjust your plan as needed. You will be able to monitor any overages, so there will be no surprise charges at the end of the month.
+                        <br/>
+                        <br/> We’ve done our best to create straightforward billing and payment policies. Click below to learn more about how our hourly billing works and how to make payments, update your billing information, get referral credits, and remove services.
+                        Still have questions? Please feel free to <a href="/contact-us" target="_blank">contact us</a>.
+                    </p>
+                    <div class="text-center">
+                        <a href="http://sae-manual.readthedocs.org/en/latest/saeplans/" target="_blank">
+                        <button type="button" class="btn btn-lg btn_learnmore" style="border-radius: 10px;margin-bottom:10px;">
+                        <span class="text">Learn More</span>
+                        </button>
+                        </a>
+                        <br/>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset id="firstFieldset" class="firstFieldset">
+                <div class="row">
+                    <div class="col-sm-6 text-center" style="margin-top:230px;">
+                        <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
+                        <h2 class="white-color">Sign Up now for
+                            <br/>your Online Auction House
+                        </h2>
+                        <p class="white-color">
+                            "I love SAE because it's so sharp and it's easy to use!
+                            <br/>~ Firehouse Antiques &amp; Auctions
                         </p>
-                      </div>
                     </div>
-                    <div class="form-bottom">
-                      <h3 class="black">
-                         <strong> Your auction house is under construction.</strong>
-                     </h3>
-                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
-
-                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
-
-                       <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
-
+                    <div class="col-sm-6" style="margin-top:85px;">
+                        <div class="panel panelborder">
+                            <div class="panel-body">
+                                <div class="form-top">
+                                    <!-- <span id="plan"></span> -->
+                                    <div id="basic" style="display:none;">
+                                        <h2 class="text-center">
+                                            <strong>Basic Plan</strong>
+                                        </h2>
+                                        <p class="text-center dollar" style="font-size:170%">$99/mo</p>
+                                        <input class="plans" id="single-slider" type="hidden">
+                                        <p>
+                                            <small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
+                                        </p>
+                                    </div>
+                                    <div id="pro" style="display:block;">
+                                        <h2 class="text-center">
+                                            <strong>Pro Plan</strong>
+                                        </h2>
+                                        <p class="text-center dollar">$
+                                            <span class="slideramount borderbox" id="slideramount">140</span>/mo
+                                        </p>
+                                        <p>
+                                            <small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href=""> Click here</a>. Use the slider below to choose your average number of bidders per catalog and determine your monthly
+                                            cost.
+                                            <span class="bidders" id="bidders">50</span> (bidders)</small>
+                                        </p>
+                                        <div id="slider2" style="background-color:#D3D3D3;"></div>
+                                        <!-- <input class="plans" value="99"  type="hidden"> -->
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="text" name="username" value="" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="text" name="email"  autocomplete="off" placeholder="&#xf003; Email" class="icon email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="text" name="auction_house_name"  autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="text" name="first_domain_level" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span><span class='when-Ap-is-not-available text-warning' style='display:none;'> was not able to be validated. Please contact <a href='mailto:help@sharpauctionengine.com' target='_top'>help@sharpauctionengine.com</a> if this problem persists</span>"
+                                                style="" />
+                                        <div class="pull-right" style="height:0px;">
+                                            <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
+                                        </div>
+                                        </p>
+                                        <input type="hidden" name="main_domain" />
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="password" name="password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="wrapper">
+                                            <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <section class="text-muted text-center">
+                                            <p>
+                                                <small>
+                                                <small>
+                                                By signing up, you agree to our
+                                                <a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">T & C</a> and
+                                                <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">privacy policy</a>.
+                                                </small>
+                                                </small>
+                                            </p>
+                                            <button type="button" class="btn btn-xs btn-warning" id="firstFieldsetValidation">Get Started Now!</button>
+                                            <p>
+                                                <small>Need a customized Solution? <a href="http://contact.sharpauctionengine.com/" target="_blank">Contact us</a> to find out what we can do for you. </small>
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </fieldset>
+            <fieldset id="secondFieldset" class="secondFieldset">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                        <div class="panel panelborder">
+                            <div class="panel-body">
+                                <div class="form-top">
+                                    <div class="text-center">
+                                        <img src="images/saelogotransparent140w120h.png">
+                                        <p class="white-color">
+                                            <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <div class="form-group">
+                                        <input type="text" autocomplete="off" name="first_name" value="test" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" autocomplete="off" value="user" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
+                                        </div> -->
+                                    <div class="form-group">
+                                        <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="city" placeholder="City" class="form-city form-control" id="form-city" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="states" class="form-control bfh-states" data-country="US" data-state="SS" style="height:50px; border-radius:16px;"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="zip" placeholder="Zip" class="form-zip form-control" id="form-zip" data-toggle="popover" title="Zip" data-content="Zip code of auction house.">
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-previous">Previous</button>
+                                    <button type="button" id="secondFieldsetValidation" class="btn btn-success">Submit Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="finalfieldset">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                        <div class="panel panelborder">
+                            <div class="panel-body">
+                                <div class="form-top">
+                                    <div class="text-center">
+                                        <img src="images/saelogotransparent140w120h.png">
+                                        <p class="white-color" style="font-weight: bold;">
+                                            Please confirm your plan and provide us additional information for payments.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>
+                                    <span class="payment-errors"></span>
+                                </p>
+                                <div class="form-bottom">
+                                    <!-- <div class="form-group" id="proplan_enabler">
+                                        <h3>Plan Info</h3>
+                                        <label class="" for="form-bill-period">Billing Period:</label>
+                                        <select name="stripe_plan" class="form-control" style="height:50px; border-radius:16px;">
+                                          {{#planOptions}}
+                                          <option value="{{id}}">{{description}}</option>
+                                          {{/planOptions}}
+                                        </select>
+                                        </div> -->
+                                    <input type="hidden" name="stripe_plan" />
+                                    <h3>Payment Info</h3>
+                                    <div class="form-group">
+                                        <label class="" for="form-card-number">Card number:</label>
+                                        <input type="text" autocomplete="off" value="4242424242424242" placeholder="Card number" class="form-card-number form-control" data-stripe="number" id="form-card-number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="" for="form-expires">Expires:</label>
+                                        <input type="text" value="" class="form-expires form-control" data-max-length="2" data-is-sae-card-exp="1" autocomplete="off" placeholder="MM/YYYY" id="form-expires">
+                                        <input type="hidden" data-stripe="exp-month" />
+                                        <input type="hidden" data-stripe="exp-year" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="" for="form-name-on-card">Name on card:</label>
+                                        <input type="text" value="ka" autocomplete="off" placeholder="Name on Card" class="form-name-on-card form-control" id="form-name-on-card">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="" for="form-cvc">CVC:</label>
+                                        <input type="text" autocomplete="off" data-stripe="cvc" value="123" placeholder="CVC" class="form-cvc form-control" id="form-cvc">
+                                    </div>
+                                    <input type="hidden" name="stripeToken" />
+                                    <div class="textfield col-xs-12">
+                                        <div class="well alert alert-default"> Your card will be charged
+                                            <span class="first-charge-mfs"></span> now, and your subscription will bill every
+                                            <span class="first-charge-interval">month</span> thereafter. You can cancel or change plans at anytime.
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-success btn-stripe removeMessagebag">Get Started</button>
+                                    <!-- <button type="button" class="btn btn-warning btn-next">skip</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+            <div class="row" id="final_page" class="finalPage">
+            <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+            <div class="panel panelborder">
+            <div class="panel-body">
+            <div class="form-top">
+            <div class="text-center">
+            <img src="images/saelogotransparent140w120h.png">
+            <p class="white-color" style="font-size:24px">
+            <strong>Thanking you for signing up!</strong>
+            </p>
             </div>
-          </fieldset>
+            </div>
+            <div class="form-bottom">
+            <h3 class="black">
+            <strong> Your auction house is under construction.</strong>
+            </h3>
+            <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
+            While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
+            <p >If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </fieldset>
         </form>
         <div class="modal" id="loadingModal">
-          <p class="text-center text"><i class="fa fa-spinner fa-spin"></i>&nbsp;Loading...</p>
+        <p class="text-center text"><i class="fa fa-spinner fa-spin"></i>&nbsp;Loading...</p>
         </div>
-     </div>
-  </div>
-      <!-- Javascript -->
-      <script>
-        var stripePublishableKey = '{{stripePublishableKey}}';
-        var instanceParentDomain = '{{instanceParentDomain}}';
-        var minimumDomainLength = parseInt('{{minimumDomainLength}}');
-        var planOptions = {{{planOptionsJson}}};
-      </script>
-      <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-      <!--<script src="js/jquery-1.10.2.js"></script>-->
-      <script src="js/jquery-1.11.1.min.js"></script>
-      <script src="js/jquery-ui.js"></script>
-      <!--  <script src="js/tooltip.js"></script>
+        </div>
+        </div>
+        <!-- Javascript -->
+        <script>
+            var stripePublishableKey = '{{stripePublishableKey}}';
+            var instanceParentDomain = '{{instanceParentDomain}}';
+            var minimumDomainLength = parseInt('{{minimumDomainLength}}');
+            var planOptions = {{{planOptionsJson}}};
+        </script>
+        <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <!--<script src="js/jquery-1.10.2.js"></script>-->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <!--  <script src="js/tooltip.js"></script>
             <script src="js/popover.js"></script> -->
-      <script src="js/jquery.ba-throttle-debounce.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/bootbox.min.js"></script>
-      <script src="js/jquery.backstretch.min.js"></script>
-      <script src="js/retina-1.1.0.min.js"></script>
-      <script src="js/scripts.js"></script>
-      <script src="js/bootstrap-formhelpers-min.js"></script>
-      <script src="js/bootstrap-formhelpers-states.js"></script>
-      <!--  <script src="js/horizontal_selector.js"></script> -->
-      <script src="js/jquery.range.js"></script>
-      <script src="js/register.js"></script>
-      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-      <script src="js/creditCardValidator.js"></script>
-      <script src="js/MessageBag.js"></script>
-
-      <script type="text/javascript" src="js/app.js"></script>
-
-      <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
+        <script src="js/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootbox.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/retina-1.1.0.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/bootstrap-formhelpers-min.js"></script>
+        <script src="js/bootstrap-formhelpers-states.js"></script>
+        <!--  <script src="js/horizontal_selector.js"></script> -->
+        <script src="js/jquery.range.js"></script>
+        <script src="js/register.js"></script>
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script src="js/creditCardValidator.js"></script>
+        <script src="js/MessageBag.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
         <![endif]-->
-
-      {{{termsConditionsModalHtml}}}
-      {{{privacyPolicyModalHtml}}}
-
-</body>
-
-<div class="templatemo-footer" >
-    <div class="footer_container">
-
+        {{{termsConditionsModalHtml}}}
+        {{{privacyPolicyModalHtml}}}
+    </body>
+    <div class="templatemo-footer" >
+        <div class="footer_container">
             <!-- Hot Links -->
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="row custom_width text-center">
-                    <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a></h5><!-- Link to Home Page -->
-                    </div>
-                    <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a></h5><!-- Link to About Page -->
-                        <p><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
-                        </p>
-                    </div>
-                    <div class="col-sm-2">
-                        <h5><a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a></h5><!-- Link to Features Page -->
-                        <p><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
-                        <br><a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
-                        </p>
-                    </div>
-                    <div class="col-sm-2">
-                        <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5><!-- Link to Pricing Page -->
-                        <p><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
-                        <br><a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
-                        </p>
-                    </div>
-                    <div class="col-sm-2">
-                        <h5><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Support</strong></a></h5><!-- Link to Support Page -->
-                        <p><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Support Policy</a> <!-- Link to Support Page (Support Policy Anchor) -->
-                        <br><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Resources</a> <!-- Link to Support Page (Resources Anchor) -->
-                        <br><a href="http://contact.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Contact</a> <!-- Link to Support Page (Contact Anchor) -->
-                        <br><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Training</a> <!-- Link to Support Page (Training Anchor) -->
-                        </p>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="row custom_width text-center">
+                        <div class="col-sm-2">
+                            <h5>
+                                <a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank"><strong>Home</strong></a>
+                            </h5>
+                            <!-- Link to Home Page -->
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>
+                                <a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank"><strong>About</strong></a>
+                            </h5>
+                            <!-- Link to About Page -->
+                            <p>
+                                <a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Company Timeline </a><!-- Link to About Page (Company Timeline Anchor) -->
+                                <br />
+                                <a href="http://sharpauctionengine.com/about" class="link_hover footer_white" target="_blank">Meet the Execs</a> <!-- Link to About Page (Meet the Execs Anchor) -->
+                            </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>
+                                <a href="http://website.dev.bid/features" target="_blank" class="link_hover footer_white"><strong>Features</strong></a>
+                            </h5>
+                            <!-- Link to Features Page -->
+                            <p>
+                                <a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Features</a> <!-- Link to Features Page (Product Features Anchor) -->
+                                <br />
+                                <a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a><!-- Link to Features Page (Demo Anchor) -->
+                                <br />
+                                <a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">What's Next?</a> <!-- Link to Features Page (What's Next Anchor) -->
+                                <br />
+                                <a href="http://website.dev.bid/features" class="link_hover footer_white" target="_blank">Product Timeline</a> <!-- Link to Features Page (Product Timeline Anchor) -->
+                            </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5><a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank"><strong>Pricing</strong></a></h5>
+                            <!-- Link to Pricing Page -->
+                            <p>
+                                <a href="http://sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Choose Your Plan</a> <!-- Link to Pricing Page (Choose Your Plan Anchor) -->
+                                <br />
+                                <a href="http://sharpauctionengine.com/" class="link_hover footer_white"  target="_blank">Billing & Payments</a> <!-- Link to Pricing Page (Billing & Payments Anchor) -->
+                                <br />
+                                <a href="http://sharpauctionengine.com/demo" class="link_hover footer_white" target="_blank">Demo</a> <!-- Link to Pricing Page (Demo Anchor) -->
+                            </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>
+                                <a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">
+                                    <strong>Support</strong>
+                                </a>
+                            </h5>
+                            <!-- Link to Support Page -->
+                            <p>
+                                <a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Support Policy</a> <!-- Link to Support Page (Support Policy Anchor) -->
+                                <br /><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Resources</a> <!-- Link to Support Page (Resources Anchor) -->
+                                <br /><a href="http://contact.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Contact</a> <!-- Link to Support Page (Contact Anchor) -->
+                                <br /><a href="http://support.sharpauctionengine.com/" class="link_hover footer_white" target="_blank">Training</a> <!-- Link to Support Page (Training Anchor) -->
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <!-- Logo -->
+                <div class="col-sm-3 text-center">
+                    <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
+                </div>
             </div>
-
-            <!-- Logo -->
-            <div class="col-sm-3 text-center">
-                <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
-            </div>
-        </div>
-
             <!-- Email Sign Up -->
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="row text-center">
-                    <form action="#"><!-- Should sign folks up for your email list - MailChimp? -->
-                        <div class="input-group center-block">
-                            <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
-                            <button class="btn btn-med btn-green" style="height:37px; width:13%" type="success">Submit</button>
-                        </div>
-                    </form>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="row text-center">
+                        <form action="#">
+                            <!-- Should sign folks up for your email list - MailChimp? -->
+                            <div class="input-group center-block">
+                                <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
+                                <button class="btn btn-med btn-green" style="height:37px; width:13%" type="success">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Social Links -->
+                <div class="col-sm-3" style="margin-top:5px;">
+                    <p class="text-center">
+                        <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-grey" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-grey" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </p>
                 </div>
             </div>
-
-            <!-- Social Links -->
-        <div class="col-sm-3" style="margin-top:5px;">
-            <p class="text-center">
-              <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-grey" target="_blank">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-grey" target="_blank">
-                <i class="fa fa-linkedin"></i>
-              </a>
-              <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
-                <i class="fa fa-rss"></i>
-              </a>
-            </p>
-       </div>
-    </div>
- </div>
-
-    <div class="footer_bottom_content text-center">
-        <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
-    </div>
-
-</div>
-
-
-<!-- Footer section -->
-<!-- <section >
-  <nav class="footer">
-    <div class="container">
-      <div class="col-sm-9 nav-link">
-        <div class="row custom_width text-center">
-        <div class="col-sm-2">
-            <ul class="nav">
-              <li class="nav-header">Home</li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <ul class="nav">
-              <li class="nav-header ">About</li>
-              <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a>
-              </li>
-              <li><a href="#">Company Timeline</a>
-              </li>
-              <li><a href="#">Meet the Execs</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <ul class="nav">
-              <li class="nav-header ">Features</li>
-              <li><a href="#">Features</a>
-              </li>
-              <li><a href="#">Product Features</a>
-              </li>
-              <li><a href="#">Demo</a>
-              </li>
-              <li><a href="#">What's Next</a>
-              </li>
-              <li><a href="#">Product Timeline</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <ul class="nav">
-              <li class="nav-header">Pricing</li>
-              <li><a href="#">Pricing</a>
-              </li>
-              <li><a href="#">Choose Your Plan</a>
-              </li>
-              <li><a href="#">Billing & Payments</a>
-              </li>
-              <li><a href="#">Demo</a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <ul class="nav">
-              <li class="nav-header">Support</li>
-              <li><a href="#">Support</a>
-              </li>
-              <li><a href="#">Support Policy</a>
-              </li>
-              <li><a href="#">Resources</a>
-              </li>
-              <li><a href="#">Contact</a>
-              </li>
-              <li><a href="#">Training</a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="col-sm-3 text-center">
-                <img src="images/logo-150px.png" class="image-responsive" alt="SAE logo">
-      </div>
-
-      <div class="col-sm-3" style="margin-top:5px;">
-        <p class="text-center">
-          <a href="https://twitter.com/AuctionEngine" class="btn btn-grey" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-grey" target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-grey" target="_blank">
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="http://news.sharpauctionengine.com" class="btn btn-grey" target="_blank">
-            <i class="fa fa-rss"></i>
-          </a>
-        </p>
-
-      </div>
-       <div class="row">
-            <div class="col-sm-9">
-                <div class="row text-center">
-                    <form action="#"> --><!-- Should sign folks up for your email list - MailChimp? -->
-                        <!-- <div class="input-group center-block">
-                            <input class="btn btn-med" name="email" id="email" type="email" placeholder="enter your email address for updates" required>
-                            <button class="btn btn-med btn-green" type="success">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="footer_bottom_content text-center">
+            <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
+        </div>
     </div>
-     <div class="footer_bottom_content text-center">
-        <span>Copyright © 2012 - 2016 Sharp Auction Engine</span>
-    </div>
-    </div>
-  </nav>
-</section> -->
-
 </html>
