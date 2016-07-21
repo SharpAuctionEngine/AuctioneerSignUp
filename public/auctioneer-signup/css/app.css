@@ -303,3 +303,57 @@ input.btn.btn-med {
     font-weight:normal;
     font-style: italic;
  }
+
+/* Large desktops and laptops */
+@media (min-width: 1200px){
+.slider-mrg{
+           margin-top: 8%; 
+ }
+
+.get-started-btn-mrg{
+    		margin-top:5%;
+ }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+.slider-mrg{
+                    margin-top: 24%;
+        }
+
+.get-started-btn-mrg{
+                margin-top:7%;
+        }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+.slider-mrg{
+                    margin-top: 32%;
+        }
+
+.get-started-btn-mrg
+        {
+                margin-top:10%;
+        }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+.slider-mrg{
+                    margin-top:0;
+        }
+
+.get-started-btn-mrg
+        {
+                margin-top:0;
+        }
+
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
