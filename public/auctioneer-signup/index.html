@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Sharp Auction Engine, Inc.</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="fonts/font-awesome.css">
+  <link rel="stylesheet" href="css/form-elements.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- <link href="css/jquery.range.css" rel="stylesheet"> -->
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+  <!-- Favicon and touch icons -->
+
+
+  <link rel="apple-touch-icon" href="ico/touch-icon-iphone-precomposed.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
+
+
+</head>
+<!-- Header section -->
+<section style="background-color:#F2EFE3;">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header col-sm-3  col-lg-4">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".nb-loginmenu-collapse" style="padding:9px 5px; margin-right:5px;">
+        <span class="sr-only">Toggle</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="col-sm-offset-1 col-lg-offset-7">
+        <a href="" class="navbar-brand uses-image" style="padding:5px 10px 8px;">
+          <img src="images/sae_logo_new_2.png" class="pull-left" height="40" style="height:40px;" alt="logo" />
+        </a>
+      </div>
+    </div>
+    <nav class="SAEnav collapse navbar-collapse nb-loginmenu-collapse" style="overflow-y:scroll;">
+      <div class="col-xs-12 col-sm-7 pull-right">
+        <ul class="nav navbar-nav pull-right">
+          <li class="col-lg-pull-12">
+            <a href="" rel="nofollow" style="text-decoration:none;color:#564841;">Sign In</a>
+          </li>
+          <li class="col-lg-pull-12">
+            <a href="" style="text-decoration:none;color:#564841;">Create an account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+</section>
+
+<body>
+  <!-- Top content -->
+  <div class="top-content">
+
+    <div class="inner-bg">
+      <div class="container">
+        <noscript>
+          <div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
+        </noscript>
+        <form role="form" action="signup" method="post" class="registration-form" id="paymentMethodForm">
+          <fieldset>
+            <h1 class="cameoantique" style="margin-top:85px;">CHOOSE YOUR PLAN</h1>
+            <p class="white">
+              Review your options below and select the plan the best suits your needs.
+              <br/> When choosing, keep in mind that both plans are based on the amount of visitors to your site at one time but all the features are the same!
+            </p>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div>
+                      <div class="text-center">
+                        <h2>
+                          <strong> Basic Plan </strong>
+                        </h2>
+                        <p class="text-center dollar">$99/mo</p>
+                        <p class="plantext">
+                          This plan is perfect for a small auction house with 25 or less active bidders
+                          <span class="red">*</span> at one time. With the Basic Plan, you pay $99 per month for access to all the features you and your bidders love from Sharp Auction Engine:
+                        </p>
+                        <div class="bulletpoints">
+                          <ul>
+                            <li>No contracts, no set-up fees, and unlimited auctions per month</li>
+                            <li>Conduct auctions anywhere, anytime with our cloud based platform</li>
+                            <li>Automatic page refresh ensures your bidders never miss out</li>
+                            <li>Easy lot creation with bulk importing and auto photo assignment</li>
+                            <li>Accept payments online and preauthorize your bidders with credit card processing from Stripe</li>
+                            <li>Our rapid development guarantees you consistently have the latest features at your finger tips</li>
+                            <li>
+                              SAE offers the use of
+                              <a href="http://sae-manual.readthedocs.org/en/latest/domain/" target="_blank">
+                                  vanity domains
+                              </a>.
+                              If you own a domain, you can use that domain for your new auction's website. It comes with a
+                              <strong>
+                                <em>FREE SSL</em>
+                              </strong>
+                              for added security.
+                            </li>
+                          </ul>
+                        </div>
+                        <strong>One Month Free Trial</strong>
+                        <br/>
+                        <input type="hidden" name="plan" />
+                        <button type="button" id="Basic_plan" class="btn btn-xs btn-next btncolor">
+                          <span class="text">Get Started Now!</span>
+                        </button>
+                        <br/>
+                        <br/>
+                        <p style="font-size:11px;">
+                          <span class="red">*</span>SAE monitors your bidder traffic and will contact you when you begin to outgrow your current plan.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div>
+                      <div class="text-center">
+                        <h2>
+                          <strong>Pro Plan</strong>
+                        </h2>
+                        <p class="dollar">$
+                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
+                        <p class="plantext">
+                          Choose this plan if your business has a large or growing pool of customers. Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:
+                          <span class="bidders"
+                          id="bidders"> 50</span> (bidders)
+                        </p>
+                        <input type="hidden" name="bidders">
+                        <input type="hidden" name="PlanAmount">
+                        <!-- <input type="hidden" id="bidders"  readonly style="border:0; color:#f6931f; font-weight:bold;"> -->
+
+                        <!-- TODO Touch is not working -->
+                        <div id="slider1" style="background-color:#D3D3D3;margin-bottom:25px;"></div>
+
+                        <!-- <input class="single-slider" id="single-slider" type="hidden"> -->
+
+                        <p class="plantext">With the Pro Plan, pay as you grow and maintain peace of mind that your auctions are always ready to handle any increase of bidders without sacrificing performance. This plan provides the same features available in the Basic Plan
+                          as well as:</p>
+                        <div class="bulletpoints">
+                          <ul>
+                            <li>Dedicated resources to cover your existing bidder base</li>
+                            <li>Powerful business intelligence statistics allow you to find bidder and listing trend</li>
+                            <li>Plus, <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection </a> to cover your growing bidder list</li>
+                          </ul>
+                        </div>
+                        <button type="button" class="btn btn-xs btn-next btncolor" id="Pro_plan" style="margin-top:11px;">
+                          <span class="text">Get Started Now!</span>
+                        </button>
+                        <br/>
+                        <br/>
+                        <p style="font-size:14px;"> Looking for an Enterprise solution? <a href="/contact-us" target="_blank">Contact us</a> to find out what we can do for you.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="background-color:#FFF;display:inline-block;margin-bottom:10px;">
+              <div class="text-center">
+                <h3 class="black">
+                  <strong> Billing & Payments </strong>
+                </h3>
+
+              </div>
+              <p class="black payment_text">Pay as you grow with our new pricing plans. With <a href="http://sae-manual.readthedocs.org/en/latest/automatedgrowthprotection/" target="_blank">Automated Growth Protection</a> and <a href="http://sae-manual.readthedocs.org/en/latest/hourlybilling/"
+                target="_blank">hourly billing </a>for exceeding plan limitations, you can rest assured that your auctions are stable and secure while paying a fair and competitive price.
+                <br/>
+                <br/> Start by selecting a plan based on the <a href="http://sae-manual.readthedocs.org/en/latest/yourcustomers/" target="_blank">number of concurrently active bidders </a> you expect for your auctions, and we’ll take care of the rest. You
+                will pay your monthly plan premium at the start of each month, and then you will be billed at the end of each month in hour increments for any overage activities only for the hours you used.
+                <br/>
+                <br/> With our built-in <a href="http://sae-manual.readthedocs.org/en/latest/businessintelligencestatistics/" target="_blank">business intelligence statistics</a>, you can easily monitor your active bidders. With this information, you can track
+                bidder trends and activities, and you can adjust your plan as needed. You will be able to monitor any overages, so there will be no surprise charges at the end of the month.
+                <br/>
+                <br/> We’ve done our best to create straightforward billing and payment policies. Click below to learn more about how our hourly billing works and how to make payments, update your billing information, get referral credits, and remove services.
+                Still have questions? Please feel free to <a href="/contact-us" target="_blank">contact us</a>.</p>
+              <div class="text-center">
+                <a href="http://sae-manual.readthedocs.org/en/latest/saeplans/" target="_blank">
+                  <button type="button" class="btn btn-lg btn_learnmore" style="border-radius: 10px;margin-bottom:10px;">
+                    <span class="text">Learn More</span>
+                  </button>
+                </a>
+                <br/>
+              </div>
+            </div>
+          </fieldset>
+           
+          
+
+          <fieldset>
+            <div class="row">
+              <div class="col-sm-6 text-center" style="margin-top:230px;">
+                <img src="images/SAElogo271.png" alt="Sharp Auction Engine" title="" />
+                <h2 class="white-color">Sign Up now for
+                  <br/>your Online Auction House</h2>
+                <p class="white-color">
+                  "I love SAE because it's so sharp and it's easy to use!
+                  <br/>~ Firehouse Antiques &amp; Auctions
+                </p>
+              </div>
+              <div class="col-sm-6" style="margin-top:85px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <!-- <span id="plan"></span> -->
+                      <div id="basic" style="display:none;">
+                        <h2 class="text-center">
+                          <strong>Basic Plan</strong>
+                        </h2>
+                        <p class="text-center dollar" style="font-size:170%">$99/mo</p>
+                        <input class="plans" id="single-slider" type="hidden">
+                        <p>
+                          <small style="font-size:84%">This Plan is perfect for a small auction house with 25 or less bidders per catalog.To view and compare plans,<a href=""> Click here.</a></small>
+                        </p>
+                      </div>
+                      <div id="pro" style="display:block;">
+                        <h2 class="text-center">
+                          <strong>Pro Plan</strong>
+                        </h2>
+                        <p class="text-center dollar">$
+                          <span class="slideramount borderbox" id="slideramount">140</span>/mo</p>
+                        <p>
+                          <small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href=""> Click here</a>. Use the slider below to choose your average number of bidders per catalog and determine your monthly
+                            cost.
+                            <span class="bidders" id="bidders">50</span> (bidders)</small>
+                        </p>
+
+                        <div id="slider2" style="background-color:#D3D3D3;"></div>
+                        <!-- <input class="plans" value="99"  type="hidden"> -->
+                      </div>
+
+                    </div>
+                    <div class="form-bottom">
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="text" name="username" value="test" autocomplete="off" placeholder="&#61447; Your Username" class="icon form-username form-control" id="username" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                        </p>
+                      </div>
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="text" name="email" value="@sae.bid" autocomplete="off" placeholder="&#xf003; Email" class="icon form-email form-control" id="email" data-toggle="popover" title="Email" data-content="This should be the email address where you want all house communication sent.">
+                        </p>
+                      </div>
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="text" name="auction_house_name" value="housename" autocomplete="off" placeholder="&#xf015; Auction House Name" class="icon form-auction-house form-control" id="house_name" data-toggle="popover" title="House Name" data-content="This is the name that will identify your auction house to users on this site.">
+                        </p>
+                      </div>
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="text" name="first_domain_level" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.sae.com</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span>"
+                          style="" />
+                          <div class="pull-right" style="height:0px;">
+                            <span value="sae.com" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.sae.com</span>
+                          </div>
+                        </p>
+                        <input type="hidden" name="main_domain" />
+                      </div>
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="password" name="password" autocomplete="off" placeholder="&#xf023; Password" class="icon form-password form-control" id="form-password" data-toggle="popover" title="Password" data-content="Create a strong password to secure your account.">
+                        </p>
+                      </div>
+
+                      <div class="form-group">
+                        <p class="wrapper">
+                          <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="form-repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
+                        </p>
+                      </div>
+                      <div>
+                        <section class="text-muted text-center">
+                          <p>
+                            <small>
+                              <small>
+                                By signing up, you agree to our
+                                <a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">T & C</a> and
+                                <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">privacy policy</a>.
+                              </small>
+                            </small>
+                          </p>
+
+                          <button type="button" class="btn btn-xs btn-warning btn-next">Get Started Now!</button>
+
+                          <p>
+                            <small>Need a customized Solution? <a href="#" data-toggle="modal" data-target="#contact us" class="link">Contact us</a> to find out what we can do for you. </small>
+                          </p>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color">
+                          <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <div class="form-group">
+                        <input type="text" autocomplete="off" name="first_name" value="test" placeholder="First Name" class="form-first-name form-control" id="form-first-name" data-toggle="popover" title="First Name" data-content="Auctioneer's first name.">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="last_name" autocomplete="off" value="user" placeholder="Last Name" class="form-last-name form-control" id="form-last-name" data-toggle="popover" title="Last Name" data-content="Auctioneer's last name.">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="phone_number" autocomplete="off" value="5555555555" placeholder="Phone" class="form-phonenumber form-control" id="form-phonenumber" data-toggle="popover" title="Phone" data-content="Best contact number to contact auctioneer.">
+                      </div>
+                      <!-- <div class="form-group">
+                                                <input type="text" name="born_on" placeholder="Born On" autocomplete="off" class="form-bornon form-control" id="form-bornon" data-toggle="popover" title="Born On" data-content="Auctioneer's date of birth.">
+                                            </div> -->
+                      <div class="form-group">
+                        <input type="text" name="address" placeholder="Auction House Address" class="form-address form-control" id="form-address" data-toggle="popover" title="House Address" data-content="Street name and number of auction house.">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="city" placeholder="City" class="form-city form-control" id="form-city" data-toggle="popover" title="Username" data-content="This unique ID is how users will identify your activities on this site.">
+                      </div>
+                      <div class="form-group">
+                        <select name="states" class="form-control bfh-states" data-country="US" data-state="SS" style="height:50px; border-radius:16px;"></select>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="zip" placeholder="Zip" class="form-zip form-control" id="form-zip" data-toggle="popover" title="Zip" data-content="Zip code of auction house.">
+                      </div>
+                      <button type="button" class="btn btn-primary btn-previous">Previous</button>
+                      <button type="button" class="btn btn-success btn-next">Submit Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+             <fieldset class="finalfieldset">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color" style="font-weight: bold;">
+                          Please confirm your plan and provide us additional information for payments.
+                        </p>
+                      </div>
+                    </div>
+
+                    <p>
+                      <span class="payment-errors"></span>
+                      
+                    </p>
+                    <div class="form-bottom">
+                      <!-- <div class="form-group" id="proplan_enabler">
+                        <h3>Plan Info</h3>
+                        <label class="" for="form-bill-period">Billing Period:</label>
+                        <select name="stripe_plan" class="form-control" style="height:50px; border-radius:16px;">
+                          <option value="Basic">Basic-25 Bidders: $99</option>
+                          <option value="Pro-50">Pro-50 Bidders: $140</option>
+                          <option value="Pro-75">Pro-75 Bidders: $165</option>
+                          <option value="Pro-100">Pro-100 Bidders: $190</option>
+                          <option value="Pro-125">Pro-125 Bidders: $215</option>
+                          <option value="Pro-150">Pro-150 Bidders: $240</option>
+                          <option value="Pro-175">Pro-175 Bidders: $265</option>
+                          <option value="Pro-200">Pro-200 Bidders: $290</option>
+                          <option value="Pro-225">Pro-225 Bidders: $315</option>
+                          <option value="Pro-250">Pro-250 Bidders: $340</option>
+                          <option value="Pro-275">Pro-275 Bidders: $365</option>
+                          <option value="Pro-300">Pro-300 Bidders: $390</option>
+                          <option value="Pro-325">Pro-325 Bidders: $415</option>
+                          <option value="Pro-350">Pro-350 Bidders: $440</option>
+                          <option value="Pro-375">Pro-375 Bidders: $465</option>
+                          <option value="Pro-400">Pro-400 Bidders: $490</option>
+                          <option value="Pro-425">Pro-425 Bidders: $515</option>
+                          <option value="Pro-450">Pro-450 Bidders: $540</option>
+                          <option value="Pro-475">Pro-475 Bidders: $565</option>
+                          <option value="Pro-500">Pro-500 Bidders: $590</option>
+                        </select>
+                      </div> -->
+                      <input type="hidden" name="stripe_plan" />
+                      <h3>Payment Info</h3>
+                      <div class="form-group">
+                        <label class="" for="form-card-number">Card number:</label>
+                        <input type="text" autocomplete="off" value="4242424242424242" placeholder="Card number" class="form-card-number form-control" data-stripe="number" id="form-card-number">
+                      </div>
+                      <div class="form-group">
+                        <label class="" for="form-expires">Expires:</label>
+                        <input type="text" value="" class="form-expires form-control" data-max-length="2" data-is-sae-card-exp="1" autocomplete="off" placeholder="MM/YYYY" id="form-expires">
+                        <input type="hidden" data-stripe="exp-month" />
+                        <input type="hidden" data-stripe="exp-year" />
+                      </div>
+                      <div class="form-group">
+                        <label class="" for="form-name-on-card">Name on card:</label>
+                        <input type="text" value="ka" autocomplete="off" placeholder="Name on Card" class="form-name-on-card form-control" id="form-name-on-card">
+                      </div>
+                      <div class="form-group">
+                        <label class="" for="form-cvc">CVC:</label>
+                        <input type="text" autocomplete="off" data-stripe="cvc" value="123" placeholder="CVC" class="form-cvc form-control" id="form-cvc">
+                      </div>
+                      <input type="hidden" name="stripeToken" />
+                      <div class="textfield col-xs-12">
+                        <div class="well alert alert-default"> Your card will be charged
+                          <span class="first-charge-mfs"></span> now, and your subscription will bill every
+                          <span class="first-charge-interval">month</span> thereafter. You can cancel or change plans at anytime.
+                        </div>
+                      </div>
+
+                      <button type="button" class="btn btn-primary btn-previous">Previous</button>
+                      <button type="button" class="btn btn-success btn-stripe removeMessagebag">Get Started</button>
+                      <!-- <button type="button" class="btn btn-warning btn-next">skip</button> -->
+
+                    </div>
+
+                  </div>
+
+                </div>
+          </fieldset>
+        <fieldset >
+            <div class="row" id="final_page" class="finalPage">
+              <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
+                <div class="panel panelborder">
+                  <div class="panel-body">
+                    <div class="form-top">
+                      <div class="text-center">
+                        <img src="images/saelogotransparent140w120h.png">
+                        <p class="white-color" style="font-size:24px">
+                          <strong>Thanking you for signing up!</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <h3 class="black">
+                         <strong> Your auction house is under construction.</strong>
+                     </h3>
+                      <p>Thank you for signing up with Sharp Auction Engine! Your auction house is currently being created. We will notify you via email once this process has been completed. Typically, this takes less than one hour, but it can take up to 24 hours.<br/><br/>
+
+                      While you are waiting, check out our <a href="http://support.sharpauctionengine.com/" target="_blank">Support Portal </a>for helpful <a href="https://www.youtube.com/channel/UCqf9mcvHeUAeUrQqzy_WuZw/videos?view=0&sort=p&flow=grid" target="_blank">video tutorials</a>, <a href="http://support.sharpauctionengine.com/customer/en/portal/topics/867922-auctioneer-s-how-to/articles" target="_blank">"How To" articles</a>, and more!<br/></p>
+
+                       <p style="font-size:12px;">If you require additional assistance or if you do not receive an email within 24 hours, you can contact us by emailing <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com</a>.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+       <!--  <div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+              </div>
+              <div class="modal-body">
+                Congratulations!! you are good to go!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="#">
+                  <button type="button" class="btn btn-primary">Visit the page!</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div> -->
+
+
+      <!-- Javascript -->
+      <script>
+        var stripePublishableKey = 'pk_test_Gs3mml7J0sPmODW6ZS8o8R3h';
+        var instanceParentDomain = 'sae.com';
+        var minimumDomainLength = parseInt('2');
+        var planOptions = [{"id":"Basic","description":"Basic-25 Bidders: $99","amountInteger":9900,"amountDecimal":"99","bidders":25},{"id":"Pro-50","description":"Pro-50 Bidders: $140","amountInteger":14000,"amountDecimal":"140","bidders":"50"},{"id":"Pro-75","description":"Pro-75 Bidders: $165","amountInteger":16500,"amountDecimal":"165","bidders":"75"},{"id":"Pro-100","description":"Pro-100 Bidders: $190","amountInteger":19000,"amountDecimal":"190","bidders":"100"},{"id":"Pro-125","description":"Pro-125 Bidders: $215","amountInteger":21500,"amountDecimal":"215","bidders":"125"},{"id":"Pro-150","description":"Pro-150 Bidders: $240","amountInteger":24000,"amountDecimal":"240","bidders":"150"},{"id":"Pro-175","description":"Pro-175 Bidders: $265","amountInteger":26500,"amountDecimal":"265","bidders":"175"},{"id":"Pro-200","description":"Pro-200 Bidders: $290","amountInteger":29000,"amountDecimal":"290","bidders":"200"},{"id":"Pro-225","description":"Pro-225 Bidders: $315","amountInteger":31500,"amountDecimal":"315","bidders":"225"},{"id":"Pro-250","description":"Pro-250 Bidders: $340","amountInteger":34000,"amountDecimal":"340","bidders":"250"},{"id":"Pro-275","description":"Pro-275 Bidders: $365","amountInteger":36500,"amountDecimal":"365","bidders":"275"},{"id":"Pro-300","description":"Pro-300 Bidders: $390","amountInteger":39000,"amountDecimal":"390","bidders":"300"},{"id":"Pro-325","description":"Pro-325 Bidders: $415","amountInteger":41500,"amountDecimal":"415","bidders":"325"},{"id":"Pro-350","description":"Pro-350 Bidders: $440","amountInteger":44000,"amountDecimal":"440","bidders":"350"},{"id":"Pro-375","description":"Pro-375 Bidders: $465","amountInteger":46500,"amountDecimal":"465","bidders":"375"},{"id":"Pro-400","description":"Pro-400 Bidders: $490","amountInteger":49000,"amountDecimal":"490","bidders":"400"},{"id":"Pro-425","description":"Pro-425 Bidders: $515","amountInteger":51500,"amountDecimal":"515","bidders":"425"},{"id":"Pro-450","description":"Pro-450 Bidders: $540","amountInteger":54000,"amountDecimal":"540","bidders":"450"},{"id":"Pro-475","description":"Pro-475 Bidders: $565","amountInteger":56500,"amountDecimal":"565","bidders":"475"},{"id":"Pro-500","description":"Pro-500 Bidders: $590","amountInteger":59000,"amountDecimal":"590","bidders":"500"}];
+      </script>
+      <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+      <!--<script src="js/jquery-1.10.2.js"></script>-->
+      <script src="js/jquery-1.11.1.min.js"></script>
+      <script src="js/jquery-ui.js"></script>
+      <!--  <script src="js/tooltip.js"></script>
+            <script src="js/popover.js"></script> -->
+      <script src="js/jquery.ba-throttle-debounce.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootbox.min.js"></script>
+      <script src="js/jquery.backstretch.min.js"></script>
+      <script src="js/retina-1.1.0.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/bootstrap-formhelpers-min.js"></script>
+      <script src="js/bootstrap-formhelpers-states.js"></script>
+      <!--  <script src="js/horizontal_selector.js"></script> -->
+      <script src="js/jquery.range.js"></script>
+      <script src="js/register.js"></script>
+      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+      <script src="js/creditCardValidator.js"></script>
+      <script src="js/MessageBag.js"></script>
+
+      <script type="text/javascript" src="js/app.js"></script>
+
+      <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+      <div class="modal fade" id="termsAndConditionsModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Terms and conditions</h4>
+      </div>
+      <div class="modal-body" style="height:500px;overflow:scroll;">
+        <div class="well">
+          <p style="text-align:center;">
+            <strong>USER AGREEMENT</strong>
+          </p>
+          <p style="text-align:center;">
+            <strong>SHARP AUCTION ENGINE</strong>
+          </p>
+          <p>This Agreement contains terms and conditions applicable to your use of the live auction services we host as well as your participation in live auction events conducted by an Auction House and Auctioneers. By using the services on any Sharp Auction
+            Engine website (i.e. www.sharpauctionengine.com and any other related websites where this Agreement appears), you are agreeing to the following terms and conditions, including those available by hyperlink, with Sharp Auction Engine as well
+            as our subsidiaries and affiliates.</p>
+          <p>Before you may become a member of Sharp Auction Engine, you must read and accept all of the terms and conditions in, and referenced by, this Agreement and our Privacy Policy (whether such terms and conditions are contained in the primary document
+            itself or are hyperlinked to related documents). We strongly recommend that, as you read this Agreement, you also access and read all linked information, as well as the listing of Auction Lingo. Some Sharp Auction Engine-branded websites,
+            or sites that we operate, may also be governed by separate user agreements and privacy policies that you should also read.</p>
+          <p>You acknowledge and agree that we may amend this Agreement at any time, and from time to time, by posting the amended terms on our website. Unless, and only to the extent, expressly stated to the contrary herein, all amended terms and conditions
+            shall automatically be effective on a prospective basis once they are posted on our site. Accordingly, you are encouraged to periodically review our terms of use for any such changes and/or amendments.</p>
+          <p>
+            <strong>LIVE AUCTION AGREEMENT</strong>
+          </p>
+          <ol>
+            <li>
+              <strong>ELIGIBILITY</strong>. Each Auction House that conducts a live auction will have its own eligibility requirements that must be met in order for you to participate in that auction. You may be required to apply for and obtain approval in order
+              to participate in a specific live auction. Approval to participate in one live auction does not guarantee approval to participate in any other live auction, conducted either by that Auction House, or another Auction House. Each Auction House
+              has sole and absolute discretion to refuse to approve your eligibility for any live auction.</li>
+            <li>
+              <strong>FEES</strong>. Each Auction House may charge a buyer's premium (which is an additional fee that a winning bidder is required to pay above the auction price) as well as shipping, handling, and other fees. These fees are subject to change
+              depending upon the Auction House and the particular item for sale, and are set by the Auction House.</li>
+            <li>
+              <strong>SHARP AUCTION ENGINE IS ONLY A VENUE.</strong>
+              <br />
+              <ol>
+                <li>
+                  <strong>Services</strong>. We are not an auction house and are not conducting the live auctions. Our service allows you to participate in live auctions conducted by the Auction House. We are solely a passive conduit to facilitate communication
+                  between you and the Auction House. We reserve the right in our sole and absolute discretion to change some or all of our services at any time.</li>
+                <li>
+                  <strong>Control</strong>. We have no control over the quality, safety, or legality of the items advertised, the truth or accuracy of the listings, or the ability of the Auction House to sell and the ability of buyers to buy items. We also do
+                  not ensure or guarantee that a buyer or seller will actually complete a transaction.</li>
+                <li>
+                  <strong>Compliance with Laws</strong>. You acknowledge and agree that the use, purchase, distribution, promotion, advertising, and sale of certain products are subject to federal state, and local regulations, including, but not limited to, firearms,
+                  Indian artifacts, recalled products, children's products, alcoholic beverages, coins and currency. You further acknowledge and agree that Sharp Auction Engine’s role with respect to the sale of products is limited to providing a conduit
+                  through which a prospective purchaser is able to participate in an auction. Sharp Auction Engine does not review or evaluate the products auctioned, or verify the descriptions given or claims made, by Auction Houses regarding the products.
+                  You expressly represent that you shall comply with all applicable federal, state, and local laws, statutes, ordinances, and regulations relating to your use, purchase, and distribution of any products that you bid upon or purchase through
+                  Sharp Auction Engine (hereinafter, the "Regulations"), including, but not limited to, (i) the Gun Control Act of 1968 and all regulations promulgated by the Bureau of Alcohol, Tobacco, Firearms, and Explosives (collectively, the "Firearms
+                  Regulations"), (ii) the Consumer Products Safety Improvement Act of 2008 and all regulations promulgated by the U.S. Consumer Products Safety Commission, and (iii) the Indian Arts &amp; Crafts Act of 1990 and any additional laws and
+                  regulations applicable to the sale of Indian arts and crafts. You shall at all times defend, indemnify and hold Sharp Auction Engine, its shareholders, members, partners, officers, directors, employees, agents, parent, subsidiaries,
+                  affiliates, joint venturers, and successors and assigns, harmless from, and against, any and all causes of action, suits, claims, demands, judgments, liabilities, losses, damages, awards, penalties, fines, costs and expenses (including,
+                  but not limited to, reasonable attorney's fees) of any nature or kind, arising under or resulting from: (i) your use, purchase, or distribution of any products in violation of any Regulations; (ii) your use of Sharp Auction Engine in
+                  connection with the purchase of any products subject to any Regulations; and (iii) your alleged or actual violation or breach of any Regulations.</li>
+                <li>
+                  <strong>Release</strong>. Since we are not involved in the actual transactions between buyers and Auction Houses, in the event that you have a dispute with an Auction House, you hereby release Sharp Auction Engine (and our shareholders, members,
+                  partners, officers, directors, employees, agents, parent, subsidiaries, affiliates, joint venturers, and successors and assigns) from causes of action, suits, claims, demands, judgments, and damages (actual and consequential) of every
+                  kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of, or in any way connected with, such disputes. If you are a California resident, you waive California Civil Code § 1542, as amended
+                  from time to time, and any similar statutes, to the extent that such statute(s) prohibits a general release from extending to claims that a creditor does not know or suspect to exist in his/her favor at the time of executing the release,
+                  which if known by the creditor, would materially affect his/her settlement with the debtor.</li>
+              </ol>
+            </li>
+            <li>
+              <strong>AUCTION HOUSES</strong>. The Auction House will list available items on which you may bid. Auction dates and times, as well as the number, character, and order and schedule of the items to be auctioned, are set by the Auction House and are
+              subject to change without notice. Individual lots and items may be modified or changed at any time. Some lots and items that are made available on the auction floor will not be included in the online live auction services. We do not control
+              the information that is provided by the Auction House, which is made available through our system. We also do not guarantee that the Auction House maintains proper auctioneers' licenses or complies with all applicable laws, rules, and regulations.</li>
+            <li>
+              <strong>BIDDING, BUYING AND CONDITIONS OF SALE</strong>. The terms and conditions for participation in each auction, including how bids are accepted, rules governing absentee bids, bid increments, bid retraction and cancellation, the conditions
+              the buyer must meet to purchase an item, as well as the specific conditions of sale (such as warranties, shipping costs, insurance, and the like) may change for each auction at the sole discretion of the Auction House. The Auction House
+              is required to post its terms and conditions and to maintain such terms throughout the auction period. You agree to be bound by those bidding terms and conditions of sale by agreeing to this Agreement. This Agreement, in addition to those
+              Auction House terms and conditions, governs your bidding activity, as well as your participation in each auction. The Auction House acts as an auctioneer and makes the sole, final determination with respect to bidding on the item, the sale
+              of the item, and the resolution of any disputes.</li>
+            <li>
+              <strong>AUDIO AND VIDEO</strong>. Any audio or video aspects of a live auction event are for entertainment purposes only.</li>
+            <li>
+              <strong>USE OF IMAGES</strong>. Sharp Auction Engine has the right to use, on its website and in advertising and promotional materials, images (including photographic images) of items being sold or that have been sold on its website, including images
+              of items which have been purchased through the site.</li>
+            <li>
+              <strong>USING SHARP AUCTION ENGINE</strong>. While using Sharp Auction Engine, you shall not: (a) violate any laws, rules, regulations or third party rights; (b) use our sites or services if you are not able to form legally binding contracts, are
+              under the age of 18, or are temporarily or indefinitely suspended from our sites; (c) fail to deliver payment on any item that you purchased through our sites; (d) manipulate the price of any item or interfere with other user's listings;
+              (e) post false, inaccurate, misleading, defamatory, or libelous content (including personal information); (f) distribute or post spam, chain letters, or pyramid schemes; (g) distribute viruses or any other technologies that may harm Sharp
+              Auction Engine, our sites, or the interests or property of Sharp Auction Engine’s users; (h) copy, modify, or distribute content from our sites and/or violate Sharp Auction Engine's copyrights and trademarks; or (i) harvest or otherwise
+              collect information about users, including, without limitation, email addresses, without their consent. Nor shall you encourage or assist any third party to engage in any of the prohibited conduct set forth above. Any violation of this provision
+              shall constitute a material breach of this Agreement and, under such circumstances, we will have the right, in our sole and absolute discretion, to prohibit your access to our sites and to suspend or terminate your right to use our services.</li>
+            <li>
+              <strong>ABUSING SHARP AUCTION ENGINE</strong>. (a) Sharp Auction Engine will work to keep our sites and services working properly and safely. Please report problems, offensive content, and any policy violations to us. (b)Without limiting our remedies,
+              it is understood that we may limit, suspend, or terminate our services and user accounts, prohibit access to our sites, delay or remove hosted content, and take technical and legal steps to keep users off our sites if we believe that they
+              are misusing, abusing, or interfering with the provision of our services, engaging in unlawful conduct, or acting inconsistently with the letter or spirit of our policies. We also reserve the right to cancel unconfirmed accounts or accounts
+              that have been inactive for a long time.</li>
+            <li>
+              <strong>ACCESS AND INTERFERENCE</strong>. The sites contain robot exclusion headers. Much of the information on the sites is updated on a real-time basis and is proprietary or is licensed to Sharp Auction Engine by our users or third parties. You
+              agree that you will not use any robot, spider, scraper or other automated means to access the sites for any purpose without our express written permission. Additionally, you agree that you will not: (a) take any action that imposes or may
+              impose (in our sole discretion) an unreasonable or disproportionately large load on our infrastructure; (b) copy, reproduce, modify, create derivative works from, distribute, or publicly display any content (except for your information)
+              from the sites without the prior, express written consent of Sharp Auction Engine and the appropriate third party, as applicable; (c) interfere or attempt to interfere with the proper working of our sites or any activities conducted on the
+              sites; or (d) bypass our robot exclusion headers or other measures we may use to prevent or restrict access to the sites.</li>
+            <li>
+              <strong>PRIVACY</strong>. Any information you provide to us, and your use of information available on our websites, is governed by our Privacy Policy. Any information you provide to the Auction House or other third parties is governed by their respective
+              privacy policies. We do not sell or rent your personal information to third parties for their marketing purposes without your express consent. We use your information only as described in the Sharp Auction Engine Privacy Policy. We consider
+              protection of our users' privacy to be a high priority. We store and process your information on computers located in the United States that are protected by physical as well as technological security devices. You can access and modify the
+              information you provide. We use third parties to verify and certify our privacy security methods. For a complete description of how we use and protect your personal information, please review the Sharp Auction Engine Privacy Policy. If you
+              object to your information being transferred or used in this way, please do not use our services.</li>
+            <li>
+              <strong>INTELLECTUAL PROPERTY/RESTRICTIONS ON USE</strong>. We reserve all rights with respect to the design and content of our websites. In particular, you may not misappropriate the design or content of our sites and you may not alter or deface
+              such design or content in any way. Nothing on our websites grants any license with respect to such design or content. All trademarks, service marks, trade names, logos, graphics, articles and other materials on our sites are protected by
+              United States and foreign copyright, trademark and other applicable laws. In particular, all trademarks, service marks, trade names and logos displayed on our sites are proprietary to Sharp Auction Engine, its affiliates, or third-party
+              owners and our websites grant no license thereto.</li>
+            <li>
+              <strong>INDEMNITY</strong>. You will defend, indemnify and hold Sharp Auction Engine, its shareholders, members, partners, officers, directors, employees, agents, parent, subsidiaries, affiliates, joint venturers, and successors and assigns, harmless
+              from, and against, any and all causes of action, suits, claims, demands, judgments, liabilities, losses, damages, awards, penalties, fines, costs and expenses (including, but not limited to, reasonable attorney's fees), sought by any third
+              party and which results from, or arises out of, your breach of this Agreement, your unlawful actions or conduct, or your violation of the rights of any third party.</li>
+            <li>
+              <strong>NO AGENCY</strong>. No agency, partnership, joint venture, employee-employer or franchiser-franchisee relationship is intended or created by this Agreement.</li>
+            <li>
+              <strong>NO WARRANTY</strong>. We and our suppliers provide our web site and services “as is” and without any warranty or condition, express, implied or statutory. WIthout limiting the foregoing, we do not warrant that the service will be uninterrupted
+              or error free, or that bids will be received by the Auction House or information regarding current price will be transmitted in a timely fashion, nor do we guarantee the performance of any obligations by an Auction House. We and our suppliers
+              specifically disclaim any implied warranties of title, merchantability, fitness for a particular purpose and non-infringement.Some states' laws may not allow a disclaimer of implied warranties in certain circumstances, in which case the
+              foregoing disclaimer may not apply to you. This warranty gives you specific legal rights and you also may have other legal rights which vary from state to state.</li>
+            <li>
+              <strong>LIABILITY LIMIT</strong>. In no event shall we or our suppliers be liable for lost profits or any special, indirect, incidental or consequential damages arising out of, or in connection with, our sites, our services, the failure of any bid
+              or pricing information to be transmitted or received by you or the Auction House in a timely manner, the interruption of any data transmission, audio or video broadcast, or this Agreement (regardless of the form of action, whether in contract,
+              tort (including negligence), strict liability or otherwise), our liability, and the liability of our suppliers, to you or any third parties in any circumstance is limited to the greater of (a) the amount of fees you pay to us in the 12 months
+              prior to the action giving rise to liability, and (b) $100.00. Some states’ laws may not allow a limitation of liability in certain circumstances, in which case the foregoing limitation may not apply to you.</li>
+            <li>
+              <strong>NOTICES</strong>. Any notice, demand, request or other communication which you may desire or be required to give to Sharp Auction Engine hereunder shall be in writing and shall be given by certified mail, return receipt requested (with postage
+              prepaid), or by Federal Express or other similar overnight delivery service (with fees prepaid), to Sharp Auction Engine, 2310 Whitesburg Drive Suite 7, Huntsville, AL 35801, or at any other address that we may designate in writing in the
+              future. Any notice, demand, request or other communication which we may desire or be required to give to you hereunder shall be in writing and shall be given by email to the email address you provided to Sharp Auction Engine during the registration
+              process, or by certified mail, return receipt requested (with postage prepaid), or by Federal Express or other similar overnight delivery service (with fees prepaid), to you at the address you provided to Sharp Auction Engine during the
+              registration process. All notices given by e-mail shall be deemed given as of 5:00 P.M. eastern standard time on the business day following the day of transmission. All notices given by mail shall be deemed to have been given three (3) business
+              days after mailing and all notices delivered by overnight delivery service shall be deemed given when delivered.</li>
+            <li>
+              <strong>FORCE MAJEURE</strong>. No party shall be liable for any failure or delay in performing any obligation under this Agreement that is due to a Force Majeure event, such as Acts of God (including fire, flood, earthquake, storm, hurricane or
+              other natural disaster), war, invasion, act of foreign enemies, hostilities (regardless of whether war is declared), civil war, rebellion, revolution, insurrection, military or usurped power or confiscation, terrorist activities, nationalization,
+              government sanction, blockage, embargo, labor dispute, strike, lockout or interruption or failure of electricity or telephone service). If a Force Majeure event occurs, the affected party will notify the other party and make commercially
+              reasonable efforts to mitigate the adverse effects of the Force Majeure event on the performance of this Agreement. However, this provision does not excuse your obligation to pay for services actually received.</li>
+            <li>
+              <strong>ARBITRATION</strong>. If a dispute, controversy, claim or cause of action arises out of, or in connection with, this Agreement or any breach or alleged breach thereof (the "Dispute"), and if the Dispute cannot be settled through direct discussions,
+              we mutually agree to endeavor first to settle the Dispute by mediation administered by the American Arbitration Association under its Commercial Mediation Procedures then in effect (or under any other form of mediation mutually acceptable
+              to the parties involved) before resorting to arbitration. Any unresolved controversy or claim relating to the Dispute shall be settled by arbitration administered by the American Arbitration Association in accordance with its Commercial
+              Arbitration Rules then in effect (or under any other form of arbitration mutually acceptable to the parties involved), and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof. If all parties
+              to the Dispute agree, a mediator involved in the parties' mediation may be asked to serve as the arbitrator. The mediation and arbitration, if any, shall take place in the City, State, and County of Alabama (unless another location is mutually
+              agreed to by the parties involved). Any award rendered shall be final and conclusive upon the parties. The costs and expenses of the mediation and arbitration shall be borne equally by the parties, provided, however, that the arbitrator
+              shall award to the prevailing party, if any, the reasonable costs and attorneys' fees incurred by the prevailing party in connection with the mediation and arbitration. If the arbitrator determines that a party was the prevailing party on
+              some but not all of the claims and counterclaims, the arbitrator may award the prevailing party an appropriate percentage of the reasonable costs and attorneys' fees incurred by the prevailing party in connection with the mediation and arbitration.
+              In the event this mediation/arbitration provision is found to be completely unenforceable or inapplicable for any reason, then any dispute, controversy, claim or cause of action arising out of, or in connection with, this Agreement or any
+              breach or alleged breach thereof, shall be brought in the state or federal courts in the City, State, and County of Alabama, and you irrevocably consent and submit to the jurisdiction of such courts for the purpose of litigating any such
+              action and waive trial by jury. The prevailing party in such action shall be entitled to recover its reasonable costs and attorneys' fees incurred in connection therewith, and if it is determined that a party was the prevailing party on
+              some but not all of the claims and counterclaims, such party may be awarded an appropriate percentage of the reasonable costs and attorneys' fees it incurred in connection therewith.</li>
+            <li>
+              <strong>GENERAL</strong>. (a) This Agreement constitutes and sets forth the entire agreement and understanding of the parties pertaining to the subject matter hereof, and supersedes all prior or contemporaneous written or oral agreements, understandings,
+              undertakings, negotiations, promises, discussions, warranties or covenants that are not specifically contained herein; (b) The headings, sections, or titles of the various paragraphs of this Agreement are inserted merely for the purpose
+              of convenience and do not expressly or by implication or intention, limit, define, extend or affect the meaning or interpretation of this Agreement or the specific terms or text of the section so designated. All personal pronouns used in
+              this Agreement shall include the other genders, whether used in the masculine, feminine or neuter gender, and the singular shall include the plural and vice versa, whenever, and as often as may be, appropriate; (c) This Agreement shall be
+              governed in all respects, whether as to validity, construction, interpretation, capacity, performance or otherwise, by the laws of the State of Alabama, without regard to principles of conflicts of laws; (d) If any provision of this Agreement
+              is found invalid or unenforceable by a court of competent jurisdiction, then such provision shall be deemed stricken herefrom and the remainder of this Agreement shall remain at all times in full force and effect. Such invalid or enforceable
+              provision shall, to the extent legally permitted, be replaced by a valid and enforceable provision that comes closest to the parties' intent underlying the invalid or unenforceable provision; (e) It is understood that any accrued but unpaid
+              financial obligations, and any other terms related to such financial obligations, shall survive the expiration or termination of this Agreement; (f) No waiver of any breach, privilege or provision of this Agreement will be construed as a
+              waiver of any rights or remedies arising from any other or future breach, privilege or provision; (g) We may, in our sole discretion, assign or otherwise transfer this Agreement to a third party.</li>
+            <li>
+              <strong>FUTURE TERMS</strong>. Sharp Auction Engine may amend, modify, add or remove any of these terms and conditions at any time, and from time to time. If we do so, we will post such changes on this page. If any future changes to these terms
+              and conditions are unacceptable to you, you should discontinue using the services. Your continued use of the services now, or following the posting of notice of any such changes, will indicate your acceptance of these terms and conditions,
+              and of any such changes.</li>
+          </ol>
+          <p> </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Privacy Policy</h4>
+      </div>
+      <div class="modal-body" style="height:500px;overflow:scroll;">
+        <div class="well">
+          <p style="text-align:center;">
+            <span style="font-size:28px;font-family:'Trebuchet MS';color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">SHARP AUCTION ENGINE PRIVACY POLICY</span>
+          </p>
+          <p style="text-align:center;">
+            <img src="https://lh3.googleusercontent.com/PVzygUMYsZeXe8bgbGScHXxUG3QiM8KPWb68iTIfxVjy6t60Y990J0SuGpHahi64tmVv1FZsQdrRqm9QNAnmMeu4MMRZ2-u0IIbIlER8BRGbfb0Q8fy8l3X2NsTPsexvVJkzw6M" alt="">
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Read This Privacy Policy Before Accessing Web Site.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Effective Date: </span>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">This Privacy Policy was last updated on March 24th, 2015.</span>
+          </p>
+          <p>
+            <strong>
+              <br>
+              <br>
+            </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">This World Wide Web Site (the "Site") at www.sharpauctionengine.com is owned and operated by Sharp Auction Engine, Inc.. (SAE). We are committed to protecting the privacy of our visitors while they interact with the content, products and services
+              on this site (the "Site"). This Privacy Policy applies to the Site only. It does not apply to other websites to which we link. Because we gather certain types of information about our users, we want you to understand what information we
+              collect about you, how we collect it and how that information is used. You agree that your use of the Site signifies your assent to this Privacy Policy. If you do not agree with this Privacy Policy, please do not use the Site.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Types of Information Collected</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">We collect two types of information from you: i) information that you voluntarily provide to us (e.g. through the submission of a support request, or by contacting us through our "Contact Us" form or e-mail); and ii) information that is derived
+              through automated tracking mechanisms.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Voluntary Information</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">We do not collect personally identifiable information about you except when you specifically provide such information to us on a voluntary basis. By providing any personally identifiable information to us, you consent to the use and method
+              of disclosure as described in this Privacy Policy.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Personally identifiable information you submit to us will only be used for the purposes for which it was submitted. Your personal information will not be sold or otherwise transferred to unaffiliated third parties without your approval at
+              the time of collection.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">WE ARE NOT LIABLE OR RESPONSIBLE FOR THE PERSONALLY IDENTIFIABLE OR OTHER INFORMATION YOU CHOOSE TO SUBMIT.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">We use non-identifying and aggregate information to better design our website and improve the user experience. We may also use or share with third parties for any purpose aggregated data that contains no personally identifiable information.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Sharp Auction Engine, Inc.. may share personally identifiable or other information with our parent, subsidiaries, divisions, and affiliates. Also, Sharp Auction Engine, Inc.. may transfer personally identifiable information as an asset in
+              connection with a proposed or actual merger or sale (including any transfers made as part of an insolvency or bankruptcy proceeding) involving all or part of our business or as part of a corporate reorganization, stock sale or other change
+              in control.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Sharp Auction Engine, Inc.. may disclose Contact Information in special cases where we have reason to believe that disclosing this information is necessary to identify, contact or bring legal action against someone who may be violating our
+              terms of use or may be causing injury or interference with our rights, property, our customers or anyone who could be harmed by such activities.</span>
+          </p>
+          <p>
+            <strong>
+              <br>
+              <br>
+            </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Types of Data we collect:</span>
+          </p>
+          <ul>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Computer Networking Interfaces (includes Internal IP Address) (also used for risk/fraud prevention purposes)</span>
+              </p>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">External IP Address</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Host Name</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Username Defined by the Operating System (usually not any real person's name)</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Java Runtime; Java Vendor; Java Version</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">JVM Name; JVM Version</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Operating System</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Operating System Architecture ‒ 32-bit or 64-bit</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Operating System Version; Patch Level</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">User Home Directory</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Browser Type; Browser Version</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Operating System Time Zone; Language; Country</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Details of Available CPUs</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Number of Processor Core</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Name of Personal Computer</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Screen Height (in pixels); Screen Width (in pixels)</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Voluntarily submitted personal data (name, email, physical address, phone number)</span>
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            <strong>
+              <br>
+              <br>
+            </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Data Collection of Users for Analyses:</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">As the hub of all transactions, we have the ability to capture valuable data, analyze it, and then turn data into valuable information for bidders, auctioneers, and sellers.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">How: </span>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Registering an account with SAE is acknowledgement of the users behalf and acceptance for SAE to store all provided fields of data. I.e.: Name, SSN, Address, email to analyze our market trends and demographic of our users for new developments</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">We will also use email addresses and user mailing addresses for promotional purposes. </span>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">YOU MAY OPT OUT TO RECEIVING MARKETING MATERIAL AT ANY TIME by adjusting your user profile settings. </span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">The information provided directly to SAE in connection with Buyer profiles and participating in auctions, Sharp Auction Engine will automatically collect and analyze the following information for internal purposes only to allow our software
+              to function properly and to validate your bids. This is crucial for us to maintain our software and keep it performing at its peak.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">If you need support, your user contact information may be passed on to a certified SAE direct employee or contracted employee to further assist you. We offer phone, ticketing, and email support. </span>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">
+            </span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Your contact information will be shared only with auctioneers with whom you have chosen to do business by accepting the terms and conditions on the catalogs published by said auctioneers. Auctioneers will be given your contact information
+              and possibly your paypal account name for operations within their own auctions.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Please Note: </span>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">You must register per catalog to each Auction House because Terms &amp; Conditions vary on every auction. It is the bidders responsibility to read and understand the terms before accepting Terms &amp; Conditions per catalog. This is when and
+              the only way your contact information is transferred to an auctioneer.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Automated Tracking Information</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">This Site uses Google Analytics to analyze how users use the Site. Google Analytics uses "cookies", which are text files placed on your computer, to securely collect anonymous usage information from all users whose internet browsers support
+              cookies and are set to enable their use. The information generated by these cookies about your use of the Site is transmitted to Google. This information is used to generate statistical reports on user activity on the Site, including page
+              visits, durations, your IP address, approximate geographic locations, browser characteristics, operating systems, and other data that is not personally identifiable. For a complete list of what data is collected and how Google Analytics
+              does so, see https://www.google.com/analytics/learn/privacy.html. Most browsers allow you to control cookies, including whether or not to accept them and how to remove them.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">How We Protect Your Information</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">We are committed to protecting the information we receive from you. We take appropriate security measures to protect your information against unauthorized access to or unauthorized alteration, disclosure or destruction of data. To prevent
+              unauthorized access, maintain data accuracy, and ensure the correct use of information, we maintain appropriate physical, electronic, and managerial procedures to safeguard and secure the information and data stored on our system. While
+              no computer system is completely secure, we believe the measures we have implemented reduce the likelihood of security problems to a level appropriate to the type of data involved.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">This privacy statement covers the use of cookies by www.sharpauctionengine.com and does not cover the use of cookies by Google Analytics or any other party.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Disclaimer to Security</span>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">By consenting to the Terms and Conditions of the Site and hence the Privacy Policy, you consent that no data transmission over the internet is completely secure. We cannot guarantee or warrant the security of any information you provide to
+              us and you transmit such information to us at your own risk.</span>
+          </p>
+          <p>
+            <strong> </strong>
+          </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:bold;font-style:normal;text-decoration:none;">Notification of Changes</span>
+          </p>
+          <p> </p>
+          <p>
+            <span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;">Sharp Auction Engine., Inc. reserves the right to change this Privacy Policy at any time at its sole discretion. If at some point in the future, there are changes to our Privacy Policy, unless we obtain your express consent, such changes will
+              only apply to information collected after the revised Privacy Policy took effect. Your continued use of the Site indicates your assent to the Privacy Policy as posted.</span>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+
+<!-- Footer section -->
+<footer>
+  <nav class="navbar navbar-default footer">
+    <div class="container">
+      <div class="col-sm-9 nav-link">
+        <div class="row">
+          <div class="col-sm-4">
+            <ul class="nav">
+              <li class="nav-header ">About</li>
+              <li><a href="http://www.sharpauctionengine.com/index.php/about-us">About Us</a>
+              </li>
+              <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a>
+              </li>
+              <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul class="nav">
+              <li class="nav-header">Product</li>
+              <li><a href="http://news.sharpauctionengine.com/">News</a>
+              </li>
+              <li><a href="/auctioneer-sign-up">Auctioneer Sign Up</a>
+              </li>
+              <li><a href="/demo-request">Request Demo</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul class="nav">
+              <li class="nav-header">Support</li>
+              <li><a href="http://support.sharpauctionengine.com">Support Portal</a>
+              </li>
+              <li><a href="http://news.sharpauctionengine.com/?cat=5"> Release Notes</a>
+              </li>
+              <li><a href="mailto:help@sharpauctionengine.com" target="_top">Email Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center">
+          <a href="https://twitter.com/AuctionEngine" class="btn btn-info" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/SharpAuctionEngine" class="btn btn-info" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="http://www.linkedin.com/company/sharp-auction-engine" class="btn btn-info" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </p>
+        <!-- <p class="text-muted text-center"> <a href="http://support.sharpauctionengine.com">Support</a> •
+			    <a href="/site-terms-and-conditions">Terms</a> •
+			    <a href="http://sharpauctionengine.com/index.php/contact-us">Contact</a> <br/> -->
+        <p class="text-muted text-center">&copy; 2016 Sharp Auction Engine, Inc. All rights reserved.</p>
+        <!-- <p class="text-muted text-center">Powered by <a href="http://www.spacegazebo.com" target="_blank">Space Gazebo</a>.</p> -->
+      </div>
+    </div>
+  </nav>
+</footer>
+
+</html>
