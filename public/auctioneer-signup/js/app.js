@@ -1,5 +1,13 @@
 var updateStripePlan = function (plan)
 {
+    var plan = plan || {
+        amountDecimal: "180",
+        amountInteger: 18000,
+        bidders: 25,
+        description: "Basic-25 Bidders: $180",
+        id: "Basic"
+    };
+    
     if ('basic' === plan.id.toLowerCase()
         .slice(0, 5))
     {
@@ -30,6 +38,14 @@ var updateStripePlan = function (plan)
 };
 var updateStripePlanSelect = function (plan)
 {
+    var plan = plan || {
+        amountDecimal: "180",
+        amountInteger: 18000,
+        bidders: 25,
+        description: "Basic-25 Bidders: $180",
+        id: "Basic"
+    };
+    
     $('[name=stripe_plan]')
         .val(plan.id);
     console.log(
