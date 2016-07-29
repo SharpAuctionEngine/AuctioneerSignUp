@@ -1,10 +1,10 @@
 var updateStripePlan = function (plan) {
     
     var plan = plan || {
-        amountDecimal: "99",
-        amountInteger: 9900,
+        amountDecimal: "180",
+        amountInteger: 18000,
         bidders: 25,
-        description: "Basic-25 Bidders: $99",
+        description: "Basic-25 Bidders: $180",
         id: "Basic"
     };
     
@@ -31,10 +31,10 @@ var updateStripePlan = function (plan) {
 var updateStripePlanSelect = function (plan) {
     
     var plan = plan || {
-        amountDecimal: "99",
-        amountInteger: 9900,
+        amountDecimal: "180",
+        amountInteger: 18000,
         bidders: 25,
-        description: "Basic-25 Bidders: $99",
+        description: "Basic-25 Bidders: $180",
         id: "Basic"
     };
     
