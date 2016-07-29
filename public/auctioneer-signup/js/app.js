@@ -1,4 +1,13 @@
 var updateStripePlan = function (plan) {
+    
+    var plan = plan || {
+        amountDecimal: "99",
+        amountInteger: 9900,
+        bidders: 25,
+        description: "Basic-25 Bidders: $99",
+        id: "Basic"
+    };
+    
     if ('basic' === plan.id.toLowerCase().slice(0, 5)) {
         $('input[name=plan]').val('basic');
         $('#pro').hide();
@@ -20,6 +29,15 @@ var updateStripePlan = function (plan) {
 // $('#Pro_plan').prop('disabled', true); // disabled pro plan for 2.0 release
 
 var updateStripePlanSelect = function (plan) {
+    
+    var plan = plan || {
+        amountDecimal: "99",
+        amountInteger: 9900,
+        bidders: 25,
+        description: "Basic-25 Bidders: $99",
+        id: "Basic"
+    };
+    
     $('[name=stripe_plan]').val(plan.id);
 
     console.log({
