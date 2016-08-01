@@ -32,6 +32,7 @@ var updateStripePlanSelect = function(plan)
 };
 
 /* global var planOptions = [] */
+
 var getStripePlan = function(id)
 {
     if (typeof id === 'object')
@@ -47,11 +48,11 @@ var getStripePlan = function(id)
             {
                 return false;
             }
-            if (o.basic===1 && 'basic' !== plan.id.toLowerCase().slice(0,5))
+            if (o.basic===1 && 'basic' !== plan.id.toLowerCase())
             {
                 return false;
             }
-            else if (o.basic===0 && 'basic' === plan.id.toLowerCase().slice(0,5))
+            else if (o.basic===0 && 'basic' === plan.id.toLowerCase())
             {
                 return false;
             }
@@ -65,7 +66,7 @@ var getStripePlan = function(id)
     else
     {
         id = id || $('[name=stripe_plan]').val();
-        for (var i=0;i<planOptions.length;i++)
+        for (var i=0; i<planOptions.length; i++)
         {
             if (id.toLowerCase() === planOptions[i].id.toLowerCase())
             {
@@ -73,6 +74,7 @@ var getStripePlan = function(id)
             }
         }
     }
+
 };
 
 $(document).ready(function() {
@@ -113,14 +115,14 @@ $(document).ready(function() {
 
 });
 
-    // Removes repeated validation message 
+    // Removes repeated validation message
 
     $(".removeMessagebag").click(function() {
-    
+
         $(' #messagebag ').remove();
 
     });
- 
+
 
 $('body').on('input','select[name=stripe_plan]',function()
 {
@@ -139,8 +141,9 @@ $("#loadingModal").modal({
 //  Plan decider
 $("#Basic_plan").click(function() {
     var plan = getStripePlan({basic:1});
+    console.log({get_plan:plan});
     updateStripePlanSelect(plan);
-    
+
 });
 $("#Pro_plan").click(function() {
     var plan = getStripePlan({
@@ -148,7 +151,7 @@ $("#Pro_plan").click(function() {
         bidders:$('input[name=bidders]').val()||50,
     });
     updateStripePlanSelect(plan);
-    
+
 
 });
 
@@ -214,20 +217,20 @@ var alertTriggersOnDuplicates = $.debounce(350,function(is_available,domain,emai
 
     email_available?'':bootbox.alert('The email you are using is already in use by another auction house. If you would like to create an additional house, please email support at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a>.');
     // is_available?'':bootbox.alert('Have you already created an auction house? Our software indicates that your <a href=http://'+domain+' target="_blank">'+domain+'</a> is similar to <a href=http://'+domain+' target="_blank">'+domain+'</a> on file. If this is your first auction house, please ignore this alert and continue. If you have any questions or need assistance, email us at <a href="mailto:help@sharpauctionengine.com" target="_top">help@sharpauctionengine.com </a> or give us a call at (246)653-5273');
- 
+
      is_available?'':bootbox.alert('The sub-domain you are requesting is already in use. Please select a new domain or email support at <a href="mailto:help@sharpauctionengine.com" target="_top"> help@sharpauctionengine.com </a> for additional assistance.');
-      
+
 });
 
 
 var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email)
-{     
+{
     if (minimumDomainLength >= firstDomainLevel(domain).length )
     {
         console.log('isDomainAvailable('+domain+'): "too short"');
         var is_available = false;
         is_email?'':updateHouseAvailableDOM($input,$fg,domain,is_available);
-        
+
 
     }
     else
@@ -235,32 +238,32 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
         $.ajax({
             url:"/auctioneer-signup/v1/typeahead/is/domain/available",
             data:{domain:domain, email:email},
-            
+
             complete:function(xhr,textStatus)
             {
                 var json = xhr.responseJSON||{};
                 var alerts =new MessageBag();
-                
+
                  //xhr.responseText
                 //xhr.responseJson
-               
+
                 //Main Domain response from node
-                
-               
+
+
                 var is_available = xhr.status===200? json.is_available.domain || false:'Ap_not_available';
                 updateHouseAvailableDOM($input,$fg,json.domain,is_available);
-                
-                // Email response from node 
+
+                // Email response from node
                 if(xhr.status===200 )
-                {   
-                   
+                {
+
                     var fg= $('input[name=email]').parents('.form-group').first();
                     $(' #messagebag ').remove();
                     if(json.is_available.email)
                     {
                           fg.removeClass('has-error');
                           fg.addClass('has-success');
-                        
+
                     }
                     else
                     {
@@ -268,21 +271,21 @@ var isDomainTakenAjax = $.debounce(350,function(is_email,$input,$fg,domain,email
                         fg.removeClass('has-success');
                         alerts.add('email','Email is already in use');
                         alerts.sprinkle('form:first');
-                      
 
 
-                        
+
+
                     }
-                    
+
                 }
                is_available?'':alertTriggersOnDuplicates(is_available,json.domain,json.is_available.email);
                console.log('isDomainAvailable('+json.domain+'):'+(is_available?1:0));
                console.log('isEmailAvailable('+json.email+'):'+(is_available?1:0));
-               
-               
-               
+
+
+
             }
-            
+
         });
     }
 });
@@ -478,23 +481,23 @@ function stripeResponseHandler(status, response) {
         //     // },
         //     beforeSend: function(json) {
         //         $("#loadingModal").modal('show');
-                
+
         //     },
         //     complete: function(xhr, textStatus) {
         //         $("#loadingModal").modal('hide');
-                
+
         //         //xhr.responseText
         //         //xhr.responseJson
         //     },
         //     success: function(json, textStatus, xhr) {
         //              var parent_fieldset = $('.registration-form .finalfieldset');
         //              var next_step = true;
-        
-        
+
+
         //               if( next_step ) {
 
         //                  parent_fieldset.fadeOut(400, function() {
-                               
+
         //              $(this).next().fadeIn();
         //           });
         //             }
@@ -504,9 +507,9 @@ function stripeResponseHandler(status, response) {
 
         //         // $('#paymentMethodForm').submit(); //ch
         //         // $("#congrats").modal('show');
-                
-                
-            
+
+
+
         //     error: function(xhr, textStatus, errorThrown) {
         //         var validationText ='';
         //         var alerts =new MessageBag();
@@ -517,9 +520,9 @@ function stripeResponseHandler(status, response) {
         //         });
         //         //xhr.responseText
         //         //xhr.responseJSON
-                
+
         //         if(xhr.status==400)
-        //         {   
+        //         {
         //             $form.find('button,input[type=button]').prop('disabled', false);
 
         //             if(xhr.responseText === 'Duplicate_Email')
@@ -534,7 +537,7 @@ function stripeResponseHandler(status, response) {
         //             if(xhr.responseJSON.errors)
         //             {
         //             jQuery.each(xhr.responseJSON.errors, function(key, value) {
-                     
+
         //              validationText += value.message;
 
         //              alerts.add(value.field,value.message);
@@ -542,7 +545,7 @@ function stripeResponseHandler(status, response) {
         //             });
         //              alerts.sprinkle('form:first');
 
-                    
+
 
         //             bootbox.alert('There are validation errors.Please click on previous button to review errors');
 
@@ -551,14 +554,14 @@ function stripeResponseHandler(status, response) {
 
         //         }
         //         bootbox.alert('There was an ISE error! Please try again then contact support.');
-                
+
         //         //typeof ReportError == 'function' && ReportError((xhr.responseText || "register failure"), (xhr.responseJSON || {}));
         //     }
         // });
     }
 }
 $("#firstFieldsetValidation").click(function() {
-    
+
 var $firstFieldsetInput =$("#firstFieldset");
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
@@ -566,65 +569,65 @@ var $firstFieldsetInput =$("#firstFieldset");
             console.log($firstFieldsetInput.serialize());
 
             ajaxCallToAp($firstFieldsetInput.serialize(),validate_field);
-    
+
 });
 $("#secondFieldsetValidation").click(function() {
-    
+
 var $secondFieldsetInput =$("#secondFieldset");
             var validate_field='Additional_Info';
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
             console.log($secondFieldsetInput.serialize());
             ajaxCallToAp($secondFieldsetInput.serialize(),validate_field);
-    
+
 });
 var ajaxCallToAp = $.debounce(450,function($data,validate_field)
-{   
+{
     var $form = $('#paymentMethodForm');
-    
+
   $.ajax({
             url: "/auctioneer-signup/v1/submit",
             method: 'POST',
             data: $data+"&validate_field="+validate_field,
             beforeSend: function(json) {
                 $("#loadingModal").modal('show');
-                
+
             },
             complete: function(xhr, textStatus) {
                 $("#loadingModal").modal('hide');
-                
+
                 //xhr.responseText
                 //xhr.responseJson
             },
             success: function(json, textStatus, xhr) {
                     var button_next='';
                     if(validate_field==='profile')
-                        { 
+                        {
                             button_next='firstFieldset';
                         }
                     if(validate_field==='Additional_Info')
-                        { 
+                        {
                             button_next='secondFieldset';
                         }
                     if(validate_field==='lastpage')
-                        { 
+                        {
                             button_next='finalfieldset';
                         }
-    
+
                      var parent_fieldset = $('.registration-form .'+button_next);
                      var next_step = true;
-        
-        
+
+
                       if( next_step ) {
 
                          parent_fieldset.fadeOut(400, function() {
-                               
+
                      $(this).next().fadeIn();
                   });
                     }
                  },
-                          
-            
+
+
             error: function(xhr, textStatus, errorThrown) {
                 var validationText ='';
                 var alerts =new MessageBag();
@@ -636,9 +639,9 @@ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
                 var json= xhr.responseJSON || xhr.responseText ||{};
                 //xhr.responseText
                 //xhr.responseJSON
-                
+
                 if(xhr.status==400)
-                {   
+                {
                     $form.find('button,input[type=button]').prop('disabled', false);
 
                     if(xhr.responseText === 'Duplicate_Email')
@@ -659,7 +662,7 @@ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
                     });
                      alerts.sprinkle('form:first');
 
-                    
+
 
                     bootbox.alert('There are validation errors. Please click on previous button to review errors');
 
@@ -668,7 +671,7 @@ var ajaxCallToAp = $.debounce(450,function($data,validate_field)
 
                 }
                 bootbox.alert('There was an ISE error! Please try again then contact support.');
-                
+
             }
         });
 });

@@ -10,3 +10,22 @@ STRIPE_PUBLISHABLE_KEY=''
 STRIPE_SECRET_KEY=''
 MINIMUM_INSTANCE_DOMAIN='2'
 ROLLBAR_KEY='e2d340481e044946ac1391204cfb09c2'
+
+
+#DEV - replaced 7/21/2016
+#AUTH_TOKEN='WyIyNCIsImQ3MzIyNWY0ZjQyM2IwZjY1Mjk3NzJiZGFiZWU1Y2MyIl0.CelVEA.3PjwOjrTWIBNXRHtDeAgO5sUrJI'
+AUTH_TOKEN='WyIyNCIsImQ3MzIyNWY0ZjQyM2IwZjY1Mjk3NzJiZGFiZWU1Y2MyIl0.CnKDHg.uROM41rRSSV7XYOmo2cJFuPWuds'
+APP_PORT='9000'
+MANDRILL_KEY = 'cPl3Rzm9BNyIjiEhKbnR-g'
+SEND_EMAIL_TO='[{"email":"help@sharpauctionengine.com","type":"to"},{"email":"carolyn@sharpauctionengine.com","type"
+:"cc"}]'
+SAE_HELP_EMAIL = 'help@sharpauctionengine.com'
+TO_FOH_SUBJECT_PREFIX = 'Auctioneer Details: '
+CONNECTION='postgres://forge:hpqpMJf2sro4Dd2FEuRW@45.33.72.101:5432/auctioneersignupform'
+INSTANCE_PARENT_DOMAIN='defiant.bid'
+ADMIN_PANEL_BASE_URI='http://saeadmin.defiant.bid'
+STRIPE_PUBLISHABLE_KEY='pk_test_Gs3mml7J0sPmODW6ZS8o8R3h'
+STRIPE_SECRET_KEY='sk_test_qNt8nbmpti7cUDTSpSwrQoQJ'
+MINIMUM_INSTANCE_DOMAIN='2'
+ROLLBAR_KEY='e2d340481e044946ac1391204cfb09c2'
+ROLLBAR_ENV='dev'
