@@ -52,7 +52,7 @@ var getStripePlan = function(id)
             {
                 return false;
             }
-            else if (o.basic===0 && 'basic' === plan.id.toLowerCase())
+            if (o.basic===0 && 'basic' === plan.id.toLowerCase())
             {
                 return false;
             }
@@ -90,8 +90,9 @@ $(document).ready(function() {
         step: 25,
         // animate:true,
         slide: function(event, ui) {
-            $("#bidders").val(ui.value);
-            var bidders = $("#bidders").val();
+            $("#num-of-bidders").val(ui.value);
+            var bidders = $("#num-of-bidders").val();
+            console.log({bidders:bidders});
             var plan = getStripePlan({
                 bidders:bidders,
                 basic:0,
@@ -106,7 +107,7 @@ $(document).ready(function() {
                     $('#slider2').slider("option", "value", bidders);
                 }
             });
-            $('input[name=bidders]').val($("#bidders").val());
+            $('input[name=bidders]').val($("#num-of-bidders").val());
             // console.log({slideramount:plan.amountDecimal,plan:plan});
             $('input[name=PlanAmount]').val(plan.amountDecimal);
             updateStripePlanSelect(plan);

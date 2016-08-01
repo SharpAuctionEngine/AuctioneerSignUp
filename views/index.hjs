@@ -35,41 +35,6 @@
     <link rel="apple-touch-icon" sizes="76x76" href="ico/touch-icon-ipad-precomposed.png">
     <link rel="apple-touch-icon" sizes="120x120" href="ico/touch-icon-iphone-retina-precomposed.png">
     <link rel="apple-touch-icon" sizes="152x152" href="ico/touch-icon-ipad-retina-precomposed.png">
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window,
-            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init', '1518592401781359');
-        fbq('track', "PageView");
-        fbq('track', 'ViewContent');
-        fbq('track', 'Lead');
-        fbq('track', 'AddPaymentInfo');
-        fbq('track', 'Purchase', {
-            value: '0.00',
-            currency: 'USD'
-        });
-        fbq('track', 'CompleteRegistration');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
-/></noscript>
-    <!-- End Facebook Pixel Code -->
 
 <!-- Start of Async HubSpot Analytics Code -->
 <script type="text/javascript">
@@ -84,6 +49,45 @@ e.parentNode.insertBefore(n, e);
 
 
 </head>
+
+<body>
+
+  <script>
+      ! function(f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function() {
+              n.callMethod ?
+                  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+      }(window,
+          document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1518592401781359');
+      fbq('track', "PageView");
+      fbq('track', 'ViewContent');
+      fbq('track', 'Lead');
+      fbq('track', 'AddPaymentInfo');
+      fbq('track', 'Purchase', {
+          value: '0.00',
+          currency: 'USD'
+      });
+      fbq('track', 'CompleteRegistration');
+  </script>
+  <noscript><img alt="" height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1518592401781359&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
 <!-- Header section -->
 <section style="background-color:#F2EFE3;">
     <div class="templatemo-top-menu">
@@ -101,7 +105,7 @@ e.parentNode.insertBefore(n, e);
                         <span class="icon-bar"></span>
                     </button>
                         <a href="/">
-                            <img src="/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo">
+                            <img src="/images/logo-horizontal.png" class="img-responsive" alt="Sharp Auction Engine" title="SAE logo"/>
                         </a>
                     </div>
                     <div class="navbar-collapse collapse body_style" id="templatemo-nav-bar">
@@ -136,7 +140,6 @@ e.parentNode.insertBefore(n, e);
 
 </section>
 
-<body>
     <!-- Top content -->
     <div class="top-content">
 
@@ -145,7 +148,7 @@ e.parentNode.insertBefore(n, e);
                 <noscript>
           <div class="alert alert-danger">It looks like you are running an outdated browser or blocking scripts. Please update your browser or add "stripe" to your browser's whitelist.</div>
         </noscript>
-                <form role="form" action="signup" method="post" class="registration-form" id="paymentMethodForm">
+                <form action="signup" method="post" class="registration-form" id="paymentMethodForm">
                     <fieldset id="LandingPage" class="LandingPage">
                         <h1 class="cameoantique" style="margin-top:85px;">CHOOSE YOUR PLAN</h1>
 
@@ -230,12 +233,12 @@ e.parentNode.insertBefore(n, e);
                                                 </div>
 						<p>
                                                    Use the slider below to choose the number of active bidders your online auction house should support and determine your monthly cost:
-                                                    <span class="bidders" id="bidders"> 50</span> (bidders)
+                                                    <span id="num-of-bidders" class="bidders"> 50</span> (bidders)
                                                 </p>
 						<div id="slider1" style="background-color:#D3D3D3;margin-bottom:25px;" class="slider-mrg"></div>
 
 						<p class="dollar">$
-                                                    <span class="slideramount borderbox" id="slideramount">250</span>/mo</p>
+                                                    <span class="slideramount borderbox">250</span>/mo</p>
 
                                                 <!-- Navigation Disbaled for 2.0 release -->
                                                 <!--<button type="button" class="btn btn-xs btncolor" id="Pro_plan" style="margin-top:11px;" disabled="disabled">  <span class="text">Get Started Now!</span> </button>-->
@@ -309,11 +312,11 @@ e.parentNode.insertBefore(n, e);
                           <strong>Pro Plan</strong>
                         </h2>
                                                 <p class="text-center dollar">$
-                                                    <span class="slideramount borderbox" id="slideramount">250</span>/mo</p>
+                                                    <span class="slideramount borderbox">250</span>/mo</p>
                                                 <p>
                                                     <small style="font-size:84%">Choose this plan if your business has a large or growing pool of customers.To view and compare plans,<a href=""> Click here</a>. Use the slider below to choose your average number of bidders per catalog and determine your monthly
                             cost.
-                            <span class="bidders" id="bidders">50</span> (bidders)</small>
+                            <span class="bidders">50</span> (bidders)</small>
                                                 </p>
 
                                                 <div id="slider2" style="background-color:#D3D3D3;"></div>
@@ -341,13 +344,11 @@ e.parentNode.insertBefore(n, e);
                                                 </p>
                                             </div>
 
-                                            <div class="form-group">
-                                                <p class="wrapper">
+                                            <div class="form-group wrapper">
                                                     <input type="text" name="first_domain_level" placeholder="&#xf0ac; Your Auction House URL" autocomplete="off" class="icon form-auction-url form-control" id="house_url" data-toggle="popover" title="House URL" data-content="This will be the website of your new online auction house. You can change this later by setting up a custom domain.<br/><em class='text-muted text-centered hint_house_url'>example</em><strong>.{{instanceParentDomain}}</strong> <span class='when-instance-domain-is-available text-success' style='display:none;'>is available!</span><span class='when-instance-domain-is-not-available text-danger' style='display:none;'>is not available!</span><span class='when-Ap-is-not-available text-warning' style='display:none;'> was not able to be validated. Please contact <a href='mailto:help@sharpauctionengine.com' target='_top'>help@sharpauctionengine.com</a> if this problem persists</span>" style="" />
                                                     <div class="pull-right" style="height:0px;">
-                                                        <span value="{{instanceParentDomain}}" style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
+                                                        <span style="position:relative;bottom:50px;padding-right:15px;pointer-events: none;">.{{instanceParentDomain}}</span>
                                                     </div>
-                                                </p>
                                                 <input type="hidden" name="main_domain" />
                                             </div>
 
@@ -362,8 +363,7 @@ e.parentNode.insertBefore(n, e);
                                                     <input type="password" name="repeat_password" autocomplete="off" placeholder="&#xf023; Confirm Password" class="icon form-repeat-password form-control" id="repeat-password" data-toggle="popover" title="Confirm Password" data-content="Please re-enter your password to confirm.">
                                                 </p>
                                             </div>
-                                            <div class="form-group">
-                                                <p class="wrapper">
+                                            <div class="form-group wrapper">
 
                                                 <select name="lead_source" id="lead_source" class="form-control" style="height:50px; border-radius:16px;">
                                                     <option value="0" style="font-weight: lighter!important;">How did you find out about us?</option>
@@ -380,8 +380,6 @@ e.parentNode.insertBefore(n, e);
                                                 </p>
                                             </div>
 
-
-                                                </p>
                                             </div>
                                             <input type=hidden name="oid" value="00Do0000000ZekX">
                                             <!-- <input type="hidden" name="debug" value=1>         -->
@@ -419,7 +417,7 @@ e.parentNode.insertBefore(n, e);
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="/images/logo-150px.png">
+                                                <img alt="" src="/images/logo-150px.png"/>
                                                 <p class="white-color">
                                                     <strong>Please provide us with additional information about the auctioneer who will be connected to this auction house.</strong>
                                                 </p>
@@ -467,7 +465,7 @@ e.parentNode.insertBefore(n, e);
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="/images/logo-150px.png">
+                                                <img alt="" src="/images/logo-150px.png"/>
                                                 <p class="white-color" style="font-weight: bold;">
                                                     Please confirm your plan and provide us additional information for payments.
                                                 </p>
@@ -523,17 +521,18 @@ e.parentNode.insertBefore(n, e);
                                         </div>
 
                                     </div>
-
                                 </div>
+                              </div>
+                            </div>
                     </fieldset>
                     <fieldset>
-                        <div class="row" id="final_page" class="finalPage">
+                        <div class="row" id="final_page">
                             <div class="col-sm-8 col-sm-offset-2 form-boxr" style="margin-top:75px;">
                                 <div class="panel panelborder">
                                     <div class="panel-body">
                                         <div class="form-top">
                                             <div class="text-center">
-                                                <img src="/images/logo-150px.png">
+                                                <img alt="" src="/images/logo-150px.png"/>
                                                 <p class="white-color" style="font-size:24px">
                                                     <strong>Thanking you for signing up!</strong>
                                                 </p>
@@ -561,47 +560,11 @@ e.parentNode.insertBefore(n, e);
                 <div class="modal" id="loadingModal">
                     <p class="text-center text"><i class="fa fa-spinner fa-spin"></i>&nbsp;Loading...</p>
                 </div>
-                </div>
-                </div>
-                <!-- Javascript -->
-                <script>
-                    var stripePublishableKey = '{{stripePublishableKey}}';
-                    var instanceParentDomain = '{{instanceParentDomain}}';
-                    var minimumDomainLength = parseInt('{{minimumDomainLength}}');
-                    var planOptions = {{{planOptionsJson}}};
-                    var salesForceInstance ='{{salesForceInstance}}';
-                </script>
-
-                <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-                <!--<script src="js/jquery-1.10.2.js"></script>-->
-                <script src="js/jquery-1.11.1.min.js"></script>
-                <script src="js/jquery-ui.js"></script>
-                <!--  <script src="js/tooltip.js"></script>
-            <script src="js/popover.js"></script> -->
-                <script src="js/jquery.ba-throttle-debounce.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/bootbox.min.js"></script>
-                <script src="js/jquery.backstretch.min.js"></script>
-                <script src="js/retina-1.1.0.min.js"></script>
-                <script src="js/scripts.js"></script>
-                <script src="js/bootstrap-formhelpers-min.js"></script>
-                <script src="js/bootstrap-formhelpers-states.js"></script>
-                <!--  <script src="js/horizontal_selector.js"></script> -->
-                <script src="js/jquery.range.js"></script>
-                <script src="js/register.js"></script>
-                <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-                <script src="js/creditCardValidator.js"></script>
-                <script src="js/MessageBag.js"></script>
-
-                <script type="text/javascript" src="js/app.js"></script>
-
-                <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
-
+            </div>
+        </div>
+    </div>
                 {{{termsConditionsModalHtml}}} {{{privacyPolicyModalHtml}}}
 
-</body>
 
 <div class="templatemo-footer">
     <div class="footer_container">
@@ -681,7 +644,7 @@ e.parentNode.insertBefore(n, e);
                         <div class="input-group center-block">
                             <input class="form-control mailChimpPlaceholder" name="EMAIL" id="mce-EMAIL" type="email" placeholder="enter your email address for updates">
 
-                            <button class="btn btn-med btn-green mobile mailChimp" type="success">Submit</button>
+                            <button class="btn btn-med btn-green mobile mailChimp" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -712,5 +675,45 @@ e.parentNode.insertBefore(n, e);
     </div>
 
 </div>
+
+<!-- Javascript -->
+<script type="text/javascript">
+    var stripePublishableKey = '{{stripePublishableKey}}';
+    var instanceParentDomain = '{{instanceParentDomain}}';
+    var minimumDomainLength = parseInt('{{minimumDomainLength}}');
+    var planOptions = {{{planOptionsJson}}};
+    var salesForceInstance ='{{salesForceInstance}}';
+</script>
+
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+<!--<script src="js/jquery-1.10.2.js"></script>-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--  <script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script> -->
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootbox.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/bootstrap-formhelpers-min.js"></script>
+<script src="js/bootstrap-formhelpers-states.js"></script>
+<!--  <script src="js/horizontal_selector.js"></script> -->
+<script src="js/jquery.range.js"></script>
+<script src="js/register.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="js/creditCardValidator.js"></script>
+<script src="js/MessageBag.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+<!--[if lt IE 10]>
+<script src="assets/js/placeholder.js"></script>
+<![endif]-->
+
+</body>
+
+
 
 </html>
