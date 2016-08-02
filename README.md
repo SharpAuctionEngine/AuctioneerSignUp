@@ -103,31 +103,8 @@ $ ``curl -X POST localhost:3002/signup --data "email=myemail@email.com" -v && ec
 
 ``npm install``
 
-######For express use
-``npm install express --save``
-
-######For mandrill_api use
-``npm install mandrill-api --save``
-
-######For mandrill_api use
-``npm install --save sequelize``
-
-######For sequelize-json use
-``npm install sequelize-json --save``
-
-######For es6-promise use
-``npm install es6-promises``
-
-
-######For request-promise use
-``npm install request-promise``
-
-######For stripe use
-``npm install stripe --save``
-
 ######you might want to do this
-``sudo npm install sequelize-cli -g``
-``sudo npm install -g pg pg-hstore``
+``sudo npm install -g sequelize-cli pg pg-hstore``
 
 
 ######Install postgre sql
