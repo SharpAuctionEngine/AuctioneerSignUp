@@ -16,12 +16,22 @@ input.icon::-ms-input-placeholder {
 .body_style
 {
 
-    font-family: open-sans;
+    /*font-family: open-sans;*/
     font-size: 12px;
     font-weight: 300;
     font-style: normal;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+    font-family: 'CameoAntique';
+    src:url('/auctioneer-signup/fonts/CameoAntique.ttf.woff') format('woff'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.eot'),
+        url('/auctioneer-signup/fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
 }
 .cameoantique {
     font-family: 'CameoAntique';
@@ -252,16 +262,98 @@ input.btn.btn-med {
 }
 
 
-@font-face {
-    font-family: 'CameoAntique';
-    src: url('fonts/CameoAntique.ttf.woff') format('woff'), url('fonts/CameoAntique.ttf.svg#CameoAntique') format('svg'), url('fonts/CameoAntique.ttf.eot'), url('fonts/CameoAntique.ttf.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 #loadingModal p.text {
     color: #eee;
     font-weight: bold;
     margin-top: 25%;
   font-size: 4em;
   display: block;
+}
+.comingSoon
+{ 
+    color:#CD623F;
+    z-index:4;
+    font-size:65px;
+    margin-top:-55px;
+    font-weight: 500
+}
+@media (max-width:768px){
+  
+.mobile
+{
+      width:70px!important;
+      margin-left:-44px!important;
+      margin-right: 0px!important;
+}
+
+}
+ .mailChimp
+ {
+    height:37px!important;
+    margin-right: 185px;
+    margin-top: -1px!important;
+    width:15%;
+
+ }
+ .mailChimpPlaceholder
+ {
+    width:40%!important;
+    margin-left: 25%;
+    font-weight:normal;
+    font-style: italic;
+ }
+
+/* Large desktops and laptops */
+@media (min-width: 1200px){
+.slider-mrg{
+           margin-top: 8%; 
+ }
+
+.get-started-btn-mrg{
+    		margin-top:5%;
+ }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+.slider-mrg{
+                    margin-top: 24%;
+        }
+
+.get-started-btn-mrg{
+                margin-top:7%;
+        }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+.slider-mrg{
+                    margin-top: 32%;
+        }
+
+.get-started-btn-mrg
+        {
+                margin-top:10%;
+        }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+.slider-mrg{
+                    margin-top:0;
+        }
+
+.get-started-btn-mrg
+        {
+                margin-top:0;
+        }
+
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
 }

@@ -65,7 +65,7 @@ form textarea.form-control::-webkit-input-placeholder {
 }
 form button.btn {
   height: 45px;
-  margin: 0;
+  /*margin: 0;*/
   padding: 0 7px;
   vertical-align: middle;
   /*background: #19b9e7;*/
