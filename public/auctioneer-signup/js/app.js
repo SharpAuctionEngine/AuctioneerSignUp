@@ -563,7 +563,7 @@ function stripeResponseHandler(status, response) {
 }
 $("#firstFieldsetValidation").click(function() {
 
-var $firstFieldsetInput =$("#firstFieldset input"); // NOTE - IE specific bugfix  http://stackoverflow.com/a/19513455
+var $firstFieldsetInput =$("#firstFieldset *"); // NOTE - IE specific bugfix  http://stackoverflow.com/a/19513455
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
             var validate_field='profile';
@@ -574,7 +574,7 @@ var $firstFieldsetInput =$("#firstFieldset input"); // NOTE - IE specific bugfix
 });
 $("#secondFieldsetValidation").click(function() {
 
-var $secondFieldsetInput =$("#secondFieldset input");
+var $secondFieldsetInput =$("#secondFieldset *");
             var validate_field='Additional_Info';
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
