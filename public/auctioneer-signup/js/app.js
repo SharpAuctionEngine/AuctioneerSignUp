@@ -563,7 +563,7 @@ function stripeResponseHandler(status, response) {
 }
 $("#firstFieldsetValidation").click(function() {
 
-var $firstFieldsetInput =$("#firstFieldset");
+var $firstFieldsetInput =$("#firstFieldset input"); // NOTE - IE specific bugfix  http://stackoverflow.com/a/19513455
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
             var validate_field='profile';
@@ -574,7 +574,7 @@ var $firstFieldsetInput =$("#firstFieldset");
 });
 $("#secondFieldsetValidation").click(function() {
 
-var $secondFieldsetInput =$("#secondFieldset");
+var $secondFieldsetInput =$("#secondFieldset input");
             var validate_field='Additional_Info';
             $(' #messagebag ').remove();
             $('.form-group').removeClass('has-error');
@@ -585,7 +585,6 @@ var $secondFieldsetInput =$("#secondFieldset");
 var ajaxCallToAp = $.debounce(450,function($data,validate_field)
 {
     var $form = $('#paymentMethodForm');
-
   $.ajax({
             url: "/auctioneer-signup/v1/submit",
             method: 'POST',
